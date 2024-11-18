@@ -15,8 +15,12 @@
                                         <strong class="h2">{{ feature.description|raw }}</strong>
                                     </div>
 
-                                    <a href="{{ feature.action_link|esc_attr }}"
-                                       class="btn btn-lg btn-outline-primary mt-auto me-auto">{{ feature.action_text|raw }}</a>
+                                    {% if feature.action_link is not empty %}
+                                        <a href="{{ get_permalink(feature.action_link)|esc_attr }}"
+                                           class="btn btn-lg btn-outline-primary mt-auto me-auto">
+                                            {{ feature.action_text|raw }}
+                                        </a>
+                                    {% endif %}
                                 </div>
                             </div>
                             <div class="col-12 col-md-5">
