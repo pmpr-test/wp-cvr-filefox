@@ -1,0 +1,10 @@
+{% set figure_class = figure_class|default('mb-0') %}
+{% set has_figure = has_figure|default(1) %}
+{% if has_figure %}
+    <figure{% if figure_class is not empty %} class="{{ figure_class|esc_attr }}"{% endif %}>
+{% endif %}
+    {{ get_the_post_thumbnail(post, image_size, image_attr)|raw }}
+{% if has_figure %}
+    </figure>
+{% endif %}
+

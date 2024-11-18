@@ -1,0 +1,56 @@
+<div class="row mb-4">
+    <div class="col-12 col-lg-8">
+        <div class="card shadow-sm">
+            <div class="card-header bg-white border-bottom p-4">
+                <h1 class="text-gray-900 h2 mb-0" data-line="1">{{ title|raw }}</h1>
+            </div>
+            <div class="card-body p-4">
+                <div class="row">
+                    <div class="col-12 col-md-8 d-flex flex-column justify-content-between">
+                        {{ pmpr_do_action('render_post_metadata', right_metadata, {
+                            version: 2,
+                        }) }}
+                        <div class="mt-4">
+                            {{ pmpr_do_action('render_post_metadata', update_html, {
+                                key_value: 1,
+                                bg_color: 'gray-200',
+                                item_class: 'pr-last-update',
+                                text_color: 'gray-600',
+                            }) }}
+                            {% block after_update %}{% endblock %}
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        {{ pmpr_do_action('render_post_metadata', left_metadata, {
+                            divider_space: 3,
+                            icon_size: 'xxxl',
+                            item_class: 'px-3',
+                            show_title: 1,
+                        }) }}
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-gray-200 p-4">
+                <div class="row">
+                    <div class="col-12 col-md-9 d-flex">
+                        <div class="d-flex">
+                            {{ render_icon(report_icon, {class: 'icon-xxxl icon-primary my-auto'}) }}
+                            <div data-divider="horizontal" class="bg-primary mx-3"></div>
+                        </div>
+                        <div>
+                            ابا استفاده از فایل‌فاکس که مرجع بزرگی از فایل‌ها برای دانلود هست، می‌توانید از حس خوب
+                            استفاده از کلی فایل مختلف لذت ببری پس نگران هیچی نباشید
+                            ابا استفاده ،
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <a href="#" class="btn btn-lg w-100 btn-outline-secondary my-auto text-nowrap">ارسال گزارش</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-4">
+        {{ product|call('get_image', 'large', {class: 'w-100 img-fluid rounded shadow-sm'})|raw }}
+    </div>
+</div>

@@ -1,0 +1,34 @@
+{% extends get_template('../base', _self) %}
+
+{% block body %}
+    {% set rendered = 0 %}
+    {% for name, options in sections %}
+        {% if options is not empty %}
+            <section class="py-5 background-image{% if options.section_bg_color is not empty %} bg-{{ options.section_bg_color|esc_attr }}{% elseif not rendered % 2 == 0 %} bg-gray-200{% endif %}" id="{{ name|esc_attr }}_section"
+                    {% if options.background is not empty %} style="background-image: url({{ wp_get_attachment_image_url(options.background)|esc_attr }})" {% endif %}>
+                {% if options.title is not empty
+                    and options.show_header is not defined %}
+
+                    <header {{ options.header_attrs|default({})|parse_attrs|raw }}>
+                        {% if options.hidden_title is not defined or not options.hidden_title %}
+                            <div class="container{% if options.header_centered %} text-center{% endif %} mb-4">
+                                {% include get_cover_template('common/header/title') with {
+                                    title: options.title,
+                                    heading: 'h2',
+                                    title_margin: 1,
+                                    title_attrs: options.title_attrs|default({})|add({class: 'front-section-title'})
+                                } %}
+                                {{ render_if_has_content('div', options.description_attrs|default({})|add({class: 'front-section-description'}), wpautop(options.description)) }}
+                            </div>
+                        {% else %}
+                            <h2 class="visually-hidden">{{ options.title|raw }}</h2>
+                        {% endif %}
+                    </header>
+                {% endif %}
+                {% include get_template('./front/' ~ name, _self) with options %}
+                {% set rendered = rendered + 1 %}
+            </section>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    {{ get_search_form()|raw }}
+
+    {% if features is not empty %}
+        <div class="row mt-5">
+            {% for feature in features %}
+                <div class="col-12 col-md-6 mb-4 d-flex">
+                    <article class="card flex-grow-1 shadow-sm bg-white background-image"
+                            {% if feature.background is not empty %} style="background-image: url({{ wp_get_attachment_image_url(feature.background)|esc_attr }})" {% endif %}>
+                        <div class="row h-100">
+                            <div class="col-12 col-md-7">
+                                <div class="py-5 ps-5 pe-3 d-flex flex-column justify-content-between h-100">
+                                    <div>
+                                        <h2 class="h6 mb-2 text-gray-600">{{ feature.title|raw }}</h2>
+                                        <strong class="h2">{{ feature.description|raw }}</strong>
+                                    </div>
+
+                                    <a href="{{ feature.action_link|esc_attr }}"
+                                       class="btn btn-lg btn-outline-primary mt-auto me-auto">{{ feature.action_text|raw }}</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-5">
+                                {{ wp_get_attachment_image(feature.image, 'medium', {class: 'h-100 w-100 rounded-top rounded-top-md-0 rounded-end-lg'})|raw }}
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+

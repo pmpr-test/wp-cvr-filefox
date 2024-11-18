@@ -1,0 +1,24 @@
+{% if items is defined
+    and items is not empty %}
+    <form id="filter-form" class="position-relative bg-white p-3" action="{{ action|esc_attr }}" method="get">
+        <input type="hidden" name="{{ filter_name|raw }}" value="1">
+        <div class="d-flex justify-content-between">
+            {{ render_if_has_content('h2', {class: 'mb-0'}, title) }}
+            <button id="filter-reset" type="button" class="btn btn-sm btn-link px-0 text-decoration-none">{{ reset_button_title|raw }}</button>
+        </div>
+
+        <div class="accordion accordion-flush" id="accordion_filters">
+            {% for filter in items %}
+                {{ filter|call('render', {
+                    loop: loop
+                }) }}
+            {% endfor %}
+        </div>
+
+        {% if not auto_submit %}
+            <div class="d-grid gap-0">
+                <button id="filter-submit" class="btn btn-primary btn-block">{{ submit_button_title|raw }}</button>
+            </div>
+        {% endif %}
+    </form>
+{% endif %}

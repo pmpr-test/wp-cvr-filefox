@@ -1,0 +1,12 @@
+{% extends get_cover_template('sidebar/dual') %}
+
+{% block main %}
+    {% include get_cover_template('common/header/index') with {
+        has_container: 0
+    } %}
+    {% include get_template('common/archive/content', _self) with {
+        items: get_search_result(),
+        template: 'index'
+    } %}
+{% endblock %}
+

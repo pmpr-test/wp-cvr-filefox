@@ -1,0 +1,13 @@
+{% extends get_template('./base', _self) %}
+
+{% block first_sidebar %}
+    {{ parent() }}
+    {% include get_cover_template('common/single/widget') %}
+{% endblock %}
+
+{% block main %}
+
+    {% include get_cover_template('common/single/index') %}
+
+{% endblock %}
+

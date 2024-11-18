@@ -1,0 +1,31 @@
+{% set padding = padding|default(4) %}
+{% set is_right = is_right|default(0) %}
+{% set full_height = full_height|default(1) %}
+{% set border_color = border_color|default('gray-200') %}
+<div class="aside shadow z-lg{% if is_right %} aside-right{% endif %}{% if container_class is defined and container_class is not empty %} {{ container_class|raw }}{% endif %}"
+     id="{{ aside_id|esc_attr }}_aside">
+    <div class="aside-wrapper position-relative{% if full_height %} min-vh-100{% endif %}{% if wrapper_class is defined and wrapper_class is not empty %} {{ wrapper_class|raw }}{% endif %}">
+        {% if has_header|default(0) %}
+            <div class="aside-header border-bottom border-1 border-{{ border_color|esc_attr }} p-{{ padding }}">
+                {% block aside_header %}{% endblock %}
+            </div>
+        {% endif %}
+        <div class="aside-content{% if full_height %} vh-100{% endif %} p-{{ content_padding|default(padding) }}">
+            {% block aside_content %}{% endblock %}
+        </div>
+        {% if has_footer|default(0) %}
+            <div class="aside-footer border-top border-1 border-{{ border_color|esc_attr }} p-{{ padding }}">
+                {% block aside_footer %}{% endblock %}
+            </div>
+        {% endif %}
+        {% if has_close|default(1) %}
+            {% block aside_close %}
+                <a href="#" class="aside-close position-fixed bottom-0 w-100 py-3 d-flex justify-content-center">
+                    {{ render_icon('fasm/6/set/angles-' ~ (is_right ? 'left' : 'right'), {class: 'icon-lg icon-primary' }) }}
+                </a>
+            {% endblock %}
+        {% endif %}
+    </div>
+</div>
+<div class="aside-overlay aside-close"></div>
+

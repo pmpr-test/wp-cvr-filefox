@@ -1,0 +1,26 @@
+{{ action|raw }}
+<div class="modal fade" id="{{ id|esc_attr }}" data-bs-backdrop="static" data-bs-keyboard="false"
+     tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="{{ id|esc_attr }}_label">
+    <div class="modal-dialog modal-{{ size|default('md')|esc_attr }}{% if centered %} modal-dialog-centered{% endif %}"
+         role="document">
+        <div class="modal-content">
+            {% if title is defined
+                and title is not empty %}
+                <div class="modal-header">
+                    {{ render_if_has_content(title_element|default('strong'), {id: id, class: 'modal-title'}, title) }}
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            {% endif %}
+            {{ render_if_has_content('div', {class: 'modal-body'}, content) }}
+            {% if actions is defined
+                and actions is not empty %}
+                <div class="modal-footer">
+                    {% for button in buttons %}
+                        {{ button|raw }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+

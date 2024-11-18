@@ -1,0 +1,15 @@
+{{ dynamic_sidebar('before-single-content') }}
+{{ pmpr_do_action('before_single_content', post, post_type) }}
+{{ pmpr_do_action('before_' ~ post_type ~ '_single_content', post) }}
+
+<div class="single-content {{ post_type|default('') }}-content {{ content_class|default('my-5') }}">
+    {{ the_content() }}
+</div>
+
+{{ pmpr_do_action('after_' ~ post_type ~ '_single_content', post) }}
+{{ pmpr_do_action('after_single_content', post, post_type) }}
+{{ dynamic_sidebar('after-single-contenet') }}
+
+{% if comments_open(post) %}
+    {{ render_if_has_content('div', {class: 'my-5' }, comments_template()) }}
+{% endif %}

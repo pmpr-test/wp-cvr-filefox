@@ -1,0 +1,14 @@
+{% set has_container = has_container|default(1) %}
+{% if jumbotron is defined and jumbotron is not empty %}
+    <header{% if has_container %} class="container my-5"{% endif %}>
+
+        {% include get_template('title', _self) with {
+            title: jumbotron,
+        } %}
+
+        {% include get_template('description', _self) with {
+            description: excerpt
+        } %}
+
+    </header>
+{% endif %}

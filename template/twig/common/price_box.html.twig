@@ -1,0 +1,5 @@
+<div class="price-box d-flex justify-content-between bg-gray-200 text-gray-600 rounded-start border border-1 border-gray-400">
+    {{ render_icon('fasm/6/set/money-bill-1-wave', {class: 'my-auto ms-2 icon-xl icon-gray-600'}) }}
+    <div data-divider="horizontal" class="bg-gray-400 mx-2"></div>
+    <div class="price-box-value py-1 me-2">{{ wc_price(price)|raw }}</div>
+</div>

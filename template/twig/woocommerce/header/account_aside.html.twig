@@ -1,0 +1,35 @@
+{% embed get_cover_template('common/aside') with {
+    is_right: 1,
+    has_header: 1,
+    has_footer: 0,
+    content_padding: 0,
+    wrapper_class: 'bg-light min-vh-100'
+} %}
+    {% block aside_header %}
+
+        <div class="d-flex">
+            {{ render_user_data('avatar', user.ID, {class: 'rounded-circle'})|raw }}
+            <div class="d-flex flex-column my-auto ms-3">
+                <span class="h6 mb-2">{{ display_name|raw }}</span>
+                <a class="fs-xs" href="{{ account_url|esc_attr }}">{{ account_url_text|raw }}</a>
+            </div>
+        </div>
+
+    {% endblock %}
+
+    {% block aside_content %}
+        {{ pmpr_do_action('woocommerce_before_mini_account_content') }}
+        <ul class="list-group account-items list-group-flush bg-transparent">
+            {% for key, item in links %}
+                <li class="list-group-item bg-transparent p-0">
+                    <a href="{{ item.link|esc_url }}" class="px-4 py-3 d-flex">
+                        {{ render_icon(item.icon, {class: 'icon-lg icon-primary'}) }}
+                        <span class="ms-3 fs-sm my-auto">{{ item.text|raw }}</span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endblock %}
+
+{% endembed %}
+

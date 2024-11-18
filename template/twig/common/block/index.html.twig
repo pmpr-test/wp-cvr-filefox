@@ -1,0 +1,16 @@
+{% if is_term(item) %}
+
+    {% include get_template('./term', _self) with {
+        term: item,
+        loop: loop,
+        show_type: 1
+    } %}
+{% elseif is_post(item) %}
+
+    {% include get_template('./post', _self) with {
+        post: item,
+        loop: loop,
+        show_type: 1
+    } %}
+{% endif %}
+

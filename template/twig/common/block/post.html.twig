@@ -1,0 +1,28 @@
+<div class="row g-3">
+    <div class="col-12 col-lg-2 order-3 order-lg-1 d-flex justify-content-between flex-row flex-md-column">
+        {% set metadata = pmpr_apply_filters('metadata_get_items', {}, {
+            post: item,
+            include: ['publish', 'study_time', 'comments']
+        }) %}
+        {{ pmpr_do_action('render_post_metadata', metadata) }}
+    </div>
+    <div class="col-12 col-lg-10 order-2">
+        <div class="card shadow-sm">
+            <div class="row g-0">
+                <div class="col-12 col-lg-4">
+                    {{ get_the_post_thumbnail(item, 'medium', {class: 'w-100 img-fluid rounded-top rounded-top-lg-0 rounded-start-lg'})|raw }}
+                </div>
+                <div class="col-12 col-lg-8">
+                    <div class="card-body">
+                        {{ pmpr_do_action('render_post_taxonomies', item) }}
+                        <a href="{{ get_permalink(item)|esc_attr }}" class="stretched-link">
+                            <h2 class="h3 mb-3" data-line="2">{{ render_post_data('title', item)|raw }}</h2>
+                        </a>
+                        {{ render_if_has_content('div', {class: 'font-sm', 'data-limit': 3}, render_post_data('excerpt', item)) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

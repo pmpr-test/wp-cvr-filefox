@@ -1,0 +1,31 @@
+<div class="conversation-container border rounded">
+    {% if brand is defined and brand is not empty %}
+        <header class="conversation-header p-3 border-bottom d-flex">
+            {{ wp_get_attachment_image(brand.logo, [50, 50])|raw }}
+            <div class="my-auto ms-2">
+                <strong class="d-block mb-1">{{ brand.name|raw }}</strong>
+                <span>{{ brand.slogan|raw }}</span>
+            </div>
+        </header>
+    {% endif %}
+    <div class="conversation-list overflow-auto bg-light p-3 position-relative">
+        {% if items is defined
+            and items is not empty
+            and items.items is defined
+            and items.items is not empty %}
+
+            {% for conversation in items.items %}
+                {{ pmpr_do_action('ticket_render_frontend_conversation', conversation) }}
+            {% endfor %}
+
+        {% else %}
+            <div class="pr-ticket-conversation-empty bg-white p-3 rounded position-absolute top-50 start-50 translate-middle">{{ empty_message|raw }}</div>
+        {% endif %}
+
+    </div>
+    {% if form is not empty %}
+        <div class="conversation-form p-3 border-top">
+            {{ form|raw }}
+        </div>
+    {% endif %}
+</div>

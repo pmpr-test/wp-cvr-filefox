@@ -1,0 +1,9 @@
+{{ render_if_has_content('h3', {class: 'text-gray-400'}, title) }}
+<ul class="list-group list-group-flush mt-4">
+    {% for post in items %}
+        <li class="list-group-item border-0 p-0 bg-transparent{% if not loop.last %} mb-2{% endif %}">
+            <a href="{{ get_permalink(post)|esc_attr }}" class="h4 text-gray-500">{{ get_title(post)|raw }}</a>
+        </li>
+    {% endfor %}
+</ul>
+

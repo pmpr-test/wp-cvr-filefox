@@ -1,0 +1,12 @@
+{% if logo %}
+    {% include get_cover_template('common/logo') with {
+        logo_key: logo,
+        logo_size: [165, 50],
+        container_class: 'mb-3 d-block'
+    } %}
+{% endif %}
+
+{% if description %}
+    <div class="text-justify">{{ wpautop(description)|raw }}</div>
+{% endif %}
+

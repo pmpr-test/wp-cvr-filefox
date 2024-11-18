@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-12 col-md-8 d-flex justify-content-between">
+        {% include get_cover_template('common/logo') with {
+            logo_type: 'footer',
+            logo_size: [165, 50],
+            container_class: 'my-auto'
+        } %}
+        {{ render_if_has_content('div', {class: 'my-auto mx-5 text-gray-400'}, get_cover_option('footer_description', '')) }}
+    </div>
+    <div class="col-12 col-md-4">
+        {{ dynamic_sidebar('footer-top') }}
+    </div>
+</div>

@@ -1,0 +1,139 @@
+{% if items is not empty %}
+    {{ render_if_has_content('div', {class: 'section-title h2', id: 'product_children_title'}, title) }}
+    <div class="list product-children my-4">
+        {% for item in items %}
+            {% set isFeatured = item|call('is_featured') %}
+            <article class="list-item p-4 alert{% if isFeatured %} alert-primary{% else %} alert-secondary{% endif %} card shadow-sm{% if not loop.last %} mb-4{% endif %}">
+                <h2 class="mb-3 alert-heading" data-line="1">{{ item|call('get_title')|raw }}</h2>
+                {% if isFeatured %}
+                    <div class="row">
+                        <div class="col" data-line="12">
+                            دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در این
+                            صفحه ارائه شده است.
+                            دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در این
+                            صفحه ارائه شده است.
+                            دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در این
+                            صفحه ارائه شده است.
+                            دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در این
+                            صفحه ارائه شده است.
+                            دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در این
+                            صفحه ارائه شده است.
+                            دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در این
+                            صفحه ارائه شده است.
+                            دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در این
+                            صفحه ارائه شده است.
+                            دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در این
+                            صفحه ارائه شده است.
+                            دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در این
+                            صفحه ارائه شده است.
+                        </div>
+                        <div class="col-12 col-lg-auto">
+                            <a href="{{ item|call('get_permalink')|esc_attr }}" class="ms-3 d-block">
+                                {{ item|call('get_image', 'medium', {class: 'w-100 img-fluid rounded'})|raw }}
+                            </a>
+                        </div>
+                    </div>
+                {% endif %}
+                <div class="row m{% if isFeatured %}y{% else %}b{% endif %}-4">
+                    <div class="col-12 col-md-6">
+                        {% if isFeatured %}
+                            <h3 class="mb-3 alert-heading">تغییرات این نسخه</h3>
+                            <ul class="list-group bg-primary">
+                                <li class="list-group-item text-white py-2">
+                                    بروزرسانی Slider Revolution 6.7.21
+                                </li>
+                                <li class="list-group-item text-white py-2">
+                                    سازگاری با WordPress 6.7
+                                </li>
+                            </ul>
+                            <small class="mt-2 d-block text-center">
+                                برای مشاهده تغییرات بیشتر دکمه مشاهده و خرید را بزنید
+                            </small>
+                        {% else %}
+                            <div data-line="6">
+                                دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در
+                                این
+                                صفحه ارائه شده است.
+                                دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در
+                                این
+                                صفحه ارائه شده است.
+                                دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در
+                                این
+                                صفحه ارائه شده است.
+                                دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در
+                                این
+                                صفحه ارائه شده است.
+                                دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در
+                                این
+                                صفحه ارائه شده است.
+                                دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در
+                                این
+                                صفحه ارائه شده است.
+                                دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در
+                                این
+                                صفحه ارائه شده است.
+                                دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در
+                                این
+                                صفحه ارائه شده است.
+                                دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در
+                                این
+                                صفحه ارائه شده است.
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {{ pmpr_do_action('render_post_metadata', [{
+                            icon: 'fasm/6/set/clock',
+                            title: 'تاریخ درج فایل',
+                            value: '۲۰ ساعت پیش',
+                        }], {
+                            key_value: 1,
+                            bg_color: 'gray-200',
+                            item_class: 'pr-last-update mb-3',
+                            text_color: 'gray-600',
+                        }) }}
+
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                {{ pmpr_do_action('render_post_metadata', [{
+                                    icon: 'fasm/6/set/file-circle-xmark',
+                                    title: 'تعداد فایل',
+                                    value: 0|number,
+                                }], {
+                                    bg_color: '',
+                                    key_value: 1,
+                                    item_class: 'alert alert-danger mb-0',
+                                    text_color: '',
+                                    icon_color: 'danger',
+                                    divider_color: '',
+                                }) }}
+
+                                <a href="#" class="my-2 text-center d-block alert-link">
+                                    فایل این نسخه را دارید؟
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <a href="#" class="btn w-100 btn-outline-secondary d-flex py-2 disabled">
+                                    {{ render_icon('fasm/6/set/eye', {class: 'icon-lg me-2 my-auto'}) }}
+                                    پیش‌نمایش / دمو
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-9" data-line="2">
+                        این فایل آخرین و جدیدترین و تست شده ترین فایل موجود در کل فضای اینترنت است که شما می‌توانید
+                        با خیال راحت آن را از طریق فایل فاکس خریداری کرده و دانلود کنید و همیشه به آن دسترسی داشته
+                        باشید، با هر دستگاهی که دوست داشتی وارد شو و فایلت رو دانلود کن و مطالعه کن.
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <a href="{{ item|call('get_permalink')|esc_attr }}"
+                           class="btn btn-lg btn-{% if not isFeatured %}outline-{% endif %}primary w-100">مشاهده و
+                            خرید</a>
+                    </div>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+{% endif %}

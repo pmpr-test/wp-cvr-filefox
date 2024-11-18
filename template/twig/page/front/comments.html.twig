@@ -1,0 +1,47 @@
+{% embed get_cover_template('common/carousel/index') with {
+    carousels: comments,
+    nav_class: 'p-2 primary-white',
+    navs_class: 'd-flex justify-content-between centered-absolute w-100 z-xs',
+    nav_icon_attrs: {class: 'icon-lg'},
+    container_class: 'container',
+    carousel_class: 'full-width animated-carousel front-first-slider max-vh-100',
+    carousel_config: {
+        loop: true,
+        speed: 1500,
+        autoplay: {
+            delay: 8000
+        },
+        slidesPerView: 1,
+        centeredSlides: true,
+        breakpoints: {
+            1000: {
+                slidesPerView: 3,
+            },
+            800: {
+                slidesPerView: 2,
+            },
+        },
+        navigation: true,
+        pagination: false,
+    }
+} %}
+
+    {% block carousel %}
+        <article class="card shadow-sm">
+            <div class="card-body py-4">
+                <div class="d-flex justify-content-center mb-3">
+                    {{ get_avatar(carousel, 55, {class: 'avatar-img rounded-circle me-2'})|raw }}
+                    <div class="my-auto">
+                        <h3 class="h4 mb-1">{{ get_comment_author(carousel)|raw }}</h3>
+                        <small>{{ subtext|raw }}</small>
+                    </div>
+                </div>
+                <div class="pr-text text-center my-auto">
+                    {{ wpautop(get_comment_text(carousel))|raw }}
+                </div>
+            </div>
+        </article>
+    {% endblock %}
+
+{% endembed %}
+

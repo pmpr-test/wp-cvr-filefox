@@ -1,0 +1,7 @@
+{% extends get_template('../container/collapsible', _self) %}
+{% set card_body_class = "p-0" %}
+{% block body %}
+    {{ parent() }}
+    {% include get_template('../type/' ~ type, _self) %}
+{% endblock %}
+

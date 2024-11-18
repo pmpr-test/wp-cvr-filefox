@@ -1,0 +1,9 @@
+<div class="pr-third-party-auth-login">
+    {% for item in items %}
+        <button class="btn btn-light" type="button">
+            {{ wp_get_attachment_image(item.icon, [35, 35])|raw }}
+            <span class="ms-2">{{ item.text|raw }}</span>
+        </button>
+    {% endfor %}
+    {{ nonce|raw }}
+</div>

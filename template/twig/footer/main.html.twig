@@ -1,0 +1,18 @@
+<div class="row">
+    {% set segments = 4 %}
+    {% for i in 1..segments %}
+        {% if is_active_sidebar('footer-' ~ i) %}
+
+            {% set class = 'col-12 col-sm-6 col-xl-3' %}
+
+            {% if not loop.last %}
+                {% set class = class ~ ' mb-8 mb-xl-0' %}
+            {% endif %}
+
+            <div class="{{ class|esc_attr }}">
+                {{ dynamic_sidebar('footer-' ~ i) }}
+            </div>
+        {% endif %}
+    {% endfor %}
+
+</div>

@@ -1,0 +1,11 @@
+{{ dynamic_sidebar('single-sidebar') }}
+{{ dynamic_sidebar(post_type ~ '-single-sidebar') }}
+
+{% set sticky_sidebar_content %}
+    {{ dynamic_sidebar('sticky-single-sidebar') }}
+    {{ dynamic_sidebar(post_type ~ '-sticky-single-sidebar') }}
+{% endset %}
+
+{% if sticky_sidebar_content %}
+    <div class="position-sticky single-sticky-aside mb-10">{{ sticky_sidebar_content|raw }}</div>
+{% endif %}

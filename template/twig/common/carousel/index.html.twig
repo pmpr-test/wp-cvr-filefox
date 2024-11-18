@@ -1,0 +1,37 @@
+{% if carousels %}
+
+    {% set carousel_config = carousel_config|default({}) %}
+
+    <div class="swiper-container position-relative {{ container_class|raw }}">
+        <div class="swiper"
+                {% if carousel_config is defined %} data-carousel="{{ carousel_config|json_encode }}"{% endif %}
+                {% if carousel_id is defined %} id="{{ carousel_id|esc_attr }}"{% endif %}>
+            {% block before_slides %}{% endblock %}
+            <div class="swiper-wrapper {{ container_class|esc_attr }}">
+                {% for key, carousel in carousels %}
+                    <div class="swiper-slide">
+                        {% block carousel %}{% endblock %}
+                    </div>
+                {% endfor %}
+            </div>
+            {% block after_slides %}{% endblock %}
+        </div>
+
+        {% if carousel_config.navigation %}
+            {% block carousel_navigation %}
+                {% include get_template('navigation', _self) with {
+                    btn_class: nav_class,
+                    icon_attrs: nav_icon_attrs,
+                    class: navs_class,
+                    icon: nav_icon,
+                } %}
+            {% endblock %}
+        {% endif %}
+
+        {% if carousel_config.pagination %}
+            {% block carousel_pagination %}
+                {% include get_template('pagination', _self) %}
+            {% endblock %}
+        {% endif %}
+    </div>
+{% endif %}

@@ -1,0 +1,34 @@
+{% extends get_cover_template('sidebar/dual') %}
+
+{% block main %}
+    <div class="my-5">
+        {% if alert is defined
+            and alert is not empty %}
+
+            {{ render_alert(alert) }}
+        {% else %}
+
+            {% include get_cover_template('common/header/index') with {
+                has_container: 0,
+                jumbotron: title,
+                title_attrs: {class: 'mb-4 text-center'}
+            } %}
+
+            <div id="message_wrapper" class="my-3 text-center"></div>
+            <div class="card download-card position-relative">
+                {% if wait_enabled %}
+                    <div class="start-download text-center position-absolute top-50 start-50 translate-middle">
+                        {{ render_if_has_content('div', {class: 'fs-6 mb-3'}, start_message) }}
+                        <button role="button" class="start-download btn btn-primary btn-lg">{{ start_button|raw }}</button>
+                    </div>
+                    <div class="progressbar-wrapper position-absolute top-50 start-50 translate-middle pr-invisible">{{ progressbar|raw }}</div>
+                {% endif %}
+
+                <div class="card-body downloads p-5 text-center pr-invisible">
+                    {{ render_if_has_content('div', {class: 'fs-6'}, wpautop(download_message)) }}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+

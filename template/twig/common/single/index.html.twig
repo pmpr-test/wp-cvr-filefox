@@ -1,0 +1,11 @@
+{% include get_cover_template('common/post/thumbnail') with {
+    image_size: 'large',
+    image_attr: {class: 'w-100'}
+} %}
+
+{% include get_cover_template('common/header/title') with {
+    title: jumbotron,
+} %}
+
+{% include get_template('./content', _self) %}
+

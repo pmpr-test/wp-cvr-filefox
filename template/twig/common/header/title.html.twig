@@ -1,0 +1,3 @@
+{% set title_attrs = title_attrs|add('class', '') %}
+{{ render_if_has_content(heading|default('h1'), title_attrs, title) }}
+

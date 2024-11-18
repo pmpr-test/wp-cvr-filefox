@@ -1,0 +1,5 @@
+{% extends get_template('../container/collapsible', _self) %}
+{% block body %}
+    {{ parent() }}
+    {% include get_template('../type/rating', _self) %}
+{% endblock %}

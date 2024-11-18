@@ -1,0 +1,10 @@
+{% if items is defined and items is not empty %}
+
+    <select name="{{ name|esc_attr }}" id="{{ name|esc_attr }}">
+        {% for item in items %}
+            <option data-slug="{{ item.slug }}" value="{{ item.slug|esc_attr }}" {{ selected(item.slug, value) }}>
+                {{ item.name|raw }}
+            </option>
+        {% endfor %}
+    </select>
+{% endif %}

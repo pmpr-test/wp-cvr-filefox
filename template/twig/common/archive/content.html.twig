@@ -1,0 +1,22 @@
+{% if items is defined
+    and items is not empty %}
+
+    <div class="list my-4">
+        {% for index, item in items %}
+            <article class="list-item{% if not loop.last %} mb-4{% endif %}">
+                {% include get_cover_template('common/block/' ~ template|default('index')) with {
+                    loop: loop,
+                } %}
+            </article>
+        {% endfor %}
+    </div>
+
+    {% if pagination|default(1) %}
+        {% include get_template('./pagination', _self) %}
+    {% endif %}
+{% else %}
+
+    {% include get_template('./empty', _self) %}
+
+{% endif %}
+

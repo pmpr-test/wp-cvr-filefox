@@ -1,0 +1,46 @@
+{% embed get_cover_template('common/carousel/index') with {
+    carousels: materials,
+    container_class: 'container',
+    carousel_config: {
+        loop: true,
+        speed: 1500,
+        autoplay: {
+            delay: 2000
+        },
+        slidesPerView: 2,
+        centeredSlides: true,
+        breakpoints: {
+            1200: {
+                slidesPerView: 6,
+            },
+            1000: {
+                slidesPerView: 5,
+            },
+            800: {
+                slidesPerView: 4,
+            },
+            768: {
+                slidesPerView: 3,
+            }
+        },
+        navigation: false,
+        pagination: false,
+    }
+} %}
+
+    {% block carousel %}
+        <article class="card white-primary shadow-sm mx-2">
+            <div class="card-body py-5 d-flex text-center flex-column justify-content-center">
+                <a href="{{ carousel.link|esc_attr }}" class="stretched-link"></a>
+                {{ render_icon(carousel.icon, {class: 'icon-xxxl mb-3 mx-auto'}) }}
+                <h3>{{ carousel.title|raw }}</h3>
+                <div>
+                    <span class="h2">{{ carousel.count|number|raw }}</span>
+                    {{ carousel.singular_name|raw }}
+                </div>
+            </div>
+        </article>
+    {% endblock %}
+
+{% endembed %}
+

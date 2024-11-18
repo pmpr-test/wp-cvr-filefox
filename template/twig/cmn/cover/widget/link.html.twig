@@ -1,0 +1,5 @@
+{% set attrs = attrs|default({}) %}
+{% if as_button %}
+    {% set attrs = attrs|add('class', 'ms-2 btn btn-' ~ size|default('md') ~ ' btn-' ~ color|default('primary')) %}
+{% endif %}
+{{ render_if_has_content('a', attrs, text) }}

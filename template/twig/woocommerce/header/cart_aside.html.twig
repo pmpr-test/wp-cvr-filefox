@@ -1,0 +1,20 @@
+{% embed get_cover_template('common/aside') with {
+    is_right: 1,
+    has_header: 1,
+    has_footer: 1,
+    content_padding: 4,
+    wrapper_class: 'bg-light min-vh-100'
+} %}
+    {% block aside_header %}
+        <div class="d-flex justify-content-between font-weight-bold">
+            <span>{{ cart_title|raw }}</span>
+            <span>{{ count_text|raw }}</span>
+        </div>
+    {% endblock %}
+
+    {% block aside_content %}
+        {{ the_widget(widget, 'title=')|raw }}
+    {% endblock %}
+
+{% endembed %}
+

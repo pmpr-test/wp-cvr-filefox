@@ -1,0 +1,11 @@
+<div class="carousel-navigation separated-arrows {{ class|esc_attr }}">
+    {% set icon = icon|default('angle') %}
+    {% set btn_class = btn_class|default('') %}
+    {% set icon_attrs = icon_attrs|default({})|add({class: 'm-auto icon-white'}) %}
+    <a class="prev {{ btn_class }} {{ prev_class }}">
+        {{ render_icon('fasm/6/set/' ~ icon ~ '-right', icon_attrs, 1) }}
+    </a>
+    <a class="next {{ btn_class }} {{ next_class }}">
+        {{ render_icon('fasm/6/set/' ~ icon ~ '-left', icon_attrs, 1) }}
+    </a>
+</div>

@@ -1,0 +1,7 @@
+{% set hasAgent = responder is defined and responder is not empty %}
+<div class="conversation{% if hasAgent %} response pe-5{% else %} request ps-5{% endif %}">
+    <div class="conversation-text rounded d-table my-auto mb-1 px-3 py-2{% if hasAgent %} bg-gray-300{% else %} ms-auto bg-primary text-white{% endif %}">
+        {{ wpautop(text)|raw }}
+    </div>
+    <time class="conversation-datetime text-muted{% if not hasAgent %} d-block text-end{% endif %}" datetime="{{ created_at|esc_attr }}">{{ created_at|datetime('j F Y H:i')|raw }}</time>
+</div>
