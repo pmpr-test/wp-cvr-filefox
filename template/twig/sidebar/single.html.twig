@@ -2,15 +2,15 @@
 
 {% block inside_container %}
     <div class="row">
-        <div class="col-12 col-md-9 my-3">
+        <aside class="col-12 col-md-3 mt-0 mb-3 mb-lg-3 order-3 order-md-1">
+            {% block sidebar %}{% endblock %}
+        </aside>
+        <div class="col-12 col-md-9 my-3 order-2">
             {% block before_main %}{% endblock %}
             <main id="main">
                 {% block main %}{% endblock %}
             </main>
             {% block after_main %}{% endblock %}
         </div>
-        <aside class="col-12 col-md-3 mt-0 mb-3 mb-lg-3">
-            {% block sidebar %}{% endblock %}
-        </aside>
     </div>
 {% endblock %}

@@ -24,15 +24,13 @@
                                         {% endfor %}
                                     </div>
                                 </div>
-                                <div>
-                                    {% if item.price > 0 %}
-                                        {{ item.price_html|raw }}
-                                    {% else %}
-                                        {% include get_cover_template('common/price_box') with {
-                                            price: item.price
-                                        } %}
-                                    {% endif %}
-                                </div>
+                                {% if item.price > 0 %}
+                                    <span class="price">{{ item.price_html|raw }}</span>
+                                {% else %}
+                                    {% include get_cover_template('common/price_box') with {
+                                        price: item.price
+                                    } %}
+                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -43,7 +41,8 @@
 
                             <div class="variation-description alert alert-success border border-success border-dashed">
                                 <p class="mb-1">
-                                    این یک توضیح بسیار کوتاه، نوشته شده توسط آپلود کننده و یک راهنما در رابطه با این فایل
+                                    این یک توضیح بسیار کوتاه، نوشته شده توسط آپلود کننده و یک راهنما در رابطه با این
+                                    فایل
                                     است.
                                 </p>
                                 <p class="mb-0">
@@ -57,7 +56,8 @@
 
                                 </div>
                                 <div class="col-6 col-md-4">
-                                    <a href="{{ item.action_link|esc_attr }}" class="btn btn-lg btn-primary d-flex justify-content-center w-100">
+                                    <a href="{{ item.action_link|esc_attr }}"
+                                       class="btn btn-lg btn-primary d-flex justify-content-center w-100">
                                         {{ render_icon(item.action_icon, {class: 'icon-white icon-lg me-3 my-auto'}) }}
                                         <span>{{ item.action_text|raw }}</span>
                                     </a>

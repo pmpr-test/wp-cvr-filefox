@@ -1,0 +1,33 @@
+{% set action_attrs = action_attrs|default({}) %}
+{% set action_attrs = action_attrs|add('href', action_link) %}
+
+{% if has_icon %}
+    {% set action_attrs = action_attrs|add('class', 'd-flex') %}
+{% endif %}
+
+{% if as_button|default(1) %}
+    {% set action_attrs = action_attrs|add('class', 'btn') %}
+{% endif %}
+
+{% if as_outline|default(0) %}
+    {% set action_attrs = action_attrs|add('class', 'as-outline') %}
+{% endif %}
+
+{% if main_color is not empty and hover_color is not empty %}
+    {% set action_attrs = action_attrs|add('class', main_color ~ '-' ~ hover_color) %}
+    {% if ignore_bg|default(0) %}
+        {% set action_attrs = action_attrs|add('class', 'ignore-bg') %}
+    {% endif %}
+{% endif %}
+
+<a {{ action_attrs|parse_attrs|raw }}>
+    {% if has_icon and icon_start|default(0) %}
+        {{ render_icon(action_icon|default('fasm/6/set/angles-right'), {class: 'me-2 my-auto icon-' ~ icon_size|default('md')}) }}
+    {% endif %}
+
+    {{ action_text|raw }}
+
+    {% if has_icon and icon_end|default(1) %}
+        {{ render_icon(action_icon|default('fasm/6/set/angles-left'), {class: 'ms-2 my-auto icon-' ~ icon_size|default('md')}) }}
+    {% endif %}
+</a>

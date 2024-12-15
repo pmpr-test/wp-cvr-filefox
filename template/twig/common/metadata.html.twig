@@ -1,11 +1,14 @@
 {% if metadata is not empty %}
     {% if version == 1 %}
-        <div class="metadata version-1 d-flex{% if not flex_row %} flex-row flex-lg-column{% endif %} justify-content-between">
+        <div class="metadata version-1 d-flex{% if not flex_row %} flex-row flex-lg-column{% endif %} {{ wrapper_class|esc_attr }}">
             {% for meta_item in metadata %}
-                <div class="meta-item {{ item_class|esc_attr }} {% if has_icon %}d-flex {% endif %}p-2 rounded bg-{{ bg_color|esc_attr }} text-{{ text_color|esc_attr }} border-{{ border_color|esc_attr }}">
+                <div class="meta-item mb-2{% if flex_row %} mb-lg-0 me-lg-2{% endif %} {{ item_class|esc_attr }} {% if has_icon %}d-flex {% endif %}p-2 rounded bg-{{ bg_color|esc_attr }} text-{{ text_color|esc_attr }} border-{{ border_color|esc_attr }}">
                     {% if has_icon %}
-                        {{ render_icon(meta_item.icon, {class: 'icon-' ~ icon_color|esc_attr ~ ' my-auto icon-' ~ icon_size|default('lg')|esc_attr }) }}
-                        <div data-divider="horizontal" class="bg-{{ divider_color|esc_attr }} mx-{{ divider_space|default(2)|esc_attr }}"></div>
+                        {{ render_icon(meta_item.icon, {class: 'me-' ~ divider_space ~ ' icon-' ~ icon_color|esc_attr ~ ' my-auto icon-' ~ icon_size|default('lg')|esc_attr }) }}
+                        {% if has_devider %}
+                            <div data-divider="horizontal"
+                                 class="bg-{{ divider_color|esc_attr }} me-{{ divider_space|default(2)|esc_attr }}"></div>
+                        {% endif %}
                     {% endif %}
                     {% set has_subtext = not key_value and meta_item.subtext is not empty %}
                     {% if has_subtext %}

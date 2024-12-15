@@ -1,0 +1,49 @@
+<div class="single-main">
+    {% include get_cover_template('common/header/title') with {
+        title: jumbotron,
+        title_attrs: {class: 'mb-4'}
+    } %}
+    <div class="row g-0">
+        <div class="col-12 col-md-6 col-lg-5">
+            {% include get_cover_template('common/post/thumbnail') with {
+                image_size: 'large',
+                image_attr: {class: 'img-fluid w-100 rounded'}
+            } %}
+        </div>
+        <div class="col-12 col-md-6 col-lg-7 mb-4 mb-md-4">
+            <div class="ms-0 ms-md-4">
+                {{ pmpr_do_action('render_post_taxonomies', post) }}
+                {% include get_cover_template('common/header/description') with {
+                    description: excerpt,
+                } %}
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        {% set metadata = pmpr_apply_filters('metadata_get_items', {}, {
+                            post: item,
+                            include: ['study_time', 'comments', 'rate']
+                        }) %}
+                        {{ pmpr_do_action('render_post_metadata', metadata, {
+                            key_value: 1,
+                            icon_size: 'xl'
+                        }) }}
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {% set metadata = pmpr_apply_filters('metadata_get_items', {}, {
+                            post: item,
+                            include: ['publish', 'update']
+                        }) %}
+                        {{ pmpr_do_action('render_post_metadata', metadata, {
+                            key_value: 1,
+                            icon_size: 'xl'
+                        }) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include get_template('./content', _self) with {
+        content_class: 'mb-5'
+    } %}
+</div>
+
