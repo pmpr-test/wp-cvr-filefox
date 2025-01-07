@@ -2,41 +2,22 @@
     {{ render_if_has_content('div', {class: 'section-title h2', id: 'product_children_title'}, title) }}
     <div class="list product-children my-4">
         {% for item in items %}
-            {% set isFeatured = item|call('is_featured') %}
-            <article class="list-item p-4 alert{% if isFeatured %} alert-primary{% else %} alert-secondary{% endif %} card shadow-sm{% if not loop.last %} mb-4{% endif %}">
-                <h2 class="mb-3 alert-heading" data-line="1">{{ item|call('get_title')|raw }}</h2>
-                {% if isFeatured %}
+            <article
+                    class="list-item p-4 alert{% if item.is_featured %} alert-primary{% else %} alert-secondary{% endif %} card shadow-sm{% if not loop.last %} mb-4{% endif %}">
+                <h2 class="mb-3 alert-heading" data-line="1">{{ item.title|raw }}</h2>
+                {% if item.is_featured %}
                     <div class="row">
-                        <div class="col" data-line="12">
-                            دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در این
-                            صفحه ارائه شده است.
-                            دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در این
-                            صفحه ارائه شده است.
-                            دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در این
-                            صفحه ارائه شده است.
-                            دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در این
-                            صفحه ارائه شده است.
-                            دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در این
-                            صفحه ارائه شده است.
-                            دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در این
-                            صفحه ارائه شده است.
-                            دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در این
-                            صفحه ارائه شده است.
-                            دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در این
-                            صفحه ارائه شده است.
-                            دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در این
-                            صفحه ارائه شده است.
-                        </div>
+                        <div class="col no-margin" data-line="12">{{ wpautop(item.description)|raw }}</div>
                         <div class="col-12 col-lg-auto">
-                            <a href="{{ item|call('get_permalink')|esc_attr }}" class="ms-3 d-block">
-                                {{ item|call('get_image', 'medium', {class: 'w-100 img-fluid rounded'})|raw }}
+                            <a href="{{ item.permalink|esc_attr }}" class="ms-3 d-block">
+                                {{ item.object|call('get_image', 'medium', {class: 'img-fluid rounded'})|raw }}
                             </a>
                         </div>
                     </div>
                 {% endif %}
-                <div class="row m{% if isFeatured %}y{% else %}b{% endif %}-4">
+                <div class="row m{% if item.is_featured %}y{% else %}b{% endif %}-4">
                     <div class="col-12 col-md-6">
-                        {% if isFeatured %}
+                        {% if item.is_featured %}
                             <h3 class="mb-3 alert-heading">تغییرات این نسخه</h3>
                             <ul class="list-group bg-primary">
                                 <li class="list-group-item text-white py-2">
@@ -50,69 +31,40 @@
                                 برای مشاهده تغییرات بیشتر دکمه مشاهده و خرید را بزنید
                             </small>
                         {% else %}
-                            <div data-line="6">
-                                دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در
-                                این
-                                صفحه ارائه شده است.
-                                دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در
-                                این
-                                صفحه ارائه شده است.
-                                دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در
-                                این
-                                صفحه ارائه شده است.
-                                دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در
-                                این
-                                صفحه ارائه شده است.
-                                دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در
-                                این
-                                صفحه ارائه شده است.
-                                دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در
-                                این
-                                صفحه ارائه شده است.
-                                دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در
-                                این
-                                صفحه ارائه شده است.
-                                دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در
-                                این
-                                صفحه ارائه شده است.
-                                دانلود جزوه ریاضیات هشتم متوسطه اول - مبحث دایره استاد شاسواری مربوط به سال ۱۴۰۱ در
-                                این
-                                صفحه ارائه شده است.
-                            </div>
+                            <div data-line="6" class="no-margin">{{ wpautop(item.description)|raw }}</div>
                         {% endif %}
                     </div>
                     <div class="col-12 col-md-6">
-                        {{ pmpr_do_action('render_post_metadata', [{
-                            icon: 'fasm/6/set/clock',
-                            title: 'تاریخ درج فایل',
-                            value: '۲۰ ساعت پیش',
-                        }], {
+                        {{ pmpr_do_action('render_post_metadata', [item.date_meta], {
+                            bg_color: 'gray-200',
                             key_value: 1,
                             has_devider: 1,
-                            bg_color: 'gray-200',
-                            item_class: 'pr-last-update mb-3',
                             text_color: 'gray-600',
+                            item_class: 'pr-last-update mb-3',
                         }) }}
 
                         <div class="row g-3">
+                            {% set download_count = item|call('get_downloads')|length %}
+                            {% set has_download = download_count > 0 %}
                             <div class="col-12 col-md-6">
                                 {{ pmpr_do_action('render_post_metadata', [{
-                                    icon: 'fasm/6/set/file-circle-xmark',
+                                    icon: 'fasm/6/set/file-circle-' ~ (has_download ? 'check' : 'xmark'),
                                     title: 'تعداد فایل',
-                                    value: 0|number,
+                                    value: download_count|number,
                                 }], {
                                     bg_color: '',
                                     key_value: 1,
                                     has_devider: 1,
-                                    item_class: 'alert alert-danger mb-0',
+                                    item_class: 'alert mb-0 alert-' ~ (has_download ? 'success' : 'danger'),
                                     text_color: '',
-                                    icon_color: 'danger',
+                                    icon_color: has_download ? 'success' : 'danger',
                                     divider_color: '',
                                 }) }}
-
-                                <a href="#" class="my-2 text-center d-block alert-link">
-                                    فایل این نسخه را دارید؟
-                                </a>
+                                {% if not has_download %}
+                                    <a href="#" class="my-2 text-center d-block alert-link">
+                                        فایل این نسخه را دارید؟
+                                    </a>
+                                {% endif %}
                             </div>
                             <div class="col-12 col-md-6">
                                 <a href="#" class="btn w-100 btn-outline-secondary d-flex py-2 disabled">
@@ -130,9 +82,10 @@
                         باشید، با هر دستگاهی که دوست داشتی وارد شو و فایلت رو دانلود کن و مطالعه کن.
                     </div>
                     <div class="col-12 col-md-3">
-                        <a href="{{ item|call('get_permalink')|esc_attr }}"
-                           class="btn btn-lg btn-{% if not isFeatured %}outline-{% endif %}primary w-100">مشاهده و
-                            خرید</a>
+                        <a href="{{ item.permalink|esc_attr }}"
+                           class="btn btn-lg btn-{% if not item.is_featured %}outline-{% endif %}primary w-100">
+
+                        </a>
                     </div>
                 </div>
             </article>

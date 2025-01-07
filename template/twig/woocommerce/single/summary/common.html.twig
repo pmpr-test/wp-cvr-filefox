@@ -32,24 +32,25 @@
                     </div>
                 </div>
             </div>
-            <div class="card-footer bg-gray-200 p-4">
-                <div class="row">
-                    <div class="col-12 col-md-9 d-flex">
-                        <div class="d-flex">
-                            {{ render_icon(report_icon, {class: 'icon-xxxl icon-primary my-auto'}) }}
-                            <div data-divider="horizontal" class="bg-primary mx-3"></div>
+            {% if report is defined
+                and report is not empty %}
+                <div class="card-footer bg-gray-200 p-4">
+                    <div class="row">
+                        <div class="col-12 col-md-9 d-flex">
+                            <div class="d-flex">
+                                {{ render_icon(report.icon, {class: 'icon-xxxl icon-primary my-auto'}) }}
+                                <div data-divider="horizontal" class="bg-primary mx-3"></div>
+                            </div>
+                            <div class="no-margin">{{ wpautop(report.text)|raw }}</div>
                         </div>
-                        <div>
-                            ابا استفاده از فایل‌فاکس که مرجع بزرگی از فایل‌ها برای دانلود هست، می‌توانید از حس خوب
-                            استفاده از کلی فایل مختلف لذت ببری پس نگران هیچی نباشید
-                            ابا استفاده ،
+                        <div class="col-12 col-md-3">
+                            <a href="#" class="btn btn-lg w-100 btn-outline-secondary my-auto text-nowrap">
+                                {{ report.action_text|raw }}
+                            </a>
                         </div>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <a href="#" class="btn btn-lg w-100 btn-outline-secondary my-auto text-nowrap">ارسال گزارش</a>
                     </div>
                 </div>
-            </div>
+            {% endif %}
         </div>
     </div>
     <div class="col-12 col-lg-4">

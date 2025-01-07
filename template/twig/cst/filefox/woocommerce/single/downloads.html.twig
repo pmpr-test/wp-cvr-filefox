@@ -1,71 +1,35 @@
 {{ render_if_has_content('div', {class: 'section-title h2'}, title) }}
-{% if items is defined
-    and items is not empty %}
-    <div class="mb-4" id="variations">
-        {% for item in items %}
-            <div class="accordion mb-4">
-                <article class="accordion-item">
-                    <div class="" id="variation_{{ item.id|esc_attr }}_heading">
-                        <div class="accordion-button bg-white py-2 pe-3 ps-2 {% if not loop.first %}collapsed {% endif %}d-flex"
-                             data-bs-toggle="collapse" data-bs-target="#variation_{{ item.id|esc_attr }}_body"
-                             aria-expanded="{% if loop.first %}true{% else %}false{% endif %}"
-                             aria-controls="variation_{{ item.id|esc_attr }}_body">
-                            <img src="{{ item.icon|esc_attr }}" alt="File Type" width="60" height="70" class="me-2">
-                            <div class="my-auto d-flex justify-content-between flex-grow-1 me-3">
-                                <div>
-                                    <h2 class="h3 text-dark">{{ item.title|raw }}</h2>
-                                    <div class="d-flex mb-auto">
-                                        {% for meta_item in item.metadata %}
-                                            <div class="d-flex text-gray-700 justify-content-between{% if not loop.last %} me-4{% endif %}">
-                                                {{ render_icon(meta_item.icon, {class: 'icon-gray-600 my-auto'}) }}
-                                                <div data-divider="horizontal" class="bg-gray-500 mx-2"></div>
-                                                <strong class="my-auto">{{ meta_item.text|raw }}</strong>
-                                            </div>
-                                        {% endfor %}
-                                    </div>
+{% if downloads is defined
+    and downloads is not empty %}
+    <div class="mb-4" id="download-list">
+        {% for download in downloads %}
+            <div class="card{% if not loop.last %} mb-4{% endif %}">
+                <div class="card-header py-3">
+                    <h2 class="h3 text-dark mb-0">{{ download.title|raw }}</h2>
+                </div>
+                <div class="card-body py-3">
+                    <div class="no-margin mb-2">
+                        {{ wpautop(download.description)|raw }}
+                    </div>
+                    <div class="row">
+                        <div class="col-6 col-md-9 d-flex">
+                            {% for meta_item in download.metadata %}
+                                <div class="d-flex text-gray-700 justify-content-between{% if not loop.last %} me-4{% endif %}">
+                                    {{ render_icon(meta_item.icon, {class: 'icon-gray-600 my-auto'}) }}
+                                    <div data-divider="horizontal" class="bg-gray-500 mx-2"></div>
+                                    <strong class="my-auto">{{ meta_item.text|raw }}</strong>
                                 </div>
-                                {% if item.price > 0 %}
-                                    <span class="price">{{ item.price_html|raw }}</span>
-                                {% else %}
-                                    {% include get_cover_template('common/price_box') with {
-                                        price: item.price
-                                    } %}
-                                {% endif %}
-                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <a href="{{ download.action_link|esc_attr }}"
+                               class="btn btn-primary d-flex justify-content-center w-100">
+                                {{ render_icon(download.action_icon, {class: 'icon-white me-3 my-auto'}) }}
+                                <span>{{ download.action_text|raw }}</span>
+                            </a>
                         </div>
                     </div>
-                    <div class="accordion-collapse collapse{% if loop.first %} show{% endif %}"
-                         id="variation_{{ item.id|esc_attr }}_body"
-                         aria-labelledby="variation_{{ item.id|esc_attr }}_title">
-                        <div class="accordion-body p-3">
-
-                            <div class="variation-description alert alert-success border border-success border-dashed">
-                                <p class="mb-1">
-                                    این یک توضیح بسیار کوتاه، نوشته شده توسط آپلود کننده و یک راهنما در رابطه با این
-                                    فایل
-                                    است.
-                                </p>
-                                <p class="mb-0">
-                                    برای مثال رمز فایل یا هر چیز دیگری که ممکن است به مشتری یا کاربر برای استفاده از این
-                                    فایل کمک کند
-                                </p>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-6 col-md-8">
-
-                                </div>
-                                <div class="col-6 col-md-4">
-                                    <a href="{{ item.action_link|esc_attr }}"
-                                       class="btn btn-lg btn-primary d-flex justify-content-center w-100">
-                                        {{ render_icon(item.action_icon, {class: 'icon-white icon-lg me-3 my-auto'}) }}
-                                        <span>{{ item.action_text|raw }}</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                </div>
             </div>
         {% endfor %}
     </div>
