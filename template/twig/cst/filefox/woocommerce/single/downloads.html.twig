@@ -14,7 +14,7 @@
                         <div class="col-6 col-md-9 d-flex">
                             {% for meta_item in download.metadata %}
                                 <div class="d-flex text-gray-700 justify-content-between{% if not loop.last %} me-4{% endif %}">
-                                    {{ render_icon(meta_item.icon, {class: 'icon-gray-600 my-auto'}) }}
+                                    {{ render_icon(meta_item.icon, {class: 'icon-lg icon-gray-600 my-auto'}) }}
                                     <div data-divider="horizontal" class="bg-gray-500 mx-2"></div>
                                     <strong class="my-auto">{{ meta_item.text|raw }}</strong>
                                 </div>
