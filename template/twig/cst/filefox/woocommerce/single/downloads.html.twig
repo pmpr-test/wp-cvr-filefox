@@ -1,10 +1,9 @@
 {{ render_if_has_content('div', {class: 'section-title h2'}, title) }}
-{% if downloads is defined
-    and downloads is not empty %}
+{% if downloads is not empty %}
     <div class="mb-4" id="download-list">
         {% for download in downloads %}
-            <div class="card{% if not loop.last %} mb-4{% endif %}">
-                <div class="card-header py-3">
+            <div class="card border{% if not loop.last %} mb-4{% endif %}">
+                <div class="card-header bg-gray-200 py-3">
                     <h2 class="h3 text-dark mb-0">{{ download.title|raw }}</h2>
                 </div>
                 <div class="card-body py-3">

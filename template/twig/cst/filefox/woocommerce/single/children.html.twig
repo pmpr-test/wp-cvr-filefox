@@ -2,8 +2,7 @@
     {{ render_if_has_content('div', {class: 'section-title h2', id: 'product_children_title'}, title) }}
     <div class="list product-children my-4">
         {% for item in items %}
-            <article
-                    class="list-item p-4 alert{% if item.is_featured %} alert-primary{% else %} alert-secondary{% endif %} card shadow-sm{% if not loop.last %} mb-4{% endif %}">
+            <article class="list-item p-4 alert{% if item.is_featured %} featured alert-primary{% else %} alert-secondary{% endif %} card shadow-sm{% if not loop.last %} mb-4{% endif %}">
                 <h2 class="mb-3 alert-heading" data-line="1">{{ item.title|raw }}</h2>
                 {% if item.is_featured %}
                     <div class="row">
@@ -18,73 +17,47 @@
                 <div class="row m{% if item.is_featured %}y{% else %}b{% endif %}-4">
                     <div class="col-12 col-md-6">
                         {% if item.is_featured %}
-                            <h3 class="mb-3 alert-heading">تغییرات این نسخه</h3>
-                            <ul class="list-group bg-primary">
-                                <li class="list-group-item text-white py-2">
-                                    بروزرسانی Slider Revolution 6.7.21
-                                </li>
-                                <li class="list-group-item text-white py-2">
-                                    سازگاری با WordPress 6.7
-                                </li>
-                            </ul>
-                            <small class="mt-2 d-block text-center">
-                                برای مشاهده تغییرات بیشتر دکمه مشاهده و خرید را بزنید
-                            </small>
+                            {% set change_logs = item.change_log|slice(1, 3) %}
+                            {% if change_logs is not empty %}
+                                <h3 class="mb-3 alert-heading">{{ change_log.title|raw }}</h3>
+                                <ul class="list-group change-logs">
+                                    {% for change_log_item in change_logs %}
+                                        {% if change_log_item.text is not empty %}
+                                            <li class="list-group-item change-log p-2">
+                                                <span data-line="1">{{ change_log_item.text|raw }}</span>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                                <small class="mt-2 d-block text-center">
+                                    {{ change_log.see_more|raw }}
+                                </small>
+                            {% endif %}
                         {% else %}
                             <div data-line="6" class="no-margin">{{ wpautop(item.description)|raw }}</div>
                         {% endif %}
                     </div>
                     <div class="col-12 col-md-6">
-                        {{ pmpr_do_action('render_post_metadata', [item.date_meta], {
-                            bg_color: 'gray-200',
-                            key_value: 1,
-                            has_devider: 1,
-                            text_color: 'gray-600',
-                            item_class: 'pr-last-update mb-3',
-                        }) }}
-
-                        <div class="row g-3">
-                            {% set download_count = item|call('get_downloads')|length %}
-                            {% set has_download = download_count > 0 %}
-                            <div class="col-12 col-md-6">
-                                {{ pmpr_do_action('render_post_metadata', [{
-                                    icon: 'fasm/6/set/file-circle-' ~ (has_download ? 'check' : 'xmark'),
-                                    title: 'تعداد فایل',
-                                    value: download_count|number,
-                                }], {
-                                    bg_color: '',
-                                    key_value: 1,
-                                    has_devider: 1,
-                                    item_class: 'alert mb-0 alert-' ~ (has_download ? 'success' : 'danger'),
-                                    text_color: '',
-                                    icon_color: has_download ? 'success' : 'danger',
-                                    divider_color: '',
-                                }) }}
-                                {% if not has_download %}
-                                    <a href="#" class="my-2 text-center d-block alert-link">
-                                        فایل این نسخه را دارید؟
-                                    </a>
-                                {% endif %}
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <a href="#" class="btn w-100 btn-outline-secondary d-flex py-2 disabled">
-                                    {{ render_icon('fasm/6/set/eye', {class: 'icon-lg me-2 my-auto'}) }}
-                                    پیش‌نمایش / دمو
-                                </a>
-                            </div>
+                        <div class="bg-white rounded metadata version-1 p-3">
+                            {% for metadata_item in item.metadata %}
+                                <div class="d-flex justify-content-between text-gray-700{% if not loop.last %} pb-3{% endif %}">
+                                    <div class="d-flex">
+                                        {{ render_icon(metadata_item.icon, {class: 'icon-gray-500 my-auto icon-lg'|esc_attr }) }}
+                                        <div data-divider="horizontal" class="bg-gray-500 mx-2"></div>
+                                        <span>{{ metadata_item.title|raw }}</span>
+                                    </div>
+                                    <strong>{{ metadata_item.value|raw }}</strong>
+                                </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-md-9" data-line="2">
-                        این فایل آخرین و جدیدترین و تست شده ترین فایل موجود در کل فضای اینترنت است که شما می‌توانید
-                        با خیال راحت آن را از طریق فایل فاکس خریداری کرده و دانلود کنید و همیشه به آن دسترسی داشته
-                        باشید، با هر دستگاهی که دوست داشتی وارد شو و فایلت رو دانلود کن و مطالعه کن.
-                    </div>
+                    <div class="col-12 col-md-9 no-margin" data-line="2">{{ wpautop(footer_content)|raw }}</div>
                     <div class="col-12 col-md-3">
                         <a href="{{ item.permalink|esc_attr }}"
-                           class="btn btn-lg btn-{% if not item.is_featured %}outline-{% endif %}primary w-100">
-
+                           class="btn py-2 btn-{% if not item.is_featured %}outline-{% endif %}primary w-100">
+                            {{ action_text|raw }}
                         </a>
                     </div>
                 </div>
