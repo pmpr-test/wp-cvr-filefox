@@ -17,7 +17,10 @@
                                 {{ render_if_has_content('div', {class: '', 'data-line': 5}, excerpt) }}
                                 <div class="row mt-auto">
                                     <div class="col-12 col-md-6">
-                                        {{ pmpr_do_action('render_post_metadata', numeric_metadata, {version: 2}) }}
+                                        {{ pmpr_do_action('render_post_metadata', numeric_metadata, {
+                                            version: 2,
+                                            columns: {'': 4}
+                                        }) }}
                                     </div>
                                     <div class="col-12 col-md-6 d-flex justify-content-between">
                                         {% for meta_item in text_metadata %}
@@ -31,7 +34,8 @@
                                     key_value: 1,
                                     flex_row: 0,
                                     has_icon: 0,
-                                    item_class: 'px-3'
+                                    item_class: 'px-3',
+                                    columns: {'': 12}
                                 }) }}
                                 <a href="{{ permalink|esc_attr }}"
                                    class="btn btn-lg btn-primary main-action w-100 mt-3">{{ action_text|raw }}</a>

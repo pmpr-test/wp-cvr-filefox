@@ -32,12 +32,11 @@
                             include: ['publish', 'study_time']
                         }) %}
                         {{ pmpr_do_action('render_post_metadata', metadata, {
-                            flex_row: 1,
                             key_value: 0,
                             icon_size: 'md',
-                            item_class: 'fs-xs',
                             has_divider: 0,
                             wrapper_class: 'mt-auto',
+                            columns: {'': 6}
                         }) }}
                     </div>
                     <div class="card-footer bg-white border-top d-flex justify-content-center py-3">

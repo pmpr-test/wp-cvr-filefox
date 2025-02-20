@@ -4,7 +4,9 @@
             post: item,
             include: ['publish', 'study_time', 'comments']
         }) %}
-        {{ pmpr_do_action('render_post_metadata', metadata) }}
+        {{ pmpr_do_action('render_post_metadata', metadata, {
+            columns: {'': 12}
+        }) }}
     </div>
     <div class="col-12 col-lg-10 order-2">
         <div class="card shadow-sm">

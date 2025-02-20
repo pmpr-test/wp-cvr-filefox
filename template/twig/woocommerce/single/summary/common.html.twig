@@ -9,6 +9,7 @@
                     <div class="col-12 col-md-8 d-flex flex-column justify-content-between">
                         {{ pmpr_do_action('render_post_metadata', right_metadata, {
                             version: 2,
+                            columns: {'': 3}
                         }) }}
                         <div class="mt-4">
                             {{ pmpr_do_action('render_post_metadata', update_html, {
@@ -17,6 +18,7 @@
                                 bg_color: 'gray-200',
                                 item_class: 'pr-last-update',
                                 text_color: 'gray-600',
+                                columns: {'': 12}
                             }) }}
                             {% block after_update %}{% endblock %}
                         </div>
@@ -28,6 +30,7 @@
                             icon_size: 'xxxl',
                             item_class: 'px-3',
                             show_title: 1,
+                            columns: {'': 12}
                         }) }}
                     </div>
                 </div>

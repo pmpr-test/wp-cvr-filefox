@@ -12,7 +12,10 @@
         </div>
         <div class="col-12 col-md-6 col-lg-7 mb-4 mb-md-4">
             <div class="ms-0 ms-md-4">
-                {{ pmpr_do_action('render_post_taxonomies', post) }}
+                <div class="d-flex justify-content-between mb-3">
+                    {{ pmpr_do_action('render_post_author', post) }}
+                    {{ pmpr_do_action('render_post_taxonomies', post) }}
+                </div>
                 {% include get_cover_template('common/header/description') with {
                     description: excerpt,
                 } %}
@@ -23,6 +26,7 @@
                 {{ pmpr_do_action('render_post_metadata', metadata, {
                     key_value: 1,
                     icon_size: 'xl',
+                    icon_color: 'primary',
                     columns: {md: 6}
                 }) }}
             </div>

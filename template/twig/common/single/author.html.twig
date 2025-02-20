@@ -1,0 +1,7 @@
+{% if name and avatar %}
+    <a href="{{ url|raw }}" class="d-flex">
+        <img src="{{ avatar|esc_url }}" alt="Author Image" class="img-fluid rounded-circle me-2 d-block"
+             width="{{ avatar_size|esc_attr }}" height="{{ avatar_size|esc_attr }}"/>
+        <strong class="my-auto text-muted">{{ name|raw }}</strong>
+    </a>
+{% endif %}
