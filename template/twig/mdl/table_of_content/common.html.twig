@@ -1,15 +1,19 @@
 <div class="toc-card card shadow mt-4 mb-5">
-    <div class="card-body p-4 d-flex flex-row">
-        <div class="toc-title d-flex flex-column justify-content-center p-4">
-            {{ render_icon('fasm/6/set/list', {class: 'icon-white mx-auto icon-5x rounded-circle px-4 mb-3'}) }}
-            <span class="h4 mb-0">{{ title|raw }}</span>
-        </div>
-        <div class="ms-4">
-            {% if collapsible %}
-                <a href="#" class="h6 my-auto text-decoration-none text-info" data-toggle="collapse" data-target=".toc-list"
-                   data-replace="{{ show_title|raw|esc_attr }}" aria-expanded="true">{{ hide_title|raw }}</a>
-            {% endif %}
-            <ul class="toc-list collapse show">{{ headings|raw }}</ul>
+    <div class="card-body p-4">
+        <div class="row">
+            <div class="col-12 col-md-3 d-none d-md-block">
+                <div class="toc-title text-center d-flex flex-column justify-content-center">
+                    {{ render_icon('fasm/6/set/list', {class: 'icon-white mx-auto icon-5x rounded-circle px-4 mb-3'}) }}
+                    <span class="h4 my-0">{{ title|raw }}</span>
+                </div>
+            </div>
+            <div class="col-12 col-md-9">
+                {% if collapsible %}
+                    <span class="h6 my-auto text-info as-link" data-toggle="collapse" data-target=".toc-list"
+                          data-replace="{{ show_title|raw|esc_attr }}" aria-expanded="true">{{ hide_title|raw }}</span>
+                {% endif %}
+                <ul class="toc-list collapse show">{{ headings|raw }}</ul>
+            </div>
         </div>
     </div>
 </div>

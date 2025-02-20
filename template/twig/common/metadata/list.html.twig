@@ -1,0 +1,9 @@
+{% if metadata is not empty %}
+    <div class="row metadata version-{{ version }}">
+        {% for meta_item in metadata %}
+            <div class="meta-item d-flex {{ margin_bottom(loop, columns, margin|default(3)) }}">
+                {% block item %}{% endblock %}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

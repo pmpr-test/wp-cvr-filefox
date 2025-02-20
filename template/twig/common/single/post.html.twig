@@ -4,7 +4,7 @@
         title_attrs: {class: 'mb-4'}
     } %}
     <div class="row g-0">
-        <div class="col-12 col-md-6 col-lg-5">
+        <div class="col-12 col-md-6 col-lg-5 mb-4 mb-md-0">
             {% include get_cover_template('common/post/thumbnail') with {
                 image_size: 'large',
                 image_attr: {class: 'img-fluid w-100 rounded'}
@@ -16,28 +16,15 @@
                 {% include get_cover_template('common/header/description') with {
                     description: excerpt,
                 } %}
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        {% set metadata = pmpr_apply_filters('metadata_get_items', {}, {
-                            post: item,
-                            include: ['study_time', 'comments', 'rate']
-                        }) %}
-                        {{ pmpr_do_action('render_post_metadata', metadata, {
-                            key_value: 1,
-                            icon_size: 'xl'
-                        }) }}
-                    </div>
-                    <div class="col-12 col-md-6">
-                        {% set metadata = pmpr_apply_filters('metadata_get_items', {}, {
-                            post: item,
-                            include: ['publish', 'update']
-                        }) %}
-                        {{ pmpr_do_action('render_post_metadata', metadata, {
-                            key_value: 1,
-                            icon_size: 'xl'
-                        }) }}
-                    </div>
-                </div>
+                {% set metadata = pmpr_apply_filters('metadata_get_items', {}, {
+                    post: item,
+                    include: ['study_time', 'comments', 'rate', 'publish', 'update']
+                }) %}
+                {{ pmpr_do_action('render_post_metadata', metadata, {
+                    key_value: 1,
+                    icon_size: 'xl',
+                    columns: {md: 6}
+                }) }}
             </div>
         </div>
     </div>

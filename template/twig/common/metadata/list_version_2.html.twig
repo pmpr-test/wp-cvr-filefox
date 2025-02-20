@@ -1,0 +1,14 @@
+{% extends get_template('./list', _self) %}
+
+{% block item %}
+    {% if meta_item.html is not empty %}
+        {{ meta_item.html|raw }}
+    {% else %}
+        <div class="meta-item d-flex flex-column text-center justify-content-between">
+            <span class="meta-title mb-1">{{ meta_item.title|raw }}</span>
+            <strong class="meta-value fw-bold h1 mb-0">{{ meta_item.value|raw }}</strong>
+        </div>
+    {% endif %}
+
+{% endblock %}
+

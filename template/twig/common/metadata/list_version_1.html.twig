@@ -1,0 +1,34 @@
+{% extends get_template('./list', _self) %}
+
+{% block item %}
+    {% if has_icon %}
+        {{ render_icon(meta_item.icon, {class: 'me-' ~ divider_space ~ ' icon-' ~ icon_color|esc_attr ~ ' my-auto icon-' ~ icon_size|default('lg')|esc_attr }) }}
+        {% if has_devider %}
+            <div data-divider="horizontal"
+                 class="bg-{{ divider_color|esc_attr }} me-{{ divider_space|default(2)|esc_attr }}"></div>
+        {% endif %}
+    {% endif %}
+    {% set has_subtext = not key_value and meta_item.subtext is not empty %}
+    {% if has_subtext %}
+        <div class="d-flex flex-column">
+    {% endif %}
+    <div class="text-nowrap my-auto flex-grow-1 d-flex justify-content-between">
+        {% if key_value %}
+            <div class="me-2 meta-title">{{ meta_item.title|raw }}</div>
+        {% endif %}
+        <strong class="meta-value">
+            {% if show_title %}
+                {{ meta_item.title|raw }}
+            {% else %}
+                {{ meta_item.value|raw }}
+            {% endif %}
+        </strong>
+    </div>
+    {% if has_subtext %}
+        <small class="meta-subtext mt-2">{{ meta_item.subtext|raw }}</small>
+    {% endif %}
+    {% if has_subtext %}
+        </div>
+    {% endif %}
+{% endblock %}
+
