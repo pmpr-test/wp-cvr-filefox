@@ -10,6 +10,3 @@
 {{ pmpr_do_action('after_single_content', post, post_type) }}
 {{ dynamic_sidebar('after-single-contenet') }}
 
-{% if comments_open(post) %}
-    {{ render_if_has_content('div', {class: 'my-5' }, comments_template()) }}
-{% endif %}

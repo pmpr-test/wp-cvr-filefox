@@ -1,0 +1,12 @@
+{{ dynamic_sidebar('archive-sidebar') }}
+
+{% set sticky_sidebar_content %}
+    {{ dynamic_sidebar('sticky-archive-sidebar') }}
+    {{ dynamic_sidebar(post_type ~ '-sticky-archive-sidebar') }}
+{% endset %}
+
+{% if sticky_sidebar_content is not empty %}
+    <div class="position-sticky archive-sticky-aside mb-10">
+        {{ sticky_sidebar_content|raw }}
+    </div>
+{% endif %}

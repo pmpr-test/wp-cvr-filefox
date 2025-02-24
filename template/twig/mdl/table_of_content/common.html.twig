@@ -1,19 +1,22 @@
-<div class="toc-card card shadow mt-4 mb-5">
-    <div class="card-body p-4">
-        <div class="row">
-            <div class="col-12 col-md-3 d-none d-md-block">
-                <div class="toc-title text-center d-flex flex-column justify-content-center">
-                    {{ render_icon('fasm/6/set/list', {class: 'icon-white mx-auto icon-5x rounded-circle px-4 mb-3'}) }}
-                    <span class="h4 my-0">{{ title|raw }}</span>
+{% if headings is not empty %}
+    <div class="toc-card card shadow mt-3 mb-5">
+        <div class="card-body p-4">
+            <div class="row">
+                <div class="col-12 col-lg-3 d-none d-lg-block">
+                    <div class="toc-title text-center d-flex flex-column justify-content-center">
+                        {{ render_icon('fasm/6/set/list', {class: 'icon-white mx-auto icon-5x rounded-circle px-4 mb-3'}) }}
+                        <span class="fs-md my-0">{{ title|raw }}</span>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-9">
-                {% if collapsible %}
-                    <span class="h6 my-auto text-info as-link" data-toggle="collapse" data-target=".toc-list"
-                          data-replace="{{ show_title|raw|esc_attr }}" aria-expanded="true">{{ hide_title|raw }}</span>
-                {% endif %}
-                <ul class="toc-list collapse show">{{ headings|raw }}</ul>
+                <div class="col-12 col-lg-9">
+                    {% if collapsible %}
+                        <span class="h6 my-auto text-info as-link" data-toggle="collapse" data-target=".toc-list"
+                              data-replace="{{ show_title|raw|esc_attr }}"
+                              aria-expanded="true">{{ hide_title|raw }}</span>
+                    {% endif %}
+                    <ul class="toc-list collapse show">{{ headings|raw }}</ul>
+                </div>
             </div>
         </div>
     </div>
-</div>
+{% endif %}

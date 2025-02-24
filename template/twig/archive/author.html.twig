@@ -1,0 +1,81 @@
+{% extends get_cover_template('container') %}
+
+{% block before_container %}
+    <main>
+    <div class="bg-gray-200">
+        <header class="container">
+            <div class="d-flex flex-column flex-sm-row py-5">
+                {{ get_avatar(object, 142, {class: 'img-fluid rounded-circle m-auto me-sm-3 mb-auto d-block'})|raw }}
+                <div class="">
+                    <div class="d-flex justify-content-between mb-3">
+                        <h1 class="text-center my-auto text-sm-start">{{ render_author_data('name', object)|raw }}</h1>
+                        <div class="d-flex">
+                            {% if socials is not empty %}
+                                {% include get_cover_template('common/socials') with {
+                                    items: socials,
+                                    icon_size: 'md',
+                                    wrapper_y_margins: 'auto'
+                                } %}
+                            {% endif %}
+                            {% include get_cover_template('common/action') with {
+                                action_text: __('Follow', domain),
+                                action_icon: 'fasm/6/set/user-plus',
+                                has_icon: 1,
+                                icon_end: 0,
+                                as_outline: 1,
+                                icon_start: 1,
+                                main_color: 'white',
+                                hover_color: 'primary',
+                                element: 'span',
+                                action_attrs: {
+                                    class: 'btn-md ms-3'
+                                }
+                            } %}
+                        </div>
+                    </div>
+                    {{ render_if_has_content('p', {class: 'fs-sm'}, render_author_data('description', object)) }}
+                    <p>
+                        چند وقت پیش مقاله <a href="">کتاب‌های مطرح در زمینه ریاضات</a> را در حوزه ریاضیات و همچنین مقاله <a
+                                href="">۱۰۰ کتاب برتر فیزیک</a> را در زمینه فیزیک و مقاله
+                        <a href="">نمونه سوالات هندسه</a> را در حوزه هندسه منتشر کرده است.
+                        چند وقت پیش مقاله <a href="">کتاب‌های مطرح در زمینه ریاضات</a> را در حوزه ریاضیات و همچنین مقاله <a
+                                href="">۱۰۰ کتاب برتر فیزیک</a> را در زمینه فیزیک و مقاله
+                        <a href="">نمونه سوالات هندسه</a> را در حوزه هندسه منتشر کرده است.
+                    </p>
+                </div>
+            </div>
+        </header>
+    </div>
+{% endblock %}
+
+{% block inside_container %}
+    {% set posts_list = pmpr_apply_filters('author_posts_list', [], object) %}
+    {% for post_list in posts_list %}
+        <section>
+            <div class="d-flex justify-content-between mb-3">
+                <h2>{{ post_list.title|raw }}</h2>
+                {% include get_cover_template('common/action') with {
+                    action_text: post_list.action_text,
+                    action_icon: post_list.action_icon,
+                    action_link: post_list.action_link,
+                    has_icon: 1,
+                    as_outline: 1,
+                    main_color: 'white',
+                    hover_color: 'primary',
+                } %}
+            </div>
+            {% for post in post_list %}
+                {% include get_cover_template('common/block/' ~ post_list.type|default('index')) with {
+                    loop: loop,
+                    post: post,
+                    version: 'batch',
+                } %}
+            {% endfor %}
+        </section>
+    {% endfor %}
+{% endblock %}
+{% block after_container %}
+    </main>
+{% endblock %}
+
+

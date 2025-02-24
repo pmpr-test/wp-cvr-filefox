@@ -1,1 +1,11 @@
-{% include get_cover_template('common/archive/index') %}
+{% extends get_cover_template('sidebar/dual') %}
+
+{% block first_sidebar %}
+    {{ parent() }}
+    {% include get_cover_template('common/archive/widget') %}
+{% endblock %}
+
+{% block main_content %}
+    {% include get_cover_template('common/archive/index') %}
+{% endblock %}
+

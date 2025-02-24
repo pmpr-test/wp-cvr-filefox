@@ -1,7 +1,8 @@
 {% if metadata is not empty %}
-    <div class="row metadata version-{{ version }}">
+    {% set hasColumns = columns is not empty %}
+    <div class="metadata{% if hasColumns %} row{% else %} d-flex{% endif%} version-{{ version }} {{ wrapper_class|esc_attr }}">
         {% for meta_item in metadata %}
-            <div class="meta-item {{ prepare_columns(loop, columns, margin|default(3)) }}">
+            <div class="meta-item {% if hasColumns %}{{ prepare_columns(loop, columns, margin|default(3)) }}{% endif %}">
                 {% block item %}{% endblock %}
             </div>
         {% endfor %}

@@ -1,5 +1,9 @@
 {% set action_attrs = action_attrs|default({}) %}
-{% set action_attrs = action_attrs|add('href', action_link) %}
+{% set element = element|default('a') %}
+
+{% if action_link is not empty %}
+    {% set action_attrs = action_attrs|add('href', action_link) %}
+{% endif %}
 
 {% if has_icon %}
     {% set action_attrs = action_attrs|add('class', 'd-flex') %}
@@ -20,7 +24,7 @@
     {% endif %}
 {% endif %}
 
-<a {{ action_attrs|parse_attrs|raw }}>
+<{{ element|raw }} {{ action_attrs|parse_attrs|raw }}>
     {% if has_icon and icon_start|default(0) %}
         {{ render_icon(action_icon|default('fasm/6/set/angles-right'), {class: 'me-2 my-auto icon-' ~ icon_size|default('md')}) }}
     {% endif %}
@@ -30,4 +34,4 @@
     {% if has_icon and icon_end|default(1) %}
         {{ render_icon(action_icon|default('fasm/6/set/angles-left'), {class: 'ms-2 my-auto icon-' ~ icon_size|default('md')}) }}
     {% endif %}
-</a>
+</{{ element|raw }}>

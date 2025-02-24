@@ -1,7 +1,43 @@
-{% if name and avatar %}
-    <a href="{{ url|raw }}" class="d-flex">
-        <img src="{{ avatar|esc_url }}" alt="Author Image" class="img-fluid rounded-circle me-2 d-block"
-             width="{{ avatar_size|esc_attr }}" height="{{ avatar_size|esc_attr }}"/>
-        <strong class="my-auto text-muted">{{ name|raw }}</strong>
-    </a>
+{% if name %}
+    {% set avatar %}
+    {% endset %}
+    <address class="my-auto">
+        {% if full_version %}
+            <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-between mb-3">
+                    {{ get_avatar(author, avatar_size, {class: 'img-fluid rounded-circle my-auto me-3 d-block'})|raw }}
+                    <div>
+                        <cite class="my-auto d-block fs-md fw-bold font-normal mb-2">{{ name|raw }}</cite>
+                        {% if socials is not empty %}
+                            {% include get_cover_template('common/socials') with {
+                                items: socials,
+                                icon_size: 'md',
+                                wrapper_y_margins: 'sm-auto'
+                            } %}
+                        {% endif %}
+                    </div>
+                </div>
+                {% include get_cover_template('common/action') with {
+                    action_text: follow_text,
+                    action_icon: follow_icon,
+                    has_icon: 1,
+                    icon_end: 0,
+                    as_outline: 1,
+                    icon_start: 1,
+                    main_color: 'white',
+                    hover_color: 'primary',
+                    element: 'span',
+                    action_attrs: {
+                        class: 'btn-sm mb-auto ms-sm-3'
+                    }
+                } %}
+            </div>
+            {{ render_if_has_content('div', {class: 'fs-sm', 'data-line': '5'}, description) }}
+        {% else %}
+            <a href="{{ url|raw }}" class="d-flex text-gray-700" rel="author" aria-label="{{ name|esc_attr }}">
+                {{ get_avatar(author, avatar_size, {class: 'img-fluid rounded-circle mb-auto me-3 d-block'})|raw }}
+                <cite class="my-auto fw-bold font-normal">{{ name|raw }}</cite>
+            </a>
+        {% endif %}
+    </address>
 {% endif %}

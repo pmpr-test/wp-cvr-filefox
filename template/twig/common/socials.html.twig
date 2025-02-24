@@ -1,0 +1,10 @@
+{% if items is not empty %}
+    <div class="d-flex my-{{ wrapper_y_margins|default(4) }}">
+        {% for item in items %}
+            <a href="{{ item.url|raw }}" rel="nofollow noopener noreferrer" aria-label="{{ item.title|esc_attr }}"
+               target="_blank" title="{{ item.title|esc_attr }}"{% if not loop.last %} class="me-3"{% endif %}>
+                {{ render_icon(item.icon, {class: 'social-icon icon-' ~ icon_color|default('gray-400') ~ ' icon-' ~ icon_size|default('xxl')}) }}
+            </a>
+        {% endfor %}
+    </div>
+{% endif %}

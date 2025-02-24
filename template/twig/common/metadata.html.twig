@@ -5,7 +5,7 @@
                 <div class="meta-item mb-2{% if flex_row %} mb-lg-0 me-lg-2{% endif %} {{ item_class|esc_attr }} {% if has_icon %}d-flex {% endif %}p-2 rounded bg-{{ bg_color|esc_attr }} text-{{ text_color|esc_attr }} border-{{ border_color|esc_attr }}">
                     {% if has_icon %}
                         {{ render_icon(meta_item.icon, {class: 'me-' ~ divider_space ~ ' icon-' ~ icon_color|esc_attr ~ ' my-auto icon-' ~ icon_size|default('lg')|esc_attr }) }}
-                        {% if has_devider %}
+                        {% if has_divider %}
                             <div data-divider="horizontal"
                                  class="bg-{{ divider_color|esc_attr }} me-{{ divider_space|default(2)|esc_attr }}"></div>
                         {% endif %}

@@ -1,8 +1,1 @@
-<div class="d-flex my-4">
-    {% for item in items %}
-        <a href="{{ item.url|raw }}" rel="nofollow noopener noreferrer" aria-label="{{ item.title|esc_attr }}"
-           target="_blank" title="{{ item.title|esc_attr }}" class="me-3">
-            {{ render_icon(item.icon, {class: 'social-icon icon-gray-400 icon-' ~ icon_size|default('xxl')}) }}
-        </a>
-    {% endfor %}
-</div>
+{% include get_cover_template('common/socials') %}

@@ -1,40 +1,41 @@
-<div class="single-main">
-    {% include get_cover_template('common/header/title') with {
-        title: jumbotron,
-        title_attrs: {class: 'mb-4'}
-    } %}
-    <div class="row g-0">
-        <div class="col-12 col-md-6 col-lg-5 mb-4 mb-md-0">
-            {% include get_cover_template('common/post/thumbnail') with {
-                image_size: 'large',
-                image_attr: {class: 'img-fluid w-100 rounded'}
-            } %}
-        </div>
-        <div class="col-12 col-md-6 col-lg-7 mb-4 mb-md-4">
-            <div class="ms-0 ms-md-4">
-                <div class="d-flex justify-content-between mb-3">
-                    {{ pmpr_do_action('render_post_author', post) }}
-                    {{ pmpr_do_action('render_post_taxonomies', post) }}
-                </div>
-                {% include get_cover_template('common/header/description') with {
-                    description: excerpt,
-                } %}
-                {% set metadata = pmpr_apply_filters('metadata_get_items', {}, {
-                    post: item,
-                    include: ['study_time', 'comments', 'rate', 'publish', 'update']
-                }) %}
-                {{ pmpr_do_action('render_post_metadata', metadata, {
-                    key_value: 1,
-                    icon_size: 'xl',
-                    icon_color: 'primary',
-                    columns: {md: 6}
-                }) }}
-            </div>
+<article class="single-main">
+    <header>
+        {% include get_cover_template('common/header/title') with {
+            title: jumbotron,
+            title_attrs: {class: 'mb-4'}
+        } %}
+        {% include get_cover_template('common/post/thumbnail') with {
+            image_size: 'feature_image',
+            image_attr: {class: 'img-fluid d-block mx-auto rounded'}
+        } %}
+    </header>
+
+    {% set metadata = pmpr_apply_filters('metadata_get_items', {}, {
+        post: item,
+        include: ['category', 'study_time', 'publish', 'traffic', 'comment']
+    }) %}
+    {{ pmpr_do_action('render_post_metadata', metadata, {
+        icon_size: 'md',
+        icon_color: 'gray-600',
+        text_color: 'gray-700',
+        has_divider: 1,
+        wrapper_class: 'my-3',
+        version: 3
+    }) }}
+
+    <div class="card bg-gray-200 mb-4">
+        <div class="card-body p-4">
+            {{ pmpr_do_action('render_post_author', post, {
+                full_version: 1,
+                avatar_size: 56
+            }) }}
         </div>
     </div>
 
     {% include get_template('./content', _self) with {
         content_class: 'mb-5'
     } %}
-</div>
+</article>
+
+{% include get_template('./comment', _self) %}
 

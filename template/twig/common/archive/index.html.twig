@@ -1,12 +1,9 @@
-{% extends get_cover_template('sidebar/single') %}
+{% include get_cover_template('common/header/index') with {
+    has_container: 0
+} %}
 
-{% block main %}
-    {% include get_cover_template('common/header/index') with {
-        has_container: 0
-    } %}
-    {% include get_template('./content', _self) with {
-        items: have_posts(),
-        template: 'post',
-    } %}
-{% endblock %}
+{% include get_template('content', _self) with {
+    items: have_posts(),
+    template: 'post',
+} %}
 

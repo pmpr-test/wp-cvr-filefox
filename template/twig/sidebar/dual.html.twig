@@ -1,19 +1,17 @@
 {% extends get_template('./base', _self) %}
 
 {% block inside_container %}
-    <div class="row">
-        <aside class="col-12 col-md-4 col-lg-{{ first_aside_grid_size|default(3) }} mb-3 mb-md-0 mt-3">
+    {% block before_main %}{% endblock %}
+    <main id="main" class="row">
+        <aside class="col-12 col-md-4 col-lg-{{ first_aside_share|default(3) }} mb-3 mb-md-0 mt-3">
             {% block first_sidebar %}{% endblock %}
         </aside>
-        <div class="col-12 col-md-8 col-lg-{{ main_grid_size|default(7) }} my-3">
-            {% block before_main %}{% endblock %}
-            <main id="main">
-                {% block main %}{% endblock %}
-            </main>
-            {% block after_main %}{% endblock %}
+        <div class="col-12 col-md-8 col-lg-{{ main_share|default(7) }} my-3">
+            {% block main_content %}{% endblock %}
         </div>
-        <aside class="d-none d-lg-block col-lg-{{ second_aside_grid_size|default(2) }} mt-3">
+        <aside class="d-none d-lg-block col-lg-{{ second_aside_share|default(2) }} mt-3">
             {% block second_sidebar %}{% endblock %}
         </aside>
-    </div>
+    </main>
+    {% block after_main %}{% endblock %}
 {% endblock %}

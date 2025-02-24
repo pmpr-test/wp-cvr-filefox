@@ -6,6 +6,8 @@
     {{ dynamic_sidebar(post_type ~ '-sticky-single-sidebar') }}
 {% endset %}
 
-{% if sticky_sidebar_content %}
-    <div class="position-sticky single-sticky-aside mb-10">{{ sticky_sidebar_content|raw }}</div>
+{% if sticky_sidebar_content is not empty %}
+    <div class="position-sticky single-sticky-aside mb-10">
+        {{ sticky_sidebar_content|raw }}
+    </div>
 {% endif %}

@@ -16,42 +16,11 @@
         {% endif %}
         {% for post in posts %}
             <div class="col-12 col-md-6 col-xl-3 d-flex mb-4">
-                <div class="card shadow-sm w-100">
-                    {% set permalink = get_permalink(post) %}
-                    {{ get_the_post_thumbnail(post, 'medium', {class: 'w-100 img-fluid card-img-top'})|raw }}
-                    <div class="card-body">
-
-                        {{ pmpr_do_action('render_post_taxonomies', post) }}
-                        <a href="{{ permalink|esc_attr }}">
-                            <h2 class="h3 mb-3" data-line="1">{{ render_post_data('title', post)|raw }}</h2>
-                        </a>
-                        {{ render_if_has_content('div', {class: 'font-sm mb-3', 'data-line': 3}, render_post_data('excerpt', post)) }}
-
-                        {% set metadata = pmpr_apply_filters('metadata_get_items', {}, {
-                            post: post,
-                            include: ['publish', 'study_time']
-                        }) %}
-                        {{ pmpr_do_action('render_post_metadata', metadata, {
-                            key_value: 0,
-                            icon_size: 'md',
-                            has_divider: 0,
-                            wrapper_class: 'mt-auto',
-                            columns: {'': 6}
-                        }) }}
-                    </div>
-                    <div class="card-footer bg-white border-top d-flex justify-content-center py-3">
-                        {% include get_cover_template('common/action') with {
-                            action_text: post_action_text,
-                            action_icon: action_icon,
-                            action_link: permalink,
-                            has_icon: 1,
-                            as_button: 0,
-                            ignore_bg: 1,
-                            main_color: 'primary',
-                            hover_color: 'secondary',
-                        } %}
-                    </div>
-                </div>
+                {% include get_cover_template('common/block/post') with {
+                    post: post,
+                    loop: loop,
+                    version: 'batch'
+                } %}
             </div>
         {% endfor %}
     </div>

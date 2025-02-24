@@ -1,0 +1,4 @@
+
+{% if comments_open(post) %}
+    {{ render_if_has_content('div', {class: 'my-5' }, comments_template()) }}
+{% endif %}

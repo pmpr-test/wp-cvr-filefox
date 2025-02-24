@@ -1,0 +1,11 @@
+{% if posts is not empty %}
+    <ul class="list-group list-group-flush">
+        {% for post in posts %}
+            {% include get_template('widget_list_item', _self) with {
+                post: post,
+                version: version,
+                metadata: metadata,
+            } %}
+        {% endfor %}
+    </ul>
+{% endif %}
