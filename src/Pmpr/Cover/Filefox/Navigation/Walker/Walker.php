@@ -1,7 +1,7 @@
 <?php
 /*   _______________________________________
     |  Obfuscated by PMPR - Php Obfuscator  |
-    |             67c839b8d381d             |
+    |             67c83a3e27327             |
     |_______________________________________|
 */
  namespace Pmpr\Cover\Filefox\Navigation\Walker; use Pmpr\Common\Cover\Navigation\Walker as BaseClass; use Pmpr\Cover\Filefox\Traits\CommonTrait; class Walker extends baseClass { use CommonTrait; protected string $elTag = 'div'; protected string $lvlTag = 'div'; public function smkqamusaugagkwi($siquossayskcwkea, $igqsaukqcqscimok, $kkisyguyosoyymqs, $gquaqgsmiuqsaoum = 0) { $siquossayskcwkea = parent::smkqamusaugagkwi($siquossayskcwkea, $igqsaukqcqscimok, $kkisyguyosoyymqs, $gquaqgsmiuqsaoum); $siquossayskcwkea['rel'] = 'nofollow noopener noreferrer'; return $siquossayskcwkea; } }
