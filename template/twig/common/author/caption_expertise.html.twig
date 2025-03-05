@@ -1,0 +1,13 @@
+{% set author_metadata = {
+    'caption': render_user_data('caption', author),
+    'expertise': render_user_data('expertise', author),
+} %}
+<div class="d-flex flex-column flex-sm-row lh-lg">
+    {% for key, author_meta in author_metadata %}
+        <span class="text-muted">{{ author_meta|raw }}</span>
+        {% if not loop.last %}
+            <div data-divider="horizontal" class="bg-gray-500 d-none d-sm-block mx-2"></div>
+        {% endif %}
+    {% endfor %}
+</div>
+

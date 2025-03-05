@@ -3,10 +3,10 @@
     <div class="list product-children my-4">
         {% for item in items %}
             <article class="list-item p-4 alert{% if item.is_featured %} featured alert-primary{% else %} alert-secondary{% endif %} card shadow-sm{% if not loop.last %} mb-4{% endif %}">
-                <h2 class="mb-3 alert-heading" data-line="1">{{ item.title|raw }}</h2>
+                <h2 class="mb-3 alert-heading line-limit-1">{{ item.title|raw }}</h2>
                 {% if item.is_featured %}
                     <div class="row">
-                        <div class="col no-margin" data-line="12">{{ wpautop(item.description)|raw }}</div>
+                        <div class="col no-margin line-limit-12">{{ wpautop(item.description)|raw }}</div>
                         <div class="col-12 col-lg-auto">
                             <a href="{{ item.permalink|esc_attr }}" class="ms-3 d-block">
                                 {{ item.object|call('get_image', 'medium', {class: 'img-fluid rounded'})|raw }}
@@ -24,7 +24,7 @@
                                     {% for change_log_item in change_logs %}
                                         {% if change_log_item.text is not empty %}
                                             <li class="list-group-item change-log p-2">
-                                                <span data-line="1">{{ change_log_item.text|raw }}</span>
+                                                <span class="line-limit-1">{{ change_log_item.text|raw }}</span>
                                             </li>
                                         {% endif %}
                                     {% endfor %}
@@ -34,7 +34,7 @@
                                 </small>
                             {% endif %}
                         {% else %}
-                            <div data-line="6" class="no-margin">{{ wpautop(item.description)|raw }}</div>
+                            <div class="line-limit-6 no-margin">{{ wpautop(item.description)|raw }}</div>
                         {% endif %}
                     </div>
                     <div class="col-12 col-md-6">
@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-md-9 no-margin" data-line="2">{{ wpautop(footer_content)|raw }}</div>
+                    <div class="col-12 col-md-9 no-margin line-limit-2">{{ wpautop(footer_content)|raw }}</div>
                     <div class="col-12 col-md-3">
                         <a href="{{ item.permalink|esc_attr }}"
                            class="btn py-2 btn-{% if not item.is_featured %}outline-{% endif %}primary w-100">

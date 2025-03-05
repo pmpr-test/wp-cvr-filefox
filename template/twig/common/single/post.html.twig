@@ -8,34 +8,38 @@
             image_size: 'feature_image',
             image_attr: {class: 'img-fluid d-block mx-auto rounded'}
         } %}
-    </header>
 
-    {% set metadata = pmpr_apply_filters('metadata_get_items', {}, {
-        post: item,
-        include: ['category', 'study_time', 'publish', 'traffic', 'comment']
-    }) %}
-    {{ pmpr_do_action('render_post_metadata', metadata, {
-        icon_size: 'md',
-        icon_color: 'gray-600',
-        text_color: 'gray-700',
-        has_divider: 1,
-        wrapper_class: 'my-3',
-        version: 3
-    }) }}
-
-    <div class="card bg-gray-200 mb-4">
-        <div class="card-body p-4">
-            {{ pmpr_do_action('render_post_author', post, {
-                full_version: 1,
-                avatar_size: 56
-            }) }}
+        {% set metadata = pmpr_apply_filters('metadata_get_items', {}, {
+            post: item,
+            include: ['category', 'study_time', 'publish', 'traffic', 'comment']
+        }) %}
+        {{ pmpr_do_action('render_post_metadata', metadata, {
+            icon_size: 'md',
+            icon_color: 'gray-600',
+            text_color: 'gray-700',
+            has_divider: 1,
+            wrapper_class: 'my-3 fs-xs fs-sm-sm',
+            version: 3
+        }) }}
+        <div class="author-card card bg-gray-200 mb-4">
+            <div class="card-body p-4">
+                {{ pmpr_do_action('render_post_author', post, {
+                    full_version: 1,
+                    avatar_size: is_mobile() ? 72 : 64
+                }) }}
+            </div>
         </div>
-    </div>
-
+    </header>
     {% include get_template('./content', _self) with {
-        content_class: 'mb-5'
+        content_class: 'mb-4'
     } %}
+    <footer class="pt-3">
+        {{ pmpr_do_action('render_post_tags', post, {}) }}
+        {{ pmpr_do_action('render_post_references', post, {}) }}
+    </footer>
 </article>
-
+<aside class="my-4">
+    {{ dynamic_sidebar('post-single-aside') }}
+</aside>
 {% include get_template('./comment', _self) %}
 

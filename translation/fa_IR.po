@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Filefox Cover\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2025-02-24 00:50+0330\n"
+"POT-Creation-Date: 2025-03-05 02:29+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: pmpr.dev <pmpr.dev@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -28,21 +28,86 @@ msgstr ""
 msgid "Filefox"
 msgstr "فایل فاکس"
 
-#: src/Pmpr/Cover/Filefox/Archive.php:100
+#: src/Pmpr/Cover/Filefox/Archive.php:51
+#, php-format
+msgid ""
+"%1$s has written an insightful article titled %2$s discussing %3$s. Another "
+"great read is %4$s, which covers %5$s."
+msgstr ""
+"%1$s  مقاله جالبی با عنوان %2$s نوشته که درباره‌ی %3$s توضیح داده است. "
+"همچنین،‌ یک مطلب دیگر با نام %4$s منتشر کرده که در مورد  %5$s صحبت می‌کند."
+
+#: src/Pmpr/Cover/Filefox/Archive.php:52
+#, php-format
+msgid "In %2$s, %1$s explores %3$s, while in %4$s, they delve into %5$s."
+msgstr ""
+"در %2$s، %1$s به بررسی %3$s پرداخته است، در حالی که در %4$sِ، او %5$s را "
+"تحلیل کرده است."
+
+#: src/Pmpr/Cover/Filefox/Archive.php:53
+#, php-format
+msgid ""
+"One of the key articles by %1$s is %2$s, which talks about %3$s. Another "
+"interesting piece is %4$s, focused on %5$s."
+msgstr ""
+"یکی از مقالات کلیدی %1$s با عنوان %2$s درباره %3$s است. همچنین او در مقاله "
+"%4$s به %5$s پرداخته است."
+
+#: src/Pmpr/Cover/Filefox/Archive.php:54
+#, php-format
+msgid ""
+"Among %1$s's works, %2$s stands out for its insights on %3$s. Similarly, "
+"%4$s provides a detailed look at %5$s."
+msgstr ""
+"در میان نوشته‌های %1$s، مقاله %2$s که درباره %3$s است، بسیار مورد توجه قرار "
+"گرفته است. همچنین،‌ در %4$s، او %5$s را بررسی کرده است."
+
+#: src/Pmpr/Cover/Filefox/Archive.php:141
+#: src/Pmpr/Cover/Filefox/Page/Front.php:134
+#: src/Pmpr/Cover/Filefox/Page/Front.php:255
+msgid "View All"
+msgstr "مشاهده همه"
+
+#: src/Pmpr/Cover/Filefox/Archive.php:145
+msgid "Latest Posts"
+msgstr "آخرین نوشته‌ها"
+
+#: src/Pmpr/Cover/Filefox/Archive.php:156
+#, php-format
+msgid "Latest %1$s in %2$s"
+msgstr ""
+
+#: src/Pmpr/Cover/Filefox/Archive.php:210
+msgid "نویسنده فایل فاکس بوده"
+msgstr ""
+
+#: src/Pmpr/Cover/Filefox/Archive.php:215
+msgid "مطلب نوشته"
+msgstr ""
+
+#: src/Pmpr/Cover/Filefox/Archive.php:220
+msgid "بازدید مطالب"
+msgstr ""
+
+#: src/Pmpr/Cover/Filefox/Archive.php:225
+msgid "دیدگاه نوشته"
+msgstr ""
+
+#: src/Pmpr/Cover/Filefox/Archive.php:285
 msgid "for"
 msgstr "برای"
 
-#: src/Pmpr/Cover/Filefox/Archive.php:101
+#: src/Pmpr/Cover/Filefox/Archive.php:286
 #, php-format
 msgid " in %s category"
 msgstr " در دسته %s"
 
-#: src/Pmpr/Cover/Filefox/Archive.php:107
+#: src/Pmpr/Cover/Filefox/Archive.php:292
 #, php-format
 msgid "in %s category"
 msgstr "در دسته %s"
 
-#: src/Pmpr/Cover/Filefox/Archive.php:227
+#: src/Pmpr/Cover/Filefox/Archive.php:412
 #, php-format
 msgid "%s view"
 msgstr "%s مشاهده"
@@ -105,37 +170,41 @@ msgstr "بزرگ"
 
 #: src/Pmpr/Cover/Filefox/Filefox.php:212
 msgid "Sidebar"
-msgstr ""
+msgstr "سایدبار"
 
 #: src/Pmpr/Cover/Filefox/Filefox.php:214
-msgid "Single Sidebar"
+msgid "Post Single Aside (Before Comments)"
 msgstr ""
 
 #: src/Pmpr/Cover/Filefox/Filefox.php:215
+msgid "Single Sidebar"
+msgstr ""
+
+#: src/Pmpr/Cover/Filefox/Filefox.php:216
 msgid "Post Single Sidebar"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:217
+#: src/Pmpr/Cover/Filefox/Filefox.php:218
 msgid "Archive Sidebar"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:220
+#: src/Pmpr/Cover/Filefox/Filefox.php:221
 msgid "Footer Top"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:221
+#: src/Pmpr/Cover/Filefox/Filefox.php:222
 msgid "Footer #1"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:222
+#: src/Pmpr/Cover/Filefox/Filefox.php:223
 msgid "Footer #2"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:223
+#: src/Pmpr/Cover/Filefox/Filefox.php:224
 msgid "Footer #3"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:224
+#: src/Pmpr/Cover/Filefox/Filefox.php:225
 msgid "Footer #4"
 msgstr ""
 
@@ -174,7 +243,7 @@ msgstr "آیکون پیکان"
 
 #: src/Pmpr/Cover/Filefox/Page/Front.php:34
 msgid "Front Page"
-msgstr ""
+msgstr "بخش نمایشی سایت"
 
 #: src/Pmpr/Cover/Filefox/Page/Front.php:49
 #: src/Pmpr/Cover/Filefox/Search.php:47
@@ -186,7 +255,7 @@ msgstr "جستجو"
 #: src/Pmpr/Cover/Filefox/Page/Front.php:115
 #: src/Pmpr/Cover/Filefox/Page/Front.php:129
 msgid "Advanced"
-msgstr ""
+msgstr "پیشرفته"
 
 #: src/Pmpr/Cover/Filefox/Page/Front.php:57
 msgid "Features"
@@ -204,7 +273,7 @@ msgstr "شرح"
 
 #: src/Pmpr/Cover/Filefox/Page/Front.php:68
 msgid "Image"
-msgstr ""
+msgstr "تصویر"
 
 #: src/Pmpr/Cover/Filefox/Page/Front.php:72
 msgid "Background"
@@ -253,11 +322,6 @@ msgstr "نوشته‌های وبلاگ"
 #| msgid "Action Text"
 msgid "Archive Link Action Text"
 msgstr "متن اکشن"
-
-#: src/Pmpr/Cover/Filefox/Page/Front.php:134
-#: src/Pmpr/Cover/Filefox/Page/Front.php:255
-msgid "View All"
-msgstr "مشاهده همه"
 
 #: src/Pmpr/Cover/Filefox/Page/Front.php:138
 msgid "Each Post Link Action Text"
@@ -443,20 +507,33 @@ msgstr ""
 msgid "Capabilities"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Single.php:28
+#: src/Pmpr/Cover/Filefox/Single.php:53
+msgid "Tags"
+msgstr "برچسب‌ها"
+
+#: src/Pmpr/Cover/Filefox/Single.php:81
+msgid "References"
+msgstr "منابع"
+
+#: src/Pmpr/Cover/Filefox/Single.php:100
 msgid "View All Published Articles"
 msgstr "مشاهده همه مقالات منتشر شده"
 
-#: src/Pmpr/Cover/Filefox/Single.php:45
+#: src/Pmpr/Cover/Filefox/Single.php:117
 msgid "Follow"
 msgstr "دنبال کردن"
 
-#: src/Pmpr/Cover/Filefox/Single.php:52
+#: src/Pmpr/Cover/Filefox/Single.php:120 src/Pmpr/Cover/Filefox/Single.php:125
+#: src/Pmpr/Cover/Filefox/Single.php:130 src/Pmpr/Cover/Filefox/Single.php:135
+msgid "X (Twitter)"
+msgstr ""
+
+#: src/Pmpr/Cover/Filefox/Single.php:146
 #, php-format
 msgid "%s is a %s expert"
 msgstr "%s متخصص %s"
 
-#: src/Pmpr/Cover/Filefox/Single.php:54
+#: src/Pmpr/Cover/Filefox/Single.php:148
 #, php-format
 msgid ""
 "and has published more than %s pages of specialized content on %s so far."

@@ -1,11 +1,27 @@
 {% if posts is not empty %}
-    <ul class="list-group list-group-flush">
-        {% for post in posts %}
-            {% include get_template('widget_list_item', _self) with {
-                post: post,
-                version: version,
-                metadata: metadata,
-            } %}
-        {% endfor %}
-    </ul>
+    {% if version is same as ('grid') %}
+        <div class="row">
+            {% for post in posts %}
+                <div class="{{ prepare_columns(loop, columns, 4) }}">
+                    {% include get_template('widget_list_item', _self) with {
+                        post: post,
+                        version: version,
+                        metadata: metadata,
+                    } %}
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <ul class="list-group list-group-flush">
+            {% for post in posts %}
+                <li class="list-group-item border-0 p-0 bg-transparent{% if not loop.last %} mb-3{% endif %}">
+                    {% include get_template('widget_list_item', _self) with {
+                        post: post,
+                        version: version,
+                        metadata: metadata,
+                    } %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 {% endif %}

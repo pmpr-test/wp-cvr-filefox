@@ -1,0 +1,34 @@
+<div class="rating-container position-relative py-5 text-center">
+
+    {{ render_frontend_spinner({
+        type: 'border',
+        show: not render,
+        overlay: 1,
+        class: 'mb-3'
+    }) }}
+
+    {% if render is defined and render %}
+        <div class="rating-wrapper">
+            {% if user_rate is not defined or user_rate is empty %}
+                <strong class="fs-md">{{ title|raw }}</strong>
+                <p class="rating-guide mb-0 fs-sm">{{ guide_text|number|raw }}</p>
+                {{ rating_form|raw }}
+            {% endif %}
+
+            {% if result is defined
+                and result is not empty %}
+                <p class="rating-result mb-0 fs-sm">{{ result|raw }}</p>
+            {% endif %}
+
+            {% if user_rate is defined
+                and user_rate is not empty %}
+                <strong class="fs-md">{{ user_rate|raw }}</strong>
+            {% else %}
+                <p class="rating-message mb-0 fs-sm"></p>
+                {{ feedback_form|raw }}
+            {% endif %}
+        </div>
+    {% endif %}
+    {{ schema|raw }}
+</div>
+

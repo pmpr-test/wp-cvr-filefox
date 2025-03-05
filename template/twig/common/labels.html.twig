@@ -1,0 +1,10 @@
+{% if items is not empty %}
+    <ul class="labels{% if wrapper_class is not empty %} {{ wrapper_class|esc_attr }}{% endif %}">
+        {% for item in items %}
+            <li class="label label-{{ color|default('default') }} mb-2">
+                <a class="text-gray-700" href="{{ item.link|esc_attr }}">{{ item.title|raw }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+

@@ -5,6 +5,7 @@
 {% endif %}
     {{ get_the_post_thumbnail(post, image_size, image_attr)|raw }}
 {% if has_figure %}
+        {{ render_if_has_content('figcaption', {class: 'visually-hidden'}, get_the_post_thumbnail_caption(post)) }}
     </figure>
 {% endif %}
 

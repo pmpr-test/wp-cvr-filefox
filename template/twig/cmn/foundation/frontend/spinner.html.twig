@@ -1,0 +1,18 @@
+{% set attributes = {'role': 'status', class: class} %}
+{% set attributes = attributes|add('class', 'pr-spinner') %}
+{% if type is not empty %}
+    {% set attributes = attributes|add('class', 'spinner-' ~ type) %}
+    {% if size is not empty %}
+        {% set attributes = attributes|add('class', 'spinner-' ~ type ~ '-' ~ size) %}
+    {% endif %}
+{% endif %}
+{% if color is not empty %}
+    {% set attributes = attributes|add('class', 'text-' ~ color) %}
+{% endif %}
+{% if show %}
+    {% set attributes = attributes|add('class', 'show') %}
+{% endif %}
+<div {{ attributes|parse_attrs|raw }}>
+    {{ render_if_has_content('span', {class: 'visually-hidden'}, text) }}
+</div>
+

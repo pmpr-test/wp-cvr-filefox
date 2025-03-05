@@ -1,0 +1,16 @@
+{% if items is not empty %}
+    <div class="post-list">
+        {{ render_if_has_content('h2', header_attrs|default({class: 'mb-3'}), title) }}
+        <div class="row">
+            {% for post in items %}
+                <div class="{{ prepare_columns(loop, {md: 6}, 4) }}">
+                    {% include get_cover_template('common/post/widget_list_item') with {
+                        post: post,
+                        version: 'list',
+                        metadata: metadata
+                    } %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}

@@ -4,7 +4,8 @@
         <ul class="nav nav-pills nav-justified mb-3 bg-gray-300" role="tablist">
             {% for key, period in periods %}
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link fs-sm{% if loop.first %} active{% endif %} rounded-0" id="posts_{{ key }}_tab"
+                    <button class="nav-link fs-sm{% if loop.first %} active{% endif %} rounded-0"
+                            id="posts_{{ key }}_tab"
                             data-bs-toggle="pill" data-bs-target="#posts_{{ key }}"
                             type="button" role="tab" aria-controls="posts_{{ key }}"
                             {% if loop.first %} aria-selected="true"{% endif %}>
@@ -20,10 +21,12 @@
                     {% if period.items is not empty %}
                         <ul class="list-group list-group-flush">
                             {% for item in period.items %}
-                                {% include get_cover_template('common/post/widget_list_item') with {
-                                    post: item.post,
-                                    metadata: item.metadata
-                                } %}
+                                <li class="list-group-item border-0 p-0 bg-transparent{% if not loop.last %} mb-3{% endif %}">
+                                    {% include get_cover_template('common/post/widget_list_item') with {
+                                        post: item.post,
+                                        metadata: item.metadata
+                                    } %}
+                                </li>
                             {% endfor %}
                         </ul>
                     {% endif %}
