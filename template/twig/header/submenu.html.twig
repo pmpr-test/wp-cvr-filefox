@@ -1,4 +1,4 @@
-<div class="position-relative shadow-sm border-top bg-white d-none d-md-block">
+<div class="position-relative shadow-sm border-top bg-white d-none d-lg-block">
     <div class="container">
         <nav class="navbar navbar-expand navbar-white d-flex">
             <ul class="navbar-nav">
@@ -26,24 +26,26 @@
         <label class="flex-grow-1">
             <input type="text" name="search" id="search"
                    placeholder="{{ search_placeholder|esc_attr }}"
-                   class="form-control border-0 outline-0 w-100">
+                   class="form-control border-0 outline-0 w-100 bg-gray-200">
             <input type="hidden" name="material" value="{{ material|esc_attr }}">
         </label>
     </div>
     <div class="search-result hide">
-        <div class="pr-ph shimmer mxw-350px my-3">
-            {% include get_cover_template('common/post/widget_list_item') with {
-                placeholder: 1,
-                metadata: [1, 1]
-            } %}
-        </div>
-        <div class="result-list mb-4 mnh-200px row"></div>
-        <div class="view-all btn py-2 btn-light btn-block w-100 d-flex justify-content-center" data-type="link">
-            <div class="text-muted">{{ view_all_text|raw }}</div>
-            <strong class="search-query ms-1"></strong>
+        <div class="d-flex flex-column justify-content-between h-360px">
+            <div class="pr-ph shimmer mxw-350px my-3">
+                {% include get_cover_template('common/post/widget_list_item') with {
+                    placeholder: 1,
+                    metadata: [1, 1]
+                } %}
+            </div>
+            <div class="result-list mb-4 row overflow-y-scroll custom-scrollbar mxh-300px h-300px"></div>
+            <div class="view-all btn py-2 btn-light btn-block w-100 d-flex justify-content-center" data-type="link">
+                <div class="text-muted">{{ view_all_text|raw }}</div>
+                <strong class="search-query ms-1"></strong>
+            </div>
         </div>
     </div>
-    <div class="mt-4 search-sections">
+    <div class="mt-4 search-sections h-360px">
         {% for section in search_sections %}
             <div class="d-flex">
                 {{ render_icon(section.icon, {class: 'icon-md icon-primary me-2'}) }}
