@@ -1,7 +1,7 @@
 <?php
 /*   _______________________________________
     |  Obfuscated by PMPR - Php Obfuscator  |
-    |             67cf35b90bfd1             |
+    |             67cf37ad8863f             |
     |_______________________________________|
 */
  namespace Pmpr\Cover\Filefox; use Pmpr\Common\Foundation\Container\Container as BaseClass; use Pmpr\Cover\Filefox\Traits\CommonTrait; abstract class Container extends BaseClass { use CommonTrait; }
