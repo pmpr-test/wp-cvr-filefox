@@ -1,9 +1,15 @@
 {% set figure_class = figure_class|default('mb-0') %}
+{% set placeholder = placeholder|default(0) %}
 {% set has_figure = has_figure|default(1) %}
 {% if has_figure %}
     <figure{% if figure_class is not empty %} class="{{ figure_class|esc_attr }}"{% endif %}>
 {% endif %}
-    {{ get_the_post_thumbnail(post, image_size, image_attr)|raw }}
+        {% if placeholder %}
+            {% set image_attr = image_attr|add({class: 'pr-ph-image'}) %}
+            <div {{ image_attr|parse_attrs|raw }}></div>
+        {% else %}
+            {{ get_the_post_thumbnail(post, image_size, image_attr)|raw }}
+        {% endif %}
 {% if has_figure %}
         {{ render_if_has_content('figcaption', {class: 'visually-hidden'}, get_the_post_thumbnail_caption(post)) }}
     </figure>

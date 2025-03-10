@@ -1,0 +1,13 @@
+<div class="col-12 col-lg-6 mb-4 mb-lg-0">
+    <div class="h3 mb-2">{{ title|raw }}</div>
+    {% for post in posts %}
+        <div class="{% if not loop.last %}mb-3{% endif %}">
+            {% include get_cover_template('common/post/widget_list_item') with {
+                post: post,
+                render_icon: 1,
+                metadata: metadata
+            } %}
+        </div>
+    {% endfor %}
+</div>
+

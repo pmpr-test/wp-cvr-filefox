@@ -1,38 +1,60 @@
-{% if post is not empty %}
-    {% set title = get_title(post) %}
+{% set placeholder = placeholder|default(0) %}
+{% if post is not empty or placeholder %}
     {% set version = version|default('list') %}
-    {% set permalink = get_permalink(post) %}
+    {% if not placeholder %}
+        {% set title = get_title(post) %}
+        {% set permalink = get_permalink(post) %}
+    {% endif %}
     {% if version is same as ('list') %}
         <article class="d-flex position-relative">
             <div>
-                {% include get_cover_template('common/post/thumbnail') with {
+                {% include get_template('thumbnail', _self) with {
                     post: post,
-                    figure_class: 'me-3 mb-0 fit-image as-small',
+                    placeholder: placeholder,
+                    figure_class: 'me-3 mb-0 fit-image as-' ~ figure_size|default('small'),
                     image_attr: {class: 'rounded overflow-hidden'},
                     image_size: 'small',
                 } %}
             </div>
-            <div class="d-flex flex-column justify-content-between">
-                <a href="{{ permalink|esc_attr }}" class="stretched-link text-gray-800"
-                   aria-label="{{ title|esc_attr }}">
-                    <h4 class="lh-lg line-limit-2">{{ title|raw }}</h4>
-                </a>
-                {% set metadata_items = pmpr_apply_filters('metadata_get_items', {}, {
-                    post: post,
-                    include: metadata
-                }) %}
-                {{ pmpr_do_action('render_post_metadata', metadata_items, {
-                    has_icon: 1,
-                    key_value: 0,
-                    has_divider: 1,
-                    divider_space: 2,
-                    text_color: 'gray-600',
-                    divider_color: 'gray-300',
-                    icon_size: 'md',
-                    item_class: 'fs-xs',
-                    icon_divider_space: 1,
-                    version: 3
-                }) }}
+            <div class="d-flex flex-column justify-content-between flex-grow-1">
+                {% if placeholder %}
+                    <div class="h4">
+                        <div class="pr-ph-text"></div>
+                        <div class="pr-ph-text pr-ph-short"></div>
+                    </div>
+                {% else %}
+                    <a href="{{ permalink|esc_attr }}" class="stretched-link text-gray-800{% if metadata is empty %} my-auto{% endif %}"
+                       aria-label="{{ title|esc_attr }}">
+                        <h4 class="lh-lg line-limit-2 mb-0">{{ title|raw }}</h4>
+                    </a>
+                {% endif %}
+                {% if metadata is not empty %}
+                    {% if placeholder %}
+                        <div class="d-flex">
+                            {% for meta in metadata %}
+                                <div class="pr-ph-meta"></div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {% set metadata_items = pmpr_apply_filters('metadata_get_items', {}, {
+                            post: post,
+                            include: metadata
+                        }) %}
+                        {{ pmpr_do_action('render_post_metadata', metadata_items, {
+                            has_icon: 1,
+                            render_icon: render_icon|default(0),
+                            key_value: 0,
+                            has_divider: 1,
+                            divider_space: 2,
+                            text_color: 'gray-600',
+                            divider_color: 'gray-300',
+                            icon_size: 'md',
+                            item_class: 'fs-xs',
+                            icon_divider_space: 1,
+                            version: 3
+                        }) }}
+                    {% endif %}
+                {% endif %}
             </div>
         </article>
     {% elseif version is same as ('simple') %}

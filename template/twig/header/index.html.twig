@@ -14,15 +14,31 @@
 
 {% if pmpr_apply_filters('has_header', 1) %}
 
-    <header id="site_header" class="site-header header-area">
-        <div class="position-relative bg-white z-lg">
-            {% include get_template('./top/index', _self) %}
-            {% include get_template('./bottom/index', _self) %}
+<header id="site_header" class="site-header header-area">
+    <div class="position-relative bg-white z-md shadow-sm">
+        <div class="container">
+            <div class="row g-0 py-2">
+                <span data-target="#mobile_aside" class="d-md-none aside-toggle my-auto col-auto as-link me-3">
+                    {{ render_icon(get_cover_option('header_aside_icon', 'fasm/6/set/bars'), {class: 'icon-xxl p-1', 'data-class': 'bg-gray-200 rounded shadow-sm'}) }}
+                </span>
+                {% include get_cover_template('common/logo') with {
+                    logo_type: 'header',
+                    logo_size: [135, 40],
+                    container_class: 'my-auto col col-md-auto me-4'
+                } %}
+                <div class="col">
+                    {% include get_template('./menu', _self) %}
+                </div>
+            </div>
         </div>
-        {% if pmpr_apply_filters('breadcrumb_allow_render', 1) %}
-            {% include get_template('./breadcrumb', _self) %}
-        {% endif %}
-    </header>
-    {% include get_template('./mobile_aside', _self) %}
+    </div>
+
+    {{ pmpr_do_action('after_header') }}
+
+    {% if pmpr_apply_filters('breadcrumb_allow_render', 1) %}
+        {% include get_template('./breadcrumb', _self) %}
+    {% endif %}
+</header>
+{% include get_template('./mobile_aside', _self) %}
 
 {% endif %}

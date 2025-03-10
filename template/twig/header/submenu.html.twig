@@ -1,0 +1,68 @@
+<div class="position-relative shadow-sm border-top bg-white d-none d-md-block">
+    <div class="container">
+        <nav class="navbar navbar-expand navbar-white d-flex">
+            <ul class="navbar-nav">
+                {% for item in items %}
+                    <li class="nav-item">
+                        <a href="{{ item.link|esc_attr }}" class="nav-link" rel="nofollow noopener noreferrer">
+                            {{ item.title|raw }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <div class="search-modal-toggle ms-auto bg-gray-200 rounded d-flex justify-content-between px-3 py-2"
+                 data-bs-target="#search_modal" data-bs-toggle="modal"
+            >
+                <div class="me-3 text-muted">{{ search_text|raw }}</div>
+                {{ render_icon(search_icon, {class: 'icon-md as-link'}) }}
+            </div>
+        </nav>
+    </div>
+</div>
+
+{% set modal_content %}
+    <div class="bg-gray-200 d-flex rounded-sm px-3 py-2 mb-4">
+        {{ render_icon(search_icon, {class: 'icon-lg my-auto'}) }}
+        <label class="flex-grow-1">
+            <input type="text" name="search" id="search"
+                   placeholder="{{ search_placeholder|esc_attr }}"
+                   class="form-control border-0 outline-0 w-100">
+            <input type="hidden" name="material" value="{{ material|esc_attr }}">
+        </label>
+    </div>
+    <div class="search-result hide">
+        <div class="pr-ph shimmer mxw-350px my-3">
+            {% include get_cover_template('common/post/widget_list_item') with {
+                placeholder: 1,
+                metadata: [1, 1]
+            } %}
+        </div>
+        <div class="result-list mb-4 mnh-200px row"></div>
+        <div class="view-all btn py-2 btn-light btn-block w-100 d-flex justify-content-center" data-type="link">
+            <div class="text-muted">{{ view_all_text|raw }}</div>
+            <strong class="search-query ms-1"></strong>
+        </div>
+    </div>
+    <div class="mt-4 search-sections">
+        {% for section in search_sections %}
+            <div class="d-flex">
+                {{ render_icon(section.icon, {class: 'icon-md icon-primary me-2'}) }}
+                <strong class="fs-16 mb-3">{{ section.title|raw }}</strong>
+            </div>
+            <div>
+
+            </div>
+            {% if not loop.last %}
+                <hr class="my-4 bg-gray-300">
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endset %}
+
+{{ render_frontend_modal({
+    id: 'search_modal',
+    show: 0,
+    centered: 1,
+    content: modal_content,
+    size: 'lg'
+}) }}

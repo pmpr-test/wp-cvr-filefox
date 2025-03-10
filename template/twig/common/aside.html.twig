@@ -6,7 +6,7 @@
      id="{{ aside_id|esc_attr }}_aside">
     <div class="aside-wrapper position-relative{% if full_height %} min-vh-100{% endif %}{% if wrapper_class is defined and wrapper_class is not empty %} {{ wrapper_class|raw }}{% endif %}">
         {% if has_header|default(0) %}
-            <div class="aside-header border-bottom border-1 border-{{ border_color|esc_attr }} p-{{ padding }}">
+            <div class="position-relative aside-header border-bottom border-1 border-{{ border_color|esc_attr }} p-{{ padding }}">
                 {% block aside_header %}{% endblock %}
             </div>
         {% endif %}

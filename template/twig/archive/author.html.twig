@@ -53,9 +53,8 @@
                                         <div class="{{ prepare_columns(loop, {'': 6}, 4) }}">
                                             <div class="card">
                                                 <div class="card-body d-flex flex-column text-center">
-                                                    {{ render_icon(meta.icon, {class: 'icon-xxxl icon-primary mx-auto mb-3'}) }}
-                                                    <strong class="h3 mb-2">{{ meta.value }}</strong>
-                                                    <span class="text-muted fs-xs">{{ meta.text|raw }}</span>
+                                                    <strong class="display-6 fw-bold mb-2">{{ meta.value }}</strong>
+                                                    <span class="text-muted fs-14">{{ meta.text|raw }}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -102,7 +101,7 @@
     <aside>
         {% for post_list in posts_list %}
             {% if post_list.posts is not empty %}
-                <div class="{% if loop.index % 2 == 0 %}bg-gray-200{% endif %}">
+                <div class="{% if loop.index is even %}bg-gray-200{% else %}bg-light{% endif %}">
                     <div class="container py-5">
                         <div class="d-flex justify-content-between mb-3">
                             <h2 class="my-auto">{{ post_list.title|raw }}</h2>
