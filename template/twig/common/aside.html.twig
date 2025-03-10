@@ -10,7 +10,7 @@
                 {% block aside_header %}{% endblock %}
             </div>
         {% endif %}
-        <div class="aside-content{% if full_height %} vh-100{% endif %} p-{{ content_padding|default(padding) }}">
+        <div class="aside-content {% if full_height %} vh-100{% endif %} p-{{ content_padding|default(padding) }}">
             {% block aside_content %}{% endblock %}
         </div>
         {% if has_footer|default(0) %}
