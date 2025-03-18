@@ -1,0 +1,47 @@
+{% if main_images and thumbnails %}
+
+    {% embed get_cover_template('common/carousel/index') with {
+        carousel_config: {
+            loop: true,
+            thumbs: '.product-gallery-thumb-carousel',
+            navigation: true,
+            pagination: true,
+            slidesPerView: 1
+        },
+        pagination_class: 'bottom-0 start-50 translate-middle-x d-lg-none',
+        nav_icon: 'arrow',
+        icon_attrs: {class: 'icon-lg icon-white'},
+        navs_class: 'position-absolute top-50 start-50 translate-middle w-100',
+        carousels: main_images,
+        container_class: 'main-carousel product-gallery-main-carousel rounded overflow-hidden mb-4 mb-lg-2',
+    } %}
+
+        {% block carousel %}
+            {{ carousel|raw }}
+        {% endblock %}
+    {% endembed %}
+
+    {% set slidesToShow = 4 %}
+    {% set arrows = thumbnails|length > slidesToShow %}
+    {% embed get_cover_template('common/carousel/index') with {
+        carousel_config: {
+            main: false,
+            navigation: false,
+            pagination: false,
+            spaceBetween: 8,
+            slidesPerView: slidesToShow,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true
+        },
+        carousels: thumbnails,
+        next_class: 'right-0',
+        prev_class: 'left-0',
+        container_class: 'overflow-hidden thumb-carousel product-gallery-thumb-carousel d-none d-lg-block'
+    } %}
+
+        {% block carousel %}
+            <div class="as-link border p-1 rounded">{{ carousel|raw }}</div>
+        {% endblock %}
+    {% endembed %}
+
+{% endif %}

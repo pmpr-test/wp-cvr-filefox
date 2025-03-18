@@ -1,16 +1,18 @@
 {% if name %}
-    <address class="my-auto">
+    <address class="my-auto{% if wrapper_class is not empty %} {{ wrapper_class|esc_attr }}{% endif %}">
         {% if full_version %}
             <div class="d-flex mb-3">
-                    {{ get_avatar(author, avatar_size, {class: 'img-fluid rounded-circle my-auto me-3 d-block'})|raw }}
-                    <div class="my-auto">
-                        <cite class="my-auto d-block fs-md fw-bold font-normal mb-1">{{ name|raw }}</cite>
-                        {% include get_cover_template('common/author/caption_expertise') with {
-                            author: author
-                        } %}
-                    </div>
+                {{ get_avatar(author, avatar_size, {class: 'img-fluid rounded-circle my-auto me-3 d-block'})|raw }}
+                <div class="my-auto">
+                    <cite class="my-auto d-block fs-md fw-bold font-normal mb-1">{{ name|default()|raw }}</cite>
+                    {% include get_cover_template('common/author/caption_expertise') with {
+                        author: author,
+                        author_metadata: author_metadata|default([])
+                    } %}
                 </div>
+            </div>
             {{ render_if_has_content('div', {class: 'fs-sm lh-lg line-limit-5'}, description) }}
+            {% block after_description %}{% endblock %}
         {% else %}
             <a href="{{ url|raw }}" class="d-flex text-gray-700" rel="author" aria-label="{{ name|esc_attr }}">
                 {{ get_avatar(author, avatar_size, {class: 'img-fluid rounded-circle mb-auto me-3 d-block'})|raw }}

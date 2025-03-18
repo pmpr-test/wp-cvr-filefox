@@ -1,5 +1,5 @@
 {% if items is not empty %}
-    {{ render_if_has_content('h2', {class: 'h2 mb-3'}, title) }}
+    {{ render_if_has_content('h2', {class: 'h2 mb-3 section-title'}, title) }}
     <ul class="list-group fs-sm list-group-flush">
         {% for item in items %}
             <li class="list-group-item px-0 pt-0 pb-3 border-0">

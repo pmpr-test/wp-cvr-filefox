@@ -1,4 +1,4 @@
-<div class="alert alert-{{ type|default('warning')|esc_attr }}{% if centered %} text-center{% endif %}{% if dismissible %} fade show{% endif %}" role="alert">
+<div class="alert alert-{{ type|default('warning')|esc_attr }}{% if centered %} text-center{% endif %}{% if dismissible %} fade show{% endif %} {{ classes|esc_attr }}" role="alert">
     {{ render_if_has_content(title_element|default('strong'), {class: 'alert-heading'}, title) }}
     {{ content|raw }}
     {% if dismissible %}

@@ -1,6 +1,6 @@
 {% if items is not empty %}
     <section id="post_faq">
-        <h2 class="h2 mb-4">{{ title|raw }}</h2>
+        <h2 class="h2 mb-4 section-title">{{ title|raw }}</h2>
         <div class="accordion accordion-flush mb-3" id="faq_accordion">
             {% for index, item in items %}
                 {% set first_item = loop.first %}

@@ -1,7 +1,7 @@
 {% set pagination = pmpr_apply_filters('get_' ~ pagination_type|default('post') ~ '_pagination', '', pagination_args|default({})) %}
 {% if pagination is not empty %}
     <nav{% if pagination_label %} aria-label="{{ pagination_label|esc_attr }}"{% endif %}
-            class="d-flex justify-content-center">
+            class="d-flex justify-content-center mt-4">
         {{ pagination|raw }}
     </nav>
 {% endif %}

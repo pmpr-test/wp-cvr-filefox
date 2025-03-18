@@ -1,15 +1,17 @@
 {% if carousels %}
 
+    {{ pmpr_do_action('pmpr_enqueue_swiper') }}
+
     {% set carousel_config = carousel_config|default({}) %}
 
     <div class="swiper-container position-relative {{ container_class|raw }}">
-        <div class="swiper"
+        <div class="swiper{% if dont_hide %} dont-hide{% endif %}"
                 {% if carousel_config is defined %} data-carousel="{{ carousel_config|json_encode }}"{% endif %}
                 {% if carousel_id is defined %} id="{{ carousel_id|esc_attr }}"{% endif %}>
             {% block before_slides %}{% endblock %}
-            <div class="swiper-wrapper {{ container_class|esc_attr }}">
+            <div class="swiper-wrapper {{ wrapper_class|esc_attr }}">
                 {% for key, carousel in carousels %}
-                    <div class="swiper-slide">
+                    <div class="swiper-slide {{ slide_class|raw }}">
                         {% block carousel %}{% endblock %}
                     </div>
                 {% endfor %}
@@ -30,7 +32,9 @@
 
         {% if carousel_config.pagination %}
             {% block carousel_pagination %}
-                {% include get_template('pagination', _self) %}
+                {% include get_template('pagination', _self) with {
+                    class: pagination_class
+                } %}
             {% endblock %}
         {% endif %}
     </div>

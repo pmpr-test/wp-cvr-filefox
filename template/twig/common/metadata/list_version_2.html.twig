@@ -6,7 +6,7 @@
     {% else %}
         <div class="meta-item d-flex flex-column text-center justify-content-between">
             <span class="meta-title mb-1">{{ meta_item.title|raw }}</span>
-            <strong class="meta-value fw-bold h1 mb-0">{{ meta_item.value|raw }}</strong>
+            <strong class="meta-value fw-bold h1 mb-0">{{ meta_item[value_key|default('value')]|raw }}</strong>
         </div>
     {% endif %}
 

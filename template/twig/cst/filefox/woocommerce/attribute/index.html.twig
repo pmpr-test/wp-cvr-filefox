@@ -1,0 +1,32 @@
+{% if attributes is not empty %}
+
+    {% if title is not empty %}
+        <div class="d-flex justify-content-between mb-3">
+            <h2 class="h3 my-auto">{{ title|raw }}</h2>
+            {% include get_cover_template('common/action') with {
+                element: 'span',
+                has_icon: 1,
+                icon_end: 1,
+                as_button: 0,
+                icon_size: 'sm',
+                action_text: action_text,
+                action_icon: action_icon,
+                action_attrs: {'class': 'fs-14', 'data-type': 'scroll-to', 'data-target': '#tab-additional_information'}
+            } %}
+        </div>
+    {% endif %}
+    <ul class="list-group list-group-horizontal overflow-auto custom-scrollbar my-3">
+        {% for attribute in attributes %}
+            <li class="list-group-item d-flex flex-column p-2 text-nowrap bg-gray-200 border-0 rounded{% if not loop.last %} me-2{% endif %}">
+                <span class="text-gray-600 fs-xs mb-1">{{ attribute.label|raw }}:</span>
+                <strong class="text-gray-700 fs-14">{{ attribute.value|raw }}</strong>
+            </li>
+        {% endfor %}
+        {% if title is empty %}
+            <li class="list-group-item d-flex flex-column p-2 text-nowrap bg-gray-200 border-0 rounded ms-2 as-link"
+                data-type="scroll-to" data-target="#tab-additional_information" aria-label="view more" data-offset="100">
+                {{ render_icon(view_more_icon, {class: 'icon-xl my-auto mx-3'}) }}
+            </li>
+        {% endif %}
+    </ul>
+{% endif %}

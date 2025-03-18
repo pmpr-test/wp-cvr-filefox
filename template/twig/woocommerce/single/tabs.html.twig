@@ -1,0 +1,43 @@
+{% if tabs is not empty %}
+    <div class="position-relative">
+        <nav class="border-bottom navbar bg-light sticky-top py-0 container-fluid container-sm" id="woo_tabs_navbar">
+            <ul class="nav scrollspy-container" role="tablist">
+                {% for key, tab in tabs %}
+                    <li class="nav-item position-relative"
+                        id="tab-title-{{ key|esc_attr }}" role="tab"
+                        aria-controls="tab-{{ key|esc_attr }}">
+                        <span data-type="scrollspy" data-target="#tab-{{ key|esc_attr }}" data-offset="90"
+                              class="nav-link as-link fw-bold gray-primary py-3 ignore-bg{% if loop.first %} active{% endif %}">
+                            {{ apply_filters('woocommerce_product_' ~ key ~ '_tab_title', tab.title, key)|raw }}
+                        </span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-xl-9 position-relative overflow-auto single-content" id="woo_panels"
+                     data-target="#woo_tabs_navbar">
+                    {% for key, tab in tabs %}
+                        <section id="tab-{{ key|esc_attr }}" role="tabpanel"
+                                 aria-labelledby="tab-title-{{ key|esc_attr }}" class="my-4">
+                            {{ tab.callback|call([key, tab]) }}
+                        </section>
+                        {% if not loop.last %}
+                            <hr class="section-separator">
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <aside class="d-none d-xl-block col-xl-3">
+                    {% include get_template('../add_to_cart_card', _self) with {
+                        has_features: 0,
+                        show_versions: 0,
+                        has_preview_action: 0,
+                        has_recommendation_breif: 0,
+                        wrapper_class: 'sticky-top mt-4'
+                    } %}
+                </aside>
+            </div>
+        </div>
+    </div>
+{% endif %}

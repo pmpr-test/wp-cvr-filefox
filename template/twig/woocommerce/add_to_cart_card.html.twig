@@ -1,0 +1,79 @@
+<div class="card shadow-sm {{ wrapper_class|esc_attr }}">
+    <div class="card-body">
+        {% if show_versions
+            and versions_text is not empty %}
+            <div class="d-flex justify-content-between">
+                <span class="fs-14 my-auto">{{ versions_text|raw }}</span>
+                {% include get_cover_template('common/action') with {
+                    element: 'span',
+                    as_button: 0,
+                    action_link: '#tab-versions',
+                    action_text: versions_action_text,
+                    action_attrs: {class: 'text-primary ignore-bg fs-14'},
+                } %}
+            </div>
+            <hr class="my-3">
+        {% endif %}
+
+        {% if recommendation is not empty %}
+            <div class="d-flex">
+                {{ recommendation.symbol|raw }}
+                <strong class="line-limit-2 fs-12 my-auto">{{ recommendation.text|raw }}</strong>
+            </div>
+            {% if has_recommendation_breif %}
+                <div class="d-flex my-3">
+                    <hr class="flex-grow-1 my-auto">
+                    {% include get_cover_template('common/action') with {
+                        element: 'span',
+                        as_button: 1,
+                        action_text: recommendation.action_text,
+                        action_attrs: {class: 'btn-light fs-12 text-secondary-primary mx-2'},
+                    } %}
+                    <hr class="flex-grow-1 my-auto">
+                </div>
+            {% else %}
+                <hr class="my-3">
+            {% endif %}
+        {% endif %}
+
+        {{ price_html|raw }}
+
+        <div class="d-grid gap-2">
+            {% if add_to_cart is not empty %}
+                {{ add_to_cart|raw }}
+            {% else %}
+                {% include get_cover_template('common/action') with {
+                    element: 'span',
+                    as_button: 1,
+                    action_link: action_link,
+                    action_text: action_text,
+                    action_attrs: {class: 'btn-primary add_to_cart_button'},
+                } %}
+            {% endif %}
+            {% if has_preview_action %}
+                {% include get_cover_template('common/action') with {
+                    element: 'span',
+                    as_button: 1,
+                    action_link: '#',
+                    action_text: preview_text,
+                    action_attrs: {class: 'btn-outline-primary' ~ (has_preview ? '' : ' disabled') },
+                } %}
+            {% endif %}
+        </div>
+
+        {% if has_features
+            and features is not empty %}
+            <hr class="my-3">
+            <ul class="list-group">
+                {% for feature in features %}
+                    <li class="list-group-item border-0 d-flex px-0 py-0 {% if not loop.last %} mb-2{% endif %}">
+                        {{ render_icon(feature.icon, {class: 'my-auto me-2 icon-md'}) }}
+                        <div class="fs-12 mb-0 text-muted">{{ feature.title|raw }}</div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+    </div>
+</div>
+

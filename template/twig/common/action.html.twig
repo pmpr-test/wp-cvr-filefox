@@ -2,11 +2,20 @@
 {% set element = element|default('a') %}
 
 {% if action_link is not empty %}
-    {% set action_attrs = action_attrs|add('href', action_link) %}
+    {% if element is same as('a') %}
+        {% set action_attrs = action_attrs|add('href', action_link) %}
+    {% elseif element is same as('span') %}
+        {% set action_attrs = action_attrs|add('data-type', 'link') %}
+        {% set action_attrs = action_attrs|add('data-link', action_link) %}
+    {% endif %}
+{% endif %}
+
+{% if element is same as('span') %}
+    {% set action_attrs = action_attrs|add('class', 'as-link') %}
 {% endif %}
 
 {% if has_icon %}
-    {% set action_attrs = action_attrs|add('class', 'd-flex') %}
+    {% set action_attrs = action_attrs|add('class', 'd-flex justify-content-center') %}
 {% endif %}
 
 {% if as_button|default(1) %}
@@ -24,14 +33,17 @@
     {% endif %}
 {% endif %}
 
+{% set icon_start = icon_end|default(0) %}
+{% set icon_end = icon_end|default(not icon_start) %}
+
 <{{ element|raw }} {{ action_attrs|parse_attrs|raw }}>
-    {% if has_icon and icon_start|default(0) %}
+    {% if has_icon and icon_start %}
         {{ render_icon(action_icon|default('fasm/6/set/angles-right'), {class: 'me-2 my-auto icon-' ~ icon_size|default('md')}) }}
     {% endif %}
 
     {{ action_text|raw }}
 
-    {% if has_icon and icon_end|default(1) %}
+    {% if has_icon and icon_end %}
         {{ render_icon(action_icon|default('fasm/6/set/angles-left'), {class: 'ms-2 my-auto icon-' ~ icon_size|default('md')}) }}
     {% endif %}
 </{{ element|raw }}>
