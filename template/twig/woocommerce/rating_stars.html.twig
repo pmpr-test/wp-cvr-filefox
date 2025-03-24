@@ -1,0 +1,13 @@
+{% for index in 5..1 %}
+    {% set color = 'warning' %}
+    {% if rate >= index %}
+        {% set icon = icons['full'] %}
+    {% elseif rate < index and (rate + 1) > index   %}
+        {% set icon = icons['half'] %}
+    {% else %}
+        {% set color = '' %}
+        {% set icon = icons['full'] %}
+    {% endif %}
+    {{ render_icon(icon, {class: 'ms-1 icon-lg icon-' ~ color}) }}
+{% endfor %}
+

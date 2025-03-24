@@ -2,19 +2,14 @@
     data-page="{{ page }}">
     <div id="comment-{{ id|esc_attr }}-content" data-id="{{ id|esc_attr }}"
             {{ comment_class(['comment-content'], id) }}>
-        <div class="d-flex">
-            {{ get_avatar(comment, avatar_size, {class: 'me-2 avatar-img rounded-circle'})|raw }}
-            <span class="h6 my-auto me-2 author-title">{{ get_comment_author(id)|raw }}</span>
-            {% if comment.comment_approved %}
-                <time class="text-muted my-auto"
-                      datetime="{{ comment.comment_date|date('Y-m-d')|esc_attr }}">
-                    {{ get_comment_date()|datetime|raw }}
-                </time>
-            {% else %}
-                <p class="text-muted my-auto">{{ args.comment_waiting_text|raw }}</p>
-            {% endif %}
-        </div>
+
+        {% include get_cover_template('common/comment/author_and_metadata') with {
+            comment: comment,
+            comment_waiting_text: args.comment_waiting_text
+        } %}
+
         <div class="font-size-sm pr-text my-3">{{ wpautop(text)|raw }}</div>
+
         {{ get_comment_reply_link({
             depth: depth,
             max_depth: max_depth,

@@ -8,6 +8,10 @@
                 content: 'نسخـــــه رایگــــان دارد'
             }) }}
             {{ pmpr_do_action('render_product_thumbnails', product) }}
+            <div class="as-link d-flex mt-2">
+                {{ render_icon(report.icon, {class: 'icon-sm me-2 my-auto'}) }}
+                <span class="fs-14 text-gray-700">{{ report.action_text|raw }}</span>
+            </div>
         </div>
         <div class="col-lg-8">
             <div class="row">
@@ -15,9 +19,9 @@
                     <h1 class="text-gray-900 fs-lg mb-2">{{ title|raw }}</h1>
                     {{ pmpr_do_action('render_post_taxonomies', product, {attrs: {class: 'fs-14 mb-0'}}) }}
                 </header>
-                <div class="col-12 col-lg-8 mb-4 mb-lg-0 border-top">
+                <div class="col-xl-8 border-top">
 
-                    <address class="rounded my-3 p-3 bg-gray-200">
+                    <address class="rounded my-3 p-3 bg-gray-200 ribbon-wrapper">
                         <div class="d-flex mb-2">
                             {{ get_avatar(author, 80, {class: 'img-fluid rounded-circle my-auto me-3 d-block'})|raw }}
                             <div class="my-auto">
@@ -27,6 +31,7 @@
                             </div>
                         </div>
                         {{ render_if_has_content('div', {class: 'fs-16 lh-lg line-limit-2'}, author_description) }}
+                        <span class="ribbon ribbon-folded ribbon-top ribbon-end ribbon-gray">{{ provided_by|raw }}</span>
                     </address>
 
                     {{ pmpr_do_action('render_product_attributes', {
@@ -40,7 +45,7 @@
                             {% for key, meta_item in metadata %}
                                 {% set isComment = key is same as ('comment') %}
                                 <li class="flex-fill list-group-item rounded shadow-sm bg-white border-0 d-flex flex-column{% if not loop.last %} me-2{% endif %} p-2 text-center{% if isComment %} as-link{% endif %}"
-                                        {% if isComment %} data-link="#comments" data-type="scroll-to" {% endif %}
+                                        {% if isComment %} data-target="#comments" data-type="scroll-to" data-offset="90"{% endif %}
                                 >
                                     {% if key is same as ('score') %}
                                         <div class="d-flex justify-content-center">
@@ -60,71 +65,54 @@
                         </ul>
                     {% endif %}
 
-                    <div class="d-flex my-3">
-                        <hr class="flex-grow-1 my-auto">
-                        <h2 class="h4 my-auto mx-3">دیدگاه خریداران</h2>
-                        <hr class="flex-grow-1 my-auto">
-                    </div>
+                    {% if reviews is not empty %}
 
-                    {% embed get_cover_template('common/carousel/index') with {
-                        carousel_config: {
-                            loop: true,
-                            navigation: true,
-                            pagination: false,
-                            slidesPerView: 1
-                        },
-                        nav_class: '',
-                        navs_class: 'd-flex justify-content-between centered-absolute w-100 z-xs',
-                        carousels: {
-                            '1': {
-                                'name': 'مهرداد',
-                                'text': 'این یک متن بلند است برای این کاربراین یک متن بلند است برای این کاربراین یک متن بلند است برای این کاربراین یک متن بلند است برای این کاربراین یک متن بلند است برای این کاربراین یک متن بلند است برای این کاربر'
+                        <div class="d-flex my-3">
+                            <hr class="flex-grow-1 my-auto">
+                            <h2 class="h4 my-auto mx-3">{{ reviews_title|raw }}</h2>
+                            <hr class="flex-grow-1 my-auto">
+                        </div>
+
+                        {% embed get_cover_template('common/carousel/index') with {
+                            carousel_config: {
+                                loop: true,
+                                navigation: true,
+                                pagination: false,
+                                slidesPerView: 1
                             },
-                            '2': {
-                                'name': 'محسن بخشایی',
-                                'text': 'این یک متن بلند است برای این کاربراین یک متن بلند است برای این کاربراین یک متن بلند است برای این کاربراین یک متن بلند است برای این کاربراین یک متن بلند است برای این کاربراین یک متن بلند است برای این کاربر'
-                            },
-                            '3': {
-                                'name': 'احمد لطفی',
-                                'text': 'این یک متن بلند است برای این کاربراین یک متن بلند است برای این کاربراین یک متن بلند است برای این کاربراین یک متن بلند است برای این کاربراین یک متن بلند است برای این کاربراین یک متن بلند است برای این کاربر'
-                            }
-                        }
-                    } %}
-                        {% block carousel %}
-                            <div class="card shadow-sm">
-                                <div class="card-body px-4 d-flex">
-                                    {{ get_avatar(author, 65, {class: 'img-fluid rounded-circle my-auto me-3 d-block'})|raw }}
-                                    <div class="pr-text">
-                                        <div class="d-flex justify-content-between mb-2">
-                                            <strong>{{ carousel.name|raw }}</strong>
-                                            <div class="d-flex">
-                                                {{ render_icon('fasm/6/set/star', {class: 'icon-md'}) }}
-                                                {{ render_icon('fasm/6/set/star', {class: 'icon-md icon-warning'}) }}
-                                                {{ render_icon('fasm/6/set/star', {class: 'icon-md icon-warning'}) }}
-                                                {{ render_icon('fasm/6/set/star', {class: 'icon-md icon-warning'}) }}
-                                                {{ render_icon('fasm/6/set/star', {class: 'icon-md icon-warning'}) }}
+                            nav_class: '',
+                            navs_class: 'd-flex justify-content-between centered-absolute w-100 z-xs',
+                            carousels: reviews
+                        } %}
+                            {% block carousel %}
+                                <div class="card shadow-sm">
+                                    <div class="card-body px-4 d-flex">
+                                        {{ get_avatar(carousel.user_id, 65, {class: 'img-fluid rounded-circle my-auto me-3 d-block'})|raw }}
+                                        <div class="pr-text flex-grow-1">
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <strong>{{ carousel.author|raw }}</strong>
+                                                <div class="d-flex">
+                                                    {% for index in 1..5 %}
+                                                        {{ render_icon('fasm/6/set/star', {class: 'icon-md' ~ (index <= carousel.rating ? ' icon-warning' : '')}) }}
+                                                    {% endfor %}
+                                                </div>
                                             </div>
+                                            <p class="line-limit-2 fs-14">{{ carousel.content|raw }}</p>
                                         </div>
-                                        <p class="line-limit-2 fs-14">{{ carousel.text|raw }}</p>
                                     </div>
                                 </div>
-                            </div>
-                        {% endblock %}
-                    {% endembed %}
+                            {% endblock %}
+                        {% endembed %}
 
+                    {% endif %}
                 </div>
-                <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                <div class="col-xl-4 d-none d-xl-block">
                     {% include get_template('../../add_to_cart_card', _self) with {
                         has_features: 1,
                         show_versions: 1,
                         has_preview_action: 1,
                         has_recommendation_breif: 1,
-                        wrapper_class: 'mb-3'
                     } %}
-                    <div class="as-link d-flex">
-                        {{ render_icon(report.icon, {class: 'icon-sm me-2 my-auto'}) }}
-                        <span class="fs-14 text-gray-700">{{ report.action_text|raw }}</span>
-                    </div>
                 </div>
             </div>
         </div>

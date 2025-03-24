@@ -2,7 +2,7 @@
 
 {% block body %}
     <main id="main" class="bg-gray-200 pb-4">
-        <header class="{% if not is_paged() %}bg-white {% endif %}">
+        <header class="pt-3{% if not is_paged() %} bg-white{% endif %}">
             <div class="container">
                 {% include get_cover_template('common/header/title') with {
                     title: jumbotron,
@@ -12,6 +12,7 @@
         </header>
 
         {% set posts = have_posts() %}
+
         {% if not is_paged() %}
             {% set first_part = posts|slice(0, 5) %}
             {% set posts = posts|slice(5, posts|length) %}

@@ -1,7 +1,8 @@
 {% if tabs is not empty %}
     <div class="position-relative">
-        <nav class="border-bottom navbar bg-light sticky-top py-0 container-fluid container-sm" id="woo_tabs_navbar">
-            <ul class="nav scrollspy-container" role="tablist">
+        <nav class="border-bottom navbar bg-light sticky-top py-0 container-fluid container-sm z-sm"
+             id="woo_tabs_navbar">
+            <ul class="nav scrollspy-container flex-nowrap text-nowrap overflow-auto" role="tablist">
                 {% for key, tab in tabs %}
                     <li class="nav-item position-relative"
                         id="tab-title-{{ key|esc_attr }}" role="tab"
@@ -16,15 +17,19 @@
         </nav>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-xl-9 position-relative overflow-auto single-content" id="woo_panels"
+                <div class="col-12 col-xl-9 position-relative overflow-auto" id="woo_panels"
                      data-target="#woo_tabs_navbar">
                     {% for key, tab in tabs %}
                         <section id="tab-{{ key|esc_attr }}" role="tabpanel"
-                                 aria-labelledby="tab-title-{{ key|esc_attr }}" class="my-4">
-                            {{ tab.callback|call([key, tab]) }}
+                                 aria-labelledby="tab-title-{{ key|esc_attr }}"
+                                 class="my-4 {% if key is same as('description') %} single-content product-content{% endif %}">
+                            {% set tab_content %}
+                                {{ tab.callback|call([key, tab]) }}
+                            {% endset %}
+                            {{ pmpr_apply_filters('woo_tab_' ~ key ~ '_content', tab_content, tab)|raw }}
                         </section>
                         {% if not loop.last %}
-                            <hr class="section-separator">
+                            <hr class="section-separator border border-1 border-dark">
                         {% endif %}
                     {% endfor %}
                 </div>
@@ -34,10 +39,50 @@
                         show_versions: 0,
                         has_preview_action: 0,
                         has_recommendation_breif: 0,
-                        wrapper_class: 'sticky-top mt-4'
+                        wrapper_class: 'sticky-top z-xs mt-4'
                     } %}
                 </aside>
             </div>
         </div>
     </div>
 {% endif %}
+{#  add to cart section for mobile and tablet (small screens)  #}
+<div class="d-xl-none position-fixed bottom-0 start-0 bg-white vw-100 z-sm rounded-top shadow">
+    <div class="container py-3">
+        <div class="d-flex justify-content-between mb-3">
+            {% if recommendation is not empty %}
+                <div class="d-flex my-auto">
+                    {{ recommendation.symbol|raw }}
+                    <strong class="line-limit-2 fs-12 my-auto">{{ recommendation.text|raw }}</strong>
+                </div>
+            {% endif %}
+            <div class="ms-3">
+                {{ price_html|raw }}
+            </div>
+        </div>
+
+        <div class="gap-2 d-flex">
+            {% if add_to_cart is not empty %}
+                <div class="flex-grow-1">
+                    {{ add_to_cart|raw }}
+                </div>
+            {% else %}
+                {% include get_cover_template('common/action') with {
+                    element: 'span',
+                    as_button: 1,
+                    action_link: action_link,
+                    action_text: action_text,
+                    action_attrs: {class: 'btn-primary add_to_cart_button'},
+                } %}
+            {% endif %}
+            {% include get_cover_template('common/action') with {
+                element: 'span',
+                as_button: 1,
+                action_link: '#',
+                action_text: preview_text,
+                action_attrs: {class: 'btn-outline-primary' ~ (has_preview ? '' : ' disabled') },
+            } %}
+        </div>
+    </div>
+</div>
+

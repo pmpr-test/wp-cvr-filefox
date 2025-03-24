@@ -1,4 +1,4 @@
-<div class="price d-flex justify-content-end my-2">
+<div class="price d-flex justify-content-end">
     {% if discount and before %}
         <div>
             <div class="d-flex justify-content-between">
@@ -6,7 +6,7 @@
                     <span class="middle-line-through w-100 position-absolute top-50"></span>
                     {{ before|raw }}
                 </div>
-                <span class="pr-discount bg-primary text-white fs-12 rounded-xl">{{ discount|raw }}</span>
+                <span class="pr-discount bg-primary text-white fs-12 rounded">{{ discount|raw }}</span>
             </div>
             {{ price|raw }}
         </div>

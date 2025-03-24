@@ -1,4 +1,4 @@
-<div class="card shadow-sm {{ wrapper_class|esc_attr }}">
+<div class="card shadow-sm add-to-cart-card {{ wrapper_class|esc_attr }}">
     <div class="card-body">
         {% if show_versions
             and versions_text is not empty %}
@@ -6,10 +6,11 @@
                 <span class="fs-14 my-auto">{{ versions_text|raw }}</span>
                 {% include get_cover_template('common/action') with {
                     element: 'span',
+                    as_scroll: 1,
                     as_button: 0,
                     action_link: '#tab-versions',
                     action_text: versions_action_text,
-                    action_attrs: {class: 'text-primary ignore-bg fs-14'},
+                    action_attrs: {class: 'text-primary ignore-bg fs-14', 'data-offset': 90},
                 } %}
             </div>
             <hr class="my-3">
@@ -36,7 +37,9 @@
             {% endif %}
         {% endif %}
 
-        {{ price_html|raw }}
+        <div class="my-2">
+            {{ price_html|raw }}
+        </div>
 
         <div class="d-grid gap-2">
             {% if add_to_cart is not empty %}
@@ -61,8 +64,7 @@
             {% endif %}
         </div>
 
-        {% if has_features
-            and features is not empty %}
+        {% if has_features and features is not empty %}
             <hr class="my-3">
             <ul class="list-group">
                 {% for feature in features %}
