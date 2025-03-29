@@ -4,6 +4,8 @@
 
     {% set inputs = inputs ~ include(get_template('selectable_item', _self), {
         term: item,
+        last: loop.last,
+        first: loop.first
     }) %}
     {% if item.id == value %}
         {% set valueIndex = loop.index %}
@@ -15,16 +17,16 @@
 
 {% if inputs is not empty %}
     <ul id="{{ name }}-list{% if isChildren %}-{{ parent|esc_attr }}{% endif %}"
-        class="list-group filter-list ps-0{% if hide_more_items %} hide-filter-more{% endif %}{% if isChildren is defined and isChildren %} ms-3 children{% if hide_children is defined and hide_children %} d-none{% endif %}{% endif %}">
+        class="list-group filter-list mt-2 ps-0{% if hide_more_items %} hide-filter-more{% endif %}{% if isChildren is defined and isChildren %} ms-3 children{% if hide_children is defined and hide_children %} collapse{% endif %}{% endif %}">
         {{ inputs|raw }}
     </ul>
     {% if hide_more_items %}
-        <a href="#filter-{{ name|esc_attr }}-list" data-show="{{ show_title|esc_attr }}"
-           data-hide="{{ hide_title|esc_attr }}"
-           class="d-flex justify-content-center text-decoration-none filter-more rotate-180deg">
+        <span data-target="#filter-{{ name|esc_attr }}-list"
+              data-show="{{ show_title|esc_attr }}" data-hide="{{ hide_title|esc_attr }}"
+              class="d-flex justify-content-center as-link filter-more rotate-180deg">
             <span>{{ show_title|raw }}</span>
             {{ render_icon(arrow_up_icon, {class: 'icon-md'}) }}
-        </a>
+        </span>
     {% endif %}
 {% endif %}
 

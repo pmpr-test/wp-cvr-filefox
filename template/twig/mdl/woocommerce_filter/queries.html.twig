@@ -1,7 +1,7 @@
 {% if selected is defined
     and selected is not empty %}
 
-    <div class="selected-items py-1">
+    <div class="selected-items">
         {% if selected is iterable %}
             {% for item in selected %}
                 {% include get_template('query', _self) with {

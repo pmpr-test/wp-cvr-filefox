@@ -1,15 +1,3 @@
 {% extends get_template('common', _self) %}
 
-{% block after_update %}
-    <div class="row g-3">
-        <div class="col-6">
-            <a href="#" class="btn btn-lg btn-outline-secondary w-100 d-flex justify-content-center">
-                {{ render_icon(preview_icon, {class: 'icon-xl me-2 my-auto'}) }}
-                {{ preview_text|raw }}
-            </a>
-        </div>
-        <div class="col-6">
-            <span data-target="#download-list" class="btn btn-lg btn-primary w-100">{{ action_text|raw }}</span>
-        </div>
-    </div>
-{% endblock %}
+

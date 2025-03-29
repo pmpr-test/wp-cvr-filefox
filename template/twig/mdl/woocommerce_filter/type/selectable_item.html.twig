@@ -6,26 +6,26 @@
     }) %}
     {% set has_children = children|length > 0 %}
     {% set has_plus_icon = hide_children is defined and hide_children and has_children %}
-    <li class="list-group-item border-0 p-0{% if has_children %} has-child{% endif %}"
+    <li class="woo-filter-item list-group-item border-0 p-0{% if not last %} mb-2{% endif%}{% if has_children %} has-child{% endif %}"
         id="{{ name }}-{{ term.term_id }}">
         {% if has_plus_icon %}
-          <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between">
         {% endif %}
-                <div class="form-check">
-                    <input type="{{ type|esc_attr }}" name="{{ name|esc_attr }}"
-                           id="{{ name|esc_attr }}_{{ term.slug|esc_attr }}" value="{{ term.slug|esc_attr }}"
-                           data-slug="{{ term.slug|esc_attr }}" data-id="{{ term.slug|esc_attr }}"
-                           class="form-check-input" {{ checked(item.slug, value)|raw }}/>
-                    <label class="form-check-label" for="{{ name|esc_attr }}_{{ term.slug|esc_attr }}">{{ term.name|raw }}</label>
-                </div>
-        {% if has_plus_icon %}
-                <div class="text-right my-auto">
-                    <a href="#{{  name }}-list- {{ term.term_id }}"
-                       class="filter-list-plus text-none-decoration">
-                        {{ render_icon(plus_icon, {class: 'icon-md rotate-45deg icon-primary'}) }}
-                    </a>
-                </div>
+            <div class="form-check mb-0">
+                <input type="{{ type|esc_attr }}" name="{{ name|esc_attr }}"
+                       id="{{ name|esc_attr }}_{{ term.slug|esc_attr }}" value="{{ term.slug|esc_attr }}"
+                       data-slug="{{ term.slug|esc_attr }}" data-id="{{ term.slug|esc_attr }}"
+                       class="form-check-input" {{ checked(item.slug, value)|raw }}/>
+                <label class="form-check-label"
+                       for="{{ name|esc_attr }}_{{ term.slug|esc_attr }}">{{ term.name|raw }}</label>
             </div>
+        {% if has_plus_icon %}
+            <span class="my-auto d-flex as-link filter-list-toggle" data-bs-toggle="collapse"
+                  data-bs-target="#{{ name|esc_attr }}-list-{{ term.term_id|esc_attr }}" aria-expanded="true">
+                {{ render_icon(plus_icon, {class: 'icon-md filter-list-plus'}) }}
+                {{ render_icon(minus_icon, {class: 'icon-md filter-list-minus'}) }}
+            </span>
+        </div>
         {% endif %}
         {% if has_children %}
             {% include get_template('selectable', _self) with {

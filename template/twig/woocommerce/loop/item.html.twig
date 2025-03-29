@@ -1,0 +1,63 @@
+<div class="product-loop-item card shadow-sm w-100{% if placeholder %} pr-ph shimmer d-block{% endif %}">
+    {% if placeholder %}
+        {% include get_cover_template('common/post/thumbnail') with {
+            placeholder: 1,
+            figure_class: 'mb-0 h-300px',
+            image_attr: {class: 'product-image img-fluid h-100 w-100'},
+        } %}
+    {% else %}
+        {{ pmpr_do_action('render_free_version_alert', product) }}
+        {{ product|call('get_image', 'thumbnail', {class: 'product-image img-fluid w-100'})|raw }}
+    {% endif %}
+    <div class="card-body d-flex flex-column justify-content-between">
+        {% if placeholder %}
+            <div class="fs-16 mb-2">
+                <div class="pr-ph-text"></div>
+                <div class="pr-ph-text pr-ph-short"></div>
+            </div>
+        {% else %}
+            <a class="text-gray-800 stretched-link"
+               href="{{ permalink|esc_attr }}" title="{{ title|esc_attr }}">
+                <h2 class="fs-16 mb-2 mb-md-3 line-limit-1 line-limit-md-2">{{ title|raw }}</h2>
+            </a>
+        {% endif %}
+        <div>
+            {% if placeholder %}
+                <div class="pr-ph-text"></div>
+                <div class="pr-ph-text"></div>
+                <div class="pr-ph-text pr-ph-short"></div>
+            {% else %}
+                {{ render_if_has_content('div', {class: 'mb-2 text-muted line-limit-2'}, excerpt) }}
+            {% endif %}
+            {% if placeholder %}
+                <div class="d-flex mt-3">
+                    {% for index in 1..3 %}
+                        <div class="pr-ph-meta"></div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {% if metadata is not empty %}
+                    <ul class="list-group list-group-horizontal list-group-flush">
+                        {% for key, meta_item in metadata %}
+                            <li class="flex-fill list-group-item rounded shadow-sm bg-white border-0 d-flex flex-column{% if not loop.last %} me-2{% endif %} p-2 text-center">
+                                {% if key is same as ('score') %}
+                                    <div class="d-flex justify-content-center">
+                                        {{ render_icon(meta_item.icon, {class: 'icon-warning me-2 my-auto'}) }}
+                                        <strong class="text-gray-700 fs-md">
+                                            {{ meta_item.value|raw }}
+                                        </strong>
+                                    </div>
+                                {% else %}
+                                    <strong class="text-gray-700 fs-md mb-1">
+                                        {{ meta_item.value|raw }}
+                                    </strong>
+                                {% endif %}
+                                <span class="text-gray-600 fs-12">{{ meta_item.subtext|raw }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</div>

@@ -1,12 +1,7 @@
 <div class="container">
     <article class="row mb-4">
         <div class="col-lg-4">
-            {{ render_frontend_alert({
-                type: 'success',
-                centered: 1,
-                classes: 'text-center p-2 fw-bold fs-14 rounded-0 border-0 mb-2',
-                content: 'نسخـــــه رایگــــان دارد'
-            }) }}
+            {{ pmpr_do_action('render_free_version_alert', product) }}
             {{ pmpr_do_action('render_product_thumbnails', product) }}
             <div class="as-link d-flex mt-2">
                 {{ render_icon(report.icon, {class: 'icon-sm me-2 my-auto'}) }}

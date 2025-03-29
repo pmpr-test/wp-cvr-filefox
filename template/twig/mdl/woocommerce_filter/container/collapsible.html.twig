@@ -1,21 +1,16 @@
 {% if render|default(1) %}
     {% block before_item %}{% endblock %}
-    <div class="accordion-item">
-        <h3 class="accordion-header" id="filter-heading-{{ id }}">
-            <button class="accordion-button{% if collapse_items %} collapsed{% endif %}"
-                    type="button" data-bs-target="#filter-{{ id }}" aria-expanded="false"
-                    aria-controls="filter-collapse-{{ id }}" data-bs-toggle="collapse">
-                {{ title|raw }}
-            </button>
-            {% block inside_item_header %}{% endblock %}
+    <div class="d-flex mb-2">
+        {{ render_icon(icon, {class: 'icon-primary me-2'}) }}
+        <h3 id="filter-heading-{{ id|esc_attr }} mb-0">
+            {{ title|raw }}
         </h3>
-        <div id="filter-{{ id|esc_attr }}" data-filter="{{ id|esc_attr }}" data-bs-parent="#accordion_filters"
-             class="accordion-collapse collapse{% if not collapse_items %} show{% endif %}"
-             aria-labelledby="filter-heading-{{ id }}">
-            <div class="accordion-body">
-                {% block body %}{% endblock body %}
-            </div>
-        </div>
+    </div>
+    {% block before_filter %}{% endblock %}
+    <div id="filter-{{ id|esc_attr }}"
+         data-filter="{{ id|esc_attr }}"
+         aria-labelledby="filter-heading-{{ id }}">
+        {% block body %}{% endblock body %}
     </div>
     {% block after_item %}{% endblock %}
 {% endif %}

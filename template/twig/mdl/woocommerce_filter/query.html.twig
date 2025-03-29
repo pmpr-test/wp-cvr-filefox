@@ -1,8 +1,6 @@
-<a class="badge text-white bg-secondary remove-filter pe-1{% if not last %} ms-2{% endif %}"
-   href="#" data-name="{{ item.name|esc_attr }}" data-value="{{ item.value|esc_attr }}"
-   data-filter="{{ item.filter|esc_attr }}">
-    <div class="d-flex">
-        <span>{{ item.title|raw }}</span>
-        {{ render_icon(remove_icon, {class: 'icon-sm icon-white ms-1 my-auto'}, 1) }}
-    </div>
-</a>
+<span class="as-link badge text-white bg-secondary remove-filter d-inline-flex pe-1 mb-1"
+      data-name="{{ item.name|esc_attr }}" data-value="{{ item.value|esc_attr }}"
+      data-filter="{{ item.filter|esc_attr }}">
+    {{ item.title|raw }}
+    {{ render_icon(remove_icon, {class: 'icon-sm icon-white ms-1 my-auto'}, 1) }}
+</span>

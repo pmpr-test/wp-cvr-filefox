@@ -1,11 +1,11 @@
 {% if items is defined
     and items is not empty %}
-    <form id="filter-form" class="position-relative bg-white p-3" action="{{ action|esc_attr }}" method="get">
+    <form id="pr_woo_filter" class="position-relative bg-white p-3 rounded shadow-sm" action="{{ action|esc_attr }}" method="get">
         <input type="hidden" name="{{ filter_name|raw }}" value="1">
-        <div class="d-flex justify-content-between">
-            {{ render_if_has_content('h2', {class: 'mb-0'}, title) }}
-            <button id="filter-reset" type="button" class="btn btn-sm btn-link px-0 text-decoration-none">{{ reset_button_title|raw }}</button>
-        </div>
+{#        <div class="d-flex justify-content-between">#}
+{#            {{ render_if_has_content('h2', {class: 'visually-hidden mb-0'}, title) }}#}
+{#            <button id="filter-reset" type="button" class="btn btn-sm btn-link px-0 text-decoration-none">{{ reset_button_title|raw }}</button>#}
+{#        </div>#}
 
         <div class="accordion accordion-flush" id="accordion_filters">
             {% for filter in items %}

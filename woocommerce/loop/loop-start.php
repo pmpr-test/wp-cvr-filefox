@@ -15,9 +15,18 @@
  * @version     3.3.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit;
 }
 ?>
-<div class="products list">
+<div class="placeholder-items mt-4">
+    <div class="row">
+	    <?php for ($i = 1; $i <= 6; $i++): ?>
+            <div class="placeholder-item col-12 col-md-6 col-xl-4 mb-4 d-flex">
+			    <?php pmpr_do_action('render_product_loop_item', ['placeholder' => 1]); ?>
+            </div>
+	    <?php endfor; ?>
+    </div>
+</div>
+<div class="products list mt-4 row">
 
