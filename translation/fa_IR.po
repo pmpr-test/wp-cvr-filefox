@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Filefox Cover\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2025-03-25 12:47+0330\n"
+"POT-Creation-Date: 2025-03-30 15:30+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: pmpr.dev <pmpr.dev@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -69,7 +69,7 @@ msgstr ""
 #: src/Pmpr/Cover/Filefox/Archive.php:158
 #: src/Pmpr/Cover/Filefox/Page/Front.php:134
 #: src/Pmpr/Cover/Filefox/Page/Front.php:255
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:281
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:337
 msgid "View All"
 msgstr "مشاهده همه"
 
@@ -620,77 +620,76 @@ msgstr "است و تا کنون بیش از %s صفحه محتوای تخصصی 
 msgid "Plural Name"
 msgstr "نام جمع"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:61
+#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:64
 msgid "Has a free version"
 msgstr "نسخـــــه رایگــــان دارد"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:64
+#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:67
 msgid "No free version"
 msgstr "نسخـــــه رایگــــان ندارد"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:134
+#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:127
 #, php-format
 msgid "Number of content of this type: %s"
 msgstr "تعداد محتوا از این نوع: %s"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:203
-#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:207
+#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:196
+#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:200
 msgid "Comment"
 msgstr "دیدگاه‌"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:206
+#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:199
 #, php-format
 msgid "%s Comment"
 msgid_plural "%s Comments"
 msgstr[0] "%s دیدگاه"
 msgstr[1] "%s دیدگاه"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:223
+#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:216
 msgid "Score"
 msgstr "امتیاز"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:227
+#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:220
 #, php-format
 msgid "from %s rate"
 msgstr "از %s امتیاز"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:233
+#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:226
 msgid "Download"
 msgstr "دانلود"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:236
+#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:229
 #, php-format
 msgid "%s Downloaded"
 msgstr "%s بار دانلود شده"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:237
+#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:230
 msgid "Downloaded"
 msgstr "دانلود شده"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:242
+#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:235
 msgid "Visit"
 msgstr "بازدید"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:246
+#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:239
 #, php-format
 msgid "%s visit in last %s hours"
 msgstr "%s بازدید در %s ساعت اخیر"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:250
+#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:243
 msgid "Today Visit"
 msgstr "بازدید امروز"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:273
+#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:266
 msgid "Free"
 msgstr "رایگان"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:276
-#: src/Pmpr/Cover/Filefox/Woocommerce/Shop.php:86
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:239
+#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:269
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:238
 msgid "Has Free Version"
 msgstr "نسخـــــه رایگــــان دارد"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:285
+#: src/Pmpr/Cover/Filefox/Woocommerce/Base.php:278
 msgid "Last Update"
 msgstr "آخرین بروزرسانی"
 
@@ -714,52 +713,63 @@ msgstr "حساب کاربری من"
 msgid "View Account"
 msgstr "مشاهده حساب کاربری"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Shop.php:82
-msgid "View"
-msgstr "مشاهده"
-
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:157
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:156
 #, php-format
 msgid "%s with more than %s years experience in %s and ..."
 msgstr "%s با بیش از %s سال تجربه در زمینه %s و ..."
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:186
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:185
 msgid "Present By"
 msgstr "ارائه شده توسط"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:187
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:186
 msgid "Buyer Reviews"
 msgstr "دیدگاه خریداران"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:251
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:250
 msgid "Preview"
 msgstr "پیش‌نمایش / دمو"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:280
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:263
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:284
+msgid "Publish Date"
+msgstr "تاریخ انتشار"
+
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:267
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:346
+msgid "Version"
+msgstr "نسخــه"
+
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:288
+msgid "Last Version"
+msgstr "آخرین نسخه"
+
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:292
+msgid "Update Date"
+msgstr "تاریخ به روز رسانی"
+
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:336
 #, php-format
 msgid "%s version available"
 msgstr "%s نسخه موجود است"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:290
-msgid "Version"
-msgstr "نسخــه"
-
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:291
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:347
 msgid "Elected"
 msgstr "منتخب"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:293
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:349
 msgid "View Details"
 msgstr "مشاهده جزئیات"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:320
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:399
 msgid "Download File"
 msgstr "دانلود فایل"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:346
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:358
-msgid "Available Versions"
-msgstr "نسخه‌های موجود"
+#~ msgid "View"
+#~ msgstr "مشاهده"
+
+#~ msgid "Available Versions"
+#~ msgstr "نسخه‌های موجود"
 
 #~ msgid "Versions"
 #~ msgstr "نسخه‌ها"
@@ -850,9 +860,6 @@ msgstr "نسخه‌های موجود"
 
 #~ msgid "Download Count"
 #~ msgstr "تعداد دانلود"
-
-#~ msgid "Updated at"
-#~ msgstr "به روز شده"
 
 #~ msgid "Rate"
 #~ msgstr "امتیاز"

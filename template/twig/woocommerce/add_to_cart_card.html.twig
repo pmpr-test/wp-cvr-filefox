@@ -64,6 +64,19 @@
             {% endif %}
         </div>
 
+        {% if metadata is not empty %}
+            <ul class="list-group list-group-flush mt-2">
+                {% for meta in metadata %}
+                    {% if meta.value is not empty %}
+                        <li class="list-group-item fs-14 border-0 d-flex justify-content-between px-0 py-1{% if loop.last %} pb-0{% endif %}">
+                            <span>{{ meta.title|raw }}</span>
+                            <strong>{{ meta.value|raw }}</strong>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        {% endif %}
+
         {% if has_features and features is not empty %}
             <hr class="my-3">
             <ul class="list-group">
