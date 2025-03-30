@@ -1,0 +1,25 @@
+{% if items is not empty %}
+    <section class="product-change-logs">
+        <h2 class="section-title mb-4">{{ title|raw }}</h2>
+        {% if multiple %}
+            {% for item in items %}
+                <div class="card shadow-sm{% if not loop.last %} mb-4{% endif %}">
+                    <div class="card-body">
+                        <h3 class="h4">{{ item.title|raw }}</h3>
+                        <ul class="list-group list-group-flush">
+                            {% for _item in item.items %}
+                                <li class="list-group-item px-0{% if loop.last %} pb-0{% endif %}">{{ _item.text|raw }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <ul class="list-group list-group-flush">
+                {% for item in items %}
+                    <li class="list-group-item">{{ item.text|raw }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </section>
+{% endif %}

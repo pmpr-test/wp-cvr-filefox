@@ -1,7 +1,9 @@
 {% if items is not empty %}
-    <div class="list product-children my-4">
+    <section class="list product-children">
+        <h2 class="section-title mb-4">{{ title|raw }}</h2>
         {% for item in items %}
-            <article class="list-item p-4 alert{% if item.is_featured %} featured alert-primary{% else %} alert-secondary{% endif %} card shadow-sm{% if not loop.last %} mb-4{% endif %}">
+            <article
+                    class="list-item p-4 alert{% if item.is_featured %} featured alert-primary{% else %} alert-secondary{% endif %} card shadow-sm{% if not loop.last %} mb-4{% endif %}">
                 <h2 class="mb-3 alert-heading line-limit-1">{{ item.title|raw }}</h2>
                 {% if item.is_featured %}
                     <div class="row">
@@ -62,5 +64,5 @@
                 </div>
             </article>
         {% endfor %}
-    </div>
+    </section>
 {% endif %}
