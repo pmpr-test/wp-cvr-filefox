@@ -1,6 +1,6 @@
 {% if items is not empty %}
-    <nav class="mb-4">
-        {{ render_if_has_content('h2', {class: 'h2 mb-3 section-title'}, title) }}
+    <nav class="mt-5">
+        {{ render_if_has_content('h2', {class: 'fs-xl mb-4 section-title'}, title) }}
         {% include get_cover_template('common/labels') %}
     </nav>
 {% endif %}

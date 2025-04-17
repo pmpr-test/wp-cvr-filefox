@@ -1,6 +1,6 @@
 {% if items is not empty %}
-    <section id="post_faq">
-        <h2 class="h2 mb-4 section-title">{{ title|raw }}</h2>
+    <section id="post_faq" class="mt-5">
+        <h2 class="fs-xl mb-4 section-title">{{ title|raw }}</h2>
         <div class="accordion accordion-flush mb-3" id="faq_accordion">
             {% for index, item in items %}
                 {% set first_item = loop.first %}
@@ -16,7 +16,7 @@
                     <div id="faq_answer_{{ index|esc_attr }}"
                          class="accordion-collapse collapse{% if first_item %} show{% endif %}"
                          aria-labelledby="faq_question_{{ index|esc_attr }}" data-bs-parent="#faq_accordion">
-                        <div class="accordion-body no-margin">
+                        <div class="accordion-body pr-text fs-sm lh-lg">
                             {{ item.answer|raw }}
                         </div>
                     </div>

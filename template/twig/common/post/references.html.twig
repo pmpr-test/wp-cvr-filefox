@@ -1,15 +1,17 @@
 {% if items is not empty %}
-    {{ render_if_has_content('h2', {class: 'h2 mb-3 section-title'}, title) }}
-    <ul class="list-group fs-sm list-group-flush">
-        {% for item in items %}
-            <li class="list-group-item px-0 pt-0 pb-3 border-0">
-                <a class="text-primary d-flex" rel="nofollow noreferrer noopener"
-                   target="_blank" href="{{ item.url|esc_attr }}">
-                    {{ render_icon(icon, {class: 'icon-sm my-auto me-2'}) }}
-                    <span class="my-auto">{{ item.name|raw }}</span>
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
+    <div class="mt-5">
+        {{ render_if_has_content('h2', {class: 'fs-xl mb-4 section-title'}, title) }}
+        <ul class="list-group fs-sm list-group-flush">
+            {% for item in items %}
+                <li class="list-group-item px-0 pt-0 pb-3 border-0">
+                    <a class="text-primary d-flex" rel="nofollow noreferrer noopener"
+                       target="_blank" href="{{ item.url|esc_attr }}">
+                        {{ render_icon(icon, {class: 'icon-sm my-auto me-2'}) }}
+                        <span class="my-auto">{{ item.name|raw }}</span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 {% endif %}
 

@@ -1,0 +1,35 @@
+<article class="card shadow-sm">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                {% include get_cover_template('common/post/thumbnail') with {
+                    post: object_id,
+                    image_size: 'medium',
+                    figure_class: 'fit-image mb-2 mb-lg-0',
+                    image_attr: {class: 'img-fluid w-100 rounded'}
+                } %}
+            </div>
+            <div class="col-12 col-lg-9 my-auto">
+                {{ render_if_has_content('h3', {class: 'mt-0 mb-1 fs-md lh-sm'}, product|call('get_title')) }}
+                {{ pmpr_do_action('render_post_taxonomies', product, {attrs: {class: 'fs-14 mb-2'}}) }}
+                {{ render_if_has_content('div', {class: 'pr-text mb-3 line-limit-2'}, product|call('get_short_description')) }}
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        {{ pmpr_do_action('render_product_attributes', {
+                            view_more_icon: false,
+                            product: product,
+                            type: 'shortcode',
+                            title: '',
+                        }) }}
+                    </div>
+                    <div class="col-12 col-md-6 mt-auto">
+                        <a href="{{ product|call('get_permalink')|esc_attr }}"
+                           class="btn btn-primary w-100 d-block">
+                            {{ __('View & Download File', cover_domain) }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
