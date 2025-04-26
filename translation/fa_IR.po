@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Filefox Cover\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2025-04-16 22:32+0330\n"
+"POT-Creation-Date: 2025-04-26 14:30+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: pmpr.dev <pmpr.dev@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -69,7 +69,7 @@ msgstr ""
 #: src/Pmpr/Cover/Filefox/Archive.php:158
 #: src/Pmpr/Cover/Filefox/Page/Front.php:134
 #: src/Pmpr/Cover/Filefox/Page/Front.php:255
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:340
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:341
 msgid "View All"
 msgstr "مشاهده همه"
 
@@ -584,41 +584,38 @@ msgstr ""
 msgid "Capabilities"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Single.php:54
+#: src/Pmpr/Cover/Filefox/Single.php:57
 msgid "Intro"
 msgstr "مقدمه"
 
-#: src/Pmpr/Cover/Filefox/Single.php:88
+#: src/Pmpr/Cover/Filefox/Single.php:91
 msgid "Tags"
 msgstr "برچسب‌ها"
 
-#: src/Pmpr/Cover/Filefox/Single.php:116
+#: src/Pmpr/Cover/Filefox/Single.php:119
 msgid "References"
 msgstr "منابع"
 
-#: src/Pmpr/Cover/Filefox/Single.php:135
+#: src/Pmpr/Cover/Filefox/Single.php:138
 msgid "View All Published Articles"
 msgstr "مشاهده همه مقالات منتشر شده"
 
-#: src/Pmpr/Cover/Filefox/Single.php:152
+#: src/Pmpr/Cover/Filefox/Single.php:160
 msgid "Follow"
 msgstr "دنبال کردن"
 
-#: src/Pmpr/Cover/Filefox/Single.php:155 src/Pmpr/Cover/Filefox/Single.php:160
-#: src/Pmpr/Cover/Filefox/Single.php:165 src/Pmpr/Cover/Filefox/Single.php:170
+#: src/Pmpr/Cover/Filefox/Single.php:163 src/Pmpr/Cover/Filefox/Single.php:168
+#: src/Pmpr/Cover/Filefox/Single.php:173 src/Pmpr/Cover/Filefox/Single.php:178
 msgid "X (Twitter)"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Single.php:181
-#, php-format
-msgid "%s is a %s expert"
-msgstr "%s متخصص %s"
-
-#: src/Pmpr/Cover/Filefox/Single.php:183
+#: src/Pmpr/Cover/Filefox/Single.php:191
 #, php-format
 msgid ""
-"and has published more than %s pages of specialized content on %s so far."
-msgstr "است و تا کنون بیش از %s صفحه محتوای تخصصی در %s منتشر کرده است."
+"and active in the field of %s, has so far edited and published %s "
+"specialized contents on %s."
+msgstr ""
+"و فعال در حوزه %s، تاکنون %s محتوای تخصصی در %s تنظیم و منتشر نموده‌ است."
 
 #: src/Pmpr/Cover/Filefox/Woocommerce/Backend.php:24
 msgid "Plural Name"
@@ -735,7 +732,7 @@ msgid "Preview"
 msgstr "پیش‌نمایش / دمو"
 
 #: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:273
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:292
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:293
 msgid "Publish Date"
 msgstr "تاریخ انتشار"
 
@@ -747,27 +744,36 @@ msgstr "آخرین نسخه"
 msgid "Update Date"
 msgstr "تاریخ به روز رسانی"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:296
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:349
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:297
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:350
 msgid "Version"
 msgstr "نسخــه"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:339
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:340
 #, php-format
 msgid "%s version available"
 msgstr "%s نسخه موجود است"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:350
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:351
 msgid "Elected"
 msgstr "منتخب"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:352
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:353
 msgid "View Details"
 msgstr "مشاهده جزئیات"
 
-#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:402
+#: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:403
 msgid "Download File"
 msgstr "دانلود فایل"
+
+#, php-format
+#~ msgid "%s is a %s expert"
+#~ msgstr "%s متخصص %s"
+
+#, php-format
+#~ msgid ""
+#~ "and has published more than %s pages of specialized content on %s so far."
+#~ msgstr "است و تا کنون بیش از %s صفحه محتوای تخصصی در %s منتشر کرده است."
 
 #~ msgid "Articles"
 #~ msgstr "مقالات"
