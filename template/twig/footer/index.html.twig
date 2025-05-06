@@ -7,21 +7,23 @@
         filter_value: 'footer'
     }) %}
     {% if features is not empty %}
-        <div class="container">
-            <div class="row my-4">
-                {% for feature in features %}
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div class="card bg-transparent">
-                            <div class="card-body">
-                                {{ render_icon(feature.icon, {class: 'icon-primary mx-auto mb-3 icon-3x'}) }}
-                                <div class="text-center">
-                                    <div class="h3 mb-2">{{ feature.title|raw }}</div>
-                                    <div class="text-gray-700">{{ feature.subtext|raw }}</div>
+        <div class="services bg-white py-4">
+            <div class="container">
+                <div class="row my-4">
+                    {% for feature in features %}
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="card bg-transparent">
+                                <div class="card-body">
+                                    {{ render_icon(feature.icon, {class: 'icon-primary mx-auto mb-3 icon-3x'}) }}
+                                    <div class="text-center">
+                                        <div class="h3 mb-2">{{ feature.title|raw }}</div>
+                                        <div class="text-gray-700">{{ feature.subtext|raw }}</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     {% endif %}

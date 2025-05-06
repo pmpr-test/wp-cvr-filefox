@@ -1,0 +1,15 @@
+<div class="d-flex{% if wrapper_class is not empty %} {{ wrapper_class }}{% endif %}">
+    {% set render_icon = show_icon|default(1) and item.icon is not empty %}
+    {% if render_icon %}
+        {{ render_icon(item.icon, {class: 'icon-primary icon-3x my-auto me-3 rounded-circle bg-gray-200 p-2'}) }}
+        <div class="my-auto">
+    {% endif %}
+        <strong>{{ item.value|raw }}</strong>
+        {% if item.subtext is not empty %}
+            <div class="text-muted">{{ item.subtext|raw }}</div>
+        {% endif %}
+
+    {% if render_icon %}
+        </div>
+    {% endif %}
+</div>

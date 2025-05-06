@@ -1,5 +1,5 @@
 {% if items is not empty %}
-    <div class="d-flex my-{{ wrapper_y_margins|default(4) }}">
+    <div class="d-flex my-{{ wrapper_y_margins|default(4) }}{% if wrapper_class is not empty %} {{ wrapper_class }}{% endif %}">
         {% for item in items %}
             <a href="{{ item.url|raw }}" rel="nofollow noopener noreferrer" aria-label="{{ item.title|esc_attr }}"
                target="_blank" title="{{ item.title|esc_attr }}"{% if not loop.last %} class="me-3"{% endif %}>

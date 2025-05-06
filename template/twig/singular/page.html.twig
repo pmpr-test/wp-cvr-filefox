@@ -1,0 +1,19 @@
+{% extends get_cover_template('container') %}
+
+{% block inside_container %}
+
+    <main class="single-main mt-3 mb-5">
+        {% include get_cover_template('common/header/index') with {
+            has_container: 0
+        } %}
+        {% include get_cover_template('common/single/content') %}
+    </main>
+
+{% endblock %}
+
+{% block after_container %}
+
+    {{ pmpr_do_action('page_after_container', post) }}
+
+{% endblock %}
+

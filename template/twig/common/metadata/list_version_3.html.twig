@@ -1,11 +1,12 @@
 {% if metadata is not empty %}
     <div class="metadata d-flex version-{{ version }} text-{{ text_color|esc_attr }} {{ wrapper_class|esc_attr }}">
-        {% for meta_item in metadata %}
+        {% for key, meta_item in metadata %}
             <div class="meta-item d-flex{% if not loop.last and not has_divider %} me-{{ divider_space|default(2) }}{% endif %} {{ item_class|esc_attr }}">
                 {% if has_icon %}
                     {{ render_icon(meta_item.icon, {class: 'me-' ~ icon_divider_space|default(divider_space) ~ ' icon-' ~ icon_color|esc_attr ~ ' my-auto meta-icon icon-' ~ icon_size|default('lg')|esc_attr }, render_icon|default(0)) }}
                 {% endif %}
-                {% if meta_item.link is not empty %}
+                {% if key is not same as ('category')
+                    and meta_item.link is not empty %}
                     <a href="{{ meta_item.link|esc_attr }}" rel="nofollow" class="as-link d-block my-auto text-{{ text_color|esc_attr }}">
                 {% endif %}
                 <strong class="meta-value my-auto">
@@ -19,7 +20,8 @@
                         {% endif %}
                     {% endif %}
                 </strong>
-                {% if meta_item.link is not empty %}
+                {% if key is not same as ('category')
+                    and meta_item.link is not empty %}
                     </a>
                 {% endif %}
             </div>
