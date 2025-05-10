@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Filefox Cover\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2025-05-07 01:04+0330\n"
+"POT-Creation-Date: 2025-05-10 17:18+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: pmpr.dev <pmpr.dev@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -67,8 +67,8 @@ msgstr ""
 "گرفته است. همچنین،‌ در %4$s، او %5$s را بررسی کرده است."
 
 #: src/Pmpr/Cover/Filefox/Archive.php:154
-#: src/Pmpr/Cover/Filefox/Page/Front.php:134
-#: src/Pmpr/Cover/Filefox/Page/Front.php:259
+#: src/Pmpr/Cover/Filefox/Page/Front.php:139
+#: src/Pmpr/Cover/Filefox/Page/Front.php:264
 #: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:341
 msgid "View All"
 msgstr "مشاهده همه"
@@ -277,7 +277,7 @@ msgid "View All Result of"
 msgstr "مشاهده همه نتایج"
 
 #: src/Pmpr/Cover/Filefox/Header.php:149
-#: src/Pmpr/Cover/Filefox/Page/Front.php:49
+#: src/Pmpr/Cover/Filefox/Page/Front.php:54
 #: src/Pmpr/Cover/Filefox/Search.php:47
 msgid "Search"
 msgstr "جستجو"
@@ -319,124 +319,124 @@ msgstr ""
 msgid "See all %s"
 msgstr "مشاهده همه %s"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:34
+#: src/Pmpr/Cover/Filefox/Page/Front.php:39
 msgid "Front Page"
 msgstr "بخش نمایشی سایت"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:53
-#: src/Pmpr/Cover/Filefox/Page/Front.php:91
-#: src/Pmpr/Cover/Filefox/Page/Front.php:115
-#: src/Pmpr/Cover/Filefox/Page/Front.php:129
+#: src/Pmpr/Cover/Filefox/Page/Front.php:58
+#: src/Pmpr/Cover/Filefox/Page/Front.php:96
+#: src/Pmpr/Cover/Filefox/Page/Front.php:120
+#: src/Pmpr/Cover/Filefox/Page/Front.php:134
 msgid "Advanced"
 msgstr "پیشرفته"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:57
+#: src/Pmpr/Cover/Filefox/Page/Front.php:62
 msgid "Features"
 msgstr "ویژگی‌ها"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:60
+#: src/Pmpr/Cover/Filefox/Page/Front.php:65
 #: src/Pmpr/Cover/Filefox/Setting.php:214
 msgid "Title"
 msgstr "عنوان"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:64
+#: src/Pmpr/Cover/Filefox/Page/Front.php:69
 #: src/Pmpr/Cover/Filefox/Setting.php:170
 msgid "Description"
 msgstr "شرح"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:68
+#: src/Pmpr/Cover/Filefox/Page/Front.php:73
 msgid "Image"
 msgstr "تصویر"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:72
+#: src/Pmpr/Cover/Filefox/Page/Front.php:77
 msgid "Background"
 msgstr "پس زمینه"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:76
+#: src/Pmpr/Cover/Filefox/Page/Front.php:81
 msgid "Action Link"
 msgstr "لینک اکشن"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:81
+#: src/Pmpr/Cover/Filefox/Page/Front.php:86
 msgid "Action Text"
 msgstr "متن اکشن"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:87
+#: src/Pmpr/Cover/Filefox/Page/Front.php:92
 #: src/Pmpr/Cover/Filefox/Setting.php:298
 msgid "Materials"
 msgstr "ماهیت‌ها"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:95
+#: src/Pmpr/Cover/Filefox/Page/Front.php:100
 msgid "Material Items"
 msgstr "آیتم‌های ماهیت"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:99
+#: src/Pmpr/Cover/Filefox/Page/Front.php:104
 msgid "Material"
 msgstr "ماهیت‌"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:104
+#: src/Pmpr/Cover/Filefox/Page/Front.php:109
 msgid "Singular Name"
 msgstr "نام منفرد"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:105
+#: src/Pmpr/Cover/Filefox/Page/Front.php:110
 msgid "Use for count of products, leave empty if you want use it's name."
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:111
-#: src/Pmpr/Cover/Filefox/Page/Front.php:119
+#: src/Pmpr/Cover/Filefox/Page/Front.php:116
+#: src/Pmpr/Cover/Filefox/Page/Front.php:124
 msgid "Comments"
 msgstr "دیدگاه‌‌ها"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:125
+#: src/Pmpr/Cover/Filefox/Page/Front.php:130
 msgid "Blog Posts"
 msgstr "نوشته‌های وبلاگ"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:133
+#: src/Pmpr/Cover/Filefox/Page/Front.php:138
 #, fuzzy
 #| msgid "Action Text"
 msgid "Archive Link Action Text"
 msgstr "متن اکشن"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:138
+#: src/Pmpr/Cover/Filefox/Page/Front.php:143
 msgid "Each Post Link Action Text"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:139
+#: src/Pmpr/Cover/Filefox/Page/Front.php:144
 msgid "Study"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:235
+#: src/Pmpr/Cover/Filefox/Page/Front.php:240
 #: src/Pmpr/Cover/Filefox/Setting.php:314
 msgid "Filefox User"
 msgstr "کاربر فایل فاکس"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:297
+#: src/Pmpr/Cover/Filefox/Page/Front.php:302
 #, php-format
 msgid "%s Section"
 msgstr "بخش‌ %s"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:298
+#: src/Pmpr/Cover/Filefox/Page/Front.php:303
 #, php-format
 msgid "Configure %s Section"
 msgstr "پیکربندی بخش %s"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:303
+#: src/Pmpr/Cover/Filefox/Page/Front.php:308
 #: src/Pmpr/Cover/Filefox/Setting.php:95 src/Pmpr/Cover/Filefox/Setting.php:106
 msgid "General"
 msgstr "عمومی"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:307
+#: src/Pmpr/Cover/Filefox/Page/Front.php:312
 msgid "Disable Section"
 msgstr "غیر فعال کردن بخش"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:311
+#: src/Pmpr/Cover/Filefox/Page/Front.php:316
 msgid "Section Background"
 msgstr "پس زمینه بخش"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:316
+#: src/Pmpr/Cover/Filefox/Page/Front.php:321
 msgid "Section Title"
 msgstr "عنوان بخش"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:320
+#: src/Pmpr/Cover/Filefox/Page/Front.php:325
 msgid "Section Description"
 msgstr "شرح بخش"
 
@@ -691,11 +691,28 @@ msgstr "نسخـــــه رایگــــان دارد"
 msgid "Last Update"
 msgstr "آخرین بروزرسانی"
 
+#: src/Pmpr/Cover/Filefox/Woocommerce/Email.php:46
+msgid "Customer Name"
+msgstr "نام مشتری"
+
+#: src/Pmpr/Cover/Filefox/Woocommerce/Email.php:50
+msgid "Order Number"
+msgstr "شماره سفارش"
+
+#: src/Pmpr/Cover/Filefox/Woocommerce/Email.php:54
+msgid "Customer Email"
+msgstr "ایمیل مشتری"
+
+#: src/Pmpr/Cover/Filefox/Woocommerce/Email.php:58
+msgid "Order Date"
+msgstr "تاریخ سفارش"
+
 #: src/Pmpr/Cover/Filefox/Woocommerce/Header.php:41
 msgid "Shopping Cart"
 msgstr "سبد خرید"
 
 #: src/Pmpr/Cover/Filefox/Woocommerce/Header.php:42
+#: woocommerce/emails/email-order-details.php:107
 msgid "Product"
 msgstr "محصول"
 
@@ -762,6 +779,14 @@ msgstr "مشاهده جزئیات"
 #: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:403
 msgid "Download File"
 msgstr "دانلود فایل"
+
+#: woocommerce/emails/email-order-details.php:108
+msgid "Quantity"
+msgstr ""
+
+#: woocommerce/emails/email-order-details.php:109
+msgid "Price"
+msgstr ""
 
 #~ msgid "Follow"
 #~ msgstr "دنبال کردن"
@@ -837,9 +862,6 @@ msgstr "دانلود فایل"
 
 #~ msgid "Limit"
 #~ msgstr "محدودیت"
-
-#~ msgid "Order By"
-#~ msgstr "مرتب‌شده به وسیله"
 
 #~ msgid "ID"
 #~ msgstr "شناسه"
