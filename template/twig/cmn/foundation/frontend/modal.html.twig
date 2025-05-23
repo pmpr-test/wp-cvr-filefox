@@ -1,7 +1,7 @@
 {{ action|raw }}
 <div class="modal fade" id="{{ id|esc_attr }}" data-bs-backdrop="{% if dismissible %}true{% else %}static{% endif %}"
      {% if dismissible %} data-bs-keyboard="true"{% endif %}
-     tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="{{ id|esc_attr }}_label" data-bs-popper="true">
+     tabindex="-1" role="dialog" aria-hidden="true" data-bs-popper="true">
     <div class="modal-dialog modal-{{ size|default('md')|esc_attr }}{% if centered %} modal-dialog-centered{% endif %}"
          role="document">
         <div class="modal-content">

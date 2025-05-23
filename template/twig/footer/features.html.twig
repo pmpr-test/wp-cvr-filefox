@@ -1,0 +1,28 @@
+{% set features = get_cover_option('woocommerce_features', [], {
+    requires: ['icon', 'title', 'subtext'],
+    filter: 'show_on',
+    output: 'array',
+    filter_value: 'footer'
+}) %}
+{% if features is not empty %}
+    <div class="features w-100 position-absolute top-0 start-50 translate-middle">
+        <div class="container">
+            <div class="row g-0 bg-white rounded">
+                {% for feature in features %}
+                    <div class="col-6 col-xl-3">
+                        <div class="p-4 d-flex">
+                            <div class="bg-gray-200 rounded p-3">
+                                {{ render_icon(feature.icon, {class: 'icon-primary icon-3x'}) }}
+                            </div>
+                            <div class="ms-3 my-auto">
+                                <div class="h3 mb-2 text-nowrap">{{ feature.title|raw }}</div>
+                                <div class="text-gray-700 line-limit-2">{{ feature.subtext|raw }}</div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endif %}
+

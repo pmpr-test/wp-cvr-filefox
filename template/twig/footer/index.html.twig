@@ -1,39 +1,12 @@
 {% if pmpr_apply_filters('has_footer', 1) %}
-
-    {% set features = get_cover_option('woocommerce_features', [], {
-        requires: ['icon', 'title', 'subtext'],
-        filter: 'show_on',
-        output: 'array',
-        filter_value: 'footer'
-    }) %}
-    {% if features is not empty %}
-        <div class="services bg-white py-4">
-            <div class="container">
-                <div class="row my-4">
-                    {% for feature in features %}
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="card bg-transparent">
-                                <div class="card-body">
-                                    {{ render_icon(feature.icon, {class: 'icon-primary mx-auto mb-3 icon-3x'}) }}
-                                    <div class="text-center">
-                                        <div class="h3 mb-2">{{ feature.title|raw }}</div>
-                                        <div class="text-gray-700">{{ feature.subtext|raw }}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    {% endif %}
-    <footer id="site_footer" class="bg-dark py-5">
-        <div class="container">
+    <footer id="site_footer" class="position-relative bg-gray-300">
+        {% include get_template('features', _self) %}
+        <div class="container pt-5">
             {% include get_template('top', _self) %}
-            <hr class="bg-gray-400 my-5 border">
+            <hr class="my-5 border-dark border-2">
             {% include get_template('main', _self) %}
-            {% include get_template('bottom', _self) %}
         </div>
+        {% include get_template('bottom', _self) %}
     </footer>
 
 {% endif %}

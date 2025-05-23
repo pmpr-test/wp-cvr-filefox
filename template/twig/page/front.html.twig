@@ -24,6 +24,8 @@
                             <h2 class="visually-hidden">{{ options.title|raw }}</h2>
                         {% endif %}
                     </header>
+                {% else %}
+                    {{ render_if_has_content('h2', {class: 'visually-hidden'}, options.alt_title) }}
                 {% endif %}
                 {% include get_template('./front/' ~ name, _self) with options %}
                 {% set rendered = rendered + 1 %}

@@ -6,7 +6,8 @@
         {% set permalink = get_permalink(post) %}
     {% endif %}
     {% if version is same as ('list') %}
-        <article class="d-flex position-relative">
+        {% set tag = placeholder ? 'div' : 'article' %}
+        <{{ tag|raw }} class="d-flex position-relative">
             <div>
                 {% include get_template('thumbnail', _self) with {
                     post: post,
@@ -23,7 +24,8 @@
                         <div class="pr-ph-text pr-ph-short"></div>
                     </div>
                 {% else %}
-                    <a href="{{ permalink|esc_attr }}" class="stretched-link text-gray-800{% if metadata is empty %} my-auto{% endif %}"
+                    <a href="{{ permalink|esc_attr }}"
+                       class="stretched-link text-gray-800{% if metadata is empty %} my-auto{% endif %}"
                        aria-label="{{ title|esc_attr }}">
                         <h4 class="lh-lg line-limit-2 mb-0">{{ title|raw }}</h4>
                     </a>
@@ -56,9 +58,9 @@
                     {% endif %}
                 {% endif %}
             </div>
-        </article>
+        </{{ tag|raw }}>
     {% elseif version is same as ('simple') %}
-        <a href="{{ permalink|esc_attr }}" class="h4 text-gray-500">
+        <a href="{{ permalink|esc_attr }}" class="h4 text-gray-600">
             {{ title|raw }}
         </a>
     {% elseif version is same as ('grid') %}

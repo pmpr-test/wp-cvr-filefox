@@ -2,3 +2,71 @@
     font-size: 20px;
     text-align: right;
 }
+.price {
+    display: flex;
+    justify-content: end;
+}
+
+.pr-discount {
+    color: #FFF;
+    background: {{ base|esc_attr }};
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 1px 4px;
+    margin-right: 3px;
+}
+
+.before-discount {
+    margin: auto;
+}
+
+.price .discount-area {
+    display: flex;
+    margin-bottom: 2px;
+    justify-content: space-between;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del .woocommerce-Price-currencySymbol {
+    display: none;
+}
+
+del .price-amount {
+    font-size: 13px;
+}
+
+.woocommerce-Price-amount bdi {
+    display: flex;
+}
+
+.woocommerce-Price-currencySymbol {
+    margin: auto 2px auto 0;
+}
+
+.woocommerce-Price-currencySymbol svg {
+    width: 20px;
+    height: 20px;
+}
+
+#template_footer #credit {
+    color: {{ footer_text|esc_attr }};
+    {% if is_bg_separator %}
+        border-top: none;
+        background-color: {{ footer_bg|esc_attr }};
+    {% else %}
+        border-color: {{ footer_bg|esc_attr }};
+    {% endif %}
+    padding: 20px 32px;
+}
+
+#body_content .email-order-details .order-totals-last td,
+#body_content .email-order-details .order-totals-last th {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+

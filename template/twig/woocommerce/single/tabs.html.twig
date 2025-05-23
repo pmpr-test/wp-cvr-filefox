@@ -20,14 +20,14 @@
                 <div class="col-12 col-xl-9 position-relative overflow-auto" id="woo_panels"
                      data-target="#woo_tabs_navbar">
                     {% for key, tab in tabs %}
-                        <section id="tab-{{ key|esc_attr }}" role="tabpanel"
-                                 aria-labelledby="tab-title-{{ key|esc_attr }}"
-                                 class="my-4 {% if key is same as('description') %} single-content product-content{% endif %}">
+                        <div id="tab-{{ key|esc_attr }}" role="tabpanel"
+                             aria-labelledby="tab-title-{{ key|esc_attr }}"
+                             class="my-4 {% if key is same as('description') %} single-content product-content{% endif %}">
                             {% set tab_content %}
                                 {{ tab.callback|call([key, tab]) }}
                             {% endset %}
                             {{ pmpr_apply_filters('woo_tab_' ~ key ~ '_content', tab_content, tab)|raw }}
-                        </section>
+                        </div>
                         {% if not loop.last %}
                             <hr class="section-separator my-5 border border-1 border-dark">
                         {% endif %}

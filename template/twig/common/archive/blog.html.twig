@@ -14,9 +14,9 @@
         {% set posts = have_posts() %}
 
         {% if not is_paged() %}
-            {% set first_part = posts|slice(0, 5) %}
-            {% set posts = posts|slice(5, posts|length) %}
-            <section id="blog_recent" class="pt-4 pb-5 bg-white">
+            {% set first_part = posts|slice(0, 6) %}
+            {% set posts = posts|slice(6, posts|length) %}
+            <div id="blog_recent" class="pt-4 pb-5 bg-white">
                 {% embed get_cover_template('common/carousel/index') with {
                     dont_hide: 1,
                     carousels: first_part,
@@ -44,12 +44,12 @@
                         {% include get_cover_template('common/block/post') with {
                             post: carousel,
                             version: 'cover',
-                            image_size: (loop.index == 3 ? 'feature_image' : 'large'),
-                            wrapper_class: 'overflow-hidden zoom-on-hover h-100',
+                            image_size: (loop.index == 1 ? 'feature_image' : (loop.index < 3 ? 'large' : 'medium')),
+                            wrapper_class: 'hero-grid-post-item h-100 overflow-hidden zoom-on-hover',
                         } %}
                     {% endblock %}
                 {% endembed %}
-            </section>
+            </div>
 
             {% set hot_posts = pmpr_apply_filters('ff_traffic_get_most_viewed_posts', [], {
                 limit: 3,
@@ -79,30 +79,32 @@
             {% endif %}
         {% endif %}
 
-        <div class="container">
-            <div class="row mt-4">
-                <section id="blog_timeline" class="col-12 col-lg-9 mb-5 mb-lg-0">
-                    <h2 class="section-title mb-4">{{ __('Today\'s Updates', domain) }}</h2>
-                    <div class="row">
-                        {% for post in posts %}
-                            <div class="{{ prepare_columns(loop, {'': 12, md: 6, xl: 4}, 4) }} d-flex">
-                                {% include get_cover_template('common/block/post') with {
-                                    post: post,
-                                    version: 'responsive',
-                                    metadata: ['publish', 'study_time'],
-                                } %}
-                            </div>
-                        {% endfor %}
-                    </div>
-                    {% include get_cover_template('common/archive/pagination') %}
-                </section>
-                <aside id="sidebar" class="col-12 col-lg-3">
-                    {% include get_cover_template('common/archive/widget') with {
-                        post_type: post_type
-                    } %}
-                </aside>
+        {% if posts is not empty %}
+            <div class="container">
+                <div class="row mt-4">
+                    <section id="blog_timeline" class="col-12 col-lg-9 mb-5 mb-lg-0">
+                        <h2 class="section-title mb-4">{{ __('Newest Posts', domain) }}</h2>
+                        <div class="row">
+                            {% for post in posts %}
+                                <div class="{{ prepare_columns(loop, {'': 12, md: 6, xl: 4}, 4) }} d-flex">
+                                    {% include get_cover_template('common/block/post') with {
+                                        post: post,
+                                        version: 'responsive',
+                                        metadata: ['publish', 'study_time'],
+                                    } %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        {% include get_cover_template('common/archive/pagination') %}
+                    </section>
+                    <aside id="sidebar" class="col-12 col-lg-3">
+                        {% include get_cover_template('common/archive/widget') with {
+                            post_type: post_type
+                        } %}
+                    </aside>
+                </div>
             </div>
-        </div>
+        {% endif %}
     </main>
 {% endblock %}
 

@@ -71,12 +71,12 @@
         {% include get_cover_template('common/background_media') with {
             attachment: get_the_post_thumbnail_id(post),
             image_size: image_size|default('medium'),
-            container_class: 'bg-cover h-100'
+            container_class: 'bg-cover w-100 h-100'
         } %}
 
         <div class="card-body card-overlay d-flex flex-column justify-content-end align-items-start position-absolute w-100 h-100">
             <a href="{{ get_permalink(post)|esc_attr }}" class="stretched-link">
-                <h2 class="h1 text-white mb-3 overlay-title">{{ get_title(post)|raw }}</h2>
+                <h2 class="fs-lg text-white mb-3 overlay-title line-limit-2 rounded">{{ get_title(post)|raw }}</h2>
             </a>
             {% set metadata_items = pmpr_apply_filters('metadata_get_items', {}, {
                 post: post,
@@ -93,7 +93,7 @@
                 divider_color: 'white',
                 icon_size: 'md',
                 item_class: 'fs-14',
-                wrapper_class: 'overlay-text',
+                wrapper_class: 'overlay-text rounded',
                 icon_divider_space: 1,
                 version: 3,
             }) }}

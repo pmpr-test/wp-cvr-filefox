@@ -24,7 +24,7 @@
         {% endfor %}
         {% if title is empty and view_more_icon is not empty %}
             <li class="list-group-item d-flex flex-column p-2 text-nowrap bg-gray-200 border-0 rounded my-0 ms-2 as-link"
-                data-type="scroll-to" data-target="#tab-additional_information" aria-label="view more" data-offset="100">
+                data-type="scroll-to" data-target="#tab-additional_information" data-offset="100">
                 {{ render_icon(view_more_icon, {class: 'icon-xl my-auto mx-3'}) }}
             </li>
         {% endif %}

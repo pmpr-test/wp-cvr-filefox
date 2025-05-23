@@ -12,7 +12,7 @@
 {% if show %}
     {% set attributes = attributes|add('class', 'show') %}
 {% endif %}
-<div {{ attributes|parse_attrs|raw }}>
+<span {{ attributes|parse_attrs|raw }}>
     {{ render_if_has_content('span', {class: 'visually-hidden'}, text) }}
-</div>
+</span>
 

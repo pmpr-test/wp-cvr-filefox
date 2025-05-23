@@ -41,7 +41,7 @@ if ( $email_improvements_enabled ) {
  */
 do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plain_text, $email ); ?>
 
-<table style="margin-bottom: 10px">
+<table style="margin-bottom: 10px; font-size:15px; width: 100%">
     <tbody>
     <?php
 
@@ -85,7 +85,6 @@ do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plai
 		<thead>
 			<tr>
 				<th class="td" scope="col" style="text-align:<?php echo esc_attr( $text_align ); ?>;"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
-				<th class="td" scope="col" style="text-align:<?php echo esc_attr( $text_align ); ?>;"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></th>
 				<th class="td" scope="col" style="text-align:<?php echo esc_attr( $text_align ); ?>;"><?php esc_html_e( 'Price', 'woocommerce' ); ?></th>
 			</tr>
 		</thead>
@@ -97,7 +96,7 @@ do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plai
 				$order,
 				array(
 					'show_sku'      => $sent_to_admin,
-					'show_image'    => $email_improvements_enabled,
+					'show_image'    => false,
 					'image_size'    => array( $image_size, $image_size ),
 					'plain_text'    => $plain_text,
 					'sent_to_admin' => $sent_to_admin,
@@ -117,7 +116,7 @@ do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plai
 					$last_class = ( $i === $item_totals_count ) ? ' order-totals-last' : '';
 					?>
 					<tr class="order-totals order-totals-<?php echo esc_attr( $total['type'] ?? 'unknown' ); ?><?php echo esc_attr( $last_class ); ?>">
-						<th class="td text-align-left" scope="row" colspan="2" style="<?php echo ( 1 === $i ) ? 'border-top-width: 4px;' : ''; ?>">
+						<th class="td text-align-left" scope="row" style="<?php echo ( 1 === $i ) ? 'border-top-width: 4px;' : ''; ?>">
 							<?php
 							echo wp_kses_post( $total['label'] ) . ' ';
 							if ( $email_improvements_enabled ) {
