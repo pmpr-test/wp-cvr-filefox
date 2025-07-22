@@ -1,11 +1,11 @@
 <div class="row">
-    <div class="col-12 col-md-8 d-flex justify-content-between">
+    <div class="col-12 col-md-8 mb-4 mb-md-0 d-flex flex-column flex-md-row justify-content-between">
         {% include get_cover_template('common/logo') with {
             logo_type: 'footer',
             logo_size: [165, 50],
-            container_class: 'my-auto'
+            container_class: 'm-auto'
         } %}
-        {{ render_if_has_content('div', {class: 'my-auto mx-5 text-gray-700'}, get_cover_option('footer_description', '')) }}
+        {{ render_if_has_content('div', {class: 'my-4 my-md-auto mx-4 mx-md-5 text-gray-800 text-center text-md-start'}, get_cover_option('footer_description', '')) }}
     </div>
     <div class="col-12 col-md-4">
         {{ dynamic_sidebar('footer-top') }}

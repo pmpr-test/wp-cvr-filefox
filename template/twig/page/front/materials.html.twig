@@ -31,7 +31,7 @@
     {% block carousel %}
         <article class="card white-primary shadow-sm mx-2">
             <div class="card-body py-5 d-flex text-center flex-column justify-content-center">
-                <a href="{{ carousel.link|esc_attr }}" class="stretched-link"></a>
+                <a href="{{ carousel.link|esc_attr }}" class="stretched-link" aria-label="{{ carousel.title|esc_attr }}"></a>
                 {{ render_icon(carousel.icon, {class: 'icon-xxxl mb-3 mx-auto'}) }}
                 <h3>{{ carousel.title|raw }}</h3>
                 <div>

@@ -39,7 +39,7 @@
     </footer>
 </article>
 <aside class="my-4">
-    {{ dynamic_sidebar('post-single-aside') }}
+    {{ dynamic_sidebar(post_type ~ '-single-aside') }}
 </aside>
 {% include get_template('./comment', _self) %}
 
