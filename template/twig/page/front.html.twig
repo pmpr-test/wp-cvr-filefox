@@ -14,7 +14,7 @@
                             <div class="container{% if options.header_centered %} text-center{% endif %} mb-4">
                                 {% include get_cover_template('common/header/title') with {
                                     title: options.title,
-                                    heading: 'h2',
+                                    heading: (loop.index == 1 ? 'h1' : 'h2'),
                                     title_margin: 1,
                                     title_attrs: options.title_attrs|default({})|add({class: 'front-section-title'})
                                 } %}
