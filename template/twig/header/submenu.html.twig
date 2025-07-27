@@ -4,7 +4,8 @@
             <ul class="navbar-nav">
                 {% for item in items %}
                     <li class="nav-item">
-                        <a href="{{ item.link|esc_attr }}" class="nav-link" rel="nofollow noopener noreferrer">
+                        <a href="{{ item.link|esc_attr }}" class="nav-link"
+                           rel="nofollow noopener noreferrer">
                             {{ item.title|raw }}
                         </a>
                     </li>
@@ -13,7 +14,7 @@
             <div class="search-modal-toggle ms-auto bg-gray-200 rounded d-lg-flex justify-content-between px-3 py-2 d-none"
                  data-bs-target="#search_modal" data-bs-toggle="modal"
             >
-                <div class="me-3 text-muted">{{ search_text|raw }}</div>
+                <div class="me-3 text-gray-700">{{ search_text|raw }}</div>
                 {{ render_icon(search_icon, {class: 'icon-md as-link'}) }}
             </div>
         </nav>
@@ -40,7 +41,7 @@
             </div>
             <div class="result-list mb-4 row overflow-y-scroll custom-scrollbar mxh-300px h-300px"></div>
             <div class="view-all btn py-2 btn-light btn-block w-100 d-flex justify-content-center" data-type="link">
-                <div class="text-muted">{{ view_all_text|raw }}</div>
+                <div class="text-gray-700">{{ view_all_text|raw }}</div>
                 <strong class="search-query ms-1"></strong>
             </div>
         </div>

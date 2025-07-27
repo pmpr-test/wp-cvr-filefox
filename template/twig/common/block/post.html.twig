@@ -17,7 +17,7 @@
                    title="{{ render_post_data('title', post)|esc_attr }}">
                     <h2 class="fs-16 fs-md-18 mb-2 mb-md-3 line-limit-1 line-limit-md-2">{{ render_post_data('title', post)|raw }}</h2>
                 </a>
-                {{ render_if_has_content('div', {class: 'fs-xs fs-md-14 mb-2 mb-md-3 text-muted line-limit-1 line-limit-md-3'}, render_post_data('excerpt', post, {check: 0})) }}
+                {{ render_if_has_content('div', {class: 'fs-xs fs-md-14 mb-2 mb-md-3 text-gray-700 line-limit-1 line-limit-md-3'}, render_post_data('excerpt', post, {check: 0})) }}
                 {% set metadata = pmpr_apply_filters('metadata_get_items', {}, {
                     post: post,
                     include: ['publish', 'study_time']

@@ -2,7 +2,7 @@
 {% if author_metadata is not empty %}
     <div class="d-flex flex-column flex-sm-row lh-lg">
         {% for author_meta in author_metadata %}
-            <span class="text-muted">{{ render_user_data(author_meta, author)|raw }}</span>
+            <span class="text-gray-700">{{ render_user_data(author_meta, author)|raw }}</span>
             {% if not loop.last %}
                 <div data-divider="horizontal" class="bg-gray-500 d-none d-sm-block mx-2"></div>
             {% endif %}

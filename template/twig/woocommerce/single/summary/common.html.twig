@@ -21,8 +21,8 @@
                             {{ get_avatar(author, 80, {class: 'img-fluid rounded-circle my-auto me-3 d-block'})|raw }}
                             <div class="my-auto">
                                 <cite class="my-auto d-block fs-16 fw-bold font-normal mb-2">{{ render_user_data('display_name', author)|raw }}</cite>
-                                {{ render_if_has_content('div', {class: 'text-muted fs-14 mb-1'}, render_user_data('caption', author)) }}
-                                {{ render_if_has_content('div', {class: 'text-muted fs-14'}, pmpr_apply_filters('get_user_educational_info', '', author)) }}
+                                {{ render_if_has_content('div', {class: 'text-gray-700 fs-14 mb-1'}, render_user_data('caption', author)) }}
+                                {{ render_if_has_content('div', {class: 'text-gray-700 fs-14'}, pmpr_apply_filters('get_user_educational_info', '', author)) }}
                             </div>
                         </div>
                         {{ render_if_has_content('div', {class: 'fs-16 lh-lg line-limit-2'}, author_description) }}
