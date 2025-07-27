@@ -31,7 +31,7 @@
                                         author: object
                                     } %}
                                     {% set educational_info = pmpr_apply_filters('get_user_educational_info', '', object) %}
-                                    {{ render_if_has_content('div', {class: 'text-muted mt-2'}, educational_info) }}
+                                    {{ render_if_has_content('div', {class: 'text-gray-700 mt-2'}, educational_info) }}
                                 </div>
                             </div>
                             {{ render_if_has_content('p', {class: 'lh-lg fs-sm line-limit-3'}, render_author_data('description', object)) }}
@@ -54,7 +54,7 @@
                                             <div class="card">
                                                 <div class="card-body d-flex flex-column text-center">
                                                     <strong class="display-6 fw-bold mb-2">{{ meta.value }}</strong>
-                                                    <span class="text-muted fs-14">{{ meta.text|raw }}</span>
+                                                    <span class="text-gray-700 fs-14">{{ meta.text|raw }}</span>
                                                 </div>
                                             </div>
                                         </div>

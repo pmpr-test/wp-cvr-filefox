@@ -9,6 +9,7 @@
         {% block after_main %}{% endblock %}
         {% block before_sidebar %}{% endblock %}
         <aside id="sidebar" class="col-12 col-lg-{{ sidebar_share|default(3) }} mt-0 mb-3 mb-lg-0 order-3">
+            <h2 class="visually-hidden">Sidebar</h2>
             {% block sidebar %}{% endblock %}
         </aside>
         {% block after_sidebar %}{% endblock %}

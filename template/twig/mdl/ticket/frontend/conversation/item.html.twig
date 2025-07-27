@@ -3,5 +3,5 @@
     <div class="conversation-text rounded d-table my-auto mb-1 px-3 py-2{% if hasAgent %} bg-gray-300{% else %} ms-auto bg-primary text-white{% endif %}">
         {{ wpautop(text)|raw }}
     </div>
-    <time class="conversation-datetime text-muted{% if not hasAgent %} d-block text-end{% endif %}" datetime="{{ created_at|esc_attr }}">{{ created_at|datetime('j F Y H:i')|raw }}</time>
+    <time class="conversation-datetime text-gray-700{% if not hasAgent %} d-block text-end{% endif %}" datetime="{{ created_at|esc_attr }}">{{ created_at|datetime('j F Y H:i')|raw }}</time>
 </div>
