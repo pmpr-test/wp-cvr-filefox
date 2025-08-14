@@ -1,7 +1,7 @@
 <header>
     {% set title = get_term_title(item) %}
     <a href="{{ get_term_link(item)|esc_url }}" aria-label="{{ title|esc_attr }}" title="{{ title|esc_attr }}">
-        {{ render_if_has_content(heading_element|default('h3'), {class: ''}, title) }}
+        {{ render_if_has_content(heading_element|default('h3'), {class: 'lh-base'}, title) }}
     </a>
 </header>
 

@@ -10,23 +10,7 @@
                             <div class="d-flex flex-column flex-sm-row mb-4">
                                 {{ get_avatar(object, 120, {class: 'img-fluid rounded-circle mx-auto ms-sm-0 me-sm-3 mb-3 my-sm-auto d-block'})|raw }}
                                 <div class="d-flex flex-column text-center text-sm-start my-auto">
-                                    <div class="d-flex justify-content-center justify-content-sm-start mb-3">
-                                        <h1 class="mb-0">{{ render_author_data('name', object)|raw }}</h1>
-                                        {% include get_cover_template('common/action') with {
-                                            action_text: __('Follow', domain),
-                                            action_icon: 'fasm/6/set/user-plus',
-                                            has_icon: 1,
-                                            icon_end: 0,
-                                            as_outline: 1,
-                                            icon_start: 1,
-                                            main_color: 'white',
-                                            hover_color: 'primary',
-                                            element: 'span',
-                                            action_attrs: {
-                                                class: 'btn-sm my-auto ms-2'
-                                            }
-                                        } %}
-                                    </div>
+                                    <h1 class="text-center text-sm-start mb-3">{{ render_author_data('name', object)|raw }}</h1>
                                     {% include get_cover_template('common/author/caption_expertise') with {
                                         author: object
                                     } %}
@@ -45,56 +29,57 @@
                                 </nav>
                             {% endif %}
                         </header>
-                        <aside class="col-lg-4">
-                            {% set metadata = pmpr_apply_filters('get_author_metadata', [], object) %}
-                            {% if metadata is not empty %}
-                                <div class="row">
-                                    {% for meta in metadata %}
-                                        <div class="{{ prepare_columns(loop, {'': 6}, 4) }}">
-                                            <div class="card">
-                                                <div class="card-body d-flex flex-column text-center">
-                                                    <strong class="display-6 fw-bold mb-2">{{ meta.value }}</strong>
-                                                    <span class="text-gray-700 fs-14">{{ meta.text|raw }}</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    {% endfor %}
-                                </div>
-                            {% endif %}
-                        </aside>
+                        {#                        <aside class="col-lg-4"> #}
+                        {#                            {% set metadata = pmpr_apply_filters('get_author_metadata', [], object) %} #}
+                        {#                            {% if metadata is not empty %} #}
+                        {#                                <div class="row"> #}
+                        {#                                    {% for meta in metadata %} #}
+                        {#                                        <div class="{{ prepare_columns(loop, {'': 6}, 4) }}"> #}
+                        {#                                            <div class="card"> #}
+                        {#                                                <div class="card-body d-flex flex-column text-center"> #}
+                        {#                                                    <strong class="display-6 fw-bold mb-2">{{ meta.value }}</strong> #}
+                        {#                                                    <span class="text-gray-700 fs-14">{{ meta.text|raw }}</span> #}
+                        {#                                                </div> #}
+                        {#                                            </div> #}
+                        {#                                        </div> #}
+                        {#                                    {% endfor %} #}
+                        {#                                </div> #}
+                        {#                            {% endif %} #}
+                        {#                        </aside> #}
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="row py-5">
-                    <div class="col-12 col-lg-8 mb-5 mb-lg-0 lh-lg fs-sm no-margin">
-                        {{ wpautop(pmpr_apply_filters('get_author_cornerstones_text', '', object))|raw }}
-                    </div>
-                    <div class="col-12 col-lg-4">
+            {% set cornerstones_text = pmpr_apply_filters('get_author_cornerstones_text', '', object) %}
+            {% if cornerstones_text %}
+                <div class="container">
+                    <div class="row py-5">
+                        <div class="col-12 col-lg-8 mb-5 mb-lg-0 lh-lg fs-sm no-margin">
+                            {{ wpautop(cornerstones_text)|raw }}
+                        </div>
+                        <div class="col-12 col-lg-4">
 
+                        </div>
                     </div>
                 </div>
-            </div>
+            {% endif %}
         </article>
-        <section class="bg-gray-200">
-            <h2 class="visually-hidden">{{ __('Introduce Video', domain) }}</h2>
-            <div class="container">
-                <div class="row py-5">
-                    <div class="col-12 col-lg-4 mb-5 mb-lg-0">
-
-                    </div>
-                    <div class="col-12 col-lg-8">
-                        {% set aparatLink = render_author_data('aparat_introduce_link', object) %}
-                        {% if aparatLink is not empty %}
+        {% set aparatLink = render_author_data('aparat_introduce_link', object) %}
+        {% if aparatLink %}
+            <section class="bg-gray-200">
+                <h2 class="visually-hidden">{{ __('Introduce Video', domain) }}</h2>
+                <div class="container">
+                    <div class="row py-5">
+                        <div class="col-12 col-lg-4 mb-5 mb-lg-0"></div>
+                        <div class="col-12 col-lg-8">
                             {{ pmpr_do_action('video_aparat_render_iframe', {
                                 url: aparatLink,
                                 attrs: {class: 'author-introduce-video rounded'}
                             }) }}
-                        {% endif %}
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        {% endif %}
     </main>
 
     {% set posts_list = pmpr_apply_filters('get_author_posts_list', [], object) %}
@@ -105,15 +90,17 @@
                     <div class="container py-5">
                         <div class="d-flex justify-content-between mb-3">
                             <h2 class="my-auto">{{ post_list.title|raw }}</h2>
-                            {% include get_cover_template('common/action') with {
-                                action_text: post_list.action_text,
-                                action_icon: post_list.action_icon,
-                                action_link: post_list.action_link,
-                                has_icon: 1,
-                                as_outline: 1,
-                                main_color: 'white',
-                                hover_color: 'primary',
-                            } %}
+                            {% if post_list.action_link is not empty %}
+                                {% include get_cover_template('common/action') with {
+                                    action_text: post_list.action_text,
+                                    action_icon: post_list.action_icon,
+                                    action_link: post_list.action_link,
+                                    has_icon: 1,
+                                    as_outline: 1,
+                                    main_color: 'white',
+                                    hover_color: 'primary',
+                                } %}
+                            {% endif %}
                         </div>
                         <div class="row">
                             {% for post_id, post in post_list.posts %}
