@@ -4,7 +4,7 @@
             <div class="d-flex mb-3">
                 {{ get_avatar(author, avatar_size, {class: 'img-fluid rounded-circle my-auto me-3 d-block'})|raw }}
                 <div class="my-auto">
-                    <cite class="my-auto d-block fs-md fw-bold font-normal mb-1">{{ name|default()|raw }}</cite>
+                    <cite class="my-auto d-block fs-md fs-md-md fw-bold font-normal mb-1">{{ name|default()|raw }}</cite>
                     {% include get_cover_template('common/author/caption_expertise') with {
                         author: author,
                         author_metadata: author_metadata|default([])

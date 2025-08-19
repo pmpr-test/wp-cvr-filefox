@@ -2,8 +2,13 @@
     <header>
         {% include get_cover_template('common/header/title') with {
             title: jumbotron,
-            title_attrs: {class: 'mb-4'}
+            title_attrs: {class: 'mb-2'}
         } %}
+        {# render category #}
+        {{ pmpr_do_action('render_post_taxonomies', post, {
+            attrs: {'class': 'mb-3'},
+            include: ['category']
+        }) }}
         {% include get_cover_template('common/post/thumbnail') with {
             image_size: 'feature_image',
             image_attr: {class: 'img-fluid d-block mx-auto rounded'}
@@ -11,7 +16,7 @@
 
         {% set metadata = pmpr_apply_filters('metadata_get_items', {}, {
             post: item,
-            include: ['category', 'study_time', 'publish', 'traffic', 'comment']
+            include: ['study_time', 'publish', 'traffic', 'comment']
         }) %}
         {{ pmpr_do_action('render_post_metadata', metadata, {
             icon_size: 'md',
