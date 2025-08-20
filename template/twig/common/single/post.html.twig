@@ -10,7 +10,7 @@
             include: ['category']
         }) }}
         {% include get_cover_template('common/post/thumbnail') with {
-            image_size: 'feature_image',
+            image_size: is_mobile() ? 'large' : 'feature_image',
             image_attr: {class: 'img-fluid d-block mx-auto rounded'}
         } %}
 
