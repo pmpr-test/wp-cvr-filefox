@@ -1,5 +1,5 @@
 {% if image is not empty %}
-    {{ wp_get_attachment_image(image, 'medium')|raw }}
+    {{ wp_get_attachment_image(image, 'large', {class: 'mb-4'})|raw }}
 {% endif %}
 
 {% if title is not empty %}
