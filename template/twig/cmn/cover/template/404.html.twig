@@ -1,13 +1,13 @@
 {% if image is not empty %}
-    {{ wp_get_attachment_image(image, 'large', {class: 'mb-4'})|raw }}
+    {{ wp_get_attachment_image(image, 'medium', {class: 'mb-5'})|raw }}
 {% endif %}
 
 {% if title is not empty %}
-    <h1 class="h3 mb-3">{{ title|raw }}</h1>
+    <h1 class="mb-4">{{ title|raw }}</h1>
 {% endif %}
 
 {% if text is not empty %}
-    <div class="text-gray-700">{{ text|raw }}</div>
+    <div class="text-gray-700 fs-md">{{ text|raw }}</div>
 {% endif %}
 
 {% if has_search %}
