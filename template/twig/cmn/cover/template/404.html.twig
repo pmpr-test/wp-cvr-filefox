@@ -1,0 +1,29 @@
+{% if image is not empty %}
+    {{ wp_get_attachment_image(image, 'medium')|raw }}
+{% endif %}
+
+{% if title is not empty %}
+    <h1 class="h3 mb-3">{{ title|raw }}</h1>
+{% endif %}
+
+{% if text is not empty %}
+    <div class="text-gray-700">{{ text|raw }}</div>
+{% endif %}
+
+{% if has_search %}
+    {{ get_search_form()|raw }}
+{% endif %}
+
+{% if url is defined %}
+    <div class="mt-5">
+        {% include get_cover_template('common/action') with {
+            action_text: action_text,
+            action_link: url,
+            as_outline: 1,
+            as_button: 1,
+            action_attrs: {
+                class: 'btn-primary'
+            }
+        } %}
+    </div>
+{% endif %}
