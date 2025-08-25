@@ -2,7 +2,7 @@
     {% set version = version|default('single') %}
     {% set permalink = get_permalink(post) %}
     {% if version is same as ('responsive') %}
-        <div class="row h-100 position-relative">
+        <div class="row g-0 h-100 position-relative">
             <div class="col-4 col-md-12">
                 {% include get_cover_template('common/post/thumbnail') with {
                     post: post,

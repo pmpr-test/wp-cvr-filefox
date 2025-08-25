@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa">
+
+<head>
+    {{ pmpr_do_action('error_wp_head') }}
+    {{ styles|raw }}
+    {{ render_if_has_content('title', {}, title) }}
+</head>
+
+<body {{ body_class() }} id="top">
+
+<header id="site_header" class="site-header header-area">
+    <div class="position-relative bg-white z-md shadow-sm py-3">
+        <div class="container">
+            {% include get_cover_template('common/logo') with {
+                logo_type: 'header',
+                logo_size: [135, 40],
+            } %}
+        </div>
+    </div>
+</header>
+

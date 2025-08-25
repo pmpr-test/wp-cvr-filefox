@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row justify-content-center align-items-center" style="height: 70vh">
+        <div class="col-12 col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body px-3 py-4 text-center">
+
+                    {% if image is not empty %}
+                        {{ wp_get_attachment_image(image, 'medium', {class: 'mb-5'})|raw }}
+                    {% endif %}
+
+                    {{ render_if_has_content('h1', {class: 'fs-md fs-md-lg mb-4'}, title) }}
+                    {{ render_if_has_content('div', {class: 'text-gray-700 fs-sm fs-md-md'}, message) }}
+
+                    {% if action_link is defined %}
+                        <div class="mt-4">
+                            {% include get_cover_template('common/action') with {
+                                action_text: action_text,
+                                action_link: action_link,
+                                action_icon: action_icon,
+                                as_outline: 1,
+                                as_button: 1,
+                                action_attrs: {
+                                    class: 'btn-primary px-4 py-2'
+                                }
+                            } %}
+                        </div>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
