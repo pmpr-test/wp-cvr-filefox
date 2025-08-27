@@ -1,18 +1,30 @@
-{% set attributes = {'role': 'status', class: class} %}
-{% set attributes = attributes|add('class', 'pr-spinner') %}
-{% if type is not empty %}
-    {% set attributes = attributes|add('class', 'spinner-' ~ type) %}
-    {% if size is not empty %}
-        {% set attributes = attributes|add('class', 'spinner-' ~ type ~ '-' ~ size) %}
+{% if type is same as ('loader') %}
+    <div class="pr-spinner{% if overlay %} pr-overlay{% endif %}{% if color is not empty %} text-{{ color|esc_attr }}{% endif %}{% if show %} show{% endif %}{% if class is not empty %} {{ class|esc_attr }}{% endif %}">
+        <div class="spinner-format-1 d-flex centered-absolute">
+            <div class="spinner-item"></div>
+            <div class="spinner-item"></div>
+            <div class="spinner-item"></div>
+            <div class="spinner-item"></div>
+            <div class="spinner-item"></div>
+        </div>
+    </div>
+{% else %}
+    {% set attributes = {'role': 'status', class: class} %}
+    {% set attributes = attributes|add('class', 'pr-spinner') %}
+    {% if type is not empty %}
+        {% set attributes = attributes|add('class', 'spinner-' ~ type) %}
+        {% if size is not empty %}
+            {% set attributes = attributes|add('class', 'spinner-' ~ type ~ '-' ~ size) %}
+        {% endif %}
     {% endif %}
+    {% if color is not empty %}
+        {% set attributes = attributes|add('class', 'text-' ~ color) %}
+    {% endif %}
+    {% if show %}
+        {% set attributes = attributes|add('class', 'show') %}
+    {% endif %}
+    <span {{ attributes|parse_attrs|raw }}>
+        {{ render_if_has_content('span', {class: 'visually-hidden'}, text) }}
+    </span>
 {% endif %}
-{% if color is not empty %}
-    {% set attributes = attributes|add('class', 'text-' ~ color) %}
-{% endif %}
-{% if show %}
-    {% set attributes = attributes|add('class', 'show') %}
-{% endif %}
-<span {{ attributes|parse_attrs|raw }}>
-    {{ render_if_has_content('span', {class: 'visually-hidden'}, text) }}
-</span>
 

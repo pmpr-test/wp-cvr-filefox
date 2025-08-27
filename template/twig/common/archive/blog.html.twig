@@ -2,7 +2,7 @@
 
 {% block body %}
     <main id="main" class="bg-gray-200 pb-4">
-        <header class="pt-3{% if not is_paged() %} bg-white{% endif %}">
+        <header class="pt-3{% if not is_paged() and not ignore_top %} bg-white{% endif %}">
             <div class="container">
                 {% include get_cover_template('common/header/title') with {
                     title: jumbotron,
@@ -13,7 +13,7 @@
 
         {% set posts = have_posts() %}
 
-        {% if not is_paged() %}
+        {% if not is_paged() and not ignore_top %}
             {% set first_part = posts|slice(0, 6) %}
             {% set posts = posts|slice(6, posts|length) %}
             <div id="blog_recent" class="pt-4 pb-5 bg-white">
@@ -83,13 +83,15 @@
             <div class="container">
                 <div class="row mt-4">
                     <section id="blog_timeline" class="col-12 col-lg-9 mb-4 mb-lg-0">
-                        <h2 class="section-title mb-4">
-                            {% set short_label = get_post_type_label(post_type, 'short_label') %}
-                            {% if short_label is empty %}
-                                {% set short_label = get_post_type_label(post_type, 'label') %}
-                            {% endif %}
-                            {{ __('Newest %s', domain)|format(short_label) }}
-                        </h2>
+                        {% if not ignore_top %}
+                            <h2 class="section-title mb-4">
+                                {% set short_label = get_post_type_label(post_type, 'short_label') %}
+                                {% if short_label is empty %}
+                                    {% set short_label = get_post_type_label(post_type, 'label') %}
+                                {% endif %}
+                                {{ __('Newest %s', domain)|format(short_label) }}
+                            </h2>
+                        {% endif %}
                         <div class="row">
                             {% for post in posts %}
                                 <div class="{{ prepare_columns(loop, {'': 12, md: 6, xl: 4}, 4) }} d-flex">

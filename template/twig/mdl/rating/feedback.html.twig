@@ -1,8 +1,10 @@
 {% if fields is defined and fields is not empty %}
-    <div class="rating-feedback my-3">
-        <p class="fs-ms text-start mb-0">{{ question|raw }}</p>
-        {% for field in fields %}
-            {{ field|call('render')|raw }}
-        {% endfor %}
+    <div class="card shadow-sm rating-feedback mt-3">
+        <div class="card-body">
+            <p class="fs-ms text-start mb-2">{{ question|raw }}</p>
+            {% for field in fields %}
+                {{ field|call('render')|raw }}
+            {% endfor %}
+        </div>
     </div>
 {% endif %}
