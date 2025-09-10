@@ -1,0 +1,14 @@
+{% extends get_template('../box', _self) %}
+
+{% block body %}
+    <div class="row g-0">
+        <div class="col-1">
+            {{ render_icon(shortcode_icon, {class: 'icon-xxl mx-auto me-4'}) }}
+        </div>
+        <div class="col-11 no-margin my-auto">
+            {{ render_if_has_content('strong', {class: 'fs-md d-block mb-2'}, title) }}
+            {{ wpautop(text)|raw }}
+        </div>
+    </div>
+{% endblock %}
+

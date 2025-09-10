@@ -1,0 +1,7 @@
+<{{ wrapper_element|default('div') }} class="card shadow-sm pr-shortcode shortcode-{{ id|raw }}">
+    {% block before_body %}{% endblock %}
+    <div class="card-body z-sm rounded position-relative">
+        {% block body %}{% endblock %}
+    </div>
+    {% block after_body %}{% endblock %}
+</{{ wrapper_element|default('div') }}>

@@ -1,0 +1,20 @@
+{% extends get_template('../box', _self) %}
+
+{% block before_body %}
+    {% if filepath is not empty or copyable %}
+        <div class="code-header direction-ltr d-flex justify-content-between p-3 bg-grey-400 border-bottom">
+            <div class="line-limit line-limit-1 my-auto fs-sm code-filepath">{{ filepath|raw }}</div>
+            {% if copyable %}
+                {{ render_if_has_content('button', {class: 'btn btn-sm btn-outline-light me-3 text-nowrap', type: 'button', 'data-copied': copied_action_text}, copy_action_text) }}
+            {% endif %}
+        </div>
+    {% endif %}
+{% endblock %}
+{% block body %}
+    <pre class="code-container direction-ltr language-{{ language|esc_attr }} mb-0">
+        <code class="language-{{ language|esc_attr }}" data-lang="{{ language|esc_attr }}" data-code="{{ code|url_encode }}"></code>
+    </pre>
+    <small class="bg-dark text-white position-absolute top-0 start-0 text-uppercase fw-bold fs-xs rounded px-2 py-1">
+        <span class="visually-hidden">Language:</span>{{ language|raw }}
+    </small>
+{% endblock %}

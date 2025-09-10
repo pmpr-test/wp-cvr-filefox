@@ -1,0 +1,32 @@
+{% set wrapper_element = 'blockquote' %}
+{% extends get_template('../box', _self) %}
+
+{% block before_body %}
+    {{ render_icon(right_icon, {class: 'icon-5x quote-right-icon position-absolute ms-2 top-0 start-0'})|raw }}
+{% endblock %}
+
+{% block body %}
+    {% if author is not empty %}
+        <div class="row g-2">
+        <figure class="col-12 col-md-2 mb-3 mb-md-0 my-0">{{ wp_get_attachment_image(avatar, 'small', {class: 'img-fluid rounded-circle mb-auto mx-auto d-block'})|raw }}</figure>
+    {% endif %}
+    <div class="col-12 col-md-8 fs-md my-auto">
+        {{ wpautop(text)|raw }}
+        {%- if author is not empty %}
+            <cite class="font-normal fs-sm">
+                {{ render_if_has_content('span', {class: 'text-gray-700'}, prefix)|raw }}
+                <strong>{{ author|raw }}</strong>{% if title is not empty %},
+                <span>{{ title|raw }}</span>{% endif %}
+            </cite>
+        {% endif -%}
+    </div>
+    {% if author is not empty %}
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block after_body %}
+    {{ render_icon(left_icon, {class: 'icon-5x quote-left-icon position-absolute me-2 bottom-0 end-0'})|raw }}
+{% endblock %}
+
+

@@ -1,0 +1,20 @@
+{% extends get_template('../box', _self) %}
+
+{% block body %}
+    <div class="row g-0">
+        <div class="col-1">
+            {{ render_icon(question_icon, {class: 'icon-xxl mx-auto me-4'}) }}
+        </div>
+        <div class="col-11 fs-sm no-margin my-auto">{{ question|raw }}</div>
+    </div>
+    <div class="my-3 border border-dashed"></div>
+    <div class="row g-0">
+        <div class="col-1">
+            {{ render_icon(answer_icon, {class: 'icon-xxl mx-auto me-4'}) }}
+        </div>
+        <div class="col-11 fs-sm no-margin my-auto">
+            {{ wpautop(answer)|raw }}
+        </div>
+    </div>
+{% endblock %}
+
