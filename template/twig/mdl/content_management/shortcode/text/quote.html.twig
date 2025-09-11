@@ -10,8 +10,8 @@
         <div class="row g-2">
         <figure class="col-12 col-md-2 mb-3 mb-md-0 my-0">{{ wp_get_attachment_image(avatar, 'small', {class: 'img-fluid rounded-circle mb-auto mx-auto d-block'})|raw }}</figure>
     {% endif %}
-    <div class="col-12 col-md-8 fs-md my-auto">
-        {{ wpautop(text)|raw }}
+    <div class="col-12 col-md-8 my-auto">
+        <p class="fs-md mb-2">{{ text|raw }}</p>
         {%- if author is not empty %}
             <cite class="font-normal fs-sm">
                 {{ render_if_has_content('span', {class: 'text-gray-700'}, prefix)|raw }}
