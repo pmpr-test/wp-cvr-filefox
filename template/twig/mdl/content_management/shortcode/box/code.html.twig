@@ -14,7 +14,7 @@
     <pre class="code-container direction-ltr language-{{ language|esc_attr }} mb-0">
         <code class="language-{{ language|esc_attr }}" data-lang="{{ language|esc_attr }}" data-code="{{ code|url_encode }}"></code>
     </pre>
-    <small class="bg-dark text-white position-absolute top-0 start-0 text-uppercase fw-bold fs-xs rounded px-2 py-1">
+    <small class="bg-dark text-white position-absolute top-0 start-0 text-uppercase fw-bold fs-xs rounded-end px-2 py-1">
         <span class="visually-hidden">{{ language_label|raw }}:</span>{{ language|raw }}
     </small>
 {% endblock %}
