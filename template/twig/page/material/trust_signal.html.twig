@@ -1,0 +1,194 @@
+<div class="container">
+    <div class="row justify-content-center mb-4">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+            <header {{ pr_add_animation({class: 'lh-base text-center'}, {effect: 'fade-down', distance: '100px', duration: 1000}) }}>
+                <h2 class="h1 fw-bold mb-4">{{ title|raw }}</h2>
+                {{ render_if_has_content('div', {class: 'fs-md'}, wpautop(description)) }}
+            </header>
+        </div>
+    </div>
+
+    <div {{ pr_add_animation({class: 'card shadow-sm'}, {effect: 'fade-left', distance: '100px', duration: 1000}) }}>
+        <div class="card-body p-4">
+            <div class="row">
+                <div class="col-12 col-lg-3 mb-4 mb-lg-0">
+                    <figure {{ pr_add_animation({class: 'overflow-hidden m-auto'}, {effect: 'fade-left', distance: '100px', duration: 1000}) }}>
+                        {{ manager.avatar|raw }}
+                    </figure>
+                </div>
+                <div class="col-12 col-lg-5">
+
+                    <div class="mb-3 text-center text-lg-start">
+                        {{ render_if_has_content('div', {class: 'fs-xl fs-md-xxl fw-bold mb-2'}, manager.name)|raw }}
+                        {% include get_cover_template('common/author/caption_expertise') with {
+                            author: manager.user_id,
+                            wraper_class: 'justify-content-center justify-content-lg-start'
+                        } %}
+                        {{ render_if_has_content('div', {class: 'text-gray-700 fs-xs fs-lg-sm mt-2'}, manager.education_info)|raw }}
+                    </div>
+                    {{ render_frontend_alert({
+                        content: alert_text,
+                        icon: alert_icon,
+                        type: 'success'
+                    }) }}
+                    <div class="no-margin text-justify fs-sm mt-3 mb-4 mb-lg-0">{{ wpautop(manager.description)|raw }}</div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    {% if manager.stack_accounts is not empty %}
+                        {% for stack_account in manager.stack_accounts %}
+                            <a class="d-flex direction-ltr text-end justify-content-between text-gray-800"
+                               rel="nofollow noopener noreferrer" target="_blank"
+                               href="{{ stack_account.link|esc_url }}">
+                                <div class="d-grid gap-2">
+                                    <div class="display-6 fw-bold text-start">
+                                        {{ stack_account.reputation|raw }}
+                                    </div>
+                                    <div class="d-flex lh-1">
+                                        {% for name, value in stack_account.badges %}
+                                            <span class="fs-md me-4">
+                                            <span class="me-1">{{ value|raw }}</span>
+                                            <span class="dot {{ name|esc_attr }}"></span>
+                                        </span>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+
+                                <div class="d-flex">
+                                    <div class="my-auto">
+                                        <strong class="fs-md d-block mb-1">{{ stack_account.title|raw }}</strong>
+                                        <span class="fs-1">{{ stack_account.description|raw }}</span>
+                                    </div>
+                                    <img src="{{ stack_account.icon|esc_url }}" alt="account avatar"
+                                         class="rounded-xxl ms-3 border border-2" width="70" height="70"/>
+                                </div>
+                            </a>
+                            <div class="border border-dashed my-3"></div>
+                        {% endfor %}
+                    {% endif %}
+                    {% if manager.badges is not empty %}
+                        <div class="row">
+                            {% for badge in manager.badges %}
+                                <div class="{{ prepare_columns(loop, {'': 12, 'md': 6}, 3) }} d-flex">
+                                    {{ render_icon(badge.icon, {class: 'icon-lg icon-secondary my-auto me-2'}) }}
+                                    <span class="my-auto fs-2">{{ badge.title|raw }}</span>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-8">
+        {% for item in items %}
+            <div class="{{ prepare_columns(loop, {'': 6, 'lg': 3}, 4) }}">
+                <div {{ pr_add_animation({class: 'd-flex justify-content-center stat-item countup py-4'}, {effect: 'fade-up', distance: '100px', duration: 800, delay: (loop.index * 100) + 200}) }}>
+                    {{ render_icon(item.icon, {class: 'icon-5x icon-primary my-auto me-4'}) }}
+                    <div class="d-grid gap-2">
+                        <div class="display-5 fw-bold text-primary"
+                             data-count="{{ item.value|esc_attr }}"
+                             data-suffix="+">
+                            {{ 0|number|raw }}
+                        </div>
+                        <div class="fs-md fs-md-lg fw-bold text-nowrap">{{ item.title|raw }}</div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="row my-8">
+        <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+            <div {{ pr_add_animation({class: ''}, {effect: 'fade-left', distance: '150px', duration: 1000, delay: 500}) }}>
+                <h3 class="h1 mb-3">{{ comments_title|raw }}</h3>
+                <div class="fs-sm fs-md-md no-margin">{{ wpautop(comments_description)|raw }}</div>
+            </div>
+        </div>
+        {% if comments is not empty %}
+            <div class="col-12 col-lg-8 mb-4 mb-lg-0">
+                <div {{ pr_add_animation({class: ''}, {effect: 'fade-right', distance: '150px', duration: 1000, delay: 600}) }}>
+                    {% embed get_cover_template('common/carousel/index') with {
+                        carousels: comments,
+                        nav_class: 'p-2 primary-white rounded-circle',
+                        navs_class: 'd-flex mt-3 px-2',
+                        slide_class: 'px-2',
+                        nav_icon_attrs: {class: 'icon-3x me-2'},
+                        carousel_class: 'animated-carousel max-vh-100',
+                        carousel_config: {
+                            loop: true,
+                            speed: 800,
+                            autoplay: {
+                                delay: 80000
+                            },
+                            slidesPerView: 1,
+                            navigation: true,
+                            pagination: false,
+                        }
+                    } %}
+
+                        {% block carousel %}
+                            <article class="card">
+                                <div class="card-body position-relative p-4">
+                                    <div class="d-flex bg-gray-200 rounded-xxl mb-4">
+                                        {% set post_id = carousel.post_id %}
+                                        {% include get_cover_template('common/post/thumbnail') with {
+                                            post: post_id,
+                                            image_attr: {class: 'img-fluid rounded-start'},
+                                            image_size: 'small',
+                                        } %}
+                                        <div class="d-flex justify-content-between flex-grow-1 py-2 px-3">
+                                            {% set post_title = render_post_data('title', post_id) %}
+                                            <div class="d-grid gap-1">
+                                                <a class="fs-sm fs-md-md fw-bold my-auto"
+                                                   href="{{ render_post_data('permalink', post_id) }}"
+                                                   title="{{ post_title|esc_attr }}">
+                                                    {{ post_title|raw }}
+                                                </a>
+                                                {{ carousel.post_subtext|raw }}
+                                            </div>
+                                            <div class="price my-auto fw-bold">
+                                                {{ carousel.price|raw }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        {{ get_avatar(carousel, 90, {class: 'avatar-img rounded-circle border border-4 border-primary'})|raw }}
+                                        <div class="ms-3 flex-grow-1">
+                                            <div class="d-grid gap-2 mb-4">
+                                                <span class="fs-lg fw-bold lh-base">{{ carousel.author|raw }}</span>
+                                                {{ carousel.rate|raw }}
+                                            </div>
+                                            <div class="lh-base fs-sm fs-md-md no-margin">
+                                                {{ wpautop(get_comment_text(carousel.comment_id))|raw }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        {% endblock %}
+
+                    {% endembed %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+
+    <div {{ pr_add_animation({class: 'card shadow'}, {effect: 'fade-in', distance: '150px', duration: 1000, delay: 700}) }}>
+        <div class="card-body p-4">
+            <div class="row justify-content-center">
+                {% for feature in features %}
+                    <div class="{{ prepare_columns(loop, {'': 12, 'sm': 6, 'md': 4, 'lg': 3}, 4) }} text-center">
+                        {% if feature.image is not empty %}
+                            {{ wp_get_attachment_image(feature.image, [150, 150], {class: 'img-fluid mb-4'})|raw }}
+                        {% else %}
+                            {{ render_icon(feature.icon, {class: 'icon-primary icon-4x mx-auto mb-4'}) }}
+                        {% endif %}
+                        <h3 class="fs-md mb-3">{{ feature.title|raw }}</h3>
+                        <div class="fs-sm no-margin line-limit line-limit-2">{{ wpautop(feature.description)|raw }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

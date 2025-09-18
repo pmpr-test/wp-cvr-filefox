@@ -1,6 +1,6 @@
 {% set author_metadata = author_metadata|default(['caption', 'expertise']) %}
 {% if author_metadata is not empty %}
-    <div class="d-flex flex-column flex-sm-row lh-lg">
+    <div class="d-flex flex-column flex-sm-row lh-lg {{ wraper_class|esc_attr }}">
         {% for author_meta in author_metadata %}
             <span class="text-gray-700 fs-xs fs-md-sm">{{ render_user_data(author_meta, author)|raw }}</span>
             {% if not loop.last %}

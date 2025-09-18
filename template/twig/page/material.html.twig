@@ -1,0 +1,31 @@
+{% extends get_template('../base', _self) %}
+
+{% block body %}
+    {% set rendered = 0 %}
+    {% for name, options in sections %}
+        {% if options is not empty %}
+
+            {% set dark_bg = not rendered % 2 == 0 %}
+
+            {% if options.start_shape %}
+                {{ render_icon(options.start_shape, {class: 'd-block mb-n1'}, 1) }}
+            {% endif %}
+
+            <section class="position-relative {% if options.padding is empty %}py-6 py-md-8 py-lg-10{% else %}{{ options.padding|esc_attr }}{% endif%} bg-cover background-image{% if options.section_bg_color is not empty %} bg-{{ options.section_bg_color|esc_attr }}{% elseif dark_bg %} bg-gray-200{% endif %}"
+                    id="{{ name|esc_attr }}_section" {% if options.background is not empty %} style="background-image: url({{ wp_get_attachment_image_url(options.background)|esc_attr }})"{% endif %}>
+
+                {{ render_if_has_content('h2', {class: 'visually-hidden'}, options.alt_title) }}
+
+                {% include get_template('./material/' ~ name, _self) with options %}
+
+                {% set rendered = rendered + 1 %}
+
+            </section>
+
+            {% if options.end_shape %}
+                {{ render_icon(options.end_shape, {class: 'd-block mt-n1'}, 1) }}
+            {% endif %}
+
+        {% endif %}
+    {% endfor %}
+{% endblock %}

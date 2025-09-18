@@ -1,13 +1,22 @@
-{% for index in 5..1 %}
-    {% set color = 'warning' %}
-    {% if rate >= index %}
-        {% set icon = icons['full'] %}
-    {% elseif rate < index and (rate + 1) > index   %}
-        {% set icon = icons['half'] %}
-    {% else %}
-        {% set color = '' %}
-        {% set icon = icons['full'] %}
-    {% endif %}
-    {{ render_icon(icon, {class: 'ms-1 icon-lg icon-' ~ color}) }}
-{% endfor %}
+<div class="d-flex flex-row-reverse justify-content-end">
+    {% for index in 5..1 %}
+        {% set color = 'warning' %}
+        {% if rate >= index %}
+            {% set icon = icons['full'] %}
+        {% elseif rate < index and (rate + 1) > index %}
+            {% set icon = icons['half'] %}
+        {% else %}
+            {% set color = 'gray-200' %}
+            {% set icon = icons['full'] %}
+        {% endif %}
+        {% set classes = 'icon-xxl icon-' ~ color %}
+        {% if not loop.first and not loop.last %}
+            {% set classes = classes ~ ' mx-1' %}
+        {% endif %}
+        <span class="d-inline-block position-relative">
+        {{ render_icon(icon, {class: classes}) }}
+        <span class="position-absolute fs-sm top-50 start-50 translate-middle mt-1">{{ index|number|raw }}</span>
+    </span>
+    {% endfor %}
+</div>
 

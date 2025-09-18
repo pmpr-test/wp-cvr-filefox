@@ -1,0 +1,23 @@
+<div class="container">
+    <header {{ pr_add_animation({class: 'lh-base text-center mb-4'}, {effect: 'fade-down', distance: '100px', duration: 1000, delay: 0}) }}>
+        <h2 class="h1 w-bold mb-4">{{ title|raw }}</h2>
+        {{ render_if_has_content('div', {class: 'fs-md'}, wpautop(description)) }}
+    </header>
+
+    <div {{ pr_add_animation({class: 'row justify-content-center mt-5'}, {effect: 'fade-up', distance: '100px', duration: 800, delay: (loop.index * 100) + (50)}) }}>
+        {% for cat in categories %}
+            <div class="{{ prepare_columns(loop, {'': 6, 'sm': 4, 'md': 3, 'lg': 2}, 4) }}">
+                <div class="d-grid gap-4">
+                    {% if cat.image is not empty %}
+                        <a class="bg-white d-block rounded-circle shadow-sm overflow-hidden mx-auto"
+                           href="{{ cat.link|esc_attr }}">
+                            {{ wp_get_attachment_image(cat.image, [150, 150], {class: 'img-fluid h-100 w-100 d-block m-auto'})|raw }}
+                        </a>
+                    {% endif %}
+                    <a href="{{ cat.link|esc_attr }}"
+                       class="d-block text-dark text-center fs-md-md">{{ cat.title|raw }}</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

@@ -5,7 +5,7 @@
     {% set carousel_config = carousel_config|default({}) %}
 
     <div class="swiper-container position-relative {{ container_class|raw }}">
-        <div class="swiper{% if dont_hide %} dont-hide{% endif %}"
+        <div class="swiper{% if dont_hide %} dont-hide{% endif %} {{ swiper_class|raw }}"
                 {% if carousel_config is defined %} data-carousel="{{ carousel_config|json_encode }}"{% endif %}
                 {% if carousel_id is defined %} id="{{ carousel_id|esc_attr }}"{% endif %}>
             {% block before_slides %}{% endblock %}

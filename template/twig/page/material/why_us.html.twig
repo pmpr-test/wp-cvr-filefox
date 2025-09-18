@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row justify-content-center mb-5">
+        <div class="col-12 col-md-8 col-lg-6">
+            <header {{ pr_add_animation({class: 'lh-base text-center'}, {effect: 'fade-down', distance: '100px', duration: 1000}) }}>
+                <h2 class="h1 fw-bold mb-4">{{ title|raw }}</h2>
+                {{ render_if_has_content('div', {class: 'fs-md'}, wpautop(description)) }}
+            </header>
+        </div>
+    </div>
+    <div class="row">
+        {% for item in items %}
+            <div class="{{ prepare_columns(loop, {'': 12, 'lg': 4}, 4) }}">
+                <div {{ pr_add_animation({class: 'lh-base text-center d-grid gap-5'}, {effect: 'fade-up', distance: '100px', duration: 1000, delay: loop.index * 150}) }}>
+                    {{ wp_get_attachment_image(item.image, 'medium', {class: 'img-fluid d-block mx-auto'})|raw }}
+                    <div>
+                        <h3 class="fs-md fs-md-lg mb-3">{{ item.title|raw }}</h3>
+                        <div class="fs-sm fs-md-md">{{ item.description|raw }}</div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

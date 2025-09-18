@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row pb-5 mb-4">
+        {% set is_image_left = image_position is same as ('left') %}
+        <div class="col-12 col-md-7 order-1{% if not is_image_left %} order-md-3{% endif %} mb-4 my-md-auto">
+            <header {{ pr_add_animation({class: ''}, {effect: 'fade-' ~ (is_image_left ? 'left' : 'right'), distance: '100px', duration: 1000, delay: 0}) }}>
+                <h1 class="display-5 lh-base fw-bold mb-4">{{ title|raw }}</h1>
+                {{ render_if_has_content('div', {class: 'lh-base fs-md fs-md-lg'}, wpautop(description)) }}
+            </header>
+            {% if actions is not empty %}
+                <div {{ pr_add_animation({class: 'my-4'}, {effect: 'fade-' ~ (is_image_left ? 'left' : 'right'), distance: '100px', duration: 1000, delay: 300}) }}>
+                    {% for action in actions %}
+                        <a href="{{ action.link|esc_url }}"
+                           class="btn btn-lg btn-{% if action.outline %}outline-{% endif %}{{ action.background|esc_attr }} mb-4 mb-md-0{% if not loop.last %} me-2{% endif %}">
+                            {{ action.text|raw }}
+                        </a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        <div class="col-12 col-md-5 order-2 my-auto">
+            <figure {{ pr_add_animation({class: 'm-0'}, {effect: 'fade-' ~ (is_image_left ? 'right' : 'left'), distance: '100px', duration: 1000, delay: 300}) }}>
+                {{ wp_get_attachment_image(image, [600, 600], {class: 'img-fluid'})|raw }}
+            </figure>
+        </div>
+    </div>
+    {% if features is not empty %}
+        <div class="row row-wave pt-5">
+            {% for feature in features %}
+                <div class="{{ prepare_columns(loop, {'': 6, 'lg': 3}, 4) }}">
+                    <div {{ pr_add_animation({class: 'card shadow overflow-hidden'}, {effect: 'fade-up', distance: '100px', duration: 1000, delay: (loop.index * 100) + 300}) }}>
+                        <div class="card-decor"></div>
+                        <div class="card-body lh-base text-center">
+                            {{ render_icon(feature.icon, {class: 'icon-default icon-9x py-3 mb-2 mx-auto'}) }}
+                            <h3 class="fs-md fs-md-lg mb-3 text-primary">{{ feature.title|raw }}</h3>
+                            <div class="fs-sm">{{ wpautop(feature.description)|raw }}</div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>

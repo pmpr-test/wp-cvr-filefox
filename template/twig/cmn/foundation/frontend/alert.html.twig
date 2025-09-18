@@ -1,6 +1,16 @@
-<div class="alert alert-{{ type|default('warning')|esc_attr }}{% if centered %} text-center{% endif %}{% if dismissible %} fade show{% endif %} {{ classes|esc_attr }}" role="alert">
+<div class="alert alert-{{ type|default('warning')|esc_attr }}{% if centered %} text-center{% endif %}{% if dismissible %} fade show{% endif %} {{ classes|esc_attr }}"
+     role="alert">
     {{ render_if_has_content(title_element|default('strong'), {class: 'alert-heading'}, title) }}
-    {{ content|raw }}
+    {% if icon is not empty %}
+    <div class="d-flex">
+        {{ render_icon(icon, {class: 'me-2 icon-' ~ icon_size|default('lg') ~ ' icon-' ~ type|default('warning')}) }}
+        <div class="my-auto">
+            {% endif %}
+            {{ content|raw }}
+            {% if icon is not empty %}
+        </div>
+    </div>
+    {% endif %}
     {% if dismissible %}
         {% include get_template('./alert_dismiss') %}
     {% endif %}

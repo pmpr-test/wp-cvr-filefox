@@ -1,0 +1,27 @@
+<div class="container">
+    <header {{ pr_add_animation({class: 'd-flex justify-content-between mb-4'}, {effect: 'fade-' ~ (is_image_left ? 'left' : 'right'), distance: '100px', duration: 1000, delay: 0}) }}>
+        <div class="lh-base my-auto">
+            <h2 class="fs-lg fs-md-xl lh-1 fw-bold mb-0">{{ title|raw }}</h2>
+            {{ render_if_has_content('div', {class: 'fs-sm fs-md-md mt-3'}, wpautop(description)) }}
+        </div>
+        {% if action_text %}
+        <a href="{{ action_link|esc_url }}" class="btn btn-lg btn-outline-primary d-block my-auto" aria-label="{{ action_text|raw }}">
+            {{ action_text|raw }}
+        </a>
+        {% endif %}
+    </header>
+
+    <div class="row">
+        {% for item in items %}
+            <div class="{{ prepare_columns(loop, {'': 12, 'sm': 6, 'lg': 3}, 4) }}">
+                <div {{ pr_add_animation({}, {effect: 'fade-up', distance: '100px', duration: 800, delay: (loop.index * 100) + (200)}) }}>
+                    {% include get_cover_template('common/block/post') with {
+                        post: item,
+                        loop: loop,
+                        version: 'responsive'
+                    } %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

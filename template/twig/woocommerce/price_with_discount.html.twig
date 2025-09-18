@@ -1,0 +1,11 @@
+<div class="price">
+    <div class="discount-area d-flex justify-content-between mb-1">
+        <div class="position-relative before-discount mt-auto">
+            <span class="middle-line-through w-100 position-absolute top-50"></span>
+            {{ before|raw }}
+        </div>
+        <span class="pr-discount bg-primary text-white fs-sm rounded">{{ discount|raw }}</span>
+    </div>
+    {{ price|raw }}
+</div>
+

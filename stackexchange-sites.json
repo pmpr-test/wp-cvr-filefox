@@ -1,0 +1,2550 @@
+{
+  "stackoverflow.com" : {
+    "title" : "Stack Overflow",
+    "host" : "stackoverflow.com",
+    "icon" : "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/stackoverflow/Img/logo.png",
+    "description" : "Professional and enthusiast programmers"
+  },
+  "serverfault.com" : {
+    "title" : "Server Fault",
+    "host" : "serverfault.com",
+    "icon" : "https://cdn.sstatic.net/Sites/serverfault/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/serverfault/Img/logo.png",
+    "description" : "System and network administrators"
+  },
+  "superuser.com" : {
+    "title" : "Super User",
+    "host" : "superuser.com",
+    "icon" : "https://cdn.sstatic.net/Sites/superuser/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/superuser/Img/logo.png",
+    "description" : "Computer enthusiasts and power users"
+  },
+  "meta.stackexchange.com" : {
+    "title" : "Meta Stack Exchange",
+    "host" : "meta.stackexchange.com",
+    "icon" : "https://meta.stackexchange.com/Content/Sites/stackexchangemeta/Img/apple-touch-icon.png",
+    "logo" : "https://meta.stackexchange.com/Content/Sites/stackexchangemeta/Img/logo.png",
+    "description" : "Meta-discussion of the Stack Exchange family of Q&amp;A websites"
+  },
+  "webapps.stackexchange.com" : {
+    "title" : "Web Applications",
+    "host" : "webapps.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/webapps/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/webapps/Img/logo.png",
+    "description" : "Power users of web applications"
+  },
+  "webapps.meta.stackexchange.com" : {
+    "title" : "Web Applications Meta",
+    "host" : "webapps.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/webappsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/webappsmeta/Img/logo.png",
+    "description" : "Power users of web applications"
+  },
+  "gaming.stackexchange.com" : {
+    "title" : "Arqade",
+    "host" : "gaming.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/gaming/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/gaming/Img/logo.png",
+    "description" : "Passionate videogamers on all platforms"
+  },
+  "gaming.meta.stackexchange.com" : {
+    "title" : "Arqade Meta",
+    "host" : "gaming.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/gamingmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/gamingmeta/Img/logo.png",
+    "description" : "Passionate videogamers on all platforms"
+  },
+  "webmasters.stackexchange.com" : {
+    "title" : "Webmasters",
+    "host" : "webmasters.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/webmasters/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/webmasters/Img/logo.png",
+    "description" : "Webmasters"
+  },
+  "webmasters.meta.stackexchange.com" : {
+    "title" : "Webmasters Meta",
+    "host" : "webmasters.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/webmastersmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/webmastersmeta/Img/logo.png",
+    "description" : "Webmasters"
+  },
+  "cooking.stackexchange.com" : {
+    "title" : "Seasoned Advice",
+    "host" : "cooking.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/cooking/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/cooking/Img/logo.png",
+    "description" : "Professional and amateur chefs"
+  },
+  "cooking.meta.stackexchange.com" : {
+    "title" : "Seasoned Advice Meta",
+    "host" : "cooking.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/cookingmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/cookingmeta/Img/logo.png",
+    "description" : "Professional and amateur chefs"
+  },
+  "gamedev.stackexchange.com" : {
+    "title" : "Game Development",
+    "host" : "gamedev.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/gamedev/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/gamedev/Img/logo.png",
+    "description" : "Professional and independent game developers"
+  },
+  "gamedev.meta.stackexchange.com" : {
+    "title" : "Game Development Meta",
+    "host" : "gamedev.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/gamedevmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/gamedevmeta/Img/logo.png",
+    "description" : "Professional and independent game developers"
+  },
+  "photo.stackexchange.com" : {
+    "title" : "Photography",
+    "host" : "photo.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/photo/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/photo/Img/logo.png",
+    "description" : "Professional, enthusiast and amateur photographers"
+  },
+  "photo.meta.stackexchange.com" : {
+    "title" : "Photography Meta",
+    "host" : "photo.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/photometa/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/photometa/Img/logo.png",
+    "description" : "Professional, enthusiast and amateur photographers"
+  },
+  "stats.stackexchange.com" : {
+    "title" : "Cross Validated",
+    "host" : "stats.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/stats/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/stats/Img/logo.png",
+    "description" : "People interested in statistics, machine learning, data analysis, data mining, and data visualization"
+  },
+  "stats.meta.stackexchange.com" : {
+    "title" : "Cross Validated Meta",
+    "host" : "stats.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/statsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/statsmeta/Img/logo.png",
+    "description" : "People interested in statistics, machine learning, data analysis, data mining, and data visualization"
+  },
+  "math.stackexchange.com" : {
+    "title" : "Mathematics",
+    "host" : "math.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/math/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/math/Img/logo.png",
+    "description" : "People studying math at any level and professionals in related fields"
+  },
+  "math.meta.stackexchange.com" : {
+    "title" : "Mathematics Meta",
+    "host" : "math.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/mathmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/mathmeta/Img/logo.png",
+    "description" : "People studying math at any level and professionals in related fields"
+  },
+  "diy.stackexchange.com" : {
+    "title" : "Home Improvement",
+    "host" : "diy.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/diy/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/diy/Img/logo.png",
+    "description" : "Contractors and serious DIYers"
+  },
+  "diy.meta.stackexchange.com" : {
+    "title" : "Home Improvement Meta",
+    "host" : "diy.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/diymeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/diymeta/Img/logo.png",
+    "description" : "Contractors and serious DIYers"
+  },
+  "meta.superuser.com" : {
+    "title" : "Meta Super User",
+    "host" : "meta.superuser.com",
+    "icon" : "https://cdn.sstatic.net/Sites/superusermeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/superusermeta/Img/logo.png",
+    "description" : "Computer enthusiasts and power users"
+  },
+  "meta.serverfault.com" : {
+    "title" : "Meta Server Fault",
+    "host" : "meta.serverfault.com",
+    "icon" : "https://cdn.sstatic.net/Sites/serverfaultmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/serverfaultmeta/Img/logo.png",
+    "description" : "System and network administrators"
+  },
+  "gis.stackexchange.com" : {
+    "title" : "Geographic Information Systems",
+    "host" : "gis.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/gis/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/gis/Img/logo.png",
+    "description" : "Cartographers, geographers and GIS professionals"
+  },
+  "gis.meta.stackexchange.com" : {
+    "title" : "Geographic Information Systems Meta",
+    "host" : "gis.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/gismeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/gismeta/Img/logo.png",
+    "description" : "Cartographers, geographers and GIS professionals"
+  },
+  "tex.stackexchange.com" : {
+    "title" : "TeX - LaTeX",
+    "host" : "tex.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/tex/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/tex/Img/logo.png",
+    "description" : "Users of TeX, LaTeX, ConTeXt, and related typesetting systems"
+  },
+  "tex.meta.stackexchange.com" : {
+    "title" : "TeX - LaTeX Meta",
+    "host" : "tex.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/texmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/texmeta/Img/logo.png",
+    "description" : "Users of TeX, LaTeX, ConTeXt, and related typesetting systems"
+  },
+  "askubuntu.com" : {
+    "title" : "Ask Ubuntu",
+    "host" : "askubuntu.com",
+    "icon" : "https://cdn.sstatic.net/Sites/askubuntu/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/askubuntu/Img/logo.png",
+    "description" : "Ubuntu users and developers"
+  },
+  "meta.askubuntu.com" : {
+    "title" : "Ask Ubuntu Meta",
+    "host" : "meta.askubuntu.com",
+    "icon" : "https://cdn.sstatic.net/Sites/askubuntumeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/askubuntumeta/Img/logo.png",
+    "description" : "Ubuntu users and developers"
+  },
+  "money.stackexchange.com" : {
+    "title" : "Personal Finance &amp; Money",
+    "host" : "money.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/money/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/money/Img/logo.png",
+    "description" : "People who want to be financially literate"
+  },
+  "money.meta.stackexchange.com" : {
+    "title" : "Personal Finance &amp; Money Meta",
+    "host" : "money.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/moneymeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/moneymeta/Img/logo.png",
+    "description" : "People who want to be financially literate"
+  },
+  "english.stackexchange.com" : {
+    "title" : "English Language &amp; Usage",
+    "host" : "english.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/english/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/english/Img/logo.png",
+    "description" : "Linguists, etymologists, and serious English language enthusiasts"
+  },
+  "english.meta.stackexchange.com" : {
+    "title" : "English Language &amp; Usage Meta",
+    "host" : "english.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/englishmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/englishmeta/Img/logo.png",
+    "description" : "Linguists, etymologists, and serious English language enthusiasts"
+  },
+  "stackapps.com" : {
+    "title" : "Stack Apps",
+    "host" : "stackapps.com",
+    "icon" : "https://cdn.sstatic.net/Sites/stackapps/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/stackapps/Img/logo.png",
+    "description" : "Apps, scripts, and development with the Stack Exchange API"
+  },
+  "ux.stackexchange.com" : {
+    "title" : "User Experience",
+    "host" : "ux.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/ux/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/ux/Img/logo.png",
+    "description" : "User experience researchers and experts"
+  },
+  "ux.meta.stackexchange.com" : {
+    "title" : "User Experience Meta",
+    "host" : "ux.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/uxmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/uxmeta/Img/logo.png",
+    "description" : "User experience researchers and experts"
+  },
+  "unix.stackexchange.com" : {
+    "title" : "Unix &amp; Linux",
+    "host" : "unix.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/unix/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/unix/Img/logo.png",
+    "description" : "Users of Linux, FreeBSD and other Un*x-like operating systems"
+  },
+  "unix.meta.stackexchange.com" : {
+    "title" : "Unix &amp; Linux Meta",
+    "host" : "unix.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/unixmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/unixmeta/Img/logo.png",
+    "description" : "Users of Linux, FreeBSD and other Un*x-like operating systems"
+  },
+  "wordpress.stackexchange.com" : {
+    "title" : "WordPress Development",
+    "host" : "wordpress.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/wordpress/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/wordpress/Img/logo.png",
+    "description" : "WordPress developers and administrators"
+  },
+  "wordpress.meta.stackexchange.com" : {
+    "title" : "WordPress Development Meta",
+    "host" : "wordpress.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/wordpressmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/wordpressmeta/Img/logo.png",
+    "description" : "WordPress developers and administrators"
+  },
+  "cstheory.stackexchange.com" : {
+    "title" : "Theoretical Computer Science",
+    "host" : "cstheory.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/cstheory/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/cstheory/Img/logo.png",
+    "description" : "Theoretical computer scientists and researchers in related fields"
+  },
+  "cstheory.meta.stackexchange.com" : {
+    "title" : "Theoretical Computer Science Meta",
+    "host" : "cstheory.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/cstheorymeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/cstheorymeta/Img/logo.png",
+    "description" : "Theoretical computer scientists and researchers in related fields"
+  },
+  "apple.stackexchange.com" : {
+    "title" : "Ask Different",
+    "host" : "apple.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/apple/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/apple/Img/logo.png",
+    "description" : "Power users of Apple hardware and software"
+  },
+  "apple.meta.stackexchange.com" : {
+    "title" : "Ask Different Meta",
+    "host" : "apple.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/applemeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/applemeta/Img/logo.png",
+    "description" : "Power users of Apple hardware and software"
+  },
+  "rpg.stackexchange.com" : {
+    "title" : "Role-playing Games",
+    "host" : "rpg.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/rpg/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/rpg/Img/logo.png",
+    "description" : "Gamemasters and players of tabletop, paper-and-pencil role-playing games"
+  },
+  "rpg.meta.stackexchange.com" : {
+    "title" : "Role-playing Games Meta",
+    "host" : "rpg.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/rpgmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/rpgmeta/Img/logo.png",
+    "description" : "Gamemasters and players of tabletop, paper-and-pencil role-playing games"
+  },
+  "bicycles.stackexchange.com" : {
+    "title" : "Bicycles",
+    "host" : "bicycles.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/bicycles/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/bicycles/Img/logo.png",
+    "description" : "People who build and repair bicycles, people who train cycling, or commute on bicycles"
+  },
+  "bicycles.meta.stackexchange.com" : {
+    "title" : "Bicycles Meta",
+    "host" : "bicycles.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/bicyclesmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/bicyclesmeta/Img/logo.png",
+    "description" : "People who build and repair bicycles, people who train cycling, or commute on bicycles"
+  },
+  "softwareengineering.stackexchange.com" : {
+    "title" : "Software Engineering",
+    "host" : "softwareengineering.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/softwareengineering/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/softwareengineering/Img/logo.png",
+    "description" : "Professionals, academics, and students working within the systems development life cycle"
+  },
+  "softwareengineering.meta.stackexchange.com" : {
+    "title" : "Software Engineering Meta",
+    "host" : "softwareengineering.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/softwareengineeringmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/softwareengineeringmeta/Img/logo.png",
+    "description" : "Professionals, academics, and students working within the systems development life cycle"
+  },
+  "electronics.stackexchange.com" : {
+    "title" : "Electrical Engineering",
+    "host" : "electronics.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/electronics/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/electronics/Img/logo.png",
+    "description" : "Electronics and electrical engineering professionals, students, and enthusiasts"
+  },
+  "electronics.meta.stackexchange.com" : {
+    "title" : "Electrical Engineering Meta",
+    "host" : "electronics.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/electronicsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/electronicsmeta/Img/logo.png",
+    "description" : "Electronic hardware hacking enthusiasts"
+  },
+  "android.stackexchange.com" : {
+    "title" : "Android Enthusiasts",
+    "host" : "android.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/android/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/android/Img/logo.png",
+    "description" : "Enthusiasts and power users of the Android operating system"
+  },
+  "android.meta.stackexchange.com" : {
+    "title" : "Android Enthusiasts Meta",
+    "host" : "android.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/androidmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/androidmeta/Img/logo.png",
+    "description" : "Enthusiasts and power users of the Android operating system"
+  },
+  "boardgames.stackexchange.com" : {
+    "title" : "Board &amp; Card Games",
+    "host" : "boardgames.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/boardgames/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/boardgames/Img/apple-touch-icon.png",
+    "description" : "People who like playing board games, designing board games or modifying the rules of existing board games"
+  },
+  "boardgames.meta.stackexchange.com" : {
+    "title" : "Board &amp; Card Games Meta",
+    "host" : "boardgames.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/boardgamesmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/boardgamesmeta/Img/apple-touch-icon.png",
+    "description" : "People who like playing board games, designing board games or modifying the rules of existing board games"
+  },
+  "physics.stackexchange.com" : {
+    "title" : "Physics",
+    "host" : "physics.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/physics/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/physics/Img/logo.png",
+    "description" : "Active researchers, academics and students of physics"
+  },
+  "physics.meta.stackexchange.com" : {
+    "title" : "Physics Meta",
+    "host" : "physics.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/physicsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/physicsmeta/Img/logo.png",
+    "description" : "Active researchers, academics and students of physics"
+  },
+  "homebrew.stackexchange.com" : {
+    "title" : "Homebrewing",
+    "host" : "homebrew.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/homebrew/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/homebrew/Img/apple-touch-icon.png",
+    "description" : "Dedicated home brewers and serious enthusiasts"
+  },
+  "homebrew.meta.stackexchange.com" : {
+    "title" : "Homebrewing Meta",
+    "host" : "homebrew.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/homebrewmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/homebrewmeta/Img/apple-touch-icon.png",
+    "description" : "Dedicated home brewers and serious enthusiasts"
+  },
+  "security.stackexchange.com" : {
+    "title" : "Information Security",
+    "host" : "security.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/security/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/security/Img/logo.png",
+    "description" : "Information security professionals"
+  },
+  "security.meta.stackexchange.com" : {
+    "title" : "Information Security Meta",
+    "host" : "security.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/securitymeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/securitymeta/Img/logo.png",
+    "description" : "Information security professionals"
+  },
+  "writing.stackexchange.com" : {
+    "title" : "Writing",
+    "host" : "writing.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/writing/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/writing/Img/apple-touch-icon.png",
+    "description" : "The craft of professional writing, including fiction, non-fiction, technical, scholarly, and commercial writing"
+  },
+  "writing.meta.stackexchange.com" : {
+    "title" : "Writing Meta",
+    "host" : "writing.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/writingmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/writingmeta/Img/apple-touch-icon.png",
+    "description" : "The craft of professional writing, including fiction, non-fiction, technical, scholarly, and commercial writing"
+  },
+  "video.stackexchange.com" : {
+    "title" : "Video Production",
+    "host" : "video.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/avp/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/avp/Img/apple-touch-icon.png",
+    "description" : "Engineers, producers, editors, and enthusiasts spanning the fields of video, and media creation"
+  },
+  "video.meta.stackexchange.com" : {
+    "title" : "Video Production Meta",
+    "host" : "video.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/avpmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/avpmeta/Img/apple-touch-icon.png",
+    "description" : "Engineers, producers, editors, and enthusiasts spanning the fields of video, and media creation"
+  },
+  "graphicdesign.stackexchange.com" : {
+    "title" : "Graphic Design",
+    "host" : "graphicdesign.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/graphicdesign/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/graphicdesign/Img/logo.png",
+    "description" : "Graphic Design professionals, students, and enthusiasts"
+  },
+  "graphicdesign.meta.stackexchange.com" : {
+    "title" : "Graphic Design Meta",
+    "host" : "graphicdesign.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/graphicdesignmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/graphicdesignmeta/Img/logo.png",
+    "description" : "Graphic Design professionals, students, and enthusiasts"
+  },
+  "dba.stackexchange.com" : {
+    "title" : "Database Administrators",
+    "host" : "dba.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/dba/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/dba/Img/logo.png",
+    "description" : "Database professionals who wish to improve their database skills and learn from others in the community"
+  },
+  "dba.meta.stackexchange.com" : {
+    "title" : "Database Administrators Meta",
+    "host" : "dba.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/dbameta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/dbameta/Img/logo.png",
+    "description" : "Database professionals who wish to improve their database skills and learn from others in the community"
+  },
+  "scifi.stackexchange.com" : {
+    "title" : "Science Fiction &amp; Fantasy",
+    "host" : "scifi.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/scifi/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/scifi/Img/logo.png",
+    "description" : "Science fiction and fantasy enthusiasts"
+  },
+  "scifi.meta.stackexchange.com" : {
+    "title" : "Science Fiction &amp; Fantasy Meta",
+    "host" : "scifi.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/scifimeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/scifimeta/Img/logo.png",
+    "description" : "Science fiction and fantasy enthusiasts"
+  },
+  "codereview.stackexchange.com" : {
+    "title" : "Code Review",
+    "host" : "codereview.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/codereview/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/codereview/Img/logo.png",
+    "description" : "Peer programmer code reviews"
+  },
+  "codereview.meta.stackexchange.com" : {
+    "title" : "Code Review Meta",
+    "host" : "codereview.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/codereviewmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/codereviewmeta/Img/logo.png",
+    "description" : "Peer programmer code reviews"
+  },
+  "codegolf.stackexchange.com" : {
+    "title" : "Code Golf",
+    "host" : "codegolf.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/codegolf/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/codegolf/Img/logo.png",
+    "description" : "Programming puzzle enthusiasts and code golfers"
+  },
+  "codegolf.meta.stackexchange.com" : {
+    "title" : "Code Golf Meta",
+    "host" : "codegolf.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/codegolfmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/codegolfmeta/Img/logo.png",
+    "description" : "Programming puzzle enthusiasts and code golfers"
+  },
+  "quant.stackexchange.com" : {
+    "title" : "Quantitative Finance",
+    "host" : "quant.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/quant/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/quant/Img/apple-touch-icon.png",
+    "description" : "Finance professionals and academics"
+  },
+  "quant.meta.stackexchange.com" : {
+    "title" : "Quantitative Finance Meta",
+    "host" : "quant.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/quantmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/quantmeta/Img/apple-touch-icon.png",
+    "description" : "Finance professionals and academics"
+  },
+  "pm.stackexchange.com" : {
+    "title" : "Project Management",
+    "host" : "pm.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/pm/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/pm/Img/apple-touch-icon.png",
+    "description" : "Project managers"
+  },
+  "pm.meta.stackexchange.com" : {
+    "title" : "Project Management Meta",
+    "host" : "pm.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/pmmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/pmmeta/Img/apple-touch-icon.png",
+    "description" : "Project managers"
+  },
+  "skeptics.stackexchange.com" : {
+    "title" : "Skeptics",
+    "host" : "skeptics.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/skeptics/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/skeptics/Img/logo.png",
+    "description" : "Scientific skepticism"
+  },
+  "skeptics.meta.stackexchange.com" : {
+    "title" : "Skeptics Meta",
+    "host" : "skeptics.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/skepticsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/skepticsmeta/Img/logo.png",
+    "description" : "Scientific skepticism"
+  },
+  "fitness.stackexchange.com" : {
+    "title" : "Physical Fitness",
+    "host" : "fitness.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/fitness/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/fitness/Img/apple-touch-icon.png",
+    "description" : "Physical fitness professionals, athletes, trainers, and those providing health-related needs"
+  },
+  "fitness.meta.stackexchange.com" : {
+    "title" : "Physical Fitness Meta",
+    "host" : "fitness.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/fitnessmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/fitnessmeta/Img/apple-touch-icon.png",
+    "description" : "Physical fitness professionals, athletes, trainers, and those providing health-related needs"
+  },
+  "drupal.stackexchange.com" : {
+    "title" : "Drupal Answers",
+    "host" : "drupal.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/drupal/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/drupal/Img/logo.png",
+    "description" : "Drupal developers and administrators"
+  },
+  "drupal.meta.stackexchange.com" : {
+    "title" : "Drupal Answers Meta",
+    "host" : "drupal.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/drupalmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/drupalmeta/Img/logo.png",
+    "description" : "Drupal developers and administrators"
+  },
+  "mechanics.stackexchange.com" : {
+    "title" : "Motor Vehicle Maintenance &amp; Repair",
+    "host" : "mechanics.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/mechanics/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/mechanics/Img/apple-touch-icon.png",
+    "description" : "Mechanics and DIY enthusiast owners of cars, trucks, and motorcycles"
+  },
+  "mechanics.meta.stackexchange.com" : {
+    "title" : "Motor Vehicle Maintenance &amp; Repair Meta",
+    "host" : "mechanics.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/mechanicsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/mechanicsmeta/Img/apple-touch-icon.png",
+    "description" : "Mechanics and DIY enthusiast owners of cars, trucks, and motorcycles"
+  },
+  "parenting.stackexchange.com" : {
+    "title" : "Parenting",
+    "host" : "parenting.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/parenting/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/parenting/Img/apple-touch-icon.png",
+    "description" : "Parents, grandparents, nannies and others with a parenting role"
+  },
+  "parenting.meta.stackexchange.com" : {
+    "title" : "Parenting Meta",
+    "host" : "parenting.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/parentingmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/parentingmeta/Img/apple-touch-icon.png",
+    "description" : "Parents, grandparents, nannies and others with a parenting role"
+  },
+  "sharepoint.stackexchange.com" : {
+    "title" : "SharePoint",
+    "host" : "sharepoint.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/sharepoint/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/sharepoint/Img/logo.png",
+    "description" : "SharePoint enthusiasts"
+  },
+  "sharepoint.meta.stackexchange.com" : {
+    "title" : "SharePoint Meta",
+    "host" : "sharepoint.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/sharepointmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/sharepointmeta/Img/logo.png",
+    "description" : "SharePoint enthusiasts"
+  },
+  "music.stackexchange.com" : {
+    "title" : "Music: Practice &amp; Theory",
+    "host" : "music.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/music/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/music/Img/logo.png",
+    "description" : "Musicians, students, and enthusiasts"
+  },
+  "music.meta.stackexchange.com" : {
+    "title" : "Music: Practice &amp; Theory Meta",
+    "host" : "music.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/musicmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/musicmeta/Img/logo.png",
+    "description" : "Musicians, students, and enthusiasts"
+  },
+  "sqa.stackexchange.com" : {
+    "title" : "Software Quality Assurance &amp; Testing",
+    "host" : "sqa.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/sqa/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/sqa/Img/apple-touch-icon.png",
+    "description" : "Software quality control experts, automation engineers, and software testers"
+  },
+  "sqa.meta.stackexchange.com" : {
+    "title" : "Software Quality Assurance &amp; Testing Meta",
+    "host" : "sqa.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/sqameta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/sqameta/Img/apple-touch-icon.png",
+    "description" : "Software quality control experts, automation engineers, and software testers"
+  },
+  "judaism.stackexchange.com" : {
+    "title" : "Mi Yodeya",
+    "host" : "judaism.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/judaism/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/judaism/Img/logo.png",
+    "description" : "Those who base their lives on Jewish law and tradition and anyone interested in learning more"
+  },
+  "judaism.meta.stackexchange.com" : {
+    "title" : "Mi Yodeya Meta",
+    "host" : "judaism.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/judaismmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/judaismmeta/Img/logo.png",
+    "description" : "Those who base their lives on Jewish law and tradition and anyone interested in learning more"
+  },
+  "german.stackexchange.com" : {
+    "title" : "German Language",
+    "host" : "german.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/german/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/german/Img/apple-touch-icon.png",
+    "description" : "Speakers of German wanting to discuss the finer points of the language and translation"
+  },
+  "german.meta.stackexchange.com" : {
+    "title" : "German Language Meta",
+    "host" : "german.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/germanmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/germanmeta/Img/apple-touch-icon.png",
+    "description" : "Speakers of German wanting to discuss the finer points of the language and translation"
+  },
+  "japanese.stackexchange.com" : {
+    "title" : "Japanese Language",
+    "host" : "japanese.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/japanese/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/japanese/Img/logo.png",
+    "description" : "Students, teachers, and linguists wanting to discuss the finer points of the Japanese language"
+  },
+  "japanese.meta.stackexchange.com" : {
+    "title" : "Japanese Language Meta",
+    "host" : "japanese.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/japanesemeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/japanesemeta/Img/logo.png",
+    "description" : "Students, teachers, and linguists wanting to discuss the finer points of the Japanese language"
+  },
+  "philosophy.stackexchange.com" : {
+    "title" : "Philosophy",
+    "host" : "philosophy.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/philosophy/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/philosophy/Img/apple-touch-icon.png",
+    "description" : "Those interested in the study of the fundamental nature of knowledge, reality, and existence"
+  },
+  "philosophy.meta.stackexchange.com" : {
+    "title" : "Philosophy Meta",
+    "host" : "philosophy.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/philosophymeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/philosophymeta/Img/apple-touch-icon.png",
+    "description" : "Those interested in the study of the fundamental nature of knowledge, reality, and existence"
+  },
+  "gardening.stackexchange.com" : {
+    "title" : "Gardening &amp; Landscaping",
+    "host" : "gardening.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/gardening/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/gardening/Img/apple-touch-icon.png",
+    "description" : "Gardeners and landscapers"
+  },
+  "gardening.meta.stackexchange.com" : {
+    "title" : "Gardening &amp; Landscaping Meta",
+    "host" : "gardening.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/gardeningmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/gardeningmeta/Img/apple-touch-icon.png",
+    "description" : "Gardeners and landscapers"
+  },
+  "travel.stackexchange.com" : {
+    "title" : "Travel",
+    "host" : "travel.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/travel/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/travel/Img/logo.png",
+    "description" : "Road warriors and seasoned travelers"
+  },
+  "travel.meta.stackexchange.com" : {
+    "title" : "Travel Meta",
+    "host" : "travel.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/travelmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/travelmeta/Img/logo.png",
+    "description" : "Road warriors and seasoned travelers"
+  },
+  "crypto.stackexchange.com" : {
+    "title" : "Cryptography",
+    "host" : "crypto.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/crypto/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/crypto/Img/logo.png",
+    "description" : "Software developers, mathematicians and others interested in cryptography"
+  },
+  "crypto.meta.stackexchange.com" : {
+    "title" : "Cryptography Meta",
+    "host" : "crypto.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/cryptometa/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/cryptometa/Img/logo.png",
+    "description" : "Software developers, mathematicians and others interested in cryptography"
+  },
+  "dsp.stackexchange.com" : {
+    "title" : "Signal Processing",
+    "host" : "dsp.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/dsp/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/dsp/Img/logo.png",
+    "description" : "Practitioners of the art and science of signal, image and video processing"
+  },
+  "dsp.meta.stackexchange.com" : {
+    "title" : "Signal Processing Meta",
+    "host" : "dsp.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/dspmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/dspmeta/Img/logo.png",
+    "description" : "Practitioners of the art and science of signal, image and video processing"
+  },
+  "french.stackexchange.com" : {
+    "title" : "French Language",
+    "host" : "french.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/french/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/french/Img/apple-touch-icon.png",
+    "description" : "Students, teachers, and linguists wanting to discuss the finer points of the French language"
+  },
+  "french.meta.stackexchange.com" : {
+    "title" : "French Language Meta",
+    "host" : "french.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/frenchmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/frenchmeta/Img/apple-touch-icon.png",
+    "description" : "Students, teachers, and linguists wanting to discuss the finer points of the French language"
+  },
+  "christianity.stackexchange.com" : {
+    "title" : "Christianity",
+    "host" : "christianity.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/christianity/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/christianity/Img/logo.png",
+    "description" : "Committed Christians, experts in Christianity and those interested in learning more"
+  },
+  "christianity.meta.stackexchange.com" : {
+    "title" : "Christianity Meta",
+    "host" : "christianity.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/christianitymeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/christianitymeta/Img/logo.png",
+    "description" : "Committed Christians, experts in Christianity and those interested in learning more"
+  },
+  "bitcoin.stackexchange.com" : {
+    "title" : "Bitcoin",
+    "host" : "bitcoin.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/bitcoin/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/bitcoin/Img/apple-touch-icon.png",
+    "description" : "Bitcoin users, developers, and enthusiasts"
+  },
+  "bitcoin.meta.stackexchange.com" : {
+    "title" : "Bitcoin Meta",
+    "host" : "bitcoin.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/bitcoinmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/bitcoinmeta/Img/apple-touch-icon.png",
+    "description" : "Bitcoin users, developers, and enthusiasts"
+  },
+  "linguistics.stackexchange.com" : {
+    "title" : "Linguistics",
+    "host" : "linguistics.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/linguistics/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/linguistics/Img/apple-touch-icon.png",
+    "description" : "Professional linguists and others with an interest in linguistic research and theory"
+  },
+  "linguistics.meta.stackexchange.com" : {
+    "title" : "Linguistics Meta",
+    "host" : "linguistics.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/linguisticsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/linguisticsmeta/Img/apple-touch-icon.png",
+    "description" : "Professional linguists and others with an interest in linguistic research and theory"
+  },
+  "hermeneutics.stackexchange.com" : {
+    "title" : "Biblical Hermeneutics",
+    "host" : "hermeneutics.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/hermeneutics/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/hermeneutics/Img/apple-touch-icon.png",
+    "description" : "Professors, theologians, and those interested in exegetical analysis of biblical texts"
+  },
+  "hermeneutics.meta.stackexchange.com" : {
+    "title" : "Biblical Hermeneutics Meta",
+    "host" : "hermeneutics.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/hermeneuticsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/hermeneuticsmeta/Img/apple-touch-icon.png",
+    "description" : "Professors, theologians, and those interested in exegetical analysis of biblical texts"
+  },
+  "history.stackexchange.com" : {
+    "title" : "History",
+    "host" : "history.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/history/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/history/Img/apple-touch-icon.png",
+    "description" : "Historians and history buffs"
+  },
+  "history.meta.stackexchange.com" : {
+    "title" : "History Meta",
+    "host" : "history.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/historymeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/historymeta/Img/apple-touch-icon.png",
+    "description" : "Historians and history buffs"
+  },
+  "bricks.stackexchange.com" : {
+    "title" : "Bricks",
+    "host" : "bricks.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/bricks/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/bricks/Img/apple-touch-icon.png",
+    "description" : "LEGO&#174; and building block enthusiasts"
+  },
+  "bricks.meta.stackexchange.com" : {
+    "title" : "Bricks Meta",
+    "host" : "bricks.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/bricksmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/bricksmeta/Img/apple-touch-icon.png",
+    "description" : "LEGO&#174; and building block enthusiasts"
+  },
+  "spanish.stackexchange.com" : {
+    "title" : "Spanish Language",
+    "host" : "spanish.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/spanish/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/spanish/Img/apple-touch-icon.png",
+    "description" : "Linguists, teachers, students and Spanish language enthusiasts in general wanting to discuss the finer points of the language"
+  },
+  "spanish.meta.stackexchange.com" : {
+    "title" : "Spanish Language Meta",
+    "host" : "spanish.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/spanishmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/spanishmeta/Img/apple-touch-icon.png",
+    "description" : "Linguists, teachers, students and Spanish language enthusiasts in general wanting to discuss the finer points of the language"
+  },
+  "scicomp.stackexchange.com" : {
+    "title" : "Computational Science",
+    "host" : "scicomp.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/scicomp/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/scicomp/Img/apple-touch-icon.png",
+    "description" : "Scientists using computers to solve scientific problems"
+  },
+  "scicomp.meta.stackexchange.com" : {
+    "title" : "Computational Science Meta",
+    "host" : "scicomp.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/scicompmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/scicompmeta/Img/apple-touch-icon.png",
+    "description" : "Scientists using computers to solve scientific problems"
+  },
+  "movies.stackexchange.com" : {
+    "title" : "Movies &amp; TV",
+    "host" : "movies.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/movies/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/movies/Img/logo.png",
+    "description" : "Movie and TV enthusiasts"
+  },
+  "movies.meta.stackexchange.com" : {
+    "title" : "Movies &amp; TV Meta",
+    "host" : "movies.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/moviesmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/moviesmeta/Img/logo.png",
+    "description" : "Movie and TV enthusiasts"
+  },
+  "chinese.stackexchange.com" : {
+    "title" : "Chinese Language",
+    "host" : "chinese.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/chinese/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/chinese/Img/apple-touch-icon.png",
+    "description" : "Students, teachers, and linguists wanting to discuss the finer points of the Chinese language"
+  },
+  "chinese.meta.stackexchange.com" : {
+    "title" : "Chinese Language Meta",
+    "host" : "chinese.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/chinesemeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/chinesemeta/Img/apple-touch-icon.png",
+    "description" : "Students, teachers, and linguists wanting to discuss the finer points of the Chinese language"
+  },
+  "biology.stackexchange.com" : {
+    "title" : "Biology",
+    "host" : "biology.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/biology/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/biology/Img/logo.png",
+    "description" : "Biology researchers, academics, and students"
+  },
+  "biology.meta.stackexchange.com" : {
+    "title" : "Biology Meta",
+    "host" : "biology.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/biologymeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/biologymeta/Img/logo.png",
+    "description" : "Biology researchers, academics, and students"
+  },
+  "poker.stackexchange.com" : {
+    "title" : "Poker",
+    "host" : "poker.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/poker/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/poker/Img/apple-touch-icon.png",
+    "description" : "Serious players and enthusiasts of poker"
+  },
+  "poker.meta.stackexchange.com" : {
+    "title" : "Poker Meta",
+    "host" : "poker.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/pokermeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/pokermeta/Img/apple-touch-icon.png",
+    "description" : "Serious players and enthusiasts of poker"
+  },
+  "mathematica.stackexchange.com" : {
+    "title" : "Mathematica",
+    "host" : "mathematica.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/mathematica/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/mathematica/Img/logo.png",
+    "description" : "Users of Wolfram Mathematica"
+  },
+  "mathematica.meta.stackexchange.com" : {
+    "title" : "Mathematica Meta",
+    "host" : "mathematica.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/mathematicameta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/mathematicameta/Img/logo.png",
+    "description" : "Users of Wolfram Mathematica"
+  },
+  "psychology.stackexchange.com" : {
+    "title" : "Psychology &amp; Neuroscience",
+    "host" : "psychology.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/psychology/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/psychology/Img/apple-touch-icon.png",
+    "description" : "Practitioners, researchers, and students in cognitive science, psychology, neuroscience, and psychiatry"
+  },
+  "psychology.meta.stackexchange.com" : {
+    "title" : "Psychology &amp; Neuroscience Meta",
+    "host" : "psychology.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/psychologymeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/psychologymeta/Img/apple-touch-icon.png",
+    "description" : "Practitioners, researchers, and students in cognitive science, psychology, neuroscience, and psychiatry"
+  },
+  "outdoors.stackexchange.com" : {
+    "title" : "The Great Outdoors",
+    "host" : "outdoors.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/outdoors/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/outdoors/Img/apple-touch-icon.png",
+    "description" : "People who love being outdoors enjoying nature and wilderness, and learning about the required skills and equipment"
+  },
+  "outdoors.meta.stackexchange.com" : {
+    "title" : "The Great Outdoors Meta",
+    "host" : "outdoors.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/outdoorsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/outdoorsmeta/Img/apple-touch-icon.png",
+    "description" : "People who love being outdoors enjoying nature and wilderness, and learning about the required skills and equipment"
+  },
+  "martialarts.stackexchange.com" : {
+    "title" : "Martial Arts",
+    "host" : "martialarts.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/martialarts/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/martialarts/Img/apple-touch-icon.png",
+    "description" : "Students and teachers of all martial arts"
+  },
+  "martialarts.meta.stackexchange.com" : {
+    "title" : "Martial Arts Meta",
+    "host" : "martialarts.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/martialartsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/martialartsmeta/Img/apple-touch-icon.png",
+    "description" : "Students and teachers of all martial arts"
+  },
+  "sports.stackexchange.com" : {
+    "title" : "Sports",
+    "host" : "sports.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/sports/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/sports/Img/apple-touch-icon.png",
+    "description" : "Participants in team and individual sport activities"
+  },
+  "sports.meta.stackexchange.com" : {
+    "title" : "Sports Meta",
+    "host" : "sports.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/sportsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/sportsmeta/Img/apple-touch-icon.png",
+    "description" : "Participants in team and individual sport activities"
+  },
+  "academia.stackexchange.com" : {
+    "title" : "Academia",
+    "host" : "academia.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/academia/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/academia/Img/logo.png",
+    "description" : "Academics and those enrolled in higher education"
+  },
+  "academia.meta.stackexchange.com" : {
+    "title" : "Academia Meta",
+    "host" : "academia.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/academiameta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/academiameta/Img/logo.png",
+    "description" : "Academics and those enrolled in higher education"
+  },
+  "cs.stackexchange.com" : {
+    "title" : "Computer Science",
+    "host" : "cs.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/cs/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/cs/Img/logo.png",
+    "description" : "Students, researchers and practitioners of computer science"
+  },
+  "cs.meta.stackexchange.com" : {
+    "title" : "Computer Science Meta",
+    "host" : "cs.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/csmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/csmeta/Img/logo.png",
+    "description" : "Students, researchers and practitioners of computer science"
+  },
+  "workplace.stackexchange.com" : {
+    "title" : "The Workplace",
+    "host" : "workplace.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/workplace/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/workplace/Img/logo.png",
+    "description" : "Members of the workforce navigating the professional setting"
+  },
+  "workplace.meta.stackexchange.com" : {
+    "title" : "The Workplace Meta",
+    "host" : "workplace.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/workplacemeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/workplacemeta/Img/logo.png",
+    "description" : "Members of the workforce navigating the professional setting"
+  },
+  "chemistry.stackexchange.com" : {
+    "title" : "Chemistry",
+    "host" : "chemistry.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/chemistry/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/chemistry/Img/logo.png",
+    "description" : "Scientists, academics, teachers, and students in the field of chemistry"
+  },
+  "chemistry.meta.stackexchange.com" : {
+    "title" : "Chemistry Meta",
+    "host" : "chemistry.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/chemistrymeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/chemistrymeta/Img/logo.png",
+    "description" : "Scientists, academics, teachers, and students in the field of chemistry"
+  },
+  "chess.stackexchange.com" : {
+    "title" : "Chess",
+    "host" : "chess.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/chess/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/chess/Img/apple-touch-icon.png",
+    "description" : "Serious players and enthusiasts of chess"
+  },
+  "chess.meta.stackexchange.com" : {
+    "title" : "Chess Meta",
+    "host" : "chess.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/chessmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/chessmeta/Img/apple-touch-icon.png",
+    "description" : "Serious players and enthusiasts of chess"
+  },
+  "raspberrypi.stackexchange.com" : {
+    "title" : "Raspberry Pi",
+    "host" : "raspberrypi.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/raspberrypi/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/raspberrypi/Img/logo.png",
+    "description" : "Users and developers of hardware and software for Raspberry Pi"
+  },
+  "raspberrypi.meta.stackexchange.com" : {
+    "title" : "Raspberry Pi Meta",
+    "host" : "raspberrypi.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/raspberrypimeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/raspberrypimeta/Img/logo.png",
+    "description" : "Users and developers of hardware and software for Raspberry Pi"
+  },
+  "russian.stackexchange.com" : {
+    "title" : "Russian Language",
+    "host" : "russian.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/russian/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/russian/Img/apple-touch-icon.png",
+    "description" : "Students, teachers, and linguists wanting to discuss the finer points of the Russian language"
+  },
+  "russian.meta.stackexchange.com" : {
+    "title" : "Russian Language Meta",
+    "host" : "russian.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/russianmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/russianmeta/Img/apple-touch-icon.png",
+    "description" : "Students, teachers, and linguists wanting to discuss the finer points of the Russian language"
+  },
+  "islam.stackexchange.com" : {
+    "title" : "Islam",
+    "host" : "islam.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/islam/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/islam/Img/apple-touch-icon.png",
+    "description" : "Muslims, experts in Islam, and those interested in learning more about Islam"
+  },
+  "islam.meta.stackexchange.com" : {
+    "title" : "Islam Meta",
+    "host" : "islam.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/islammeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/islammeta/Img/apple-touch-icon.png",
+    "description" : "Muslims, experts in Islam, and those interested in learning more about Islam"
+  },
+  "salesforce.stackexchange.com" : {
+    "title" : "Salesforce",
+    "host" : "salesforce.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/salesforce/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/salesforce/Img/logo.png",
+    "description" : "Salesforce administrators, implementation experts, developers and anybody in-between"
+  },
+  "salesforce.meta.stackexchange.com" : {
+    "title" : "Salesforce Meta",
+    "host" : "salesforce.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/salesforcemeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/salesforcemeta/Img/logo.png",
+    "description" : "Salesforce administrators, implementation experts, developers and anybody in-between"
+  },
+  "patents.stackexchange.com" : {
+    "title" : "Ask Patents",
+    "host" : "patents.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/patents/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/patents/Img/apple-touch-icon.png",
+    "description" : "People interested in improving and participating in the patent system"
+  },
+  "patents.meta.stackexchange.com" : {
+    "title" : "Ask Patents Meta",
+    "host" : "patents.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/patentsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/patentsmeta/Img/apple-touch-icon.png",
+    "description" : "People interested in improving and participating in the patent system"
+  },
+  "genealogy.stackexchange.com" : {
+    "title" : "Genealogy &amp; Family History",
+    "host" : "genealogy.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/genealogy/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/genealogy/Img/apple-touch-icon.png",
+    "description" : "Expert genealogists and people interested in genealogy or family history"
+  },
+  "genealogy.meta.stackexchange.com" : {
+    "title" : "Genealogy &amp; Family History Meta",
+    "host" : "genealogy.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/genealogymeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/genealogymeta/Img/apple-touch-icon.png",
+    "description" : "Expert genealogists and people interested in genealogy or family history"
+  },
+  "robotics.stackexchange.com" : {
+    "title" : "Robotics",
+    "host" : "robotics.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/robotics/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/robotics/Img/apple-touch-icon.png",
+    "description" : "Professional robotic engineers, hobbyists, researchers and students"
+  },
+  "robotics.meta.stackexchange.com" : {
+    "title" : "Robotics Meta",
+    "host" : "robotics.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/roboticsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/roboticsmeta/Img/apple-touch-icon.png",
+    "description" : "Professional robotic engineers, hobbyists, researchers and students"
+  },
+  "expressionengine.stackexchange.com" : {
+    "title" : "ExpressionEngine&#174; Answers",
+    "host" : "expressionengine.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/expressionengine/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/expressionengine/Img/logo.png",
+    "description" : "Administrators, end users, developers and designers for ExpressionEngine&#174; CMS"
+  },
+  "expressionengine.meta.stackexchange.com" : {
+    "title" : "ExpressionEngine&#174; Answers Meta",
+    "host" : "expressionengine.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/expressionenginemeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/expressionenginemeta/Img/logo.png",
+    "description" : "Administrators, end users, developers and designers for ExpressionEngine&#174; CMS"
+  },
+  "politics.stackexchange.com" : {
+    "title" : "Politics",
+    "host" : "politics.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/politics/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/politics/Img/apple-touch-icon.png",
+    "description" : "People interested in governments, policies, and political processes"
+  },
+  "politics.meta.stackexchange.com" : {
+    "title" : "Politics Meta",
+    "host" : "politics.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/politicsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/politicsmeta/Img/apple-touch-icon.png",
+    "description" : "People interested in governments, policies, and political processes"
+  },
+  "anime.stackexchange.com" : {
+    "title" : "Anime &amp; Manga",
+    "host" : "anime.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/anime/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/anime/Img/logo.png",
+    "description" : "Anime and manga fans"
+  },
+  "anime.meta.stackexchange.com" : {
+    "title" : "Anime &amp; Manga Meta",
+    "host" : "anime.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/animemeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/animemeta/Img/logo.png",
+    "description" : "Anime and manga fans"
+  },
+  "magento.stackexchange.com" : {
+    "title" : "Magento",
+    "host" : "magento.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/magento/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/magento/Img/logo.png",
+    "description" : "Users of the Magento e-Commerce platform"
+  },
+  "magento.meta.stackexchange.com" : {
+    "title" : "Magento Meta",
+    "host" : "magento.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/magentometa/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/magentometa/Img/logo.png",
+    "description" : "Users of the Magento e-Commerce platform"
+  },
+  "ell.stackexchange.com" : {
+    "title" : "English Language Learners",
+    "host" : "ell.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/ell/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/ell/Img/logo.png",
+    "description" : "Speakers of other languages learning English"
+  },
+  "ell.meta.stackexchange.com" : {
+    "title" : "English Language Learners Meta",
+    "host" : "ell.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/ellmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/ellmeta/Img/logo.png",
+    "description" : "Speakers of other languages learning English"
+  },
+  "sustainability.stackexchange.com" : {
+    "title" : "Sustainable Living",
+    "host" : "sustainability.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/sustainability/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/sustainability/Img/apple-touch-icon.png",
+    "description" : "Folks dedicated to a lifestyle that can be maintained indefinitely without depleting available resources"
+  },
+  "sustainability.meta.stackexchange.com" : {
+    "title" : "Sustainable Living Meta",
+    "host" : "sustainability.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/sustainabilitymeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/sustainabilitymeta/Img/apple-touch-icon.png",
+    "description" : "Folks dedicated to a lifestyle that can be maintained indefinitely without depleting available resources"
+  },
+  "tridion.stackexchange.com" : {
+    "title" : "Tridion",
+    "host" : "tridion.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/tridion/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/tridion/Img/apple-touch-icon.png",
+    "description" : "Tridion developers and administrators"
+  },
+  "tridion.meta.stackexchange.com" : {
+    "title" : "Tridion Meta",
+    "host" : "tridion.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/tridionmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/tridionmeta/Img/apple-touch-icon.png",
+    "description" : "Tridion developers and administrators"
+  },
+  "reverseengineering.stackexchange.com" : {
+    "title" : "Reverse Engineering",
+    "host" : "reverseengineering.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/reverseengineering/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/reverseengineering/Img/apple-touch-icon.png",
+    "description" : "Researchers and developers who explore the principles of a system through analysis of its structure, function, and operation"
+  },
+  "reverseengineering.meta.stackexchange.com" : {
+    "title" : "Reverse Engineering Meta",
+    "host" : "reverseengineering.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/reverseengineeringmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/reverseengineeringmeta/Img/apple-touch-icon.png",
+    "description" : "Researchers and developers who explore the principles of a system through analysis of its structure, function, and operation"
+  },
+  "networkengineering.stackexchange.com" : {
+    "title" : "Network Engineering",
+    "host" : "networkengineering.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/networkengineering/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/networkengineering/Img/logo.png",
+    "description" : "Network engineers"
+  },
+  "networkengineering.meta.stackexchange.com" : {
+    "title" : "Network Engineering Meta",
+    "host" : "networkengineering.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/networkengineeringmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/networkengineeringmeta/Img/logo.png",
+    "description" : "Network engineers"
+  },
+  "opendata.stackexchange.com" : {
+    "title" : "Open Data",
+    "host" : "opendata.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/opendata/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/opendata/Img/apple-touch-icon.png",
+    "description" : "Developers and researchers interested in open data"
+  },
+  "opendata.meta.stackexchange.com" : {
+    "title" : "Open Data Meta",
+    "host" : "opendata.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/opendatameta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/opendatameta/Img/apple-touch-icon.png",
+    "description" : "Developers and researchers interested in open data"
+  },
+  "freelancing.stackexchange.com" : {
+    "title" : "Freelancing",
+    "host" : "freelancing.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/freelancing/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/freelancing/Img/apple-touch-icon.png",
+    "description" : "Self-employed and freelance workers"
+  },
+  "freelancing.meta.stackexchange.com" : {
+    "title" : "Freelancing Meta",
+    "host" : "freelancing.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/freelancingmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/freelancingmeta/Img/apple-touch-icon.png",
+    "description" : "Self-employed and freelance workers"
+  },
+  "blender.stackexchange.com" : {
+    "title" : "Blender",
+    "host" : "blender.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/blender/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/blender/Img/logo.png",
+    "description" : "People who use Blender to create 3D graphics, animations, or games"
+  },
+  "blender.meta.stackexchange.com" : {
+    "title" : "Blender Meta",
+    "host" : "blender.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/blendermeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/blendermeta/Img/logo.png",
+    "description" : "People who use Blender to create 3D graphics, animations, or games"
+  },
+  "mathoverflow.net" : {
+    "title" : "MathOverflow",
+    "host" : "mathoverflow.net",
+    "icon" : "https://cdn.sstatic.net/Sites/mathoverflow/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/mathoverflow/Img/logo.png",
+    "description" : "Professional mathematicians"
+  },
+  "meta.mathoverflow.net" : {
+    "title" : "MathOverflow Meta",
+    "host" : "meta.mathoverflow.net",
+    "icon" : "https://cdn.sstatic.net/Sites/mathoverflowmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/mathoverflowmeta/Img/logo.png",
+    "description" : "Professional mathematicians"
+  },
+  "space.stackexchange.com" : {
+    "title" : "Space Exploration",
+    "host" : "space.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/space/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/space/Img/apple-touch-icon.png",
+    "description" : "Spacecraft operators, scientists, engineers, and enthusiasts"
+  },
+  "space.meta.stackexchange.com" : {
+    "title" : "Space Exploration Meta",
+    "host" : "space.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/spacemeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/spacemeta/Img/apple-touch-icon.png",
+    "description" : "Spacecraft operators, scientists, engineers, and enthusiasts"
+  },
+  "sound.stackexchange.com" : {
+    "title" : "Sound Design",
+    "host" : "sound.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/sound/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/sound/Img/apple-touch-icon.png",
+    "description" : "Sound engineers, producers, editors, and enthusiasts"
+  },
+  "sound.meta.stackexchange.com" : {
+    "title" : "Sound Design Meta",
+    "host" : "sound.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/soundmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/soundmeta/Img/apple-touch-icon.png",
+    "description" : "Sound designers"
+  },
+  "astronomy.stackexchange.com" : {
+    "title" : "Astronomy",
+    "host" : "astronomy.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/astronomy/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/astronomy/Img/apple-touch-icon.png",
+    "description" : "Astronomers and astrophysicists"
+  },
+  "astronomy.meta.stackexchange.com" : {
+    "title" : "Astronomy Meta",
+    "host" : "astronomy.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/astronomymeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/astronomymeta/Img/apple-touch-icon.png",
+    "description" : "Astronomers and astrophysicists"
+  },
+  "tor.stackexchange.com" : {
+    "title" : "Tor",
+    "host" : "tor.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/tor/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/tor/Img/apple-touch-icon.png",
+    "description" : "Researchers, developers, and users of Tor"
+  },
+  "tor.meta.stackexchange.com" : {
+    "title" : "Tor Meta",
+    "host" : "tor.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/tormeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/tormeta/Img/apple-touch-icon.png",
+    "description" : "Researchers, developers, and users of Tor"
+  },
+  "pets.stackexchange.com" : {
+    "title" : "Pets",
+    "host" : "pets.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/pets/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/pets/Img/apple-touch-icon.png",
+    "description" : "Pet owners, caretakers, breeders, veterinarians, and trainers"
+  },
+  "pets.meta.stackexchange.com" : {
+    "title" : "Pets Meta",
+    "host" : "pets.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/petsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/petsmeta/Img/apple-touch-icon.png",
+    "description" : "Pet owners, caretakers, breeders, veterinarians, and trainers"
+  },
+  "ham.stackexchange.com" : {
+    "title" : "Amateur Radio",
+    "host" : "ham.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/ham/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/ham/Img/apple-touch-icon.png",
+    "description" : "Amateur radio enthusiasts"
+  },
+  "ham.meta.stackexchange.com" : {
+    "title" : "Amateur Radio Meta",
+    "host" : "ham.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/hammeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/hammeta/Img/apple-touch-icon.png",
+    "description" : "Amateur radio enthusiasts"
+  },
+  "italian.stackexchange.com" : {
+    "title" : "Italian Language",
+    "host" : "italian.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/italian/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/italian/Img/apple-touch-icon.png",
+    "description" : "Students, teachers, and linguists wanting to discuss the finer points of the Italian language"
+  },
+  "italian.meta.stackexchange.com" : {
+    "title" : "Italian Language Meta",
+    "host" : "italian.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/italianmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/italianmeta/Img/apple-touch-icon.png",
+    "description" : "Students, teachers, and linguists wanting to discuss the finer points of the Italian language"
+  },
+  "pt.stackoverflow.com" : {
+    "title" : "Stack Overflow em Portugu&#234;s",
+    "host" : "pt.stackoverflow.com",
+    "icon" : "https://cdn.sstatic.net/Sites/br/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/br/Img/logo.png",
+    "description" : "Programadores profissionais e entusiastas"
+  },
+  "pt.meta.stackoverflow.com" : {
+    "title" : "Stack Overflow em Portugu&#234;s Meta",
+    "host" : "pt.meta.stackoverflow.com",
+    "icon" : "https://cdn.sstatic.net/Sites/brmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/brmeta/Img/logo.png",
+    "description" : "Programadores profissionais e entusiastas"
+  },
+  "aviation.stackexchange.com" : {
+    "title" : "Aviation",
+    "host" : "aviation.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/aviation/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/aviation/Img/logo.png",
+    "description" : "Aircraft pilots, mechanics, and enthusiasts"
+  },
+  "aviation.meta.stackexchange.com" : {
+    "title" : "Aviation Meta",
+    "host" : "aviation.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/aviationmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/aviationmeta/Img/logo.png",
+    "description" : "Aircraft pilots, mechanics, and enthusiasts"
+  },
+  "ebooks.stackexchange.com" : {
+    "title" : "Ebooks",
+    "host" : "ebooks.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/ebooks/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/ebooks/Img/apple-touch-icon.png",
+    "description" : "Ebook publishers and readers"
+  },
+  "ebooks.meta.stackexchange.com" : {
+    "title" : "Ebooks Meta",
+    "host" : "ebooks.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/ebooksmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/ebooksmeta/Img/apple-touch-icon.png",
+    "description" : "Ebook publishers and readers"
+  },
+  "alcohol.stackexchange.com" : {
+    "title" : "Beer, Wine &amp; Spirits",
+    "host" : "alcohol.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/alcohol/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/alcohol/Img/apple-touch-icon.png",
+    "description" : "Alcoholic beverage aficionados and those interested in beer, wine, or spirits"
+  },
+  "alcohol.meta.stackexchange.com" : {
+    "title" : "Beer, Wine &amp; Spirits Meta",
+    "host" : "alcohol.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/alcoholmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/alcoholmeta/Img/apple-touch-icon.png",
+    "description" : "Alcoholic beverage aficionados and those interested in beer, wine, or spirits"
+  },
+  "softwarerecs.stackexchange.com" : {
+    "title" : "Software Recommendations",
+    "host" : "softwarerecs.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/softwarerecs/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/softwarerecs/Img/logo.png",
+    "description" : "People seeking specific software recommendations"
+  },
+  "softwarerecs.meta.stackexchange.com" : {
+    "title" : "Software Recommendations Meta",
+    "host" : "softwarerecs.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/softwarerecsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/softwarerecsmeta/Img/logo.png",
+    "description" : "People seeking specific software recommendations"
+  },
+  "arduino.stackexchange.com" : {
+    "title" : "Arduino",
+    "host" : "arduino.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/arduino/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/arduino/Img/apple-touch-icon.png",
+    "description" : "Developers of open-source hardware and software that is compatible with Arduino"
+  },
+  "arduino.meta.stackexchange.com" : {
+    "title" : "Arduino Meta",
+    "host" : "arduino.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/arduinometa/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/arduinometa/Img/apple-touch-icon.png",
+    "description" : "Developers of open-source hardware and software that is compatible with Arduino"
+  },
+  "cs50.stackexchange.com" : {
+    "title" : "CS50",
+    "host" : "cs50.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/cs50/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/cs50/Img/apple-touch-icon.png",
+    "description" : "Students of Harvard University&#39;s CS50"
+  },
+  "cs50.meta.stackexchange.com" : {
+    "title" : "CS50 Meta",
+    "host" : "cs50.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/cs50meta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/cs50meta/Img/apple-touch-icon.png",
+    "description" : "Students of Harvard University&#39;s CS50"
+  },
+  "expatriates.stackexchange.com" : {
+    "title" : "Expatriates",
+    "host" : "expatriates.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/expatriates/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/expatriates/Img/apple-touch-icon.png",
+    "description" : "People living abroad on a long-term basis"
+  },
+  "expatriates.meta.stackexchange.com" : {
+    "title" : "Expatriates Meta",
+    "host" : "expatriates.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/expatriatesmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/expatriatesmeta/Img/apple-touch-icon.png",
+    "description" : "People living abroad on a long-term basis"
+  },
+  "matheducators.stackexchange.com" : {
+    "title" : "Mathematics Educators",
+    "host" : "matheducators.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/matheducators/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/matheducators/Img/apple-touch-icon.png",
+    "description" : "Those involved in the field of teaching mathematics"
+  },
+  "matheducators.meta.stackexchange.com" : {
+    "title" : "Mathematics Educators Meta",
+    "host" : "matheducators.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/matheducatorsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/matheducatorsmeta/Img/apple-touch-icon.png",
+    "description" : "Those involved in the field of teaching mathematics"
+  },
+  "meta.stackoverflow.com" : {
+    "title" : "Meta Stack Overflow",
+    "host" : "meta.stackoverflow.com",
+    "icon" : "https://meta.stackoverflow.com/Content/Sites/stackoverflowmeta/Img/apple-touch-icon.png",
+    "logo" : "https://meta.stackoverflow.com/Content/Sites/stackoverflowmeta/Img/logo.png",
+    "description" : "Professional and enthusiast programmers"
+  },
+  "earthscience.stackexchange.com" : {
+    "title" : "Earth Science",
+    "host" : "earthscience.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/earthscience/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/earthscience/Img/apple-touch-icon.png",
+    "description" : "Those interested in the geology, meteorology, oceanography, and environmental sciences"
+  },
+  "earthscience.meta.stackexchange.com" : {
+    "title" : "Earth Science Meta",
+    "host" : "earthscience.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/earthsciencemeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/earthsciencemeta/Img/apple-touch-icon.png",
+    "description" : "Those interested in the geology, meteorology, oceanography, and environmental sciences"
+  },
+  "joomla.stackexchange.com" : {
+    "title" : "Joomla",
+    "host" : "joomla.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/joomla/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/joomla/Img/apple-touch-icon.png",
+    "description" : "Joomla! administrators, users, developers and designers"
+  },
+  "joomla.meta.stackexchange.com" : {
+    "title" : "Joomla Meta",
+    "host" : "joomla.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/joomlameta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/joomlameta/Img/apple-touch-icon.png",
+    "description" : "Joomla! administrators, users, developers and designers"
+  },
+  "datascience.stackexchange.com" : {
+    "title" : "Data Science",
+    "host" : "datascience.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/datascience/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/datascience/Img/apple-touch-icon.png",
+    "description" : "Data science professionals, Machine Learning specialists, and those interested in learning more about the field"
+  },
+  "datascience.meta.stackexchange.com" : {
+    "title" : "Data Science Meta",
+    "host" : "datascience.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/datasciencemeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/datasciencemeta/Img/apple-touch-icon.png",
+    "description" : "Data science professionals, Machine Learning specialists, and those interested in learning more about the field"
+  },
+  "puzzling.stackexchange.com" : {
+    "title" : "Puzzling",
+    "host" : "puzzling.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/puzzling/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/puzzling/Img/logo.png",
+    "description" : "Those who create, solve, and study puzzles"
+  },
+  "puzzling.meta.stackexchange.com" : {
+    "title" : "Puzzling Meta",
+    "host" : "puzzling.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/puzzlingmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/puzzlingmeta/Img/logo.png",
+    "description" : "Those who create, solve, and study puzzles"
+  },
+  "craftcms.stackexchange.com" : {
+    "title" : "Craft CMS",
+    "host" : "craftcms.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/craftcms/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/craftcms/Img/apple-touch-icon.png",
+    "description" : "Administrators, end users, developers and designers for Craft CMS"
+  },
+  "craftcms.meta.stackexchange.com" : {
+    "title" : "Craft CMS Meta",
+    "host" : "craftcms.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/craftcmsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/craftcmsmeta/Img/apple-touch-icon.png",
+    "description" : "Administrators, end users, developers and designers for Craft CMS"
+  },
+  "buddhism.stackexchange.com" : {
+    "title" : "Buddhism",
+    "host" : "buddhism.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/buddhism/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/buddhism/Img/apple-touch-icon.png",
+    "description" : "People practicing or interested in Buddhist philosophy, teaching, and practice"
+  },
+  "buddhism.meta.stackexchange.com" : {
+    "title" : "Buddhism Meta",
+    "host" : "buddhism.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/buddhismmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/buddhismmeta/Img/apple-touch-icon.png",
+    "description" : "People practicing or interested in Buddhist philosophy, teaching, and practice"
+  },
+  "hinduism.stackexchange.com" : {
+    "title" : "Hinduism",
+    "host" : "hinduism.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/hinduism/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/hinduism/Img/apple-touch-icon.png",
+    "description" : "Followers of the Hindu religion and those interested in learning more about Hinduism"
+  },
+  "hinduism.meta.stackexchange.com" : {
+    "title" : "Hinduism Meta",
+    "host" : "hinduism.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/hinduismmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/hinduismmeta/Img/apple-touch-icon.png",
+    "description" : "Followers of the Hindu religion and those interested in learning more about Hinduism"
+  },
+  "communitybuilding.stackexchange.com" : {
+    "title" : "Community Building",
+    "host" : "communitybuilding.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/communitybuilding/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/communitybuilding/Img/apple-touch-icon.png",
+    "description" : "Community managers, administrators, and moderators"
+  },
+  "communitybuilding.meta.stackexchange.com" : {
+    "title" : "Community Building Meta",
+    "host" : "communitybuilding.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/communitybuildingmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/communitybuildingmeta/Img/apple-touch-icon.png",
+    "description" : "Community managers, administrators, and moderators"
+  },
+  "worldbuilding.stackexchange.com" : {
+    "title" : "Worldbuilding",
+    "host" : "worldbuilding.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/worldbuilding/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/worldbuilding/Img/logo.png",
+    "description" : "Writers/artists using science, geography and culture to construct imaginary worlds and settings"
+  },
+  "worldbuilding.meta.stackexchange.com" : {
+    "title" : "Worldbuilding Meta",
+    "host" : "worldbuilding.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/worldbuildingmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/worldbuildingmeta/Img/logo.png",
+    "description" : "Writers/artists using science, geography and culture to construct imaginary worlds and settings"
+  },
+  "ja.stackoverflow.com" : {
+    "title" : "スタック・オーバーフロー",
+    "host" : "ja.stackoverflow.com",
+    "icon" : "https://cdn.sstatic.net/Sites/ja/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/ja/Img/apple-touch-icon.png",
+    "description" : "プログラマーとプログラミングに熱心な人"
+  },
+  "ja.meta.stackoverflow.com" : {
+    "title" : "スタック・オーバーフローMeta",
+    "host" : "ja.meta.stackoverflow.com",
+    "icon" : "https://cdn.sstatic.net/Sites/jameta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/jameta/Img/apple-touch-icon.png",
+    "description" : "プログラマーとプログラミングに熱心な人"
+  },
+  "emacs.stackexchange.com" : {
+    "title" : "Emacs",
+    "host" : "emacs.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/emacs/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/emacs/Img/logo.png",
+    "description" : "Those using, extending or developing Emacs"
+  },
+  "emacs.meta.stackexchange.com" : {
+    "title" : "Emacs Meta",
+    "host" : "emacs.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/emacsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/emacsmeta/Img/logo.png",
+    "description" : "Those using, extending or developing Emacs"
+  },
+  "hsm.stackexchange.com" : {
+    "title" : "History of Science and Mathematics",
+    "host" : "hsm.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/hsm/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/hsm/Img/apple-touch-icon.png",
+    "description" : "People interested in the history and origins of science and mathematics"
+  },
+  "hsm.meta.stackexchange.com" : {
+    "title" : "History of Science and Mathematics Meta",
+    "host" : "hsm.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/hsmmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/hsmmeta/Img/apple-touch-icon.png",
+    "description" : "People interested in the history and origins of science and mathematics"
+  },
+  "economics.stackexchange.com" : {
+    "title" : "Economics",
+    "host" : "economics.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/economics/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/economics/Img/apple-touch-icon.png",
+    "description" : "Those who study, teach, research and apply economics and econometrics"
+  },
+  "economics.meta.stackexchange.com" : {
+    "title" : "Economics Meta",
+    "host" : "economics.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/economicsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/economicsmeta/Img/apple-touch-icon.png",
+    "description" : "Professional and academic economists and analysts"
+  },
+  "lifehacks.stackexchange.com" : {
+    "title" : "Lifehacks",
+    "host" : "lifehacks.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/lifehacks/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/lifehacks/Img/apple-touch-icon.png",
+    "description" : "People looking to bypass life&#39;s everyday problems with simple tricks"
+  },
+  "lifehacks.meta.stackexchange.com" : {
+    "title" : "Lifehacks Meta",
+    "host" : "lifehacks.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/lifehacksmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/lifehacksmeta/Img/apple-touch-icon.png",
+    "description" : "People looking to bypass life&#39;s everyday problems with simple tricks"
+  },
+  "engineering.stackexchange.com" : {
+    "title" : "Engineering",
+    "host" : "engineering.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/engineering/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/engineering/Img/apple-touch-icon.png",
+    "description" : "Professionals and students of engineering"
+  },
+  "engineering.meta.stackexchange.com" : {
+    "title" : "Engineering Meta",
+    "host" : "engineering.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/engineeringmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/engineeringmeta/Img/apple-touch-icon.png",
+    "description" : "Professionals and students of engineering"
+  },
+  "coffee.stackexchange.com" : {
+    "title" : "Coffee",
+    "host" : "coffee.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/coffee/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/coffee/Img/apple-touch-icon.png",
+    "description" : "People interested in all aspects of producing and consuming coffee"
+  },
+  "coffee.meta.stackexchange.com" : {
+    "title" : "Coffee Meta",
+    "host" : "coffee.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/coffeemeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/coffeemeta/Img/apple-touch-icon.png",
+    "description" : "People interested in all aspects of producing and consuming coffee"
+  },
+  "vi.stackexchange.com" : {
+    "title" : "Vi and Vim",
+    "host" : "vi.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/vi/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/vi/Img/apple-touch-icon.png",
+    "description" : "People using the vi and Vim families of text editors"
+  },
+  "vi.meta.stackexchange.com" : {
+    "title" : "Vi and Vim Meta",
+    "host" : "vi.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/vimeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/vimeta/Img/apple-touch-icon.png",
+    "description" : "People using the vi and Vim families of text editors"
+  },
+  "musicfans.stackexchange.com" : {
+    "title" : "Music Fans",
+    "host" : "musicfans.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/musicfans/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/musicfans/Img/apple-touch-icon.png",
+    "description" : "Music historians, critics, and fans"
+  },
+  "musicfans.meta.stackexchange.com" : {
+    "title" : "Music Fans Meta",
+    "host" : "musicfans.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/musicfansmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/musicfansmeta/Img/apple-touch-icon.png",
+    "description" : "Music historians, critics, and fans"
+  },
+  "woodworking.stackexchange.com" : {
+    "title" : "Woodworking",
+    "host" : "woodworking.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/woodworking/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/woodworking/Img/apple-touch-icon.png",
+    "description" : "Professional and amateur woodworkers"
+  },
+  "woodworking.meta.stackexchange.com" : {
+    "title" : "Woodworking Meta",
+    "host" : "woodworking.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/woodworkingmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/woodworkingmeta/Img/apple-touch-icon.png",
+    "description" : "Professional and amateur woodworkers"
+  },
+  "civicrm.stackexchange.com" : {
+    "title" : "CiviCRM",
+    "host" : "civicrm.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/civicrm/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/civicrm/Img/apple-touch-icon.png",
+    "description" : "Administrators and users of the CiviCRM  Constituent Relationship Management software"
+  },
+  "civicrm.meta.stackexchange.com" : {
+    "title" : "CiviCRM Meta",
+    "host" : "civicrm.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/civicrmmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/civicrmmeta/Img/apple-touch-icon.png",
+    "description" : "Administrators and users of the CiviCRM Constituent Relationship Management software"
+  },
+  "medicalsciences.stackexchange.com" : {
+    "title" : "Medical Sciences",
+    "host" : "medicalsciences.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/medicalsciences/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/medicalsciences/Img/apple-touch-icon.png",
+    "description" : "Professionals in medical and allied health fields, students of those professions, related academics, and others with a sound understanding of medicine and healthcare-related sciences"
+  },
+  "medicalsciences.meta.stackexchange.com" : {
+    "title" : "Medical Sciences Meta",
+    "host" : "medicalsciences.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/medicalsciencesmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/medicalsciencesmeta/Img/apple-touch-icon.png",
+    "description" : "Professionals in medical and allied health fields, students of those professions, related academics, and others with a sound understanding of medicine and healthcare-related sciences"
+  },
+  "ru.stackoverflow.com" : {
+    "title" : "Stack Overflow на русском",
+    "host" : "ru.stackoverflow.com",
+    "icon" : "https://cdn.sstatic.net/Sites/ru/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/ru/Img/logo.png",
+    "description" : "программистов"
+  },
+  "ru.meta.stackoverflow.com" : {
+    "title" : "Stack Overflow на русском Meta",
+    "host" : "ru.meta.stackoverflow.com",
+    "icon" : "https://cdn.sstatic.net/Sites/rumeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/rumeta/Img/logo.png",
+    "description" : "программистов"
+  },
+  "rus.stackexchange.com" : {
+    "title" : "Русский язык",
+    "host" : "rus.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/rus/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/rus/Img/apple-touch-icon.png",
+    "description" : "лингвистов и энтузиастов русского языка"
+  },
+  "rus.meta.stackexchange.com" : {
+    "title" : "Русский язык Meta",
+    "host" : "rus.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/rusmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/rusmeta/Img/apple-touch-icon.png",
+    "description" : "лингвистов и энтузиастов русского языка"
+  },
+  "mythology.stackexchange.com" : {
+    "title" : "Mythology &amp; Folklore",
+    "host" : "mythology.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/mythology/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/mythology/Img/apple-touch-icon.png",
+    "description" : "Enthusiasts and scholars of mythology and folklore"
+  },
+  "mythology.meta.stackexchange.com" : {
+    "title" : "Mythology &amp; Folklore Meta",
+    "host" : "mythology.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/mythologymeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/mythologymeta/Img/apple-touch-icon.png",
+    "description" : "Enthusiasts and scholars of mythology and folklore"
+  },
+  "law.stackexchange.com" : {
+    "title" : "Law",
+    "host" : "law.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/law/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/law/Img/apple-touch-icon.png",
+    "description" : "Legal professionals, students, and others with experience or interest in law"
+  },
+  "law.meta.stackexchange.com" : {
+    "title" : "Law Meta",
+    "host" : "law.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/lawmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/lawmeta/Img/apple-touch-icon.png",
+    "description" : "Legal professionals, students, and others with experience or interest in law"
+  },
+  "opensource.stackexchange.com" : {
+    "title" : "Open Source",
+    "host" : "opensource.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/opensource/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/opensource/Img/apple-touch-icon.png",
+    "description" : "People organizing, marketing or licensing open source development projects"
+  },
+  "opensource.meta.stackexchange.com" : {
+    "title" : "Open Source Meta",
+    "host" : "opensource.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/opensourcemeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/opensourcemeta/Img/apple-touch-icon.png",
+    "description" : "People organizing, marketing or licensing open source development projects"
+  },
+  "elementaryos.stackexchange.com" : {
+    "title" : "elementary OS",
+    "host" : "elementaryos.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/elementaryos/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/elementaryos/Img/apple-touch-icon.png",
+    "description" : "Developers and users of elementary OS and applications"
+  },
+  "elementaryos.meta.stackexchange.com" : {
+    "title" : "elementary OS Meta",
+    "host" : "elementaryos.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/elementaryosmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/elementaryosmeta/Img/apple-touch-icon.png",
+    "description" : "Developers and users of elementary OS and applications"
+  },
+  "portuguese.stackexchange.com" : {
+    "title" : "Portuguese Language",
+    "host" : "portuguese.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/portuguese/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/portuguese/Img/apple-touch-icon.png",
+    "description" : "Linguists, teachers and learners wanting to discuss the finer points of the Portuguese language"
+  },
+  "portuguese.meta.stackexchange.com" : {
+    "title" : "Portuguese Language Meta",
+    "host" : "portuguese.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/portuguesemeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/portuguesemeta/Img/apple-touch-icon.png",
+    "description" : "Linguists, teachers and learners wanting to discuss the finer points of the Portuguese language"
+  },
+  "computergraphics.stackexchange.com" : {
+    "title" : "Computer Graphics",
+    "host" : "computergraphics.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/computergraphics/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/computergraphics/Img/apple-touch-icon.png",
+    "description" : "Computer graphics researchers and programmers"
+  },
+  "computergraphics.meta.stackexchange.com" : {
+    "title" : "Computer Graphics Meta",
+    "host" : "computergraphics.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/computergraphicsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/computergraphicsmeta/Img/apple-touch-icon.png",
+    "description" : "Computer graphics researchers and programmers"
+  },
+  "hardwarerecs.stackexchange.com" : {
+    "title" : "Hardware Recommendations",
+    "host" : "hardwarerecs.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/hardwarerecs/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/hardwarerecs/Img/apple-touch-icon.png",
+    "description" : "People seeking specific hardware recommendations"
+  },
+  "hardwarerecs.meta.stackexchange.com" : {
+    "title" : "Hardware Recommendations Meta",
+    "host" : "hardwarerecs.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/hardwarerecsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/hardwarerecsmeta/Img/apple-touch-icon.png",
+    "description" : "People seeking specific hardware recommendations"
+  },
+  "es.stackoverflow.com" : {
+    "title" : "Stack Overflow en espa&#241;ol",
+    "host" : "es.stackoverflow.com",
+    "icon" : "https://cdn.sstatic.net/Sites/es/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/es/Img/logo.png",
+    "description" : "Programadores y profesionales de la inform&#225;tica"
+  },
+  "es.meta.stackoverflow.com" : {
+    "title" : "Stack Overflow Meta en espa&#241;ol",
+    "host" : "es.meta.stackoverflow.com",
+    "icon" : "https://cdn.sstatic.net/Sites/esmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/esmeta/Img/logo.png",
+    "description" : "Programadores y profesionales de la inform&#225;tica"
+  },
+  "3dprinting.stackexchange.com" : {
+    "title" : "3D Printing",
+    "host" : "3dprinting.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/3dprinting/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/3dprinting/Img/apple-touch-icon.png",
+    "description" : "3D printing enthusiasts"
+  },
+  "3dprinting.meta.stackexchange.com" : {
+    "title" : "3D Printing Meta",
+    "host" : "3dprinting.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/3dprintingmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/3dprintingmeta/Img/apple-touch-icon.png",
+    "description" : "3D printing enthusiasts"
+  },
+  "ethereum.stackexchange.com" : {
+    "title" : "Ethereum",
+    "host" : "ethereum.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/ethereum/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/ethereum/Img/apple-touch-icon.png",
+    "description" : "Users of Ethereum, the decentralized application platform and smart contract enabled blockchain"
+  },
+  "ethereum.meta.stackexchange.com" : {
+    "title" : "Ethereum Meta",
+    "host" : "ethereum.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/ethereummeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/ethereummeta/Img/apple-touch-icon.png",
+    "description" : "Users of Ethereum, the decentralized application platform and smart contract enabled blockchain"
+  },
+  "latin.stackexchange.com" : {
+    "title" : "Latin Language",
+    "host" : "latin.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/latin/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/latin/Img/apple-touch-icon.png",
+    "description" : "Linguists, teachers, and students wanting to discuss the finer points of the Latin language"
+  },
+  "latin.meta.stackexchange.com" : {
+    "title" : "Latin Language Meta",
+    "host" : "latin.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/latinmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/latinmeta/Img/apple-touch-icon.png",
+    "description" : "Linguists, teachers, and students wanting to discuss the finer points of the Latin language"
+  },
+  "languagelearning.stackexchange.com" : {
+    "title" : "Language Learning",
+    "host" : "languagelearning.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/languagelearning/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/languagelearning/Img/apple-touch-icon.png",
+    "description" : "Students, teachers, polyglots, and anyone interested in the techniques of second-language acquisition"
+  },
+  "languagelearning.meta.stackexchange.com" : {
+    "title" : "Language Learning Meta",
+    "host" : "languagelearning.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/languagelearningmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/languagelearningmeta/Img/apple-touch-icon.png",
+    "description" : "Students, teachers, polyglots, and anyone interested in the techniques of second-language acquisition"
+  },
+  "retrocomputing.stackexchange.com" : {
+    "title" : "Retrocomputing",
+    "host" : "retrocomputing.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/retrocomputing/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/retrocomputing/Img/apple-touch-icon.png",
+    "description" : "Vintage-computer hobbyists interested in restoring, preserving, and using the classic computer and gaming systems of yesteryear"
+  },
+  "retrocomputing.meta.stackexchange.com" : {
+    "title" : "Retrocomputing Meta",
+    "host" : "retrocomputing.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/retrocomputingmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/retrocomputingmeta/Img/apple-touch-icon.png",
+    "description" : "Vintage-computer hobbyists interested in restoring, preserving, and using the classic computer and gaming systems of yesteryear"
+  },
+  "crafts.stackexchange.com" : {
+    "title" : "Arts &amp; Crafts",
+    "host" : "crafts.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/crafts/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/crafts/Img/apple-touch-icon.png",
+    "description" : "Artists and crafters"
+  },
+  "crafts.meta.stackexchange.com" : {
+    "title" : "Arts &amp; Crafts Meta",
+    "host" : "crafts.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/craftsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/craftsmeta/Img/apple-touch-icon.png",
+    "description" : "Artists and crafters"
+  },
+  "korean.stackexchange.com" : {
+    "title" : "Korean Language",
+    "host" : "korean.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/korean/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/korean/Img/apple-touch-icon.png",
+    "description" : "Linguists, teachers and students of the Korean language"
+  },
+  "korean.meta.stackexchange.com" : {
+    "title" : "Korean Language Meta",
+    "host" : "korean.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/koreanmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/koreanmeta/Img/apple-touch-icon.png",
+    "description" : "Linguists, teachers and students of the Korean language"
+  },
+  "monero.stackexchange.com" : {
+    "title" : "Monero",
+    "host" : "monero.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/monero/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/monero/Img/apple-touch-icon.png",
+    "description" : "Developers and users of the secure, private and untraceable cryptocurrency Monero"
+  },
+  "monero.meta.stackexchange.com" : {
+    "title" : "Monero Meta",
+    "host" : "monero.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/monerometa/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/monerometa/Img/apple-touch-icon.png",
+    "description" : "Developers and users of the secure, private and untraceable cryptocurrency Monero"
+  },
+  "ai.stackexchange.com" : {
+    "title" : "Artificial Intelligence",
+    "host" : "ai.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/ai/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/ai/Img/apple-touch-icon.png",
+    "description" : "People interested in conceptual questions about life and challenges in a world where &quot;cognitive&quot; functions can be mimicked in purely digital environment"
+  },
+  "ai.meta.stackexchange.com" : {
+    "title" : "Artificial Intelligence Meta",
+    "host" : "ai.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/aimeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/aimeta/Img/apple-touch-icon.png",
+    "description" : "People interested in conceptual questions about life and challenges in a world where &quot;cognitive&quot; functions can be mimicked in purely digital environment"
+  },
+  "esperanto.stackexchange.com" : {
+    "title" : "Esperanto Language",
+    "host" : "esperanto.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/esperanto/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/esperanto/Img/apple-touch-icon.png",
+    "description" : "Teachers and students of the Esperanto language"
+  },
+  "esperanto.meta.stackexchange.com" : {
+    "title" : "Esperanto Language Meta",
+    "host" : "esperanto.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/esperantometa/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/esperantometa/Img/apple-touch-icon.png",
+    "description" : "Teachers and students of the Esperanto language"
+  },
+  "sitecore.stackexchange.com" : {
+    "title" : "Sitecore",
+    "host" : "sitecore.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/sitecore/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/sitecore/Img/apple-touch-icon.png",
+    "description" : "Developers and end users of the Sitecore CMS and multichannel marketing software"
+  },
+  "sitecore.meta.stackexchange.com" : {
+    "title" : "Sitecore Meta",
+    "host" : "sitecore.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/sitecoremeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/sitecoremeta/Img/apple-touch-icon.png",
+    "description" : "Developers and end users of the Sitecore CMS and multichannel marketing software"
+  },
+  "iot.stackexchange.com" : {
+    "title" : "Internet of Things",
+    "host" : "iot.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/iot/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/iot/Img/apple-touch-icon.png",
+    "description" : "Builders and users of networked sensors and control devices in the contexts of smart homes, industry automation, or environmental sensors"
+  },
+  "iot.meta.stackexchange.com" : {
+    "title" : "Internet of Things Meta",
+    "host" : "iot.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/iotmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/iotmeta/Img/apple-touch-icon.png",
+    "description" : "Builders and users of networked sensors and control devices in the contexts of smart homes, industry automation, or environmental sensors"
+  },
+  "literature.stackexchange.com" : {
+    "title" : "Literature",
+    "host" : "literature.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/literature/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/literature/Img/apple-touch-icon.png",
+    "description" : "Scholars and enthusiasts of literature"
+  },
+  "literature.meta.stackexchange.com" : {
+    "title" : "Literature Meta",
+    "host" : "literature.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/literaturemeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/literaturemeta/Img/apple-touch-icon.png",
+    "description" : "Scholars and enthusiasts of literature"
+  },
+  "vegetarianism.stackexchange.com" : {
+    "title" : "Veganism &amp; Vegetarianism",
+    "host" : "vegetarianism.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/vegetarianism/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/vegetarianism/Img/apple-touch-icon.png",
+    "description" : "Those committed to a vegan or vegetarian lifestyle and anyone interested in learning more"
+  },
+  "vegetarianism.meta.stackexchange.com" : {
+    "title" : "Veganism &amp; Vegetarianism Meta",
+    "host" : "vegetarianism.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/vegetarianismmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/vegetarianismmeta/Img/apple-touch-icon.png",
+    "description" : "Those committed to a vegan or vegetarian lifestyle and anyone interested in learning more"
+  },
+  "ukrainian.stackexchange.com" : {
+    "title" : "Ukrainian Language",
+    "host" : "ukrainian.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/ukrainian/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/ukrainian/Img/apple-touch-icon.png",
+    "description" : "Linguists, teachers and students of the Ukrainian language"
+  },
+  "ukrainian.meta.stackexchange.com" : {
+    "title" : "Ukrainian Language Meta",
+    "host" : "ukrainian.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/ukrainianmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/ukrainianmeta/Img/apple-touch-icon.png",
+    "description" : "Linguists, teachers and students of the Ukrainian language"
+  },
+  "devops.stackexchange.com" : {
+    "title" : "DevOps",
+    "host" : "devops.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/devops/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/devops/Img/apple-touch-icon.png",
+    "description" : "Software engineers working on automated testing, continuous delivery, service integration and monitoring, and building SDLC infrastructure"
+  },
+  "devops.meta.stackexchange.com" : {
+    "title" : "DevOps Meta",
+    "host" : "devops.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/devopsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/devopsmeta/Img/apple-touch-icon.png",
+    "description" : "Software engineers working on automated testing, continuous delivery, service integration and monitoring, and building SDLC infrastructure"
+  },
+  "bioinformatics.stackexchange.com" : {
+    "title" : "Bioinformatics",
+    "host" : "bioinformatics.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/bioinformatics/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/bioinformatics/Img/apple-touch-icon.png",
+    "description" : "Researchers, developers, students, teachers, and end users interested in bioinformatics"
+  },
+  "bioinformatics.meta.stackexchange.com" : {
+    "title" : "Bioinformatics Meta",
+    "host" : "bioinformatics.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/bioinformaticsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/bioinformaticsmeta/Img/apple-touch-icon.png",
+    "description" : "Researchers, developers, students, teachers, and end users interested in bioinformatics"
+  },
+  "cseducators.stackexchange.com" : {
+    "title" : "Computer Science Educators",
+    "host" : "cseducators.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/cseducators/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/cseducators/Img/apple-touch-icon.png",
+    "description" : "Those involved in the field of teaching Computer Science"
+  },
+  "cseducators.meta.stackexchange.com" : {
+    "title" : "Computer Science Educators Meta",
+    "host" : "cseducators.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/cseducatorsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/cseducatorsmeta/Img/apple-touch-icon.png",
+    "description" : "Those involved in the field of teaching Computer Science"
+  },
+  "interpersonal.stackexchange.com" : {
+    "title" : "Interpersonal Skills",
+    "host" : "interpersonal.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/interpersonal/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/interpersonal/Img/apple-touch-icon.png",
+    "description" : "People looking to improve their interpersonal communication skills"
+  },
+  "interpersonal.meta.stackexchange.com" : {
+    "title" : "Interpersonal Skills Meta",
+    "host" : "interpersonal.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/interpersonalmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/interpersonalmeta/Img/apple-touch-icon.png",
+    "description" : "People looking to improve their interpersonal communication skills"
+  },
+  "iota.stackexchange.com" : {
+    "title" : "Iota",
+    "host" : "iota.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/iota/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/iota/Img/apple-touch-icon.png",
+    "description" : "Users of Iota, the open-source cryptocurrency for IoT that does not use a blockchain"
+  },
+  "iota.meta.stackexchange.com" : {
+    "title" : "Iota Meta",
+    "host" : "iota.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/iotameta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/iotameta/Img/apple-touch-icon.png",
+    "description" : "Users of Iota, the open-source cryptocurrency for IoT that does not use a blockchain"
+  },
+  "stellar.stackexchange.com" : {
+    "title" : "Stellar",
+    "host" : "stellar.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/stellar/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/stellar/Img/apple-touch-icon.png",
+    "description" : "Developers and users of Stellar and the Stellar Distributed Exchange"
+  },
+  "stellar.meta.stackexchange.com" : {
+    "title" : "Stellar Meta",
+    "host" : "stellar.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/stellarmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/stellarmeta/Img/apple-touch-icon.png",
+    "description" : "Developers and users of Stellar and the Stellar Distributed Exchange"
+  },
+  "conlang.stackexchange.com" : {
+    "title" : "Constructed Languages",
+    "host" : "conlang.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/conlang/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/conlang/Img/apple-touch-icon.png",
+    "description" : "Designers and users of artificial or invented languages, consciously developed instead of having developed naturally"
+  },
+  "conlang.meta.stackexchange.com" : {
+    "title" : "Constructed Languages Meta",
+    "host" : "conlang.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/conlangmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/conlangmeta/Img/apple-touch-icon.png",
+    "description" : "Designers and users of artificial or invented languages, consciously developed instead of having developed naturally"
+  },
+  "quantumcomputing.stackexchange.com" : {
+    "title" : "Quantum Computing",
+    "host" : "quantumcomputing.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/quantumcomputing/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/quantumcomputing/Img/logo.png",
+    "description" : "Engineers, scientists, programmers, and computing professionals interested in quantum computing"
+  },
+  "quantumcomputing.meta.stackexchange.com" : {
+    "title" : "Quantum Computing Meta",
+    "host" : "quantumcomputing.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/quantumcomputingmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/quantumcomputingmeta/Img/logo.png",
+    "description" : "Engineers, scientists, programmers, and computing professionals interested in quantum computing"
+  },
+  "eosio.stackexchange.com" : {
+    "title" : "EOS.IO",
+    "host" : "eosio.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/eosio/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/eosio/Img/apple-touch-icon.png",
+    "description" : "Users and developers of distributed applications built on top of the blockchain operating system, EOS.IO"
+  },
+  "eosio.meta.stackexchange.com" : {
+    "title" : "EOS.IO Meta",
+    "host" : "eosio.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/eosiometa/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/eosiometa/Img/apple-touch-icon.png",
+    "description" : "Users and developers of distributed applications built on top of the blockchain operating system, EOS.IO"
+  },
+  "tezos.stackexchange.com" : {
+    "title" : "Tezos",
+    "host" : "tezos.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/tezos/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/tezos/Img/apple-touch-icon.png",
+    "description" : "Users, experts, and developers of the Tezos blockchain project"
+  },
+  "tezos.meta.stackexchange.com" : {
+    "title" : "Tezos Meta",
+    "host" : "tezos.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/tezosmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/tezosmeta/Img/apple-touch-icon.png",
+    "description" : "Users, experts, and developers of the Tezos blockchain project"
+  },
+  "or.stackexchange.com" : {
+    "title" : "Operations Research",
+    "host" : "or.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/or/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/or/Img/apple-touch-icon.png",
+    "description" : "Operations research and analytics professionals, educators, and students"
+  },
+  "or.meta.stackexchange.com" : {
+    "title" : "Operations Research Meta",
+    "host" : "or.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/ormeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/ormeta/Img/apple-touch-icon.png",
+    "description" : "Operations research and analytics professionals, educators, and students"
+  },
+  "drones.stackexchange.com" : {
+    "title" : "Drones and Model Aircraft",
+    "host" : "drones.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/drones/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/drones/Img/apple-touch-icon.png",
+    "description" : "Experienced flyers, pilots, and builders of drones and model aircraft"
+  },
+  "drones.meta.stackexchange.com" : {
+    "title" : "Drones and Model Aircraft Meta",
+    "host" : "drones.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/dronesmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/dronesmeta/Img/apple-touch-icon.png",
+    "description" : "Experienced flyers, pilots, and builders of drones and model aircraft"
+  },
+  "mattermodeling.stackexchange.com" : {
+    "title" : "Matter Modeling",
+    "host" : "mattermodeling.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/mattermodeling/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/mattermodeling/Img/apple-touch-icon.png",
+    "description" : "Materials modelers and data scientists"
+  },
+  "mattermodeling.meta.stackexchange.com" : {
+    "title" : "Matter Modeling Meta",
+    "host" : "mattermodeling.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/mattermodelingmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/mattermodelingmeta/Img/apple-touch-icon.png",
+    "description" : "Materials modelers and data scientists"
+  },
+  "cardano.stackexchange.com" : {
+    "title" : "Cardano",
+    "host" : "cardano.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/cardano/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/cardano/Img/apple-touch-icon.png",
+    "description" : "Users and developers of the Cardano cryptocurrency ecosystem"
+  },
+  "cardano.meta.stackexchange.com" : {
+    "title" : "Cardano Meta",
+    "host" : "cardano.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/cardanometa/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/cardanometa/Img/apple-touch-icon.png",
+    "description" : "Users and developers of the Cardano cryptocurrency ecosystem"
+  },
+  "proofassistants.stackexchange.com" : {
+    "title" : "Proof Assistants",
+    "host" : "proofassistants.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/proofassistants/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/proofassistants/Img/apple-touch-icon.png",
+    "description" : "Mathematicians and computer scientists who develop and use proof assistants"
+  },
+  "proofassistants.meta.stackexchange.com" : {
+    "title" : "Proof Assistants Meta",
+    "host" : "proofassistants.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/proofassistantsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/proofassistantsmeta/Img/apple-touch-icon.png",
+    "description" : "Mathematicians and computer scientists who develop and use proof assistants"
+  },
+  "substrate.stackexchange.com" : {
+    "title" : "Substrate and Polkadot",
+    "host" : "substrate.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/substrate/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/substrate/Img/apple-touch-icon.png",
+    "description" : "Developers building blockchains with the Substrate SDK"
+  },
+  "substrate.meta.stackexchange.com" : {
+    "title" : "Substrate and Polkadot Meta",
+    "host" : "substrate.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/substratemeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/substratemeta/Img/apple-touch-icon.png",
+    "description" : "Developers building blockchains with the Substrate SDK"
+  },
+  "bioacoustics.stackexchange.com" : {
+    "title" : "Bioacoustics",
+    "host" : "bioacoustics.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/bioacoustics/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/bioacoustics/Img/apple-touch-icon.png",
+    "description" : "People interested in the studies of non-human animal sounds and the impacts of sounds on animals"
+  },
+  "bioacoustics.meta.stackexchange.com" : {
+    "title" : "Bioacoustics Meta",
+    "host" : "bioacoustics.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/bioacousticsmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/bioacousticsmeta/Img/apple-touch-icon.png",
+    "description" : "People interested in the studies of non-human animal sounds and the impacts of sounds on animals"
+  },
+  "solana.stackexchange.com" : {
+    "title" : "Solana",
+    "host" : "solana.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/solana/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/solana/Img/apple-touch-icon.png",
+    "description" : "Solana software users and developers"
+  },
+  "solana.meta.stackexchange.com" : {
+    "title" : "Solana Meta",
+    "host" : "solana.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/solanameta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/solanameta/Img/apple-touch-icon.png",
+    "description" : "Solana software users and developers"
+  },
+  "langdev.stackexchange.com" : {
+    "title" : "Programming Language Design and Implementation",
+    "host" : "langdev.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/langdev/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/langdev/Img/apple-touch-icon.png",
+    "description" : "Designers and implementers of computer programming languages"
+  },
+  "langdev.meta.stackexchange.com" : {
+    "title" : "Programming Language Design and Implementation Meta",
+    "host" : "langdev.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/langdevmeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/langdevmeta/Img/apple-touch-icon.png",
+    "description" : "Designers and implementers of computer programming languages"
+  },
+  "genai.stackexchange.com" : {
+    "title" : "GenAI",
+    "host" : "genai.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/genai/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/genai/Img/apple-touch-icon.png",
+    "description" : "GenAI enthusiasts and practitioners and those interested in learning more about using GenAI tools"
+  },
+  "genai.meta.stackexchange.com" : {
+    "title" : "GenAI Meta",
+    "host" : "genai.meta.stackexchange.com",
+    "icon" : "https://cdn.sstatic.net/Sites/genaimeta/Img/apple-touch-icon.png",
+    "logo" : "https://cdn.sstatic.net/Sites/genaimeta/Img/apple-touch-icon.png",
+    "description" : "GenAI enthusiasts and practitioners and those interested in learning more about using GenAI tools"
+  }
+}

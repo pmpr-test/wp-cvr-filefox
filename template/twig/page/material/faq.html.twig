@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row justify-content-center mb-5">
+        <div class="col-12 col-lg-10">
+            <header {{ pr_add_animation({class: 'lh-base text-center'}, {effect: 'fade-down', distance: '100px', duration: 1000}) }}>
+                <h2 class="h1 fw-bold mb-4">{{ title|raw }}</h2>
+                {{ render_if_has_content('div', {class: 'fs-md'}, wpautop(description)) }}
+            </header>
+        </div>
+    </div>
+    <div {{ pr_add_animation({class: 'row'}, {effect: 'fade-up', distance: '200px', duration: 1000}) }}>
+        <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+            <div class="card border shadow-sm bg-gray-200">
+                <div class="card-body">
+                    <nav class="nav nav-pills flex-column" id="faq_tabs">
+                        {% for id, category in categories %}
+                            <button class="text-start fs-md fw-bold d-flex nav-link p-4{% if loop.first %} active{% endif %}"
+                                    id="cat_{{ id|esc_attr }}_tab" data-bs-toggle="pill"
+                                    data-bs-target="#cat_{{ id|esc_attr }}" type="button" role="tab"
+                                    aria-controls="cat_{{ id|esc_attr }}" aria-selected="true">
+                                {{ render_icon(category.icon, {class: 'icon-xxl icon-primary me-3'}) }}
+                                {{ category.title|raw }}
+                            </button>
+                        {% endfor %}
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-8">
+            <div class="tab-content" id="faq_tab_contents">
+                {% for id, category in categories %}
+                    <div class="tab-pane fade{% if loop.first %} show active{% endif %}"
+                         id="cat_{{ id|esc_attr }}" role="tabpanel"
+                         aria-labelledby="cat_{{ id|esc_attr }}_tab">
+
+                        <div class="accordion accordion-flush" id="faq_accordion">
+                            {% for item_id, item in category.items %}
+                                <div class="accordion-item border">
+                                    <h3 class="accordion-header" id="faq_item_{{ item_id|esc_attr }}_q">
+                                        <button class="accordion-button collapsed fs-sm fs-md-md fw-bold p-4"
+                                                type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#faq_item_{{ item_id|esc_attr }}_a"
+                                                aria-expanded="false"
+                                                aria-controls="faq_item_{{ item_id|esc_attr }}_a">
+                                            {{ item.question|raw }}
+                                        </button>
+                                    </h3>
+                                    <div id="faq_item_{{ item_id|esc_attr }}_a" class="accordion-collapse collapse"
+                                         aria-labelledby="faq_item_{{ item_id|esc_attr }}_q"
+                                         data-bs-parent="#faq_tab_contents">
+                                        <div class="accordion-body fs-sm fs-md-md no-margin text-gray-800 py-4 bg-gray-100">{{ wpautop(item.response)|raw }}</div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
