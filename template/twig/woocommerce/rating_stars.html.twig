@@ -6,7 +6,7 @@
         {% elseif rate < index and (rate + 1) > index %}
             {% set icon = icons['half'] %}
         {% else %}
-            {% set color = 'gray-200' %}
+            {% set color = 'gray-400' %}
             {% set icon = icons['full'] %}
         {% endif %}
         {% set classes = 'icon-xxl icon-' ~ color %}
@@ -14,9 +14,9 @@
             {% set classes = classes ~ ' mx-1' %}
         {% endif %}
         <span class="d-inline-block position-relative">
-        {{ render_icon(icon, {class: classes}) }}
-        <span class="position-absolute fs-sm top-50 start-50 translate-middle mt-1">{{ index|number|raw }}</span>
-    </span>
+            {{ render_icon(icon, {class: classes}, 0, {set: 'solid'}) }}
+            <span class="position-absolute fs-sm top-50 start-50 translate-middle mt-1">{{ index|number|raw }}</span>
+        </span>
     {% endfor %}
 </div>
 
