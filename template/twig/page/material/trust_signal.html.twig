@@ -182,7 +182,7 @@
     <div class="row justify-content-center">
         {% for feature in features %}
             <div class="{{ prepare_columns(loop, {'': 12, 'sm': 6, 'md': 4, 'lg': 3}, 4) }} text-center">
-                <div {{ pr_add_animation({}, {effect: 'fade-up', distance: '200px', duration: 1000, delay: (loop.index * 100) + 700}) }}>
+                <div {{ pr_add_animation({}, {effect: 'fade-up', distance: '200px', duration: 1000, delay: (loop.index * 100) + 200}) }}>
                     {% if feature.image is not empty %}
                         {{ wp_get_attachment_image(feature.image, [150, 150], {class: 'img-fluid mb-4'})|raw }}
                     {% else %}
