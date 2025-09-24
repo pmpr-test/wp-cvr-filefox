@@ -12,7 +12,7 @@
         <div class="card-body p-4">
             <div class="row">
                 <div class="col-12 col-lg-3 mb-4 mb-lg-0">
-                    <figure {{ pr_add_animation({class: 'overflow-hidden m-auto'}, {effect: 'fade-left', distance: '100px', duration: 1000}) }}>
+                    <figure class="overflow-hidden m-auto">
                         {{ manager.avatar|raw }}
                     </figure>
                 </div>
@@ -36,44 +36,46 @@
                 <div class="col-12 col-lg-4">
                     {% if manager.stack_accounts is not empty %}
                         {% for stack_account in manager.stack_accounts %}
-                            <a class="d-flex direction-ltr text-end justify-content-between text-gray-800"
-                               rel="nofollow noopener noreferrer" target="_blank"
-                               href="{{ stack_account.link|esc_url }}">
-                                <div class="d-grid gap-2">
-                                    <div class="display-6 fw-bold text-start">
-                                        {{ stack_account.reputation|raw }}
-                                    </div>
-                                    <div class="d-flex lh-1">
-                                        {% for name, value in stack_account.badges %}
-                                            <span class="fs-md me-4">
+                            {% if stack_account.reputation is not empty %}
+                                <a class="d-flex direction-ltr text-end justify-content-between text-gray-800"
+                                   rel="nofollow noopener noreferrer" target="_blank"
+                                   href="{{ stack_account.link|esc_url }}">
+                                    <div class="d-grid gap-2">
+                                        <div class="display-6 fw-bold text-start">
+                                            {{ stack_account.reputation|raw }}
+                                        </div>
+                                        <div class="d-flex lh-1">
+                                            {% for name, value in stack_account.badges %}
+                                                <span class="fs-md me-4">
                                             <span class="me-1">{{ value|raw }}</span>
                                             <span class="dot {{ name|esc_attr }}"></span>
                                         </span>
-                                        {% endfor %}
+                                            {% endfor %}
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="d-flex">
-                                    <div class="my-auto">
-                                        <strong class="fs-md d-block mb-1">{{ stack_account.title|raw }}</strong>
-                                        <span class="fs-1">{{ stack_account.description|raw }}</span>
+                                    <div class="d-flex">
+                                        <div class="my-auto">
+                                            <strong class="fs-md d-block mb-1">{{ stack_account.title|raw }}</strong>
+                                            <span class="fs-1">{{ stack_account.description|raw }}</span>
+                                        </div>
+                                        <img src="{{ stack_account.icon|esc_url }}" alt="account avatar"
+                                             class="rounded-xxl ms-3 border border-2" width="70" height="70"/>
                                     </div>
-                                    <img src="{{ stack_account.icon|esc_url }}" alt="account avatar"
-                                         class="rounded-xxl ms-3 border border-2" width="70" height="70"/>
-                                </div>
-                            </a>
-                            <div class="border border-dashed my-3"></div>
+                                </a>
+                                <div class="border border-dashed my-3"></div>
+                            {% endif %}
                         {% endfor %}
                     {% endif %}
                     {% if manager.badges is not empty %}
-                        <div class="row">
+                        <ul class="list-group list-group-flush">
                             {% for badge in manager.badges %}
-                                <div class="{{ prepare_columns(loop, {'': 12, 'md': 6}, 3) }} d-flex">
-                                    {{ render_icon(badge.icon, {class: 'icon-lg icon-secondary my-auto me-2'}) }}
-                                    <span class="my-auto fs-2">{{ badge.title|raw }}</span>
-                                </div>
+                                <li class="list-group-item border-0 px-0 d-flex {% if loop.first %}pt-0 pb-2{% elseif loop.last %}pt-2 pb-0{% else %}py-2{% endif %}">
+                                    {{ render_icon(badge.icon, {class: 'icon-xl icon-primary my-auto me-3'}) }}
+                                    <span class="my-auto fs-sm">{{ badge.title|raw }}</span>
+                                </li>
                             {% endfor %}
-                        </div>
+                        </ul>
                     {% endif %}
                 </div>
             </div>
@@ -81,17 +83,17 @@
     </div>
 
     <div class="row my-8">
-        {% for item in items %}
+        {% for stat in stats %}
             <div class="{{ prepare_columns(loop, {'': 6, 'lg': 3}, 4) }}">
                 <div {{ pr_add_animation({class: 'd-flex justify-content-center stat-item countup py-4'}, {effect: 'fade-up', distance: '100px', duration: 800, delay: (loop.index * 100) + 200}) }}>
-                    {{ render_icon(item.icon, {class: 'icon-5x icon-primary my-auto me-4'}) }}
+                    {{ render_icon(stat.icon, {class: 'icon-5x icon-primary my-auto me-4'}) }}
                     <div class="d-grid gap-2">
                         <div class="display-5 fw-bold text-primary"
-                             data-count="{{ item.value|esc_attr }}"
+                             data-count="{{ stat.value|esc_attr }}"
                              data-suffix="+">
                             {{ 0|number|raw }}
                         </div>
-                        <div class="fs-md fs-md-lg fw-bold text-nowrap">{{ item.title|raw }}</div>
+                        <div class="fs-md fs-md-lg fw-bold text-nowrap">{{ stat.title|raw }}</div>
                     </div>
                 </div>
             </div>
@@ -174,21 +176,24 @@
         {% endif %}
     </div>
 
-    <div {{ pr_add_animation({class: 'card shadow'}, {effect: 'fade-in', distance: '150px', duration: 1000, delay: 700}) }}>
-        <div class="card-body p-4">
-            <div class="row justify-content-center">
-                {% for feature in features %}
-                    <div class="{{ prepare_columns(loop, {'': 12, 'sm': 6, 'md': 4, 'lg': 3}, 4) }} text-center">
-                        {% if feature.image is not empty %}
-                            {{ wp_get_attachment_image(feature.image, [150, 150], {class: 'img-fluid mb-4'})|raw }}
-                        {% else %}
-                            {{ render_icon(feature.icon, {class: 'icon-primary icon-4x mx-auto mb-4'}) }}
-                        {% endif %}
-                        <h3 class="fs-md mb-3">{{ feature.title|raw }}</h3>
-                        <div class="fs-sm no-margin line-limit line-limit-2">{{ wpautop(feature.description)|raw }}</div>
-                    </div>
-                {% endfor %}
+    {#    <div {{ pr_add_animation({class: 'card shadow'}, {effect: 'fade-in', distance: '150px', duration: 1000, delay: 700}) }}> #}
+    {#        <div class="card-body p-4"> #}
+    {#            <div class="row justify-content-center"> #}
+    <div class="row justify-content-center">
+        {% for feature in features %}
+            <div class="{{ prepare_columns(loop, {'': 12, 'sm': 6, 'md': 4, 'lg': 3}, 4) }} text-center">
+                <div {{ pr_add_animation({}, {effect: 'fade-up', distance: '200px', duration: 1000, delay: (loop.index * 100) + 700}) }}>
+                    {% if feature.image is not empty %}
+                        {{ wp_get_attachment_image(feature.image, [150, 150], {class: 'img-fluid mb-4'})|raw }}
+                    {% else %}
+                        {{ render_icon(feature.icon, {class: 'icon-primary icon-4x mx-auto mb-4'}) }}
+                    {% endif %}
+                    <h3 class="fs-md mb-3">{{ feature.title|raw }}</h3>
+                    <div class="fs-sm no-margin line-limit line-limit-2">{{ wpautop(feature.description)|raw }}</div>
+                </div>
             </div>
-        </div>
+        {% endfor %}
     </div>
+    {#        </div> #}
+    {#    </div> #}
 </div>
