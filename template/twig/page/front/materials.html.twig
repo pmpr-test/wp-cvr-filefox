@@ -11,7 +11,7 @@
         </div>
     </div>
     <div {{ pr_add_animation({class: 'nav-custom nav-horizontal'}, {effect: 'fade-up', distance: '100px', duration: 1000, delay: 200}) }}>
-        <nav class="nav" id="material_tabs">
+        <nav class="nav" id="material_tabs" role="tablist">
             {% for id, material in materials %}
                 <button class="d-flex shadow-sm fw-bold nav-link{% if loop.first %} active{% endif %}"
                         id="material_{{ id|esc_attr }}_tab" data-bs-toggle="pill"

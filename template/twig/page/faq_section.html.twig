@@ -10,7 +10,7 @@
     </div>
     <div {{ pr_add_animation({class: 'row nav-custom'}, {effect: 'fade-up', distance: '200px', duration: 1000, delay: 200}) }}>
         <div class="col-12 col-lg-4 mb-4 mb-lg-0">
-            <nav class="nav" id="faq_tabs">
+            <nav class="nav" id="faq_tabs" role="tablist">
                 {% for id, category in categories %}
                     <button class="shadow-sm fw-bold d-flex nav-link{% if loop.first %} active{% endif %}"
                             id="cat_{{ id|esc_attr }}_tab" data-bs-toggle="pill"
