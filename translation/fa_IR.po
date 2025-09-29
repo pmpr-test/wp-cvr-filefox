@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Filefox Cover\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2025-09-24 13:10+0330\n"
+"POT-Creation-Date: 2025-09-29 02:57+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: pmpr.dev <pmpr.dev@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -66,8 +66,8 @@ msgstr ""
 "گرفته است. همچنین،‌ در %4$s، او %5$s را بررسی کرده است."
 
 #: src/Pmpr/Cover/Filefox/Archive.php:154
-#: src/Pmpr/Cover/Filefox/Page/Front.php:138
-#: src/Pmpr/Cover/Filefox/Page/Front.php:268
+#: src/Pmpr/Cover/Filefox/Page/Front.php:235
+#: src/Pmpr/Cover/Filefox/Page/Front.php:472
 #: src/Pmpr/Cover/Filefox/Woocommerce/Single.php:342
 msgid "View All"
 msgstr "مشاهده همه"
@@ -128,6 +128,17 @@ msgstr "در دسته %s"
 msgid "%s view"
 msgstr "%s مشاهده"
 
+#: src/Pmpr/Cover/Filefox/Block.php:35
+#, php-format
+msgid "%s ago"
+msgstr "%s پیش"
+
+#: src/Pmpr/Cover/Filefox/Block.php:46
+#, fuzzy, php-format
+#| msgid "Publish Date"
+msgid "Published at %s"
+msgstr "تاریخ انتشار"
+
 #: src/Pmpr/Cover/Filefox/Comment.php:149
 msgid "Write Comment"
 msgstr "دیدگاه خود را بنویسید"
@@ -160,170 +171,170 @@ msgstr "جدول راه راه سربرگ رنگی"
 msgid "Filefox Cover"
 msgstr "کاور فایل فاکس"
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:159
+#: src/Pmpr/Cover/Filefox/Filefox.php:164
 msgid "Primary"
 msgstr "اصلی"
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:163
+#: src/Pmpr/Cover/Filefox/Filefox.php:168
 msgid "Secondary"
 msgstr "ثانویه"
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:167
+#: src/Pmpr/Cover/Filefox/Filefox.php:172
 msgid "Success"
 msgstr "موفق"
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:171
+#: src/Pmpr/Cover/Filefox/Filefox.php:176
 msgid "Info"
 msgstr "اطلاعات"
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:175
+#: src/Pmpr/Cover/Filefox/Filefox.php:180
 msgid "Warning"
 msgstr "هشدار"
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:179
+#: src/Pmpr/Cover/Filefox/Filefox.php:184
 msgid "Danger"
 msgstr "خطر"
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:191
+#: src/Pmpr/Cover/Filefox/Filefox.php:196
 msgid "Small"
 msgstr "کوچک"
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:192
+#: src/Pmpr/Cover/Filefox/Filefox.php:197
 msgid "Medium"
 msgstr "متوسط"
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:193
+#: src/Pmpr/Cover/Filefox/Filefox.php:198
 msgid "Large"
 msgstr "بزرگ"
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:268
+#: src/Pmpr/Cover/Filefox/Filefox.php:273
 msgid "Sidebar"
 msgstr "سایدبار"
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:269
+#: src/Pmpr/Cover/Filefox/Filefox.php:274
 msgid "Single Sidebar"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:270
+#: src/Pmpr/Cover/Filefox/Filefox.php:275
 msgid "Archive Sidebar"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:273
+#: src/Pmpr/Cover/Filefox/Filefox.php:278
 msgid "News"
 msgstr "اخبار"
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:274
-#: src/Pmpr/Cover/Filefox/Page/Front.php:256
+#: src/Pmpr/Cover/Filefox/Filefox.php:279
+#: src/Pmpr/Cover/Filefox/Page/Front.php:461
 msgid "Posts"
 msgstr "نوشته‌ها"
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:275
+#: src/Pmpr/Cover/Filefox/Filefox.php:280
 msgid "Articles"
 msgstr "مقالات"
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:281
+#: src/Pmpr/Cover/Filefox/Filefox.php:286
 #, php-format
 msgid "%s Single Aside (Before Comments)"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:286
+#: src/Pmpr/Cover/Filefox/Filefox.php:291
 #, php-format
 msgid "%s Single Sidebar"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:291
+#: src/Pmpr/Cover/Filefox/Filefox.php:296
 #, php-format
 msgid "%s Archive Sidebar"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:297
+#: src/Pmpr/Cover/Filefox/Filefox.php:302
 msgid "Footer Top"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:298
+#: src/Pmpr/Cover/Filefox/Filefox.php:303
 msgid "Footer #1"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:299
+#: src/Pmpr/Cover/Filefox/Filefox.php:304
 msgid "Footer #2"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:300
+#: src/Pmpr/Cover/Filefox/Filefox.php:305
 msgid "Footer #3"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:301
+#: src/Pmpr/Cover/Filefox/Filefox.php:306
 msgid "Footer #4"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:306
+#: src/Pmpr/Cover/Filefox/Filefox.php:311
 #, php-format
 msgid "Newest %s"
 msgstr "جدیدترین %s"
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:307
+#: src/Pmpr/Cover/Filefox/Filefox.php:312
 msgid "Today's Updates"
 msgstr "تازه‌های امروز"
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:308
+#: src/Pmpr/Cover/Filefox/Filefox.php:313
 msgid "Today's hottest"
 msgstr "داغ‌ترین‌های امروز"
 
-#: src/Pmpr/Cover/Filefox/Filefox.php:309
+#: src/Pmpr/Cover/Filefox/Filefox.php:314
 msgid "View & Download File"
 msgstr "مشاهده و دانلود فایل"
 
-#: src/Pmpr/Cover/Filefox/Header.php:61
+#: src/Pmpr/Cover/Filefox/Header.php:66
 msgid "Specialized Articles"
 msgstr "مقالات تخصصی"
 
-#: src/Pmpr/Cover/Filefox/Header.php:101
+#: src/Pmpr/Cover/Filefox/Header.php:114
 msgid "Type something"
 msgstr "چیزی بنویسید"
 
-#: src/Pmpr/Cover/Filefox/Header.php:103
+#: src/Pmpr/Cover/Filefox/Header.php:116
 #, php-format
 msgid "Like %s"
 msgstr "مثلا %s"
 
-#: src/Pmpr/Cover/Filefox/Header.php:110
+#: src/Pmpr/Cover/Filefox/Header.php:123
 #, php-format
 msgid "%s Suggestions"
 msgstr "پیشنهاد %s"
 
-#: src/Pmpr/Cover/Filefox/Header.php:116
+#: src/Pmpr/Cover/Filefox/Header.php:129
 msgid "Popular Searches"
 msgstr "جستجو‌های محبوب"
 
-#: src/Pmpr/Cover/Filefox/Header.php:124
+#: src/Pmpr/Cover/Filefox/Header.php:137
 #, php-format
 msgid "%s Search"
 msgstr "جستجوی %s"
 
-#: src/Pmpr/Cover/Filefox/Header.php:127
+#: src/Pmpr/Cover/Filefox/Header.php:140
 msgid "View All Result of"
 msgstr "مشاهده همه نتایج"
 
-#: src/Pmpr/Cover/Filefox/Header.php:149
-#: src/Pmpr/Cover/Filefox/Page/Front.php:53
-#: src/Pmpr/Cover/Filefox/Page/Front.php:172
+#: src/Pmpr/Cover/Filefox/Header.php:162
+#: src/Pmpr/Cover/Filefox/Page/Front.php:77
+#: src/Pmpr/Cover/Filefox/Page/Material/Search.php:17
 #: src/Pmpr/Cover/Filefox/Search.php:49
 msgid "Search"
 msgstr "جستجو"
 
-#: src/Pmpr/Cover/Filefox/Header.php:154 src/Pmpr/Cover/Filefox/Setting.php:146
+#: src/Pmpr/Cover/Filefox/Header.php:167 src/Pmpr/Cover/Filefox/Setting.php:146
 msgid "Cart"
 msgstr "سبد خرید"
 
-#: src/Pmpr/Cover/Filefox/Header.php:159 src/Pmpr/Cover/Filefox/Setting.php:115
+#: src/Pmpr/Cover/Filefox/Header.php:172 src/Pmpr/Cover/Filefox/Setting.php:115
 msgid "Account"
 msgstr "حساب کاربری"
 
-#: src/Pmpr/Cover/Filefox/Header.php:229
+#: src/Pmpr/Cover/Filefox/Header.php:242
 msgid "Mobile Aside"
 msgstr "منوی موبایل"
 
-#: src/Pmpr/Cover/Filefox/Header.php:234
+#: src/Pmpr/Cover/Filefox/Header.php:247
 msgid "Header Bottom Left"
 msgstr ""
 
@@ -335,15 +346,11 @@ msgstr "به عنوان مگامنو"
 msgid "Short Description"
 msgstr "شرح کوتاه"
 
-#: src/Pmpr/Cover/Filefox/Navigation/Navigation.php:46
-msgid "Disable Menu"
-msgstr "غیر فعال کردن منو"
-
-#: src/Pmpr/Cover/Filefox/Navigation/Navigation.php:57
+#: src/Pmpr/Cover/Filefox/Navigation/Navigation.php:54
 msgid "Desktop Navigation Menu"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Navigation/Navigation.php:58
+#: src/Pmpr/Cover/Filefox/Navigation/Navigation.php:55
 msgid "Mobile Navigation Menu"
 msgstr ""
 
@@ -352,315 +359,349 @@ msgstr ""
 msgid "See all %s"
 msgstr "مشاهده همه %s"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:36
+#: src/Pmpr/Cover/Filefox/Page/Front.php:49
 msgid "Front Page"
 msgstr "بخش نمایشی سایت"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:57
-#: src/Pmpr/Cover/Filefox/Page/Front.php:95
-#: src/Pmpr/Cover/Filefox/Page/Front.php:119
-#: src/Pmpr/Cover/Filefox/Page/Front.php:133
-#: src/Pmpr/Cover/Filefox/Page/Material.php:85
-#: src/Pmpr/Cover/Filefox/Page/Material.php:128
-#: src/Pmpr/Cover/Filefox/Page/Material.php:152
-#: src/Pmpr/Cover/Filefox/Page/Material.php:250
-#: src/Pmpr/Cover/Filefox/Page/Material.php:269
+#: src/Pmpr/Cover/Filefox/Page/Front.php:66
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:79
+msgid "Hero"
+msgstr ""
+
+#: src/Pmpr/Cover/Filefox/Page/Front.php:70
+#: src/Pmpr/Cover/Filefox/Page/Front.php:122
+#: src/Pmpr/Cover/Filefox/Page/Front.php:165
+#: src/Pmpr/Cover/Filefox/Page/Front.php:202
+#: src/Pmpr/Cover/Filefox/Page/Front.php:216
+#: src/Pmpr/Cover/Filefox/Page/Front.php:230
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:83
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:117
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:141
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:239
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:258
 msgid "Advanced"
 msgstr "پیشرفته"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:61
-#: src/Pmpr/Cover/Filefox/Page/Material.php:106
+#: src/Pmpr/Cover/Filefox/Page/Front.php:82
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:95
 msgid "Features"
 msgstr "ویژگی‌ها"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:64
-#: src/Pmpr/Cover/Filefox/Page/Material.php:109
-#: src/Pmpr/Cover/Filefox/Page/Material.php:159
-#: src/Pmpr/Cover/Filefox/Page/Material.php:207
+#: src/Pmpr/Cover/Filefox/Page/Front.php:86
+#: src/Pmpr/Cover/Filefox/Page/Front.php:126
+#: src/Pmpr/Cover/Filefox/Page/Front.php:171
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:121
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:145
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:183
+msgid "Items"
+msgstr "آیتم‌ها‌"
+
+#: src/Pmpr/Cover/Filefox/Page/Front.php:89
+#: src/Pmpr/Cover/Filefox/Page/Front.php:141
+#: src/Pmpr/Cover/Filefox/Page/Front.php:184
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:98
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:148
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:196
 #: src/Pmpr/Cover/Filefox/Setting.php:219
 msgid "Title"
 msgstr "عنوان"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:68
-#: src/Pmpr/Cover/Filefox/Page/Material.php:117
-#: src/Pmpr/Cover/Filefox/Page/Material.php:167
+#: src/Pmpr/Cover/Filefox/Page/Front.php:93
+#: src/Pmpr/Cover/Filefox/Page/Front.php:145
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:106
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:156
 #: src/Pmpr/Cover/Filefox/Setting.php:170
 #: src/Pmpr/Cover/Filefox/Setting.php:227
 msgid "Description"
 msgstr "شرح"
 
-#: src/Pmpr/Cover/Filefox/Page/Front.php:72
-#: src/Pmpr/Cover/Filefox/Page/Material.php:89
-#: src/Pmpr/Cover/Filefox/Page/Material.php:141
-#: src/Pmpr/Cover/Filefox/Page/Material.php:163
-#: src/Pmpr/Cover/Filefox/Setting.php:215
-msgid "Image"
-msgstr "تصویر"
-
-#: src/Pmpr/Cover/Filefox/Page/Front.php:76
-msgid "Background"
-msgstr "پس زمینه"
-
-#: src/Pmpr/Cover/Filefox/Page/Front.php:80
-msgid "Action Link"
-msgstr "لینک اکشن"
-
-#: src/Pmpr/Cover/Filefox/Page/Front.php:85
-msgid "Action Text"
-msgstr "متن اکشن"
-
-#: src/Pmpr/Cover/Filefox/Page/Front.php:91
-#: src/Pmpr/Cover/Filefox/Page/Front.php:193
-#: src/Pmpr/Cover/Filefox/Setting.php:307
-msgid "Materials"
-msgstr "ماهیت‌ها"
-
-#: src/Pmpr/Cover/Filefox/Page/Front.php:99
-msgid "Material Items"
-msgstr "آیتم‌های ماهیت"
-
-#: src/Pmpr/Cover/Filefox/Page/Front.php:103
-#: src/Pmpr/Cover/Filefox/Search.php:92
-msgid "Material"
-msgstr "ماهیت‌"
-
-#: src/Pmpr/Cover/Filefox/Page/Front.php:108
-msgid "Singular Name"
-msgstr "نام منفرد"
-
-#: src/Pmpr/Cover/Filefox/Page/Front.php:109
-msgid "Use for count of products, leave empty if you want use it's name."
-msgstr ""
-
-#: src/Pmpr/Cover/Filefox/Page/Front.php:115
-#: src/Pmpr/Cover/Filefox/Page/Front.php:123
-#: src/Pmpr/Cover/Filefox/Page/Front.php:242
-#: src/Pmpr/Cover/Filefox/Page/Material.php:221
-msgid "Comments"
-msgstr "دیدگاه‌‌ها"
-
-#: src/Pmpr/Cover/Filefox/Page/Front.php:129
-msgid "Blog Posts"
-msgstr "نوشته‌های وبلاگ"
-
-#: src/Pmpr/Cover/Filefox/Page/Front.php:137
-#, fuzzy
-#| msgid "Action Text"
-msgid "Archive Link Action Text"
-msgstr "متن اکشن"
-
-#: src/Pmpr/Cover/Filefox/Page/Front.php:142
-msgid "Each Post Link Action Text"
-msgstr ""
-
-#: src/Pmpr/Cover/Filefox/Page/Front.php:143
-msgid "Study"
-msgstr ""
-
-#: src/Pmpr/Cover/Filefox/Page/Front.php:244
-#: src/Pmpr/Cover/Filefox/Setting.php:323
-msgid "Filefox User"
-msgstr "کاربر فایل فاکس"
-
-#: src/Pmpr/Cover/Filefox/Page/Material.php:81
-msgid "Hero"
-msgstr ""
-
-#: src/Pmpr/Cover/Filefox/Page/Material.php:94
-msgid "Image Position"
-msgstr "موقعیت تصویر"
-
-#: src/Pmpr/Cover/Filefox/Page/Material.php:95
-msgid "Left"
-msgstr "چپ"
-
-#: src/Pmpr/Cover/Filefox/Page/Material.php:96
-msgid "Right"
-msgstr "راست"
-
-#: src/Pmpr/Cover/Filefox/Page/Material.php:100
-msgid "Call to Actions"
-msgstr "کال تو اکشن‌ها"
-
-#: src/Pmpr/Cover/Filefox/Page/Material.php:113
-#: src/Pmpr/Cover/Filefox/Page/Material.php:211
+#: src/Pmpr/Cover/Filefox/Page/Front.php:97
+#: src/Pmpr/Cover/Filefox/Page/Front.php:135
+#: src/Pmpr/Cover/Filefox/Page/Front.php:188
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:102
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:200
 #: src/Pmpr/Cover/Filefox/Setting.php:155
 #: src/Pmpr/Cover/Filefox/Setting.php:211
 msgid "Icon"
 msgstr "آیکون"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:124
-msgid "Product Cats"
-msgstr "دسته‌بندی‌های محصول"
-
-#: src/Pmpr/Cover/Filefox/Page/Material.php:132
-#: src/Pmpr/Cover/Filefox/Page/Material.php:156
-#: src/Pmpr/Cover/Filefox/Page/Material.php:194
-msgid "Items"
-msgstr "آیتم‌ها‌"
-
-#: src/Pmpr/Cover/Filefox/Page/Material.php:133
-msgid "If you leave it empty, all available product cats will be shown."
+#: src/Pmpr/Cover/Filefox/Page/Front.php:102
+msgid "Color"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:136
-msgid "Product Cat"
-msgstr "دسته‌بندی محصول"
+#: src/Pmpr/Cover/Filefox/Page/Front.php:107
+#: src/Pmpr/Cover/Filefox/Page/Front.php:154
+msgid "Action Link"
+msgstr "لینک اکشن"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:142
-msgid "Leave empty if you want use the product cat image."
+#: src/Pmpr/Cover/Filefox/Page/Front.php:112
+#: src/Pmpr/Cover/Filefox/Page/Front.php:150
+#: src/Pmpr/Cover/Filefox/Page/Front.php:206
+msgid "Action Text"
+msgstr "متن اکشن"
+
+#: src/Pmpr/Cover/Filefox/Page/Front.php:118
+#: src/Pmpr/Cover/Filefox/Page/Front.php:290
+#: src/Pmpr/Cover/Filefox/Setting.php:307
+msgid "Materials"
+msgstr "ماهیت‌ها"
+
+#: src/Pmpr/Cover/Filefox/Page/Front.php:130
+#: src/Pmpr/Cover/Filefox/Search.php:97
+msgid "Material"
+msgstr "ماهیت‌"
+
+#: src/Pmpr/Cover/Filefox/Page/Front.php:155
+msgid "Leave empty if you want use the material home page."
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:148
-msgid "Why Us?"
-msgstr "چرا ما؟"
-
-#: src/Pmpr/Cover/Filefox/Page/Material.php:173
-msgid "Trust Signal"
-msgstr "سیگنال اعتماد"
-
-#: src/Pmpr/Cover/Filefox/Page/Material.php:177
-msgid "Manager"
-msgstr "مدیر"
-
-#: src/Pmpr/Cover/Filefox/Page/Material.php:181
-msgid "Alert Text"
-msgstr "متن هشدار"
-
-#: src/Pmpr/Cover/Filefox/Page/Material.php:185
-msgid "Alert Icon"
-msgstr "آیکون هشدار"
-
-#: src/Pmpr/Cover/Filefox/Page/Material.php:190
+#: src/Pmpr/Cover/Filefox/Page/Front.php:161
+#: src/Pmpr/Cover/Filefox/Page/Front.php:331
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:179
 msgid "Stats"
 msgstr "آمار و اطلاعات"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:197
+#: src/Pmpr/Cover/Filefox/Page/Front.php:174
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:186
 msgid "Type"
 msgstr "نوع"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:199
+#: src/Pmpr/Cover/Filefox/Page/Front.php:176
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:188
 msgid "Files Count"
 msgstr "تعداد فایل‌ها"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:200
+#: src/Pmpr/Cover/Filefox/Page/Front.php:177
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:189
 msgid "Articles Count"
 msgstr "تعداد مقالات"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:201
+#: src/Pmpr/Cover/Filefox/Page/Front.php:178
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:190
 msgid "Free Files Count"
 msgstr "تعداد فایل‌های رایگان"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:202
+#: src/Pmpr/Cover/Filefox/Page/Front.php:179
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:191
 msgid "Customers Count"
 msgstr "تعداد مشتریان"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:214
+#: src/Pmpr/Cover/Filefox/Page/Front.php:191
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:203
 msgid "Value"
 msgstr "مقدار"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:215
+#: src/Pmpr/Cover/Filefox/Page/Front.php:192
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:204
 msgid "Leave empty if you want use dynamic value."
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:225
+#: src/Pmpr/Cover/Filefox/Page/Front.php:198
+#: src/Pmpr/Cover/Filefox/Page/Front.php:350
 #, fuzzy
-#| msgid "Comments"
-msgid "Comments Title"
+#| msgid "Team"
+msgid "Teams"
+msgstr "تیم"
+
+#: src/Pmpr/Cover/Filefox/Page/Front.php:207
+#, fuzzy
+#| msgid "View All"
+msgid "View All Files"
+msgstr "مشاهده همه"
+
+#: src/Pmpr/Cover/Filefox/Page/Front.php:212
+#: src/Pmpr/Cover/Filefox/Page/Front.php:220
+#: src/Pmpr/Cover/Filefox/Page/Front.php:447
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:210
+msgid "Comments"
 msgstr "دیدگاه‌‌ها"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:229
-#, fuzzy
-#| msgid "Short Description"
-msgid "Comments Description"
-msgstr "شرح کوتاه"
+#: src/Pmpr/Cover/Filefox/Page/Front.php:226
+msgid "Blog Posts"
+msgstr "نوشته‌های وبلاگ"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:233
+#: src/Pmpr/Cover/Filefox/Page/Front.php:234
 #, fuzzy
-#| msgid "Product"
-msgid "Products"
-msgstr "محصول"
+#| msgid "Action Text"
+msgid "Archive Link Action Text"
+msgstr "متن اکشن"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:234
-msgid "Choose the products whose reviews you want to show."
+#: src/Pmpr/Cover/Filefox/Page/Front.php:239
+msgid "Each Post Link Action Text"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:238
-#, fuzzy
-#| msgid "Customers Count"
-msgid "Comments Count"
-msgstr "تعداد مشتریان"
-
-#: src/Pmpr/Cover/Filefox/Page/Material.php:246
-msgid "FAQ"
-msgstr "سوالات متداول"
-
-#: src/Pmpr/Cover/Filefox/Page/Material.php:254
-msgid "Categories"
-msgstr "دسته‌بندی‌ها"
-
-#: src/Pmpr/Cover/Filefox/Page/Material.php:259
-msgid "Each Category Items Count"
+#: src/Pmpr/Cover/Filefox/Page/Front.php:240
+msgid "Study"
 msgstr ""
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:265
-#, fuzzy
-#| msgid "Articles"
-msgid "Recent Articles"
-msgstr "مقالات"
-
-#: src/Pmpr/Cover/Filefox/Page/Material.php:273
-#, fuzzy
-#| msgid "Call to Actions"
-msgid "Call to Action Text"
-msgstr "کال تو اکشن‌ها"
-
-#: src/Pmpr/Cover/Filefox/Page/Material.php:306
+#: src/Pmpr/Cover/Filefox/Page/Front.php:270
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:295
 #, fuzzy
 #| msgid "%s Section"
 msgid "Hero Section"
 msgstr "بخش‌ %s"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:324
+#: src/Pmpr/Cover/Filefox/Page/Front.php:422
+#, php-format
+msgid "Bestseller %s"
+msgstr "%s پرفروش"
+
+#: src/Pmpr/Cover/Filefox/Page/Front.php:449
+#: src/Pmpr/Cover/Filefox/Setting.php:323
+msgid "Filefox User"
+msgstr "کاربر فایل فاکس"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/About.php:17
+msgid "About"
+msgstr "درباره ما"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Contact.php:17
+msgid "Contact"
+msgstr ""
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:89
+msgid "Call to Actions"
+msgstr "کال تو اکشن‌ها"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:113
+msgid "Product Cats"
+msgstr "دسته‌بندی‌های محصول"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:122
+msgid "If you leave it empty, all available product cats will be shown."
+msgstr ""
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:125
+msgid "Product Cat"
+msgstr "دسته‌بندی محصول"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:130
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:152
+#: src/Pmpr/Cover/Filefox/Setting.php:215
+#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:38
+msgid "Image"
+msgstr "تصویر"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:131
+msgid "Leave empty if you want use the product cat image."
+msgstr ""
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:137
+msgid "Why Us?"
+msgstr "چرا ما؟"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:162
+msgid "Trust Signal"
+msgstr "سیگنال اعتماد"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:166
+msgid "Manager"
+msgstr "مدیر"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:170
+msgid "Alert Text"
+msgstr "متن هشدار"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:174
+msgid "Alert Icon"
+msgstr "آیکون هشدار"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:214
+#, fuzzy
+#| msgid "Comments"
+msgid "Comments Title"
+msgstr "دیدگاه‌‌ها"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:218
+#, fuzzy
+#| msgid "Short Description"
+msgid "Comments Description"
+msgstr "شرح کوتاه"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:222
+#, fuzzy
+#| msgid "Product"
+msgid "Products"
+msgstr "محصول"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:223
+msgid "Choose the products whose reviews you want to show."
+msgstr ""
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:227
+#, fuzzy
+#| msgid "Customers Count"
+msgid "Comments Count"
+msgstr "تعداد مشتریان"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:235
+msgid "FAQ"
+msgstr "سوالات متداول"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:243
+msgid "Categories"
+msgstr "دسته‌بندی‌ها"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:248
+msgid "Each Category Items Count"
+msgstr ""
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:254
+#, fuzzy
+#| msgid "Articles"
+msgid "Recent Articles"
+msgstr "مقالات"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:262
+#, fuzzy
+#| msgid "Call to Actions"
+msgid "Call to Action Text"
+msgstr "کال تو اکشن‌ها"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:313
 #, fuzzy
 #| msgid "%s Section"
 msgid "Product Cats Section"
 msgstr "بخش‌ %s"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:352
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:341
 #, fuzzy
 #| msgid "%s Section"
 msgid "Why Us Section"
 msgstr "بخش‌ %s"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:367
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:356
 #, fuzzy
 #| msgid "%s Section"
 msgid "Team Section"
 msgstr "بخش‌ %s"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:408
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:389
 msgid "More Details"
 msgstr "جزئیات بیشتر"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:510
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:491
 #, php-format
 msgid "Purchase Date: %s"
 msgstr "تاریخ خرید: %s"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:547
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:528
 #, fuzzy
 #| msgid "Disable Section"
 msgid "Articles Section"
 msgstr "غیر فعال کردن بخش"
 
-#: src/Pmpr/Cover/Filefox/Page/Material.php:571
+#: src/Pmpr/Cover/Filefox/Page/Material/Home.php:552
 #, fuzzy
 #| msgid "%s Section"
 msgid "FAQ Section"
 msgstr "بخش‌ %s"
 
-#: src/Pmpr/Cover/Filefox/Search.php:103
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:17
+msgid "Shop"
+msgstr ""
+
+#: src/Pmpr/Cover/Filefox/Search.php:109
 msgid "Enter a keyword..."
 msgstr "یک کلمه کلیدی وارد کنید..."
 
@@ -669,7 +710,7 @@ msgid "Cover Setting"
 msgstr "تنظیمات کاور"
 
 #: src/Pmpr/Cover/Filefox/Setting.php:95 src/Pmpr/Cover/Filefox/Setting.php:106
-#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:31
+#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:59
 msgid "General"
 msgstr "عمومی"
 
@@ -837,40 +878,58 @@ msgid "has so far edited and published %s specialized contents on %s."
 msgstr "تاکنون %s محتوای تخصصی در %s تنظیم و منتشر نموده‌ است."
 
 #: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:25
+msgid "Image Position"
+msgstr "موقعیت تصویر"
+
+#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:26
+msgid "Left"
+msgstr "چپ"
+
+#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:27
+msgid "Right"
+msgstr "راست"
+
+#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:53
 #, php-format
 msgid "%s Section"
 msgstr "بخش‌ %s"
 
-#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:26
+#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:54
 #, php-format
 msgid "Configure %s Section"
 msgstr "پیکربندی بخش %s"
 
-#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:35
+#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:63
 msgid "Disable Section"
 msgstr "غیر فعال کردن بخش"
 
-#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:39
+#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:67
 #, fuzzy
 #| msgid "Section Title"
 msgid "Section Start Shape"
 msgstr "عنوان بخش"
 
-#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:44
+#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:72
 msgid "Section Background"
 msgstr "پس زمینه بخش"
 
-#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:49
+#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:77
 #, fuzzy
 #| msgid "Section Title"
 msgid "Section End Shape"
 msgstr "عنوان بخش"
 
-#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:54
+#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:82
 msgid "Section Title"
 msgstr "عنوان بخش"
 
-#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:58
+#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:86
+#, fuzzy
+#| msgid "Section Title"
+msgid "Section Subtitle"
+msgstr "عنوان بخش"
+
+#: src/Pmpr/Cover/Filefox/Traits/PageTrait.php:90
 msgid "Section Description"
 msgstr "شرح بخش"
 
@@ -1048,6 +1107,44 @@ msgstr "خلاصه سفارش"
 msgid "Price"
 msgstr "قیمت"
 
+#, php-format
+#~ msgid "%s Recommended Ones"
+#~ msgstr "%s پیشنهادی"
+
+#, php-format
+#~ msgid "%s Freebies"
+#~ msgstr "%s رایگان"
+
+#, fuzzy
+#~| msgid "Action Text"
+#~ msgid "Shop Action Text"
+#~ msgstr "متن اکشن"
+
+#, fuzzy
+#~| msgid "Disable Section"
+#~ msgid "Articles Action Text"
+#~ msgstr "غیر فعال کردن بخش"
+
+#, fuzzy
+#~| msgid "View All Published Articles"
+#~ msgid "View All Articles"
+#~ msgstr "مشاهده همه مقالات منتشر شده"
+
+#~ msgid "ago"
+#~ msgstr "پیش"
+
+#~ msgid "Disable Menu"
+#~ msgstr "غیر فعال کردن منو"
+
+#~ msgid "Background"
+#~ msgstr "پس زمینه"
+
+#~ msgid "Material Items"
+#~ msgstr "آیتم‌های ماهیت"
+
+#~ msgid "Singular Name"
+#~ msgstr "نام منفرد"
+
 #~ msgid "Reputation of Professional Activities"
 #~ msgstr "اعتبار فعالیت‌های حرفه‌ای"
 
@@ -1062,9 +1159,6 @@ msgstr "قیمت"
 #, php-format
 #~ msgid "%s purchased this product on %s."
 #~ msgstr "%s این محصول را در تاریخ %s خریده است."
-
-#~ msgid "Team"
-#~ msgstr "تیم"
 
 #, fuzzy
 #~| msgid "%s Section"
@@ -1094,9 +1188,6 @@ msgstr "قیمت"
 
 #~ msgid "Versions"
 #~ msgstr "نسخه‌ها"
-
-#~ msgid "Recommended Version"
-#~ msgstr "نسخه پیشنهادی"
 
 #~ msgid "visit today"
 #~ msgstr "باز"
@@ -1163,9 +1254,6 @@ msgstr "قیمت"
 
 #~ msgid "Rate"
 #~ msgstr "امتیاز"
-
-#~ msgid "About"
-#~ msgstr "درباره ما"
 
 #~ msgid "Download %s"
 #~ msgstr "دانلود %s"

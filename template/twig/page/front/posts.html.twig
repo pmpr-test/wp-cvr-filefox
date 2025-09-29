@@ -1,28 +1,61 @@
 <div class="container">
-    <div class="row">
-        {% if title is not empty %}
-            <div class="col-12 mb-3 d-flex justify-content-between">
-                <h2 class="my-auto">{{ title|raw }}</h2>
-                {% include get_cover_template('common/action') with {
-                    action_text: action_text,
-                    action_icon: action_icon,
-                    action_link: action_link,
-                    has_icon: 1,
-                    as_outline: 1,
-                    main_color: 'white',
-                    hover_color: 'primary',
-                } %}
-            </div>
-        {% endif %}
-        {% for post in posts %}
-            <div class="col-12 col-md-6 col-xl-3 d-flex mb-4">
+    <div {{ pr_add_animation({class: 'row mb-4'}, {effect: 'fade-up', distance: '100px', duration: 1000, delay: 0}) }}>
+        <div class="col-12 col-md-8 col-lg-6 mb-4 mb-md-0">
+            {% include get_cover_template('common/header/section') with {
+                heading_attrs: {class: 'display-6 fw-bold'},
+                description_attrs: {class: 'fs-md'},
+            } %}
+        </div>
+        <div class="col-12 col-md-4 col-lg-6 d-flex justify-content-center justify-content-md-end">
+            {% include get_cover_template('common/action') with {
+                action_text: action_text,
+                action_icon: action_icon,
+                action_link: action_link,
+                has_icon: 1,
+                icon_end: 1,
+                main_action: 1,
+                action_attrs: {class: 'my-auto'}
+            } %}
+        </div>
+    </div>
+    <div {{ pr_add_animation({class: ''}, {effect: 'fade-up', distance: '150px', duration: 1000, delay: 100}) }}>
+        {% embed get_cover_template('common/carousel/index') with {
+            carousels: posts,
+            swiper_class: 'mb-4',
+            breakpoints: {'': 1, md: 2, lg: 3, xxl: 4},
+            wrapper_class: 'mxh-500px',
+            carousel_config: {
+                loop: false,
+                speed: 1500,
+                autoplay: false,
+                equalHeight: true,
+                spaceBetween: 20,
+                centeredSlides: false,
+                navigation: false,
+                pagination: true,
+            }
+        } %}
+
+            {% block carousel %}
                 {% include get_cover_template('common/block/post') with {
-                    post: post,
-                    loop: loop,
-                    version: 'batch'
+                    post: carousel,
+                    version: 'default'
                 } %}
-            </div>
-        {% endfor %}
+            {% endblock %}
+
+            {% block after_last_slide %}
+                <div class="card position-relative shadow-sm h-100 w-100">
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        {{ render_icon(view_all_icon, {class: 'icon-3x p-2 icon-primary mx-auto mb-2 rounded-circle border border-primary'}) }}
+                        <a class="stretched-link fs-md mx-auto" href="{{ action_link|esc_attr }}"
+                           aria-label="{{ action_text|esc_attr }}">
+                            {{ action_text|raw }}
+                        </a>
+                    </div>
+                </div>
+            {% endblock %}
+
+        {% endembed %}
     </div>
 </div>
 

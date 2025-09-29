@@ -1,0 +1,26 @@
+<div class="stack-info position-relative">
+    <div class="d-flex mb-3">
+        {% if icon is not empty %}
+            <img src="{{ icon|esc_url }}" alt="account avatar"
+                 class="rounded-2 border border-2 ms-2" width="48" height="48"/>
+        {% endif %}
+        <div class="my-auto">
+            {{ render_if_has_content('a', {class: 'stack-title line-limit-1 stretched-link', href: link}, title) }}
+            {{ render_if_has_content('span', {class: 'stack-description line-limit-1'}, description) }}
+        </div>
+    </div>
+    <div class="d-flex justify-content-between">
+        <div>
+            <div class="stack-subtitle">REPUTATION</div>
+            <strong class="stack-reputation">{{ reputation|raw }}</strong>
+        </div>
+        <div>
+            <div class="stack-subtitle">BADGES</div>
+            <div class="d-flex flex-row-reverse">
+                {% for name, value in badges %}
+                    <span class="stack-badge badge-{{ name|esc_attr }}{% if not loop.last %} me-1{% endif %}">{{ value|raw }}</span>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

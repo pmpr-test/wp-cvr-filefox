@@ -1,0 +1,13 @@
+{% set header_attrs = header_attrs|default({})|add('class', 'lp-section-header lh-base mb-3')  %}
+<header {{ header_attrs|parse_attrs|raw }}>
+    {% block before_heading %}{% endblock %}
+    {% set subtitle_attrs = subtitle_attrs|default({})|add('class', 'lp-section-subtitle')  %}
+    {{ render_if_has_content('span', subtitle_attrs, subtitle) }}
+    {% set heading_attrs = heading_attrs|default({})|add('class', 'lp-section-title mb-4')  %}
+    {{ render_if_has_content(heading_tag|default('h2'), heading_attrs, title) }}
+    {% set description_attrs = description_attrs|default({})|add('class', 'lp-section-description no-margin')  %}
+    {{ render_if_has_content('div', description_attrs, wpautop(description)) }}
+    {% block after_heading %}{% endblock %}
+</header>
+
+

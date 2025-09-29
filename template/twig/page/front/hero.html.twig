@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row g-lg-5 mb-6">
+        {% set is_image_left = image_position is same as ('left') %}
+        <div class="col-12 col-lg-7 order-1{% if not is_image_left %} order-lg-3{% endif %} mb-4 my-lg-auto">
+            <div {{ pr_add_animation({class: 'mb-5'}, {effect: 'fade-' ~ (is_image_left ? 'left' : 'right'), distance: '100px', duration: 1000, delay: 0}) }}>
+                {% include get_cover_template('common/header/section') with {
+                    heading_tag: 'h1',
+                    heading_attrs: {'class': 'display-5 fw-bold'},
+                    description_attrs: {'class': 'fs-md'},
+                } %}
+                {{ get_search_form()|raw }}
+            </div>
+        </div>
+        <div class="col-12 col-lg-5 order-2 my-auto">
+            <figure {{ pr_add_animation({class: 'm-0'}, {effect: 'fade-' ~ (is_image_left ? 'right' : 'left'), distance: '100px', duration: 1000, delay: 0}) }}>
+                {{ wp_get_attachment_image(image, [600, 600], {class: 'img-fluid'})|raw }}
+            </figure>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        {% for feature in features %}
+            <div class="{{ prepare_columns(loop, {'': 12, 'md': 6, 'lg': 4}, 4) }}">
+                <div {{ pr_add_animation({class: 'card shadow-sm'}, {effect: 'fade-up', distance: '150px', duration: 1000, delay: (loop.index * 100) + 200}) }}>
+                    <div class="card-body p-4 lh-base d-flex flex-row fs-md-column flex-lg-row">
+                        <div class="rounded-3 mb-md-4 mb-lg-0 p-3 bg-{{ feature.color|esc_attr }}-light icon-{{ feature.color|esc_attr }}">
+                            {{ render_icon(feature.icon, {class: 'icon-4x mx-auto mx-md-0' }) }}
+                        </div>
+                        <div class="my-auto text-start text-md-center text-lg-start ms-3">
+                            <h2 class="fs-lg fs-md-xl mb-3">{{ feature.title|raw }}</h2>
+                            {{ render_if_has_content('div', {class: 'fs-sm'}, feature.description) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

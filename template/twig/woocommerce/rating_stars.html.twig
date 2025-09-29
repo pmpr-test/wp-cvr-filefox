@@ -6,7 +6,7 @@
         {% elseif rate < index and (rate + 1) > index %}
             {% set icon = icons['half'] %}
         {% else %}
-            {% set color = 'gray-400' %}
+            {% set color = 'gray-600' %}
             {% set icon = icons['full'] %}
         {% endif %}
         {% set classes = 'icon-xxl icon-' ~ color %}

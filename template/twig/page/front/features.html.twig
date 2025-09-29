@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        {% set is_image_left = image_position is same as ('left') %}
+        <div class="col-12 col-xl-8 order-1{% if not is_image_left %} order-lg-3{% endif %}">
+            <div {{ pr_add_animation({class: ''}, {effect: 'fade-' ~ (is_image_left ? 'left' : 'right'), distance: '100px', duration: 1000, delay: 0}) }}>
+                {% include get_cover_template('common/header/section') with {
+                    heading_tag: 'h2',
+                    heading_attrs: {'class': 'display-6 fw-bold'},
+                    description_attrs: {'class': 'fs-md'},
+                } %}
+
+                <div class="row justify-content-center mt-5">
+                    {% for feature in features %}
+                        <div class="{{ prepare_columns(loop, {'': 12, 'md': 6}, 4) }}">
+                            <div {{ pr_add_animation({class: 'd-flex'}, {effect: 'fade-up', distance: '200px', duration: 1000, delay: (loop.index * 100) + 200}) }}>
+                                {% if feature.image is not empty %}
+                                    {{ wp_get_attachment_image(feature.image, [150, 150], {class: 'img-fluid me-4'})|raw }}
+                                {% else %}
+                                    {{ render_icon(feature.icon, {class: 'icon-primary icon-4x mx-auto me-4'}) }}
+                                {% endif %}
+                                <div class="my-auto">
+                                    <h3 class="fs-md mb-3">{{ feature.title|raw }}</h3>
+                                    <div class="fs-sm no-margin line-limit line-limit-3">{{ wpautop(feature.description)|raw }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-4 order-2 my-auto d-none d-xl-block">
+            <figure {{ pr_add_animation({class: 'm-0'}, {effect: 'fade-' ~ (is_image_left ? 'right' : 'left'), distance: '100px', duration: 1000, delay: 0}) }}>
+                {{ wp_get_attachment_image(image, [450, 450], {class: 'img-fluid d-block mx-auto'})|raw }}
+            </figure>
+        </div>
+    </div>
+</div>

@@ -2,7 +2,7 @@
     <div class="row pb-5 mb-4">
         {% set is_image_left = image_position is same as ('left') %}
         <div class="col-12 col-md-7 order-1{% if not is_image_left %} order-md-3{% endif %} mb-4 my-md-auto">
-            <header {{ pr_add_animation({class: ''}, {effect: 'fade-' ~ (is_image_left ? 'left' : 'right'), distance: '100px', duration: 1000, delay: 0}) }}>
+            <header {{ pr_add_animation({}, {effect: 'fade-' ~ (is_image_left ? 'left' : 'right'), distance: '100px', duration: 1000, delay: 0}) }}>
                 <h1 class="display-5 lh-base fw-bold mb-4">{{ title|raw }}</h1>
                 {{ render_if_has_content('div', {class: 'lh-base fs-md fs-md-lg'}, wpautop(description)) }}
             </header>

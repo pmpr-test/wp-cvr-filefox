@@ -25,6 +25,11 @@
 
 {% if as_button|default(1) %}
     {% set action_attrs = action_attrs|add('class', 'btn') %}
+    {% if main_action|default(0) %}
+        {% set main_color = 'primary' %}
+        {% set hover_color = 'white' %}
+        {% set action_attrs = action_attrs|add('class', 'btn-lg') %}
+    {% endif %}
 {% endif %}
 
 {% if as_outline|default(0) %}

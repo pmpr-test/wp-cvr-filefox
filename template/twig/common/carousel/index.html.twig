@@ -4,6 +4,7 @@
 
     {% set carousel_config = carousel_config|default({}) %}
 
+    {% set carousel_config = pmpr_apply_filters('swiper_configuration', carousel_config, _context) %}
     <div class="swiper-container position-relative {{ container_class|raw }}">
         <div class="swiper{% if dont_hide %} dont-hide{% endif %} {{ swiper_class|raw }}"
                 {% if carousel_config is defined %} data-carousel="{{ carousel_config|json_encode }}"{% endif %}
@@ -11,9 +12,19 @@
             {% block before_slides %}{% endblock %}
             <div class="swiper-wrapper {{ wrapper_class|esc_attr }}">
                 {% for key, carousel in carousels %}
+                    {% if loop.first and block('before_first_slide') is not empty %}
+                        <div class="swiper-slide {{ slide_class|raw }}">
+                            {% block before_first_slide %}{% endblock %}
+                        </div>
+                    {% endif %}
                     <div class="swiper-slide {{ slide_class|raw }}">
                         {% block carousel %}{% endblock %}
                     </div>
+                    {% if loop.last and block('after_last_slide') is not empty %}
+                        <div class="swiper-slide {{ slide_class|raw }}">
+                            {% block after_last_slide %}{% endblock %}
+                        </div>
+                    {% endif %}
                 {% endfor %}
             </div>
             {% block after_slides %}{% endblock %}

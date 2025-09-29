@@ -18,7 +18,7 @@
     <ul class="list-group list-group-horizontal overflow-auto custom-scrollbar p-0">
         {% for attribute in attributes %}
             <li class="list-group-item d-flex flex-column p-2 text-nowrap bg-gray-200 border-0 rounded my-0{% if not loop.last %} me-2{% endif %}">
-                <span class="text-gray-600 fs-xs mb-1">{{ attribute.label|raw }}:</span>
+                <span class="text-gray-700 fs-xs mb-1">{{ attribute.label|raw }}:</span>
                 <strong class="text-gray-700 fs-14">{{ attribute.value|raw }}</strong>
             </li>
         {% endfor %}

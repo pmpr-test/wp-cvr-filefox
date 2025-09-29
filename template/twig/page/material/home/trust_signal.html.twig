@@ -37,33 +37,7 @@
                     {% if manager.stack_accounts is not empty %}
                         {% for stack_account in manager.stack_accounts %}
                             {% if stack_account.reputation is not empty %}
-                                <a class="d-flex direction-ltr text-end justify-content-between text-gray-800"
-                                   rel="nofollow noopener noreferrer" target="_blank"
-                                   href="{{ stack_account.link|esc_url }}">
-                                    <div class="d-grid gap-2">
-                                        <div class="display-6 fw-bold text-start">
-                                            {{ stack_account.reputation|raw }}
-                                        </div>
-                                        <div class="d-flex lh-1">
-                                            {% for name, value in stack_account.badges %}
-                                                <span class="fs-md me-4">
-                                            <span class="me-1">{{ value|raw }}</span>
-                                            <span class="dot {{ name|esc_attr }}"></span>
-                                        </span>
-                                            {% endfor %}
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex">
-                                        <div class="my-auto">
-                                            <strong class="fs-md d-block mb-1">{{ stack_account.title|raw }}</strong>
-                                            <span class="fs-1">{{ stack_account.description|raw }}</span>
-                                        </div>
-                                        <img src="{{ stack_account.icon|esc_url }}" alt="account avatar"
-                                             class="rounded-xxl ms-3 border border-2" width="70" height="70"/>
-                                    </div>
-                                </a>
-                                <div class="border border-dashed my-3"></div>
+                                {% include get_cover_template('common/stack_account') with stack_account %}
                             {% endif %}
                         {% endfor %}
                     {% endif %}
@@ -121,7 +95,7 @@
                             loop: true,
                             speed: 800,
                             autoplay: {
-                                delay: 80000
+                                delay: 10000
                             },
                             slidesPerView: 1,
                             navigation: true,
@@ -176,9 +150,6 @@
         {% endif %}
     </div>
 
-    {#    <div {{ pr_add_animation({class: 'card shadow'}, {effect: 'fade-in', distance: '150px', duration: 1000, delay: 700}) }}> #}
-    {#        <div class="card-body p-4"> #}
-    {#            <div class="row justify-content-center"> #}
     <div class="row justify-content-center">
         {% for feature in features %}
             <div class="{{ prepare_columns(loop, {'': 12, 'sm': 6, 'md': 4, 'lg': 3}, 4) }} text-center">
@@ -194,6 +165,4 @@
             </div>
         {% endfor %}
     </div>
-    {#        </div> #}
-    {#    </div> #}
 </div>

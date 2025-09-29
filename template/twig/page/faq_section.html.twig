@@ -1,29 +1,25 @@
 <div class="container">
-    <div class="row justify-content-center mb-5">
-        <div class="col-12 col-lg-10">
-            <header {{ pr_add_animation({class: 'lh-base text-center'}, {effect: 'fade-down', distance: '100px', duration: 1000}) }}>
-                <h2 class="h1 fw-bold mb-4">{{ title|raw }}</h2>
-                {{ render_if_has_content('div', {class: 'fs-md'}, wpautop(description)) }}
-            </header>
+    <div {{ pr_add_animation({class: 'row mb-4'}, {effect: 'fade-up', distance: '100px', duration: 1000, delay: 0}) }}>
+        <div class="col-12 col-md-8 col-lg-6 mb-4 mb-md-0">
+            {% include get_cover_template('common/header/section') with {
+                heading_attrs: {class: 'display-6 fw-bold'},
+                description_attrs: {class: 'fs-md'},
+            } %}
         </div>
     </div>
-    <div {{ pr_add_animation({class: 'row'}, {effect: 'fade-up', distance: '200px', duration: 1000}) }}>
+    <div {{ pr_add_animation({class: 'row nav-custom'}, {effect: 'fade-up', distance: '200px', duration: 1000, delay: 200}) }}>
         <div class="col-12 col-lg-4 mb-4 mb-lg-0">
-            <div class="card border shadow-sm bg-gray-200">
-                <div class="card-body">
-                    <nav class="nav nav-pills flex-column" id="faq_tabs">
-                        {% for id, category in categories %}
-                            <button class="text-start fs-md fw-bold d-flex nav-link p-4{% if loop.first %} active{% endif %}"
-                                    id="cat_{{ id|esc_attr }}_tab" data-bs-toggle="pill"
-                                    data-bs-target="#cat_{{ id|esc_attr }}" type="button" role="tab"
-                                    aria-controls="cat_{{ id|esc_attr }}" aria-selected="true">
-                                {{ render_icon(category.icon, {class: 'icon-xxl icon-primary me-3'}) }}
-                                {{ category.title|raw }}
-                            </button>
-                        {% endfor %}
-                    </nav>
-                </div>
-            </div>
+            <nav class="nav" id="faq_tabs">
+                {% for id, category in categories %}
+                    <button class="shadow-sm fw-bold d-flex nav-link{% if loop.first %} active{% endif %}"
+                            id="cat_{{ id|esc_attr }}_tab" data-bs-toggle="pill"
+                            data-bs-target="#cat_{{ id|esc_attr }}" type="button" role="tab"
+                            aria-controls="cat_{{ id|esc_attr }}" aria-selected="true">
+                        {{ render_icon(category.icon, {class: 'icon-xxl icon-primary me-3'}) }}
+                        <h3 class="my-auto">{{ category.title|raw }}</h3>
+                    </button>
+                {% endfor %}
+            </nav>
         </div>
         <div class="col-12 col-lg-8">
             <div class="tab-content" id="faq_tab_contents">

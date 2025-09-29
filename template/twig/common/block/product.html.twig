@@ -11,7 +11,7 @@
                     image_attr: {class: 'img-fluid w-100 rounded-top-md'}
                 } %}
             </div>
-            <div class="col d-flex flex-column d-flex flex-column">
+            <div class="col d-flex flex-column">
                 <div class="card-body d-flex flex-column flex-grow-1">
                     {{ pmpr_do_action('render_post_taxonomies', post, {
                         attrs: {class: 'fs-xs line-limit-1'},
@@ -42,7 +42,74 @@
             </div>
         </div>
     {% elseif version is same as ('single') %}
+        <div class="row gx-0">
+            <div class="col-12 col-lg-4">
+                {{ get_the_post_thumbnail(post, 'medium', {class: 'w-100 img-fluid rounded-top rounded-top-lg-0 rounded-start-lg'})|raw }}
+            </div>
+            <div class="col-12 col-lg-8">
+                <div class="card-body h-100">
+                    {{ pmpr_do_action('render_post_taxonomies', post) }}
+                    <a href="{{ permalink|esc_attr }}" class="stretched-link">
+                        <{{ heading_element }} class="h3 mb-3 lh-base line-limit-2">
+                        {{ render_post_data('title', post)|raw }}
+                    </{{ heading_element }}>
+                    </a>
+                    <div class="d-flex flex-column justify-content-between">
+                        {{ render_if_has_content('div', {class: 'fs-sm mb-3', 'data-limit': 3}, render_post_data('excerpt', post, {check: 0})) }}
+                        {% set metadata = pmpr_apply_filters('metadata_get_items', {}, {
+                            post: post,
+                            include: ['publish', 'study_time', 'traffic', 'comments']
+                        }) %}
+                        {{ pmpr_do_action('render_post_metadata', metadata, {
+                            has_icon: 0,
+                            key_value: 0,
+                            text_color: 'gray-600',
+                            has_divider: 1,
+                            divider_space: 2,
+                            divider_color: 'gray-300',
+                            version: 3
+                        }) }}
+                    </div>
+                </div>
+            </div>
+        </div>
     {% else %}
+        {% include get_cover_template('common/post/thumbnail') with {
+            post: post,
+            image_size: 'medium',
+            figure_class: 'fit-image mb-0',
+            image_attr: {class: 'img-fluid w-100 rounded-top-md'}
+        } %}
+        <div class="d-flex flex-column">
+            <div class="card-body d-flex flex-column flex-grow-1">
+                {{ pmpr_do_action('render_post_taxonomies', post, {
+                    attrs: {class: 'fs-xs line-limit-1'},
+                    show_material_in_mobile: 0
+                }) }}
+                <a class="text-gray-800" href="{{ permalink|esc_attr }}"
+                   title="{{ render_post_data('title', post)|esc_attr }}">
+                    <h2 class="fs-16 fs-md-18 mb-2 mb-md-3 line-limit-1 line-limit-md-2 lh-base">{{ render_post_data('title', post)|raw }}</h2>
+                </a>
+                {{ render_if_has_content('div', {class: 'fs-xs fs-md-14 mb-2 mb-md-3 text-gray-700 line-limit-1 line-limit-md-3'}, render_post_data('excerpt', post)) }}
+                {% set metadata = pmpr_apply_filters('metadata_get_items', {}, {
+                    post: post,
+                    include: ['traffic']
+                }) %}
+                {{ pmpr_do_action('render_post_metadata', metadata, {
+                    has_icon: 1,
+                    icon_size: 'sm',
+                    key_value: 0,
+                    text_color: 'gray-600',
+                    item_class: 'fs-xs',
+                    has_divider: 1,
+                    divider_space: 2,
+                    divider_color: 'gray-300',
+                    wrapper_class: 'mt-auto',
+                    version: 3
+                }) }}
+            </div>
+        </div>
+
     {% endif %}
 </article>
 
