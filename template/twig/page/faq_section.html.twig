@@ -32,17 +32,16 @@
                         <div class="accordion accordion-flush" id="faq_accordion">
                             {% for item_id, item in category.items %}
                                 <div class="accordion-item border">
-                                    <h3 class="accordion-header" id="faq_item_{{ item_id|esc_attr }}_q">
+                                    <h3 class="accordion-header" id="faq_item_{{ id|esc_attr }}_{{ item_id|esc_attr }}_q">
                                         <button class="accordion-button collapsed fs-sm fs-md-md fw-bold p-4"
-                                                type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#faq_item_{{ item_id|esc_attr }}_a"
-                                                aria-expanded="false"
-                                                aria-controls="faq_item_{{ item_id|esc_attr }}_a">
+                                                type="button" data-bs-toggle="collapse" aria-expanded="false"
+                                                data-bs-target="#faq_item_{{ id|esc_attr }}_{{ item_id|esc_attr }}_a"
+                                                aria-controls="faq_item_{{ id|esc_attr }}_{{ item_id|esc_attr }}_a">
                                             {{ item.question|raw }}
                                         </button>
                                     </h3>
-                                    <div id="faq_item_{{ item_id|esc_attr }}_a" class="accordion-collapse collapse"
-                                         aria-labelledby="faq_item_{{ item_id|esc_attr }}_q"
+                                    <div id="faq_item_{{ id|esc_attr }}_{{ item_id|esc_attr }}_a" class="accordion-collapse collapse"
+                                         aria-labelledby="faq_item_{{ id|esc_attr }}_{{ item_id|esc_attr }}_q"
                                          data-bs-parent="#faq_tab_contents">
                                         <div class="accordion-body fs-sm fs-md-md no-margin text-gray-800 py-4 bg-gray-100">{{ wpautop(item.response)|raw }}</div>
                                     </div>
