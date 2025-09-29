@@ -18,7 +18,7 @@
                         data-bs-target="#material_{{ id|esc_attr }}" type="button" role="tab"
                         aria-controls="material_{{ id|esc_attr }}" aria-selected="true">
                     {{ render_icon(material.icon, {class: 'icon-xxl icon-default me-3'}) }}
-                    <h3 class="my-auto">{{ material.material_title|raw }}</h3>
+                    <span class="h3 my-auto">{{ material.material_title|raw }}</span>
                 </button>
             {% endfor %}
         </nav>

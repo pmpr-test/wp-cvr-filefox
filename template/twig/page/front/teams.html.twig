@@ -130,7 +130,7 @@
                                 <div class="card-body">
                                     {{ render_if_has_content('strong', {class: 'my-auto fs-md d-block mb-4'}, carousel.list_title) }}
                                     {% for product_id, product in carousel.products %}
-                                        <article class="d-flex position-relative">
+                                        <div class="d-flex position-relative">
                                             {{ product.image|raw }}
                                             <div class="d-grid flex-grow-1 gap-1 ms-3">
                                                 <a href="{{ product.permalink|esc_attr }}"
@@ -159,7 +159,7 @@
                                             <div class="price ms-3">
                                                 {{ product.price_html|raw }}
                                             </div>
-                                        </article>
+                                        </div>
                                         {% if not loop.last %}
                                             <hr class="border border-gray-400 my-2"/>
                                         {% endif %}

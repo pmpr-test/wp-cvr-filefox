@@ -17,7 +17,7 @@
                             data-bs-target="#cat_{{ id|esc_attr }}" type="button" role="tab"
                             aria-controls="cat_{{ id|esc_attr }}" aria-selected="true">
                         {{ render_icon(category.icon, {class: 'icon-xxl icon-primary me-3'}) }}
-                        <h3 class="my-auto">{{ category.title|raw }}</h3>
+                        <span class="h3 my-auto">{{ category.title|raw }}</span>
                     </button>
                 {% endfor %}
             </nav>
@@ -29,7 +29,7 @@
                          id="cat_{{ id|esc_attr }}" role="tabpanel"
                          aria-labelledby="cat_{{ id|esc_attr }}_tab">
 
-                        <div class="accordion accordion-flush" id="faq_accordion">
+                        <div class="accordion accordion-flush" id="faq_{{ id|esc_attr }}_accordion">
                             {% for item_id, item in category.items %}
                                 <div class="accordion-item border">
                                     <h3 class="accordion-header" id="faq_item_{{ id|esc_attr }}_{{ item_id|esc_attr }}_q">
