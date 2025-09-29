@@ -2,6 +2,7 @@
     <div {{ pr_add_animation({class: 'row mb-4'}, {effect: 'fade-up', distance: '100px', duration: 1000, delay: 0}) }}>
         <div class="col-12 col-md-8 col-lg-6 mb-4 mb-md-0">
             {% include get_cover_template('common/header/section') with {
+                header_attrs: {class: 'text-center'},
                 heading_attrs: {class: 'display-6 fw-bold'},
                 description_attrs: {class: 'fs-md'},
             } %}

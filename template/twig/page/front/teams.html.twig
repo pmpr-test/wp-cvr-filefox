@@ -77,7 +77,7 @@
                                                 wraper_class: 'justify-content-center justify-content-lg-start',
                                                 font_size_class: 'fs-1 fs-md-sm',
                                             } %}
-                                            {{ render_if_has_content('div', {class: 'mt-2 fs-1 fs-md-sm'}, carousel.education_info)|raw }}
+                                            {{ render_if_has_content('div', {class: 'mt-2 fs-1 fs-md-sm text-gray-700'}, carousel.education_info)|raw }}
                                         </div>
                                     </div>
                                 {% endif %}
@@ -126,7 +126,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-5">
-                            <div class="bg-gray-100 rounded-lg-end">
+                            <div class="bg-gray-100 h-100 rounded-lg-end">
                                 <div class="card-body">
                                     {{ render_if_has_content('strong', {class: 'my-auto fs-md d-block mb-4'}, carousel.list_title) }}
                                     {% for product_id, product in carousel.products %}
