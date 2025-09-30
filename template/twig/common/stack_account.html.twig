@@ -5,7 +5,10 @@
                  class="rounded-2 border border-2 ms-2" width="48" height="48"/>
         {% endif %}
         <div class="my-auto">
-            {{ render_if_has_content('a', {class: 'stack-title line-limit-1 stretched-link', href: link}, title) }}
+            {{ render_if_has_content('a', {
+                class: 'stack-title line-limit-1 stretched-link',
+                href: link, target: '_blank', rel: 'nofollow noreferrer noopener'
+            }, title) }}
             {{ render_if_has_content('span', {class: 'stack-description line-limit-1'}, description) }}
         </div>
     </div>
