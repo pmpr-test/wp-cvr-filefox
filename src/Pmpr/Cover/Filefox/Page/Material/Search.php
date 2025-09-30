@@ -1,7 +1,7 @@
 <?php
 /*   _______________________________________
     |  Obfuscated by PMPR - Php Obfuscator  |
-    |             68dbbe397f9fb             |
+    |             68dbbf184fd87             |
     |_______________________________________|
 */
  namespace Pmpr\Cover\Filefox\Page\Material; use Pmpr\Common\Foundation\Frontend\TaxonomyEndPoint; use Pmpr\Common\Foundation\Interfaces\Constants; class Search extends TaxonomyEndPoint { public function qiccuiwooiquycsg() { $this->ykuiyscecakwkmui(Constants::oeeqisiiqoswqqmy)->gecckeoacskeskii(__('Search', PR__CVR__FILEFOX)); parent::qiccuiwooiquycsg(); } public function wigskegsqequoeks() { $this->qcsmikeggeemccuu('template_redirect', [$this, 'uwocymugwigymuww']); parent::wigskegsqequoeks(); } public function uwocymugwigymuww() { $eiicaiwgqkgsekce = $this->caokeucsksukesyo()->giiecckwoyiawoyy(); $mumyimcwkaemyyue = $this->uwkmaywceaaaigwo()->owicscwgeuqcqaig(); $ccamueccusigaaio = $eiicaiwgqkgsekce->gkwaaeusmsaywikg(Constants::mgsccwumkcawaqcy); if ($ccamueccusigaaio && $mumyimcwkaemyyue->gouusicsisumuiei()) { $aoskwucuugeuaeus = $this->caokeucsksukesyo()->kckogqkiycqeumoa(); $iwewcwusemqaiggk = $aoskwucuugeuaeus->get($ccamueccusigaaio); if ($iwewcwusemqaiggk && Constants::oeeqisiiqoswqqmy === $aoskwucuugeuaeus->yyoeeseewqmmyaee($iwewcwusemqaiggk)) { $gowwokmucauqoeko = $mumyimcwkaemyyue->yqymaqmqiqmmmsoo(['s' => $eiicaiwgqkgsekce->gkwaaeusmsaywikg('s', '', true)], untrailingslashit($aoskwucuugeuaeus->qmgcisuuikgmqcsu($iwewcwusemqaiggk)) . '/search/'); $this->uwkmaywceaaaigwo()->giiecckwoyiawoyy()->gwqgmkqcgwwmweom($gowwokmucauqoeko); exit; } } } }
