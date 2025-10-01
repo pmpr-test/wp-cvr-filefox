@@ -3,12 +3,12 @@
 {% block inside_container %}
     <div class="row">
         {% block before_main %}{% endblock %}
-        <main id="main" class="col-12 col-lg-{{ main_share|default(9) }} mb-3 mb-lg-0 order-2">
+        <main id="main" class="col-12 col-lg-{{ main_share|default(9) - 1 }} col-xl-{{ main_share|default(9) }} mb-3 mb-lg-0 order-{{ main_order|default(2) }}">
             {% block main %}{% endblock %}
         </main>
         {% block after_main %}{% endblock %}
         {% block before_sidebar %}{% endblock %}
-        <aside id="sidebar" class="col-12 col-lg-{{ sidebar_share|default(3) }} mt-0 mb-3 mb-lg-0 order-3">
+        <aside id="sidebar" class="col-12 col-lg-{{ sidebar_share|default(3) + 1 }} col-xl-{{ sidebar_share|default(3) }} mt-0 mb-3 mb-lg-0 order-{{ sidebar_order|default(3) }}">
             <h2 class="visually-hidden">Sidebar</h2>
             {% block sidebar %}{% endblock %}
         </aside>
