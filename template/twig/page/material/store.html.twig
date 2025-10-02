@@ -46,7 +46,7 @@
         </div>
     </div>
     {% if products is not empty %}
-        <div class="row">
+        <div class="row{% if pagination is not empty %} mb-4{% endif %}">
             {% for product_id, product in products %}
                 <article class="{{ prepare_columns(loop, {'': 12, 'md': 6, 'xl': 4}, 4) }} d-flex block-responsive">
                     <div class="card shadow-sm rounded-2 flex-grow-1 position-relative">
@@ -89,6 +89,9 @@
                 </article>
             {% endfor %}
         </div>
+        {% include get_cover_template('common/archive/pagination') with {
+            pagination_args: pagination_args
+        } %}
     {% else %}
         <div class="empty-message d-flex flex-column justify-content-center align-items-center mt-5 mt-lg-10">
             {{ render_icon(empty_icon, {class: 'icon-4x p-3 icon-primary rounded-circle bg-gray-400 mb-3'}) }}
