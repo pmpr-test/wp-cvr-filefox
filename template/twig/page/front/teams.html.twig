@@ -16,15 +16,14 @@
         {% embed get_cover_template('common/carousel/index') with {
             carousels: teams,
             pagination_class: 'pt-3',
-            swiper_class: 'overflow-visible',
+            swiper_class: 'p-2',
             carousel_config: {
-                loop: false,
+                loop: true,
                 shuffle: true,
                 autoplay: {
-                    delay: 100000
+                    delay: 5000
                 },
                 speed: 1500,
-                effect: 'fade',
                 spaceBetween: 20,
                 navigation: false,
                 pagination: true,

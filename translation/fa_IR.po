@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Filefox Cover\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2025-10-02 03:52+0330\n"
+"POT-Creation-Date: 2025-10-02 10:58+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: pmpr.dev <pmpr.dev@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -28,7 +28,7 @@ msgid "Filefox"
 msgstr "فایل فاکس"
 
 #: src/Pmpr/Cover/Filefox/Ajax.php:66
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:226
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:262
 msgid "No results found!"
 msgstr "هیچ نتیجه ای یافت نشد!"
 
@@ -297,6 +297,7 @@ msgid "Type something"
 msgstr "چیزی بنویسید"
 
 #: src/Pmpr/Cover/Filefox/Header.php:115
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:118
 #, php-format
 msgid "Like %s"
 msgstr "مثلا %s"
@@ -548,6 +549,7 @@ msgstr "سوالات متداول"
 
 #: src/Pmpr/Cover/Filefox/Page/Front.php:264
 #: src/Pmpr/Cover/Filefox/Page/Material/Home.php:242
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:103
 msgid "Categories"
 msgstr "دسته‌بندی‌ها"
 
@@ -721,67 +723,83 @@ msgstr "بخش مقالات"
 msgid "Shop"
 msgstr "فروشگاه"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:75
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:77
 msgid "Sort:"
 msgstr "مرتب‌سازی:"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:86
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:88
 msgid "Filter"
 msgstr "فیلتر"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:87
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:89
 msgid "Filters"
 msgstr "فیلترها"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:102
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:105
 msgid "All Categories"
 msgstr "همه دسته‌بندی‌ها"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:112
-#: src/Pmpr/Cover/Filefox/Search.php:129
-msgid "Enter a keyword..."
-msgstr "یک کلمه کلیدی وارد کنید..."
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:116
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:126
+msgid "Product name"
+msgstr "نام محصول"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:174
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:128
+msgid "Clear Search"
+msgstr "حذف جستجو"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:142
+msgid "Product Category"
+msgstr "دسته‌بندی محصول"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:144
+msgid "Clear Category"
+msgstr "حذف دسته"
+
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:210
 #, php-format
 msgid "%s File"
 msgstr "%s فایل"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:203
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:239
 msgid "Show Results"
 msgstr "نمایش نتایج"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:209
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:245
 msgid "Clear Filter"
 msgstr "حذف فیلتر"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:227
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:263
 msgid "Try again or use other filters"
 msgstr "دوباره تلاش کنید یا از فیلتر های دیگر استفاده کنید"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:306
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:342
 msgid "Best Selling"
 msgstr "پرفروش‌ترین"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:307
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:343
 msgid "Relevance"
 msgstr "مرتبط‌ترین"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:308
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:344
 msgid "Most Viewed"
 msgstr "پربازدیدترین"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:309
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:345
 msgid "Newest"
 msgstr "جدیدترین"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:310
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:346
 msgid "Price: Low to High"
 msgstr "ارزان‌ترین"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:311
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:347
 msgid "Price: High to Low"
 msgstr "گران‌ترین"
+
+#: src/Pmpr/Cover/Filefox/Search.php:129
+msgid "Enter a keyword..."
+msgstr "یک کلمه کلیدی وارد کنید..."
 
 #: src/Pmpr/Cover/Filefox/Setting.php:84
 msgid "Cover Setting"
