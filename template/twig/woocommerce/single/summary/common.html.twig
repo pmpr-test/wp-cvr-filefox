@@ -16,17 +16,19 @@
                 </header>
                 <div class="col-xl-8 border-top">
 
-                    <address class="rounded my-3 p-3 bg-gray-200 ribbon-wrapper">
+                    <address class="rounded my-3 p-3 bg-gray-200 pr-ribbon-wrapper">
                         <div class="d-flex mb-2">
                             {{ get_avatar(author, 80, {class: 'img-fluid rounded-circle my-auto me-3 d-block'})|raw }}
                             <div class="my-auto">
-                                <cite class="my-auto d-block fs-16 fw-bold font-normal mb-2">{{ render_user_data('display_name', author)|raw }}</cite>
-                                {{ render_if_has_content('div', {class: 'text-gray-700 fs-14 mb-1'}, render_user_data('caption', author)) }}
-                                {{ render_if_has_content('div', {class: 'text-gray-700 fs-14'}, pmpr_apply_filters('get_user_educational_info', '', author)) }}
+                                <cite class="my-auto d-block fs-md fw-bold font-normal mb-2">{{ render_user_data('display_name', author)|raw }}</cite>
+                                {{ render_if_has_content('div', {class: 'text-gray-700 fs-xs mb-1'}, render_user_data('caption', author)) }}
+                                {{ render_if_has_content('div', {class: 'text-gray-700 fs-xs'}, pmpr_apply_filters('get_user_educational_info', '', author)) }}
                             </div>
                         </div>
                         {{ render_if_has_content('div', {class: 'fs-16 lh-lg line-limit-2'}, author_description) }}
-                        <span class="ribbon ribbon-folded ribbon-top ribbon-end ribbon-gray">{{ provided_by|raw }}</span>
+                        {{ render_if_has_content('span', {class: 'pr-ribbon ribbon-gray ribbon-folded folded-top ribbon-end end-rounded lh-base fs-xs'}, provided_by) }}
+
+{#                        <span class="ribbon ribbon-folded ribbon-top ribbon-end ribbon-primary">{{ provided_by|raw }}</span>#}
                     </address>
 
                     {{ pmpr_do_action('render_product_attributes', {
