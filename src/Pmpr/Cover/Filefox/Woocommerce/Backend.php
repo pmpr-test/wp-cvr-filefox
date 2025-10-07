@@ -1,7 +1,7 @@
 <?php
 /*   _______________________________________
     |  Obfuscated by PMPR - Php Obfuscator  |
-    |             68e598c84128e             |
+    |             68e5a4f86e76d             |
     |_______________________________________|
 */
  namespace Pmpr\Cover\Filefox\Woocommerce; use Pmpr\Common\Foundation\Interfaces\Constants; class Backend extends Common { public function wigskegsqequoeks() { $this->qcsmikeggeemccuu('admin_init', [$this, 'yeyiguyegmmyusea']); } public function yeyiguyegmmyusea() { $uuyucgkyusckoaeq = $this->caokeucsksukesyo()->wmkogisswkckmeua(); $uuyucgkyusckoaeq->scyscgskcwukckyy('material_megamenu_fields')->mkksewyosgeumwsa($uuyucgkyusckoaeq->ymuegqgyuagyucws(Constants::mmieaueggwwaokig)->gswweykyogmsyawy(__('Plural Name', PR__CVR__FILEFOX)))->auoaeeuwaqswggqg('material')->register(); } }

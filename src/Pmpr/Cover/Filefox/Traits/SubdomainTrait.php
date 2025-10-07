@@ -1,7 +1,7 @@
 <?php
 /*   _______________________________________
     |  Obfuscated by PMPR - Php Obfuscator  |
-    |             68e598c84128e             |
+    |             68e5a4f86e76d             |
     |_______________________________________|
 */
  namespace Pmpr\Cover\Filefox\Traits; use Pmpr\Common\Foundation\Interfaces\Constants; trait SubdomainTrait { public function aycessgueogkawag() { $mksyucucyswaukig = $this->ocksiywmkyaqseou('url_structure_get_subdomain_object', null); return $mksyucucyswaukig && Constants::oeeqisiiqoswqqmy === $this->caokeucsksukesyo()->kckogqkiycqeumoa()->yyoeeseewqmmyaee($mksyucucyswaukig) ? $mksyucucyswaukig : null; } }

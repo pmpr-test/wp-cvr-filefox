@@ -116,7 +116,7 @@
             {% if post_list.posts is not empty %}
                 <div class="{% if loop.index is even %}bg-gray-200{% else %}bg-light{% endif %}">
                     <div class="container py-5">
-                        <div class="d-flex justify-content-between mb-3">
+                        <div class="d-flex justify-content-between mb-4">
                             <h2 class="my-auto">{{ post_list.title|raw }}</h2>
                             {% if post_list.action_link is not empty %}
                                 {% include get_cover_template('common/action') with {
@@ -124,23 +124,52 @@
                                     action_icon: post_list.action_icon,
                                     action_link: post_list.action_link,
                                     has_icon: 1,
+                                    icon_end: 1,
                                     as_outline: 1,
                                     main_color: 'white',
                                     hover_color: 'primary',
                                 } %}
                             {% endif %}
                         </div>
-                        <div class="row">
-                            {% for post_id, post in post_list.posts %}
-                                <div class="{{ prepare_columns(loop, {'': 12, 'md': 6, 'lg': 3}, 4) }} d-flex">
-                                    {% include get_cover_template('common/block/' ~ post_list.type|default('index')) with {
-                                        loop: loop,
-                                        post: post_id,
-                                        version: 'responsive',
-                                    } %}
+
+                        {% embed get_cover_template('common/carousel/index') with {
+                            carousels: post_list.posts,
+                            swiper_class: 'mb-4',
+                            breakpoints: {'': 1, md: 2, lg: 3, xxl: 4},
+                            wrapper_class: 'mxh-500px',
+                            carousel_config: {
+                                loop: false,
+                                speed: 1500,
+                                autoplay: false,
+                                equalHeight: true,
+                                spaceBetween: 20,
+                                centeredSlides: false,
+                                navigation: false,
+                                pagination: true,
+                            }
+                        } %}
+
+                            {% block carousel %}
+                                {% include get_cover_template('common/block/' ~ post_list.type|default('index')) with {
+                                    loop: loop,
+                                    post: carousel,
+                                    version: 'responsive',
+                                } %}
+                            {% endblock %}
+
+                            {% block after_last_slide %}
+                                <div class="card position-relative shadow-sm h-100 w-100">
+                                    <div class="card-body d-flex flex-column justify-content-center">
+                                        {{ render_icon(post_list.view_all_icon, {class: 'icon-3x p-2 icon-primary mx-auto mb-2 rounded-circle border border-primary'}) }}
+                                        <a class="stretched-link fs-md mx-auto" href="{{ post_list.action_link|esc_attr }}"
+                                           aria-label="{{ post_list.action_text|esc_attr }}">
+                                            {{ post_list.action_text|raw }}
+                                        </a>
+                                    </div>
                                 </div>
-                            {% endfor %}
-                        </div>
+                            {% endblock %}
+
+                        {% endembed %}
                     </div>
                 </div>
             {% endif %}
