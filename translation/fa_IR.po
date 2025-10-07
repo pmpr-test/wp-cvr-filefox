@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Filefox Cover\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2025-10-02 10:58+0330\n"
+"POT-Creation-Date: 2025-10-04 11:51+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: pmpr.dev <pmpr.dev@gmail.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -28,7 +28,7 @@ msgid "Filefox"
 msgstr "فایل فاکس"
 
 #: src/Pmpr/Cover/Filefox/Ajax.php:66
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:262
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:269
 msgid "No results found!"
 msgstr "هیچ نتیجه ای یافت نشد!"
 
@@ -293,6 +293,7 @@ msgid "Store"
 msgstr "فروشگاه"
 
 #: src/Pmpr/Cover/Filefox/Header.php:113
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:116
 msgid "Type something"
 msgstr "چیزی بنویسید"
 
@@ -739,61 +740,60 @@ msgstr "فیلترها"
 msgid "All Categories"
 msgstr "همه دسته‌بندی‌ها"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:116
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:126
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:127
 msgid "Product name"
 msgstr "نام محصول"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:128
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:129
 msgid "Clear Search"
 msgstr "حذف جستجو"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:142
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:146
 msgid "Product Category"
 msgstr "دسته‌بندی محصول"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:144
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:148
 msgid "Clear Category"
 msgstr "حذف دسته"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:210
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:217
 #, php-format
 msgid "%s File"
 msgstr "%s فایل"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:239
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:246
 msgid "Show Results"
 msgstr "نمایش نتایج"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:245
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:252
 msgid "Clear Filter"
 msgstr "حذف فیلتر"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:263
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:270
 msgid "Try again or use other filters"
 msgstr "دوباره تلاش کنید یا از فیلتر های دیگر استفاده کنید"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:342
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:349
 msgid "Best Selling"
 msgstr "پرفروش‌ترین"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:343
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:350
 msgid "Relevance"
 msgstr "مرتبط‌ترین"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:344
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:351
 msgid "Most Viewed"
 msgstr "پربازدیدترین"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:345
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:352
 msgid "Newest"
 msgstr "جدیدترین"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:346
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:353
 msgid "Price: Low to High"
 msgstr "ارزان‌ترین"
 
-#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:347
+#: src/Pmpr/Cover/Filefox/Page/Material/Store.php:354
 msgid "Price: High to Low"
 msgstr "گران‌ترین"
 

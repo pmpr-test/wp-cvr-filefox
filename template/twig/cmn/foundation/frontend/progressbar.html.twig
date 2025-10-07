@@ -1,6 +1,6 @@
-<div {{ attributes|parse_attrs|raw }}>
+<div {{ attrs|parse_attrs|raw }}>
     <div class="pr-progress-bar">
         <div class="pr-progress-text"></div>
     </div>
-    {{ render_if_has_content('div', {class: 'pr-progress-label'}, label) }}
+    {{ render_if_has_content('div', {class: 'pr-progress-label mt-3'}, label) }}
 </div>

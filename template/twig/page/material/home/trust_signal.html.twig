@@ -59,7 +59,7 @@
     <div class="row my-8">
         {% for stat in stats %}
             <div class="{{ prepare_columns(loop, {'': 6, 'lg': 3}, 4) }}">
-                <div {{ pr_add_animation({class: 'd-flex justify-content-center stat-item countup py-4'}, {effect: 'fade-up', distance: '100px', duration: 800, delay: (loop.index * 100) + 200}) }}>
+                <div {{ pr_add_animation({class: 'd-flex justify-content-center stat-item countup py-4 position-relative'}, {effect: 'fade-up', distance: '100px', duration: 800, delay: (loop.index * 100) + 200}) }}>
                     {{ render_icon(stat.icon, {class: 'icon-5x icon-primary my-auto me-4'}) }}
                     <div class="d-grid gap-2">
                         <div class="display-5 fw-bold text-primary"

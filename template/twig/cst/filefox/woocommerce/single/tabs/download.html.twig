@@ -1,0 +1,56 @@
+{% if downloads is not empty %}
+    <section class="list product-children">
+        <h2 class="section-title mb-4">{{ title|raw }}</h2>
+        {% if downloads is not empty %}
+            <ul class="list-group list-group-flush">
+                {% for download in downloads %}
+                    <li class="list-group-item p-0 mb-2">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <article class="row">
+                                    <div class="col-12 col-md-9 col-xl-10 mb-3 mb-md-0">
+                                        <div class="d-flex">
+                                            <img
+                                                    src="{{ download.thumbnail|raw }}"
+                                                    alt="File Format {{ download.format }}"
+                                                    width="85" height="85" class="my-auto"
+                                            >
+                                            <div class="ms-2 lh-base">
+                                                <h3 class="mb-2">{{ download.title|raw }}</h3>
+                                                {{ render_if_has_content('div', {class: 'fs-sm'}, download.description) }}
+                                                <div class="d-flex mt-3">
+                                                    {% for name, item in download.metadata %}
+                                                        <div class="d-flex">
+                                                            {{ render_icon(item.icon, {class: 'icon-lg icon-gray my-auto'}) }}
+                                                            <span class="d-block ms-2 my-auto">{{ item.text|raw }}</span>
+                                                        </div>
+                                                        {% if not loop.last %}
+                                                            <div data-divider="horizontal" class="bg-gray-300 mx-2"></div>                                                        {% endif %}
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-3 col-xl-2">
+                                        {% include get_cover_template('common/action') with {
+                                            action_text: download_text,
+                                            action_icon: download_icon,
+                                            action_link: download.action_link,
+                                            icon_end: 1,
+                                            has_icon: 1,
+                                            as_outline: 1,
+                                            main_color: 'white',
+                                            hover_color: 'primary',
+                                        } %}
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+
+        {% endif %}
+    </section>
+{% endif %}

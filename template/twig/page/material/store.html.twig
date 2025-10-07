@@ -1,114 +1,114 @@
-{% set main_order = 4 %}
-{% set main_share = 9 %}
-{% set sidebar_share = 3 %}
-
-{% extends get_cover_template('sidebar/single') %}
+{% extends get_cover_template('container') %}
 
 {% block inside_container %}
-    <div class="mb-4 mb-lg-5 mt-0 mt-lg-5">
-        {{ parent() }}
-    </div>
-{% endblock %}
-
-{% block main %}
-    <div class="card aside-filter store-sort bg-gray-100 shadow-sm mb-lg-3 d-none d-lg-block" id="store_sort">
-        <div class="card-body d-flex justify-content-between">
-            <div class="d-flex flex-column flex-lg-row flex-grow-1">
-                <div class="d-flex justify-content-between mb-2 mb-lg-0 me-lg-3">
-                    <div class="d-flex">
-                        {{ render_icon(sort_icon, {class: 'icon-xxl icon-dark my-auto d-none d-lg-block'}) }}
-                        <strong class="fs-md fs-md-sm ms-lg-2 my-auto">{{ sort_label|raw }}</strong>
-                    </div>
-                    {{ render_icon('fasm/6/set/xmark', {class: 'icon-xxl icon-dark close-filter my-auto as-link ms-3 bg-gray-200 rounded d-flex d-lg-none'}) }}
+    <main id="main" class="row mb-4 mb-lg-5 mt-0 mt-lg-4">
+        <header class="lh-base mb-3 mb-lg-4">
+            <h1 class="fs-md fs-md-lg">{{ page_title|raw }}</h1>
+            {{ render_if_has_content('div', {class: 'no-margin d-none d-lg-block'}, wpautop(page_description)) }}
+        </header>
+        <aside id="sidebar" class="col-lg-4 col-xl-3">
+            <div class="d-flex justify-content-between d-lg-none mb-3">
+                <div class="d-flex position-relative rounded-3 shadow-sm border p-2 as-link filter-toggle{% if filter_effects > 0 %} filter-active{% else %} bg-white{% endif %}"
+                     data-target="#store_filters">
+                    {{ render_icon(filter_icon, {class: 'icon-md icon-dark my-auto'}) }}
+                    <span class="ms-2 my-auto">{{ filter_label|raw }}</span>
+                    {% if filter_effects > 0 %}
+                        <span class="filter-active-count d-block d-md-none position-absolute">{{ filter_effects|number|raw }}</span>
+                    {% endif %}
                 </div>
-                <ul class="list-group list-group-flush list-group-horizontal-md my-auto">
-                    {% for key, title in sort_options %}
-                        <li class="list-group-item sort-item border-lg-0 px-0 py-lg-0 mx-lg-2 as-link fs-sm{% if sort_by is same as (key) %} fw-bold text-primary{% else %} text-gray-700{% endif %}"
-                            data-value="{{ key|esc_attr }}">{{ title|raw }}</li>
-                    {% endfor %}
-                </ul>
+                <div class="d-flex rounded-3 shadow-sm border p-2 as-link filter-toggle{% if sort_by is empty %} bg-white{% else %} filter-active{% endif %}"
+                     data-target="#store_sort">
+                    {{ render_icon(sort_icon, {class: 'icon-md icon-dark my-auto'}) }}
+                    <span class="ms-2 my-auto">{{ mobile_sort_label|raw }}</span>
+                </div>
             </div>
-            <div class="text-gray-600 my-auto d-none d-lg-block">{{ product_count_text|raw }}</div>
-        </div>
-    </div>
-    <div class="filter-overlay close-filter" data-target="#store_sort"></div>
-    <div class="d-flex justify-content-between d-lg-none mb-3">
-        <div class="d-flex position-relative rounded-3 shadow-sm border p-2 as-link filter-toggle{% if filter_effects > 0 %} filter-active{% else %} bg-white{% endif %}" data-target="#store_filters">
-            {{ render_icon(filter_icon, {class: 'icon-md icon-dark my-auto'}) }}
-            <span class="ms-2 my-auto">{{ filter_label|raw }}</span>
-            {% if filter_effects > 0 %}
-                <span class="filter-active-count d-block d-md-none position-absolute">{{ filter_effects|number|raw }}</span>
-            {% endif %}
-        </div>
-        <div class="d-flex rounded-3 shadow-sm border p-2 as-link filter-toggle{% if sort_by is empty %} bg-white{% else %} filter-active{% endif %}" data-target="#store_sort">
-            {{ render_icon(sort_icon, {class: 'icon-md icon-dark my-auto'}) }}
-            <span class="ms-2 my-auto">{{ mobile_sort_label|raw }}</span>
-        </div>
-    </div>
-    {% if products is not empty %}
-        <div class="row{% if pagination is not empty %} mb-4{% endif %}">
-            {% for product_id, product in products %}
-                <article class="{{ prepare_columns(loop, {'': 12, 'md': 6, 'xl': 4}, 4) }} d-flex block-responsive">
-                    <div class="card shadow-sm rounded-2 flex-grow-1 position-relative">
-                        <div class="card-body">
-                            <div class="row gx-0 h-100">
-                                <div class="col-3 col-lg-12 my-auto mb-lg-3 mt-lg-0">
-                                    <figure class="rounded-2 overflow-hidden my-auto mxh-200px">
-                                        {{ product.thumbnail|raw }}
-                                    </figure>
-                                </div>
-                                <div class="col-9 col-lg-12">
-                                    <div class="ms-3 ms-lg-0 d-flex flex-column h-100">
-                                        <a href="{{ product.permalink|esc_attr }}"
-                                           class="gray-primary ignore-bg stretched-link d-block mb-3">
-                                            <h2 class="line-limit-2 lh-base fs-sm m-0">{{ product.title|raw }}</h2>
-                                        </a>
-                                        <div class="d-flex justify-content-between mt-auto">
-                                            {% if product.metadata is not empty %}
-                                                <ul class="list-group list-group-flush list-group-horizontal-lg mt-auto">
-                                                    {% for meta_id, meta in product.metadata %}
-                                                        {% set isScore = meta_id == 'score' %}
-                                                        <li class="list-group-item d-flex border-0 p-0{% if not loop.last %} mb-2 mb-lg-0 me-3{% endif %}">
-                                                            <div class="fw-bold fs-sm fs-lg-md me-2 mb-0 mt-auto">{{ meta.value|raw }}</div>
-                                                            {{ render_icon(meta.icon, {class: 'icon-lg icon-' ~ (isScore ? 'warning' : '')}, 0, {
-                                                                set: isScore ? 'solid' : 'default'
-                                                            }) }}
-                                                        </li>
-                                                    {% endfor %}
-                                                </ul>
-                                            {% endif %}
-                                            <div class="price mt-auto ms-auto">
-                                                {{ product.price_html|raw }}
+            <div class="card bg-gray-100 shadow-sm aside-filter store-filter d-none d-lg-block" id="store_filters">
+                <div class="card-body h-100 overflow-hidden d-flex flex-column justify-content-between">
+                    <div class="d-flex d-lg-none justify-content-between mb-3">
+                        <div class="my-auto fs-md fw-bold">{{ filters_label|raw }}</div>
+                        {{ render_icon('fasm/6/set/xmark', {class: 'icon-xxl icon-dark close-filter my-auto as-link ms-3 bg-gray-200 rounded'}) }}
+                    </div>
+                    {{ filter_fields|raw }}
+                </div>
+            </div>
+        </aside>
+        <div class="col-lg-8 col-xl-9">
+            <div class="card aside-filter store-sort bg-gray-100 shadow-sm mb-lg-3 d-none d-lg-block" id="store_sort">
+                <div class="card-body d-flex justify-content-between">
+                    <div class="d-flex flex-column flex-lg-row flex-grow-1">
+                        <div class="d-flex justify-content-between mb-2 mb-lg-0 me-lg-3">
+                            <div class="d-flex">
+                                {{ render_icon(sort_icon, {class: 'icon-xxl icon-dark my-auto d-none d-lg-block'}) }}
+                                <strong class="fs-md fs-md-sm ms-lg-2 my-auto">{{ sort_label|raw }}</strong>
+                            </div>
+                            {{ render_icon('fasm/6/set/xmark', {class: 'icon-xxl icon-dark close-filter my-auto as-link ms-3 bg-gray-200 rounded d-flex d-lg-none'}) }}
+                        </div>
+                        <ul class="list-group list-group-flush list-group-horizontal-md my-auto">
+                            {% for key, title in sort_options %}
+                                <li class="list-group-item sort-item border-lg-0 px-0 py-lg-0 mx-lg-2 as-link fs-sm{% if sort_by is same as (key) %} fw-bold text-primary{% else %} text-gray-700{% endif %}"
+                                    data-value="{{ key|esc_attr }}">{{ title|raw }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="text-gray-600 my-auto d-none d-lg-block">{{ product_count_text|raw }}</div>
+                </div>
+            </div>
+            <div class="filter-overlay close-filter" data-target="#store_sort"></div>
+            {% if products is not empty %}
+                <section class="row{% if pagination is not empty %} mb-4{% endif %}">
+                    {% for product_id, product in products %}
+                        <article
+                                class="{{ prepare_columns(loop, {'': 12, 'md': 6, 'xl': 4}, 4) }} d-flex block-responsive">
+                            <div class="card shadow-sm rounded-2 flex-grow-1 position-relative">
+                                <div class="card-body">
+                                    <div class="row gx-0 h-100">
+                                        <div class="col-3 col-lg-12 my-auto mb-lg-3 mt-lg-0">
+                                            <figure class="rounded-2 overflow-hidden my-auto mxh-200px">
+                                                {{ product.thumbnail|raw }}
+                                            </figure>
+                                        </div>
+                                        <div class="col-9 col-lg-12">
+                                            <div class="ms-3 ms-lg-0 d-flex flex-column h-100">
+                                                <a href="{{ product.permalink|esc_attr }}"
+                                                   class="gray-primary ignore-bg stretched-link d-block mb-3">
+                                                    <h2 class="line-limit-2 lh-base fs-sm m-0">{{ product.title|raw }}</h2>
+                                                </a>
+                                                <div class="d-flex justify-content-between mt-auto">
+                                                    {% if product.metadata is not empty %}
+                                                        <ul class="list-group list-group-flush list-group-horizontal-lg mt-auto">
+                                                            {% for meta_id, meta in product.metadata %}
+                                                                {% set isScore = meta_id == 'score' %}
+                                                                <li class="list-group-item d-flex border-0 p-0{% if not loop.last %} mb-2 mb-lg-0 me-3{% endif %}">
+                                                                    <div class="fw-bold fs-sm fs-lg-md me-2 mb-0 mt-auto">{{ meta.value|raw }}</div>
+                                                                    {{ render_icon(meta.icon, {class: 'icon-lg icon-' ~ (isScore ? 'warning' : '')}, 0, {
+                                                                        set: isScore ? 'solid' : 'default'
+                                                                    }) }}
+                                                                </li>
+                                                            {% endfor %}
+                                                        </ul>
+                                                    {% endif %}
+                                                    <div class="price mt-auto ms-auto">
+                                                        {{ product.price_html|raw }}
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </article>
-            {% endfor %}
+                        </article>
+                    {% endfor %}
+                </section>
+                {% include get_cover_template('common/archive/pagination') with {
+                    pagination_args: pagination_args
+                } %}
+            {% else %}
+                <div class="empty-message d-flex flex-column justify-content-center align-items-center mt-5 mt-lg-10">
+                    {{ render_icon(empty_icon, {class: 'icon-4x p-3 icon-primary rounded-circle bg-gray-400 mb-3'}) }}
+                    <strong class="h2 mb-2">{{ empty_title|raw }}</strong>
+                    <div class="fs-sm">{{ empty_text|raw }}</div>
+                </div>
+            {% endif %}
         </div>
-        {% include get_cover_template('common/archive/pagination') with {
-            pagination_args: pagination_args
-        } %}
-    {% else %}
-        <div class="empty-message d-flex flex-column justify-content-center align-items-center mt-5 mt-lg-10">
-            {{ render_icon(empty_icon, {class: 'icon-4x p-3 icon-primary rounded-circle bg-gray-400 mb-3'}) }}
-            <strong class="h2 mb-2">{{ empty_title|raw }}</strong>
-            <div class="fs-sm">{{ empty_text|raw }}</div>
-        </div>
-    {% endif %}
-{% endblock %}
-
-{% block sidebar %}
-    <div class="card bg-gray-100 shadow-sm aside-filter store-filter d-none d-lg-block" id="store_filters">
-        <div class="card-body h-100 overflow-hidden d-flex flex-column justify-content-between">
-            <div class="d-flex d-lg-none justify-content-between mb-3">
-                <div class="my-auto fs-md fw-bold">{{ filters_label|raw }}</div>
-                {{ render_icon('fasm/6/set/xmark', {class: 'icon-xxl icon-dark close-filter my-auto as-link ms-3 bg-gray-200 rounded'}) }}
-            </div>
-            {{ filter_fields|raw }}
-        </div>
-    </div>
+    </main>
 {% endblock %}

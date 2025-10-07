@@ -1,9 +1,8 @@
 {% extends get_cover_template('sidebar/dual') %}
 
-{% block main %}
+{% block main_content %}
     <div class="my-5">
-        {% if alert is defined
-            and alert is not empty %}
+        {% if alert is defined and alert is not empty %}
 
             {{ render_alert(alert) }}
         {% else %}
@@ -15,13 +14,17 @@
             } %}
 
             <div id="message_wrapper" class="my-3 text-center"></div>
-            <div class="card download-card position-relative">
+            <div class="card shadow-sm download-card position-relative">
                 {% if wait_enabled %}
                     <div class="start-download text-center position-absolute top-50 start-50 translate-middle">
                         {{ render_if_has_content('div', {class: 'fs-6 mb-3'}, start_message) }}
                         <button role="button" class="start-download btn btn-primary btn-lg">{{ start_button|raw }}</button>
                     </div>
-                    <div class="progressbar-wrapper position-absolute top-50 start-50 translate-middle pr-invisible">{{ progressbar|raw }}</div>
+                    <div class="position-absolute top-50 start-50 translate-middle">
+                        <div class="progressbar-wrapper pr-invisible my-auto">
+                            {{ progressbar|raw }}
+                        </div>
+                    </div>
                 {% endif %}
 
                 <div class="card-body downloads p-5 text-center pr-invisible">
