@@ -3,7 +3,7 @@
 {% if author_metadata is not empty %}
     <div class="d-flex flex-column{% if inline %} flex-sm-row{% endif%} lh-base {{ wraper_class|esc_attr }}">
         {% for author_meta in author_metadata %}
-            <span class="text-{{ text_color|default('gray-700') }}{% if not inline and not loop.last %} mb-2{% endif %}{% if font_size_class is empty %} fs-xs fs-md-sm{% else %} {{ font_size_class|esc_attr }}{% endif %}">{{ render_user_data(author_meta, author)|raw }}</span>
+            <span class="text-{{ text_color|default('gray-700') }}{% if not inline and not loop.last %} mb-2{% elseif not loop.last %} mb-1 mb-sm-0{% endif %}{% if font_size_class is empty %} fs-xs fs-md-sm{% else %} {{ font_size_class|esc_attr }}{% endif %}">{{ render_user_data(author_meta, author)|raw }}</span>
             {% if not loop.last and inline %}
                 <div data-divider="horizontal" class="bg-gray-500 d-none d-sm-block mx-2"></div>
             {% endif %}

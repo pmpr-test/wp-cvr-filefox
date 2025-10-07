@@ -7,7 +7,7 @@
 {% if features is not empty %}
     <div class="features row g-0 bg-white rounded p-4 mb-5">
         {% for feature in features %}
-            <div class="d-flex {{ prepare_columns(loop, {'': 12, sm: 6, xl: 3}, 4) }}">
+            <div class="{{ prepare_columns(loop, {'': 12, sm: 6, xl: 3}, 4) }} d-flex">
                 <div class="bg-gray-200 rounded p-2 p-sm-3">
                     {{ render_icon(feature.icon, {class: 'icon-primary icon-xl icon-sm-3x'}) }}
                 </div>
