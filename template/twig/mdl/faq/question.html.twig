@@ -1,0 +1,15 @@
+<div class="card border">
+    <h2 class="card-header my-0 d-flex" id="question-{{ question.id|esc_attr }}">
+        <button class="btn btn-block rotate-180 collapsed text-left font-weight-bold fs-xs fs-md-sm" type="button" data-toggle="collapse"
+                data-target="#response-{{ question.id|esc_attr }}" aria-expanded="true"
+                aria-controls="response-{{ question.id|esc_attr }}">
+            {{ question.question|raw }}
+        </button>
+        {{ render_icon('fasm/6/set/angle-up', {class: 'my-auto'}) }}
+    </h2>
+    <div id="response-{{ question.id|esc_attr }}" class="collapse" aria-labelledby="question-{{ question.id|esc_attr }}"
+         data-parent="#faq_list">
+        <div class="card-body text-gray-3 fs-xs fs-md-sm">{{ question.response|raw }}</div>
+    </div>
+</div>
+

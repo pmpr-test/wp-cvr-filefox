@@ -1,0 +1,11 @@
+{% extends get_cover_template('container') %}
+{% block inside_container %}
+    <main>
+        {% include get_cover_template('common/header/index') with {
+            has_container: 0
+        } %}
+        <div class="accordion my-6" id="faq_list">
+            {{ list|raw }}
+        </div>
+    </main>
+{% endblock %}

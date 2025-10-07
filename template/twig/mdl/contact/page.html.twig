@@ -1,57 +1,62 @@
 {% extends get_cover_template('container') %}
 {% block inside_container %}
-    {{ content|raw }}
-    <div class="row my-4">
-        <div class="col-12 col-lg-6 col-xl-7 mb-5 mb-lg-0 d-flex">
-            <div class="card shadow-sm w-100">
-                <div class="card-body">
-                    <h2 class="mb-3">{{ title|raw }}</h2>
-                    {{ form|raw }}
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-lg-6 col-xl-5 d-flex">
-            <div class="card shadow-sm w-100">
-                <div class="card-body">
-                    {{ map|raw }}
-                    {% if items_by_type.location is not empty %}
-                        {% for location in items_by_type.location %}
-                            <div class="card-text mt-4">
-                                {% include get_cover_template('common/information/single') with {
-                                    item: location
-                                } %}
-                            </div>
-                        {% endfor %}
-                    {% endif %}
-                    {% if items_by_type.phone is not empty %}
-                        <hr class="border my-4">
-                        <div class="row">
-                            {% for email in items_by_type.email %}
-                                <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-                                    {% include get_cover_template('common/information/single') with {
-                                        item: email
-                                    } %}
-                                </div>
-                            {% endfor %}
-                            {% for phone in items_by_type.phone %}
-                                <div class="col-12 col-lg-6">
-                                    {% include get_cover_template('common/information/single') with {
-                                        item: phone
-                                    } %}
-                                </div>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-    </div>
-    {% set socials = pmpr_apply_filters('contact_get_socials', {}, {output: 'object'}) %}
-    {% if socials is not empty %}
-        {% include get_cover_template('common/socials') with {
-            items: socials,
-            wrapper_class: 'justify-content-end'
+    <main>
+        {% include get_cover_template('common/header/index') with {
+            has_container: 0
         } %}
-    {% endif %}
+        {{ content|raw }}
+        <div class="row my-4">
+            <div class="col-12 col-lg-6 col-xl-7 mb-5 mb-lg-0 d-flex">
+                <div class="card shadow-sm w-100">
+                    <div class="card-body">
+                        <h2 class="mb-3">{{ title|raw }}</h2>
+                        {{ form|raw }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-5 d-flex">
+                <div class="card shadow-sm w-100">
+                    <div class="card-body">
+                        {{ map|raw }}
+                        {% if items_by_type.location is not empty %}
+                            {% for location in items_by_type.location %}
+                                <div class="card-text mt-4">
+                                    {% include get_cover_template('common/information/single') with {
+                                        item: location
+                                    } %}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        {% if items_by_type.phone is not empty %}
+                            <hr class="border my-4">
+                            <div class="row">
+                                {% for email in items_by_type.email %}
+                                    <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                                        {% include get_cover_template('common/information/single') with {
+                                            item: email
+                                        } %}
+                                    </div>
+                                {% endfor %}
+                                {% for phone in items_by_type.phone %}
+                                    <div class="col-12 col-lg-6">
+                                        {% include get_cover_template('common/information/single') with {
+                                            item: phone
+                                        } %}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% set socials = pmpr_apply_filters('contact_get_socials', {}, {output: 'object'}) %}
+        {% if socials is not empty %}
+            {% include get_cover_template('common/socials') with {
+                items: socials,
+                wrapper_class: 'justify-content-end'
+            } %}
+        {% endif %}
+    </main>
 {% endblock %}
 
