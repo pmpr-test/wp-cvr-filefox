@@ -2,12 +2,13 @@
 {% set main_share = 8 %}
 {% extends get_template('./base', _self) %}
 
+{% block main %}
+    {% include get_cover_template('common/single/' ~ post_type, 'common/single/index') %}
+{% endblock %}
+
+
 {% block sidebar %}
     {{ parent() }}
     {% include get_cover_template('common/single/widget') %}
-{% endblock %}
-
-{% block main %}
-    {% include get_cover_template('common/single/' ~ post_type, 'common/single/index') %}
 {% endblock %}
 

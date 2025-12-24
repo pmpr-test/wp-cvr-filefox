@@ -44,15 +44,17 @@
             {% endblock %}
 
             {% block after_last_slide %}
-                <div class="card position-relative shadow-sm h-100 w-100">
-                    <div class="card-body d-flex flex-column justify-content-center">
-                        {{ render_icon(view_all_icon, {class: 'icon-3x p-2 icon-primary mx-auto mb-2 rounded-circle border border-primary'}) }}
-                        <a class="stretched-link fs-md mx-auto" href="{{ action_link|esc_attr }}"
-                           aria-label="{{ action_text|esc_attr }}">
-                            {{ action_text|raw }}
-                        </a>
+                {% if action_link is not empty %}
+                    <div class="card position-relative shadow-sm h-100 w-100">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            {{ render_icon(view_all_icon, {class: 'icon-3x p-2 icon-primary mx-auto mb-2 rounded-circle border border-primary'}) }}
+                            <a class="stretched-link fs-md mx-auto" href="{{ action_link|esc_attr }}"
+                               aria-label="{{ action_text|esc_attr }}">
+                                {{ action_text|raw }}
+                            </a>
+                        </div>
                     </div>
-                </div>
+                {% endif %}
             {% endblock %}
 
         {% endembed %}

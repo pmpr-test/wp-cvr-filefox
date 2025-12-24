@@ -1,0 +1,61 @@
+<section>
+    {{ render_if_has_content('h3', {class: 'mb-3'}, title) }}
+    {% embed get_cover_template('common/carousel/index') with {
+        swiper_class: 'mb-2',
+        breakpoints: {'': 1},
+        as_js_template: 1,
+        carousel_config: {
+            loop: false,
+            speed: 1500,
+            autoplay: {
+                delay: 8000
+            },
+            equalHeight: true,
+            spaceBetween: 20,
+            centeredSlides: false,
+            navigation: false,
+            pagination: true,
+        }
+    } %}
+
+        {% block js_carousel %}
+            {% verbatim %}
+                <div class="card">
+                    <figure class="fit-image mb-0">
+                        <img src="{{thumbnail}}" alt="{{thumbnail_alt}}" class="img-fluid w-100 rounded-top-md">
+                    </figure>
+
+                    <div class="d-flex flex-column">
+                        <div class="card-body d-flex flex-column flex-grow-1">
+                            <a class="text-gray-800" href="{{permalink}}" title="{{title}}">
+                                <h2 class="fs-16 fs-md-18 mb-4 line-limit-2 lh-base">{{title}}</h2>
+                            </a>
+                            {{#description}}
+                            <div class="fs-xs fs-md-14 mb-4 text-gray-700 line-limit-2">{{description}}</div>
+                            {{/description}}
+                            <div class="d-flex justify-content-between mt-auto">
+                                <div class="price mt-auto ms-auto">{{{price_html}}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endverbatim %}
+        {% endblock %}
+
+        {% block after_last_slide %}
+            {% if action_link is not empty %}
+                <div class="card position-relative shadow-sm h-100 w-100">
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        {{ render_icon(view_all_icon, {class: 'icon-3x p-2 icon-primary mx-auto mb-2 rounded-circle border border-primary'}) }}
+                        <a class="stretched-link fs-md mx-auto" href="{{ action_link|esc_attr }}"
+                           aria-label="{{ action_text|esc_attr }}">
+                            {{ action_text|raw }}
+                        </a>
+                    </div>
+                </div>
+            {% endif %}
+        {% endblock %}
+
+    {% endembed %}
+</section>
+

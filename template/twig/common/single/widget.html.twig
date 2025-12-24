@@ -1,9 +1,13 @@
 {{ dynamic_sidebar('single-sidebar') }}
 {{ dynamic_sidebar(post_type ~ '-single-sidebar') }}
+{{ pmpr_do_action('singular_sidebar', object, post_type) }}
+{{ pmpr_do_action(post_type ~ '_singular_sidebar', object) }}
 
 {% set sticky_sidebar_content %}
     {{ dynamic_sidebar('sticky-single-sidebar') }}
     {{ dynamic_sidebar(post_type ~ '-sticky-single-sidebar') }}
+    {{ pmpr_do_action('singular_sticky_sidebar', object, post_type) }}
+    {{ pmpr_do_action(post_type ~ '_singular_sticky_sidebar', object) }}
 {% endset %}
 
 {% if sticky_sidebar_content is not empty %}

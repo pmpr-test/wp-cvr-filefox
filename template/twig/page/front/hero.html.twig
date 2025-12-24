@@ -23,7 +23,7 @@
                 <div {{ pr_add_animation({class: 'card shadow-sm'}, {effect: 'fade-up', distance: '150px', duration: 1000, delay: (loop.index * 100) + 200}) }}>
                     <div class="card-body p-4 lh-base d-flex flex-row fs-md-column flex-lg-row">
                         <div class="rounded-3 mb-md-4 mb-lg-0 p-3 bg-{{ feature.color|esc_attr }}-light icon-{{ feature.color|esc_attr }}">
-                            {{ render_icon(feature.icon, {class: 'icon-4x mx-auto mx-md-0' }) }}
+                            {{ render_icon(feature.icon, {class: 'icon-4x mx-auto mx-md-0'}, 1) }}
                         </div>
                         <div class="my-auto text-start text-md-center text-lg-start ms-3">
                             <h2 class="fs-lg fs-md-xl mb-3">{{ feature.title|raw }}</h2>

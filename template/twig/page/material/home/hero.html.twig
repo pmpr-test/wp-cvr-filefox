@@ -30,7 +30,7 @@
                     <div {{ pr_add_animation({class: 'card shadow overflow-hidden'}, {effect: 'fade-up', distance: '100px', duration: 1000, delay: (loop.index * 100) + 300}) }}>
                         <div class="card-decor"></div>
                         <div class="card-body lh-base text-center">
-                            {{ render_icon(feature.icon, {class: 'icon-default icon-9x py-3 mb-2 mx-auto'}) }}
+                            {{ render_icon(feature.icon, {class: 'icon-default icon-9x py-3 mb-2 mx-auto'}, 1) }}
                             <h3 class="fs-md fs-md-lg mb-3 text-primary">{{ feature.title|raw }}</h3>
                             <div class="fs-sm">{{ wpautop(feature.description)|raw }}</div>
                         </div>

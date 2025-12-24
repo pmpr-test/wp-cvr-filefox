@@ -1,6 +1,7 @@
-{% if carousels %}
+{% set as_js_template = as_js_template|default(0) %}
+{%- if carousels or as_js_template %}
 
-    {{ pmpr_do_action('pmpr_enqueue_swiper') }}
+    {{ pmpr_do_action('pmpr_swiper_added') }}
 
     {% set carousel_config = carousel_config|default({}) %}
 
@@ -11,21 +12,39 @@
                 {% if carousel_id is defined %} id="{{ carousel_id|esc_attr }}"{% endif %}>
             {% block before_slides %}{% endblock %}
             <div class="swiper-wrapper {{ wrapper_class|esc_attr }}">
-                {% for key, carousel in carousels %}
-                    {% if loop.first and block('before_first_slide') is not empty %}
+                {% if as_js_template %}
+                    {% if block('js_before_first_slide') is not empty %}
                         <div class="swiper-slide {{ slide_class|raw }}">
-                            {% block before_first_slide %}{% endblock %}
+                            {% block js_before_first_slide %}{% endblock %}
                         </div>
                     {% endif %}
+                    {% verbatim %}{{#items}}{% endverbatim %}
                     <div class="swiper-slide {{ slide_class|raw }}">
-                        {% block carousel %}{% endblock %}
+                        {% block js_carousel %}{% endblock %}
                     </div>
-                    {% if loop.last and block('after_last_slide') is not empty %}
+                    {% verbatim %}{{/items}}{% endverbatim %}
+                    {% if block('js_after_last_slide') is not empty %}
                         <div class="swiper-slide {{ slide_class|raw }}">
-                            {% block after_last_slide %}{% endblock %}
+                            {% block js_after_last_slide %}{% endblock %}
                         </div>
                     {% endif %}
-                {% endfor %}
+                {% else %}
+                    {% for key, carousel in carousels %}
+                        {% if loop.first and block('before_first_slide') is not empty %}
+                            <div class="swiper-slide {{ slide_class|raw }}">
+                                {% block before_first_slide %}{% endblock %}
+                            </div>
+                        {% endif %}
+                        <div class="swiper-slide {{ slide_class|raw }}">
+                            {% block carousel %}{% endblock %}
+                        </div>
+                        {% if loop.last and block('after_last_slide') is not empty %}
+                            <div class="swiper-slide {{ slide_class|raw }}">
+                                {% block after_last_slide %}{% endblock %}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
             </div>
             {% block after_slides %}{% endblock %}
         </div>
@@ -49,4 +68,4 @@
             {% endblock %}
         {% endif %}
     </div>
-{% endif %}
+{% endif -%}

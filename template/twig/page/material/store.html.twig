@@ -2,15 +2,15 @@
 
 {% block inside_container %}
     <main id="main" class="row mb-4 mb-lg-5 mt-0 mt-lg-4">
-        <header class="lh-base mb-3 mb-lg-4">
-            <h1 class="fs-md fs-md-lg">{{ page_title|raw }}</h1>
+        <header class="lh-base mb-2 mb-lg-4">
+            <h1 class="fs-md fs-md-lg mb-2">{{ page_title|raw }}</h1>
             {{ render_if_has_content('div', {class: 'no-margin d-none d-lg-block'}, wpautop(page_description)) }}
         </header>
         <aside id="sidebar" class="col-lg-4 col-xl-3">
             <div class="d-flex justify-content-between d-lg-none mb-3">
                 <div class="d-flex position-relative rounded-3 shadow-sm border p-2 as-link filter-toggle{% if filter_effects > 0 %} filter-active{% else %} bg-white{% endif %}"
                      data-target="#store_filters">
-                    {{ render_icon(filter_icon, {class: 'icon-md icon-dark my-auto'}) }}
+                    {{ render_icon(filter_icon, {class: 'icon-md icon-dark my-auto'}, 1) }}
                     <span class="ms-2 my-auto">{{ filter_label|raw }}</span>
                     {% if filter_effects > 0 %}
                         <span class="filter-active-count d-block d-md-none position-absolute">{{ filter_effects|number|raw }}</span>
@@ -18,7 +18,7 @@
                 </div>
                 <div class="d-flex rounded-3 shadow-sm border p-2 as-link filter-toggle{% if sort_by is empty %} bg-white{% else %} filter-active{% endif %}"
                      data-target="#store_sort">
-                    {{ render_icon(sort_icon, {class: 'icon-md icon-dark my-auto'}) }}
+                    {{ render_icon(sort_icon, {class: 'icon-md icon-dark my-auto'}, 1) }}
                     <span class="ms-2 my-auto">{{ mobile_sort_label|raw }}</span>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                     <div class="d-flex flex-column flex-lg-row flex-grow-1">
                         <div class="d-flex justify-content-between mb-2 mb-lg-0 me-lg-3">
                             <div class="d-flex">
-                                {{ render_icon(sort_icon, {class: 'icon-xxl icon-dark my-auto d-none d-lg-block'}) }}
+                                {{ render_icon(sort_icon, {class: 'icon-xxl icon-dark my-auto d-none d-lg-block'}, 1) }}
                                 <strong class="fs-md fs-md-sm ms-lg-2 my-auto">{{ sort_label|raw }}</strong>
                             </div>
                             {{ render_icon('fasm/6/set/xmark', {class: 'icon-xxl icon-dark close-filter my-auto as-link ms-3 bg-gray-200 rounded d-flex d-lg-none'}) }}
@@ -104,7 +104,7 @@
                 } %}
             {% else %}
                 <div class="empty-message d-flex flex-column justify-content-center align-items-center mt-5 mt-lg-10">
-                    {{ render_icon(empty_icon, {class: 'icon-4x p-3 icon-primary rounded-circle bg-gray-400 mb-3'}) }}
+                    {{ render_icon(empty_icon, {class: 'icon-4x p-3 icon-primary rounded-circle bg-gray-400 mb-3'}, 1) }}
                     <strong class="h2 mb-2">{{ empty_title|raw }}</strong>
                     <div class="fs-sm">{{ empty_text|raw }}</div>
                 </div>

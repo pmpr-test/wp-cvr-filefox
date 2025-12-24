@@ -1,0 +1,21 @@
+<nav class="mobile-nav navbar fixed-bottom d-block d-md-none bg-white shadow-sm z-lg py-0 rounded-0 border-top">
+    {% set items = pmpr_apply_filters('header_footer_items', {}) %}
+    <div class="row gx-1 px-2">
+        {% for item in items %}
+            <div class="col pt-2 pb-1 border-0 mobile-nav-item{% if item.active %} mobile-nav-item-active{% endif %}">
+                {% if item.link is not empty %}
+                    <a href="{{ item.link|esc_url }}"
+                       class="h-100 text-center d-flex flex-column justify-content-center">
+                        {{ render_icon(item.icon, {class: 'icon-xl mobile-nav-icon mx-auto'}, 1) }}
+                        <div class="mobile-nav-title fs-xs text-nowrap">{{ item.title|raw }}</div>
+                    </a>
+                {% else %}
+                    <div class="text-center d-flex flex-column justify-content-center h-100 as-link aside-toggle"{% if item.target is not empty %} data-target="{{ item.target|esc_attr }}"{% endif %}>
+                        {{ render_icon(item.icon, {class: 'icon-xl mobile-nav-icon mx-auto'}, 1) }}
+                        <div class="mobile-nav-title fs-xs text-nowrap">{{ item.title|raw }}</div>
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</nav>
