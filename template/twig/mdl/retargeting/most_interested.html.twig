@@ -1,4 +1,4 @@
-<section>
-    {% include get_template('products', _self) %}
-</section>
+{% include get_template('products', _self) with {
+    swiper_class: 'mb-2',
+} %}
 

@@ -4,15 +4,16 @@
 {% set border_color = border_color|default('gray-200') %}
 <div class="aside shadow z-lg{% if is_right %} aside-right{% endif %}{% if container_class is defined and container_class is not empty %} {{ container_class|raw }}{% endif %}"
      id="{{ aside_id|esc_attr }}_aside">
-    <div class="aside-wrapper position-relative{% if full_height %} min-vh-100{% endif %}{% if wrapper_class is defined and wrapper_class is not empty %} {{ wrapper_class|raw }}{% endif %}">
+    <div class="aside-wrapper d-flex flex-column position-relative{% if full_height %} min-vh-100{% endif %}{% if wrapper_class is defined and wrapper_class is not empty %} {{ wrapper_class|raw }}{% endif %}">
         {% if has_header|default(0) %}
             <div class="position-relative aside-header border-bottom border-1 border-{{ border_color|esc_attr }} p-{{ padding }}">
                 {% block aside_header %}{% endblock %}
             </div>
         {% endif %}
-        <div class="aside-content {% if full_height %} vh-100{% endif %} p-{{ content_padding|default(padding) }}">
+        <div class="aside-content flex-grow-1{% if full_height %} vh-100{% endif %} p-{{ content_padding|default(padding) }}">
             {% block aside_content %}{% endblock %}
         </div>
+        {% block aside_after_content %}{% endblock %}
         {% if has_footer|default(0) %}
             <div class="aside-footer border-top border-1 border-{{ border_color|esc_attr }} p-{{ padding }}">
                 {% block aside_footer %}{% endblock %}
@@ -20,9 +21,7 @@
         {% endif %}
         {% if has_close|default(1) %}
             {% block aside_close %}
-                <a href="#" class="aside-close position-fixed bottom-0 w-100 py-3 d-flex justify-content-center">
-                    {{ render_icon('fasm/6/set/angles-' ~ (is_right ? 'left' : 'right'), {class: 'icon-lg icon-primary' }) }}
-                </a>
+                {{ render_icon('fasm/6/set/angles-' ~ (is_right ? 'left' : 'right'), {class: 'icon-xl icon-primary aside-close as-link position-fixed bottom-0 w-100 my-3 d-flex justify-content-center' }) }}
             {% endblock %}
         {% endif %}
     </div>

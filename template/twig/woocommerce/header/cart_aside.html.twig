@@ -1,19 +1,25 @@
 {% embed get_cover_template('common/aside') with {
+    padding: 3,
     is_right: 1,
-    has_header: 1,
+    has_close: 0,
     has_footer: 1,
-    content_padding: 4,
+    has_header: 1,
+    full_height: 0,
     wrapper_class: 'bg-light min-vh-100'
 } %}
     {% block aside_header %}
         <div class="d-flex justify-content-between font-weight-bold">
-            <span>{{ cart_title|raw }}</span>
-            <span>{{ count_text|raw }}</span>
+            <strong>{{ cart_title|raw }}</strong>
+            <strong>{{ count_text|raw }}</strong>
         </div>
     {% endblock %}
 
     {% block aside_content %}
         {{ the_widget(widget, 'title=')|raw }}
+    {% endblock %}
+
+    {% block aside_footer %}
+        <div id="woo_cart_footer"></div>
     {% endblock %}
 
 {% endembed %}

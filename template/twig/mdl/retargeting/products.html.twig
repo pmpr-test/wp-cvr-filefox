@@ -1,59 +1,55 @@
 {{ render_if_has_content('h3', {class: 'mb-3'}, title) }}
 {% embed get_cover_template('common/carousel/index') with {
-    swiper_class: 'mb-2',
     breakpoints: {'': 1},
     as_js_template: 1,
     carousel_config: {
         loop: false,
-        speed: 1500,
+        speed: 2000,
         autoplay: {
             delay: 8000
         },
         equalHeight: true,
         spaceBetween: 20,
         centeredSlides: false,
-        navigation: false,
-        pagination: true,
+        navigation: navigation|default(0),
+        pagination: pagination|default(1),
     }
 } %}
-
     {% block js_carousel %}
-        {% verbatim %}
-            <div class="card">
+        {% if compact|default(0) %}
+            {%- verbatim -%}
+            <div class="py-2 d-flex px-4 position-relative h-100">
+                <img src="{{thumbnail}}" alt="{{thumbnail_alt}}" class="img-fluid rounded" width="60" height="60">
+                <div class="d-grid flex-grow-1 gap-1 ms-3">
+                    <a class="text-gray-800 stretched-link fs-16 fw-bold mb-2 line-limit-2 lh-base" href="{{permalink}}">{{title}}</a>
+                </div>
+                {{#price_html}}
+                <div class="price ms-3">{{{price_html}}}</div>
+                {{/price_html}}
+            </div>
+            {%- endverbatim -%}
+        {% else %}
+            {%- verbatim -%}
+            <div class="card position-relative">
                 <figure class="fit-image mb-0">
-                    <img src="{{thumbnail}}" alt="{{thumbnail_alt}}" class="img-fluid w-100 rounded-top-md">
+                    <img src="{{thumbnail}}" alt="{{thumbnail_alt}}" class="img-fluid w-100 rounded-top">
                 </figure>
-
                 <div class="d-flex flex-column">
                     <div class="card-body d-flex flex-column flex-grow-1">
-                        <a class="text-gray-800" href="{{permalink}}" title="{{title}}">
-                            <h2 class="fs-16 fs-md-18 mb-4 line-limit-2 lh-base">{{title}}</h2>
-                        </a>
+                        <a class="text-gray-800 stretched-link fs-16 fs-md-18 fw-bold mb-3 line-limit-2 lh-base" href="{{permalink}}">{{title}}</a>
                         {{#description}}
-                        <div class="fs-xs fs-md-14 mb-4 text-gray-700 line-limit-2">{{description}}</div>
+                        <div class="fs-xs fs-md-14 mb-3 text-gray-700 line-limit-2">{{description}}</div>
                         {{/description}}
+                        {{#price_html}}
                         <div class="d-flex justify-content-between mt-auto">
                             <div class="price mt-auto ms-auto">{{{price_html}}}</div>
                         </div>
+                        {{/price_html}}
                     </div>
                 </div>
             </div>
-        {% endverbatim %}
-    {% endblock %}
-
-    {% block after_last_slide %}
-        {% if action_link is not empty %}
-            <div class="card position-relative shadow-sm h-100 w-100">
-                <div class="card-body d-flex flex-column justify-content-center">
-                    {{ render_icon(view_all_icon, {class: 'icon-3x p-2 icon-primary mx-auto mb-2 rounded-circle border border-primary'}) }}
-                    <a class="stretched-link fs-md mx-auto" href="{{ action_link|esc_attr }}"
-                       aria-label="{{ action_text|esc_attr }}">
-                        {{ action_text|raw }}
-                    </a>
-                </div>
-            </div>
+            {%- endverbatim -%}
         {% endif %}
     {% endblock %}
-
 {% endembed %}
 

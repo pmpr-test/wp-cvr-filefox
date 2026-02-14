@@ -1,0 +1,7 @@
+<?php
+/*   _______________________________________
+    |  Obfuscated by PMPR - Php Obfuscator  |
+    |             6990793c28be5             |
+    |_______________________________________|
+*/
+ namespace Pmpr\Cover\Filefox\Woocommerce; class Checkout extends Template { public function kgewmaycsoykyaso() { $this->kuieicsuscgmwigg('woocommerce_before_checkout_form', 'woocommerce_output_all_notices')->kuieicsuscgmwigg('woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form')->kuieicsuscgmwigg('woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20); } public function wigskegsqequoeks() { $this->qcsmikeggeemccuu('woocommerce_checkout_sidebar', [$this, 'igoikyoywacukquy'])->qcsmikeggeemccuu('woocommerce_checkout_before_order_review', 'woocommerce_checkout_payment', 1); parent::wigskegsqequoeks(); } public function igoikyoywacukquy($ccamueccusigaaio) { if ($ccamueccusigaaio !== 'form-pay') { woocommerce_checkout_coupon_form(); } } public function ikckqoqkgcewiwcq($ymqmyyeuycgmigyo, $aqykuigiuwmmcieu, $ymkomoccmymcoiea = [], $ugugagoguiycqeys = []) : array { switch ($ymqmyyeuycgmigyo) { case self::iwmuesguywsuoymo: $ugugagoguiycqeys = ['.woocommerce-notice--success' => ['class' => 'alert alert-success']]; break; case self::qoqyseqyqyscgoek: $ugugagoguiycqeys = ['.woocommerce-notice--success' => ['class' => 'alert alert-success']]; break; } return parent::ikckqoqkgcewiwcq($ymqmyyeuycgmigyo, $aqykuigiuwmmcieu, $ymkomoccmymcoiea, $ugugagoguiycqeys); } }
