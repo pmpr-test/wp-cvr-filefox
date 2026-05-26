@@ -10,7 +10,7 @@
     {% block aside_header %}
         <div class="d-flex justify-content-between font-weight-bold">
             <strong>{{ cart_title|raw }}</strong>
-            <strong>{{ count_text|raw }}</strong>
+            <strong><span class="pr-cart-aside-count">{{ count_number|number|raw }}</span>&nbsp;{{ count_text|raw }}</strong>
         </div>
     {% endblock %}
 
